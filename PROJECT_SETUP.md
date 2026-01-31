@@ -84,12 +84,12 @@ Define the fundamental data types:
 
 - **SocialMediaPost** (IMPLEMENTED) - Individual post data
   - Type (photo, text, story, video, poll, shared post)
-  - Content (text, image reference)
-  - Timestamp/date
+  - Content (text, image Sprite reference)
+  - Days since posted (int - for sorting, 1 = yesterday, 7 = week ago, etc.)
   - Likes, comments, engagement data
   - Trait associations (ScriptableObject references to related interests, personality traits, lifestyle traits)
-  - Red flag / green flag indicators
-  - Categories for organization
+  - Red flag / green flag boolean indicators
+  - Note: Categories removed - use "Controversial" personality trait for divisive posts instead
 
 - **CandidateProfile** (IMPLEMENTED) - Character profile information
   - Name, gender, age, bio
@@ -109,9 +109,10 @@ Define the fundamental data types:
 
 - **PersonalityTraitSO** (IMPLEMENTED) - ScriptableObject for personality traits
   - Display name, icon, description
-  - Positive/negative flag
-  - Opposite and complementary traits
+  - Positive/negative flag (`isPositiveTrait`)
+  - Opposite and complementary traits (array-based)
   - Match weight (1-10)
+  - **Special: "Controversial" trait** - Used for divisive/polarizing posts (replaces old category system)
 
 - **LifestyleTraitSO** (IMPLEMENTED) - ScriptableObject for lifestyle indicators
   - Display name, icon, description
@@ -192,23 +193,60 @@ Feature-specific logic:
 
 ## Testing & Sample Data
 
-See **SAMPLE_DATA.md** for ready-to-use test data including:
-- 5 sample interests (Hiking, Gaming, Cooking, Reading, Fitness)
-- 5 sample personality traits (Outgoing, Introverted, Adventurous, Creative, Reliable)
-- 5 sample lifestyle traits (Night Owl, Early Riser, Homebody, Social Butterfly, Fitness Focused)
-- 3 complete candidate profiles with social media posts (Sarah, Alex, Jamie)
+### JSON Import System
+All game data is managed through JSON files in the **JSONData/** folder:
+- **25 Interests** - Hobbies and activities (Hiking, Gaming, Yoga, Photography, etc.)
+- **15 Personality Traits** - Character traits including special "Controversial" trait for red flags
+- **10 Lifestyle Traits** - Daily life patterns (Night Owl, Career Driven, Eco Friendly, etc.)
+- **10 Candidate Profiles** - Complete dating profiles with 1-5 posts each (29 total posts)
 
-To test in Unity:
-1. Create trait ScriptableObjects first (in Data/ScriptableObjects/Traits/)
-2. Create candidate profiles (in Data/ScriptableObjects/Profiles/)
-3. Reference the sample data file for values to input
-4. Enter Play mode to verify data displays correctly
+### Automated Import Workflow
+1. **Edit JSON files** in `JSONData/` folder to add/modify data
+2. **In Unity**, go to: `Tools > Maskhot > Import Data from JSON`
+3. **Confirm import** - All ScriptableObjects are created automatically with proper references
+4. **Test with ProfileTester** - Attach ProfileTester component to GameObject, drag in profiles, run tests
+
+See **JSONData/README.md** for complete documentation on JSON structure and usage.
+See **SAMPLE_DATA.md** for original reference data (now available as JSON files).
+
+### Testing Components
+- **ProfileTester.cs** - Test script to verify profile data
+  - Tests multiple profiles in a single run
+  - Consolidated output per profile for easy debugging
+  - Validates all trait references and post data
+  - Usage: Attach to GameObject, assign profile arrays, use Context Menu "Test All Profiles"
 
 ## Development Workflow
 
+### JSON Data Management
+**All game data is managed through JSON files** - no manual ScriptableObject creation needed!
+
+1. **Edit JSON files** in `JSONData/` folder:
+   - `Interests.json` - 25 hobbies/activities
+   - `PersonalityTraits.json` - 15 character traits
+   - `LifestyleTraits.json` - 10 daily life patterns
+   - `Candidates.json` - 10 complete profiles with posts
+
+2. **Import to Unity**: `Tools > Maskhot > Import Data from JSON`
+   - Automatically creates all ScriptableObjects
+   - Resolves all trait references
+   - Handles enum conversions
+   - Creates proper folder structure
+
+3. **Test**: Use ProfileTester component to verify imported data
+
+**Benefits:**
+- Version control friendly (JSON diff)
+- Easy to edit and collaborate
+- Fast iteration (reimport overwrites)
+- No manual inspector work
+- Bulk data entry support
+
+See `JSONData/README.md` for complete JSON documentation.
+
 ### Recommended Build Order:
 1. **Data Structures** ✓ COMPLETE - Core classes implemented
-2. **ScriptableObjects** ✓ COMPLETE - Templates created, ready for data entry
+2. **ScriptableObjects** ✓ COMPLETE - JSON import system functional
 3. **Manager Layer** - Build systems to load and manage data
 4. **Controllers** - Wire up logic for game flow
 5. **UI Integration** - Hand off to UI developer with working backend
@@ -231,7 +269,7 @@ To test in Unity:
 ### ✓ Completed
 - Project folder structure (Scripts, Prefabs, Sprites, Data, Audio, etc.)
 - Core data classes:
-  - SocialMediaPost.cs
+  - SocialMediaPost.cs (with int-based timestamp for sorting)
   - CandidateProfile.cs
   - ClientProfile.cs
   - MatchCriteria.cs (with TraitRequirement and RequirementLevel)
@@ -239,7 +277,7 @@ To test in Unity:
   - PersonalityArchetype enum
 - Trait ScriptableObjects:
   - InterestSO.cs
-  - PersonalityTraitSO.cs
+  - PersonalityTraitSO.cs (with array-based opposite traits)
   - LifestyleTraitSO.cs
   - NarrativeHintCollectionSO.cs (hint collections for quest requirements)
 - Profile ScriptableObjects:
@@ -247,11 +285,26 @@ To test in Unity:
   - ClientProfileSO.cs (curated client profiles for story progression)
 - Quest system:
   - Quest.cs (runtime quest data: client + introduction + match criteria)
-- Sample data file (SAMPLE_DATA.md) with 3 test candidate profiles
+- **JSON Import System**:
+  - ScriptableObjectImporter.cs (Unity Editor tool with menu integration)
+  - Automated asset creation from JSON files
+  - Reference resolution between traits and profiles
+  - Enum parsing for categories, gender, archetype, post types
+  - JSONData/ folder with complete test dataset
+  - JSONData/README.md documentation
+- **Test Data**:
+  - 25 interests across all categories
+  - 15 personality traits (including "Controversial" for red flags)
+  - 10 lifestyle traits
+  - 10 diverse candidate profiles (varying post counts: 1-5)
+  - 29 total social media posts with green/red flags
+  - SAMPLE_DATA.md reference documentation
+- **Testing Tools**:
+  - ProfileTester.cs (multi-profile batch testing with consolidated output)
 - Hybrid design supporting both curated (ScriptableObject) and procedural (runtime) content
 
 ### ⏳ In Progress
-- Creating ScriptableObject assets in Unity (using sample data)
+- None - ready for next development phase
 
 ### 📋 To Do
 - Sample client data (create a few ClientProfileSO assets for story progression)
