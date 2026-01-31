@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08edf020511e9f74d84b9a788aae5406, type: 3}
+  m_Name: MarcusThompson
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Data.CandidateProfileSO
+  profile:
+    characterName: Marcus Thompson
+    gender: 0
+    age: 32
+    profilePicture: {fileID: 0}
+    bio: Data analyst with a passion for solving puzzles. Early mornings at the gym,
+      evenings with a good documentary. Looking for someone who appreciates both
+      ambition and downtime.
+    personalityTraits:
+    - {fileID: 11400000, guid: 3000438eb39a9e0428afb85e946f4989, type: 2}
+    - {fileID: 11400000, guid: fca26d9085fd520459944da8ca772d89, type: 2}
+    - {fileID: 11400000, guid: 642effaf5bb81a0489bd44043dde2f0a, type: 2}
+    - {fileID: 11400000, guid: 5a7d3b597a79a4747a62b10a8ed5ff62, type: 2}
+    interests:
+    - {fileID: 11400000, guid: 9c6a08fd46ac69f498b021b7e2ec7cc4, type: 2}
+    - {fileID: 11400000, guid: 6e1d0b93fb03bf144a35a5ed1a39e4b4, type: 2}
+    - {fileID: 11400000, guid: 7c95931c70c34e74bacbed000e011654, type: 2}
+    - {fileID: 11400000, guid: 6923f6aee8cad1e4bbb8491e07d15bb1, type: 2}
+    lifestyleTraits:
+    - {fileID: 11400000, guid: b182040851b6bd54390e05870623bf49, type: 2}
+    - {fileID: 11400000, guid: 9e9d19e28661d224dadbe3c37b38fdfd, type: 2}
+    - {fileID: 11400000, guid: a5b8b900b55b5cf4bb2a6c18f292da8b, type: 2}
+    archetype: 6
+  guaranteedPosts:
+  - postType: 0
+    content: "New PR on deadlifts this morning! Consistency pays off \U0001F4AA"
+    postImage: {fileID: 0}
+    daysSincePosted: 1
+    likes: 143
+    comments: 21
+    relatedInterests:
+    - {fileID: 11400000, guid: 9c6a08fd46ac69f498b021b7e2ec7cc4, type: 2}
+    relatedPersonalityTraits:
+    - {fileID: 11400000, guid: fca26d9085fd520459944da8ca772d89, type: 2}
+    - {fileID: 11400000, guid: 642effaf5bb81a0489bd44043dde2f0a, type: 2}
+    relatedLifestyleTraits:
+    - {fileID: 11400000, guid: b182040851b6bd54390e05870623bf49, type: 2}
+    - {fileID: 11400000, guid: a5b8b900b55b5cf4bb2a6c18f292da8b, type: 2}
+    isRedFlag: 0
+    isGreenFlag: 1
+  - postType: 0
+    content: "Just closed the biggest project of my career. Time to celebrate with
+      the team! \U0001F942"
+    postImage: {fileID: 0}
+    daysSincePosted: 6
+    likes: 201
+    comments: 34
+    relatedInterests: []
+    relatedPersonalityTraits:
+    - {fileID: 11400000, guid: fca26d9085fd520459944da8ca772d89, type: 2}
+    - {fileID: 11400000, guid: 3000438eb39a9e0428afb85e946f4989, type: 2}
+    relatedLifestyleTraits:
+    - {fileID: 11400000, guid: 9e9d19e28661d224dadbe3c37b38fdfd, type: 2}
+    isRedFlag: 0
+    isGreenFlag: 1
+  randomPostCount: 5
+  randomPostTagFilter: []
+  profileId: 499038e8-12a4-457b-9c6a-c1dc9491da6e

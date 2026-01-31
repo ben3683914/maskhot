@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17ce37a69e573e24aa4a9967b8ff9c3e, type: 3}
+  m_Name: Theater
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Data.InterestSO
+  displayName: Theater
+  icon: {fileID: 0}
+  description: Enjoys live performances and theatrical arts
+  category: 2
+  matchWeight: 6
+  relatedInterests:
+  - {fileID: 11400000, guid: d943b25a0705846449e8cdd2307fc2e7, type: 2}
+  - {fileID: 11400000, guid: 7c95931c70c34e74bacbed000e011654, type: 2}
+  - {fileID: 11400000, guid: aee96d26a3f2ab14f9777e6f7ed228a0, type: 2}

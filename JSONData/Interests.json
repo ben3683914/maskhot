@@ -1,0 +1,204 @@
+{
+  "interests": [
+    {
+      "assetName": "Hiking",
+      "displayName": "Hiking",
+      "description": "Loves outdoor adventures and nature trails",
+      "category": "Outdoor",
+      "matchWeight": 7,
+      "relatedInterests": ["Fitness", "Photography", "Cycling"]
+    },
+    {
+      "assetName": "Gaming",
+      "displayName": "Gaming",
+      "description": "Enjoys video games and streaming",
+      "category": "Entertainment",
+      "matchWeight": 5,
+      "relatedInterests": ["Reading", "BoardGames"]
+    },
+    {
+      "assetName": "Cooking",
+      "displayName": "Cooking",
+      "description": "Passionate about food and trying new recipes",
+      "category": "Food",
+      "matchWeight": 6,
+      "relatedInterests": ["Reading", "Travel", "Baking"]
+    },
+    {
+      "assetName": "Reading",
+      "displayName": "Reading",
+      "description": "Loves books and literature",
+      "category": "Intellectual",
+      "matchWeight": 6,
+      "relatedInterests": ["Cooking", "Gaming", "Writing"]
+    },
+    {
+      "assetName": "Fitness",
+      "displayName": "Fitness",
+      "description": "Committed to health and exercise",
+      "category": "Athletic",
+      "matchWeight": 7,
+      "relatedInterests": ["Hiking", "Yoga", "Running"]
+    },
+    {
+      "assetName": "Music",
+      "displayName": "Music",
+      "description": "Enjoys playing instruments or listening to diverse genres",
+      "category": "Entertainment",
+      "matchWeight": 6,
+      "relatedInterests": ["Dancing", "Theater"]
+    },
+    {
+      "assetName": "Photography",
+      "displayName": "Photography",
+      "description": "Passionate about capturing moments and visual storytelling",
+      "category": "Creative",
+      "matchWeight": 7,
+      "relatedInterests": ["Hiking", "Travel", "Art"]
+    },
+    {
+      "assetName": "Travel",
+      "displayName": "Travel",
+      "description": "Loves exploring new places and cultures",
+      "category": "Travel",
+      "matchWeight": 8,
+      "relatedInterests": ["Photography", "Cooking", "WineTasting"]
+    },
+    {
+      "assetName": "Volunteering",
+      "displayName": "Volunteering",
+      "description": "Dedicated to community service and helping others",
+      "category": "Social",
+      "matchWeight": 7,
+      "relatedInterests": ["Gardening"]
+    },
+    {
+      "assetName": "Movies",
+      "displayName": "Movies",
+      "description": "Film enthusiast who loves cinema and storytelling",
+      "category": "Entertainment",
+      "matchWeight": 5,
+      "relatedInterests": ["Reading", "Music", "Theater"]
+    },
+    {
+      "assetName": "Yoga",
+      "displayName": "Yoga",
+      "description": "Practices yoga for physical and mental wellness",
+      "category": "Athletic",
+      "matchWeight": 6,
+      "relatedInterests": ["Fitness", "Meditation"]
+    },
+    {
+      "assetName": "Meditation",
+      "displayName": "Meditation",
+      "description": "Mindfulness and mental clarity practice",
+      "category": "Intellectual",
+      "matchWeight": 5,
+      "relatedInterests": ["Yoga", "Reading"]
+    },
+    {
+      "assetName": "Dancing",
+      "displayName": "Dancing",
+      "description": "Loves movement and dance in various forms",
+      "category": "Creative",
+      "matchWeight": 6,
+      "relatedInterests": ["Music", "Fitness"]
+    },
+    {
+      "assetName": "Gardening",
+      "displayName": "Gardening",
+      "description": "Growing plants and connecting with nature",
+      "category": "Outdoor",
+      "matchWeight": 6,
+      "relatedInterests": ["Volunteering", "Cooking"]
+    },
+    {
+      "assetName": "WineTasting",
+      "displayName": "Wine Tasting",
+      "description": "Appreciates fine wines and culinary experiences",
+      "category": "Food",
+      "matchWeight": 5,
+      "relatedInterests": ["Cooking", "Travel"]
+    },
+    {
+      "assetName": "BoardGames",
+      "displayName": "Board Games",
+      "description": "Enjoys strategy games and game nights with friends",
+      "category": "Social",
+      "matchWeight": 6,
+      "relatedInterests": ["Gaming", "Podcasts"]
+    },
+    {
+      "assetName": "Podcasts",
+      "displayName": "Podcasts",
+      "description": "Loves listening to and discussing podcasts",
+      "category": "Intellectual",
+      "matchWeight": 5,
+      "relatedInterests": ["Reading", "BoardGames"]
+    },
+    {
+      "assetName": "Art",
+      "displayName": "Art",
+      "description": "Museums, galleries, and appreciating visual arts",
+      "category": "Creative",
+      "matchWeight": 7,
+      "relatedInterests": ["Photography", "Theater"]
+    },
+    {
+      "assetName": "Fashion",
+      "displayName": "Fashion",
+      "description": "Interested in style, design, and self-expression through clothing",
+      "category": "Creative",
+      "matchWeight": 5,
+      "relatedInterests": ["Art", "Photography"]
+    },
+    {
+      "assetName": "Sports",
+      "displayName": "Sports",
+      "description": "Watches and follows various sports",
+      "category": "Entertainment",
+      "matchWeight": 6,
+      "relatedInterests": ["Fitness", "Cycling"]
+    },
+    {
+      "assetName": "Theater",
+      "displayName": "Theater",
+      "description": "Enjoys live performances and theatrical arts",
+      "category": "Creative",
+      "matchWeight": 6,
+      "relatedInterests": ["Music", "Movies", "Art"]
+    },
+    {
+      "assetName": "Writing",
+      "displayName": "Writing",
+      "description": "Creative writing, journaling, or blogging",
+      "category": "Creative",
+      "matchWeight": 6,
+      "relatedInterests": ["Reading", "Podcasts"]
+    },
+    {
+      "assetName": "Cycling",
+      "displayName": "Cycling",
+      "description": "Road biking or mountain biking enthusiast",
+      "category": "Athletic",
+      "matchWeight": 7,
+      "relatedInterests": ["Hiking", "Fitness", "Sports"]
+    },
+    {
+      "assetName": "Running",
+      "displayName": "Running",
+      "description": "Passionate about running and marathons",
+      "category": "Athletic",
+      "matchWeight": 7,
+      "relatedInterests": ["Fitness", "Cycling"]
+    },
+    {
+      "assetName": "Baking",
+      "displayName": "Baking",
+      "description": "Loves creating pastries, breads, and desserts",
+      "category": "Food",
+      "matchWeight": 6,
+      "relatedInterests": ["Cooking"]
+    }
+  ]
+}

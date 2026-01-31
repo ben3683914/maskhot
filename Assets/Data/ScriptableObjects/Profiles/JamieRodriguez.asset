@@ -14,44 +14,50 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Data.CandidateProfileSO
   profile:
     characterName: Jamie Rodriguez
-    gender: 2
-    age: 24
+    gender: 0
+    age: 28
     profilePicture: {fileID: 0}
-    bio: Artist and dog lover. Spend most of my time in coffee shops sketching. Always
-      down for spontaneous adventures or deep conversations.
+    bio: Artist and dog dad to the world's best golden retriever. Spend my weekends
+      at galleries or dog parks. Big personality, bigger heart.
     personalityTraits:
-    - {fileID: 11400000, guid: aaffbf8cab8ecf2418d8c3248dda4332, type: 2}
-    - {fileID: 11400000, guid: d190f5e3f3484c74198778d3a4b45b31, type: 2}
     - {fileID: 11400000, guid: 2c32bbc66c331734faa9d6a77ff4c060, type: 2}
+    - {fileID: 11400000, guid: aaffbf8cab8ecf2418d8c3248dda4332, type: 2}
+    - {fileID: 11400000, guid: e4615ebb9e6143f42a77c19e5f315f52, type: 2}
+    - {fileID: 11400000, guid: 88c44cc134cd1ac42a60298a857c1561, type: 2}
     interests:
-    - {fileID: 11400000, guid: 6e1d0b93fb03bf144a35a5ed1a39e4b4, type: 2}
+    - {fileID: 11400000, guid: aee96d26a3f2ab14f9777e6f7ed228a0, type: 2}
     - {fileID: 11400000, guid: 7e63e981cf8fa6c4b9fbba361879c6a9, type: 2}
     - {fileID: 11400000, guid: a3fa8d611dd70304186e4ce1d680ee76, type: 2}
+    - {fileID: 11400000, guid: d943b25a0705846449e8cdd2307fc2e7, type: 2}
+    - {fileID: 11400000, guid: 8d280373f32242b479f87f1c38c95e10, type: 2}
     lifestyleTraits:
     - {fileID: 11400000, guid: 5b85eb22b6d5ecc47af8096ad0749df6, type: 2}
     - {fileID: 11400000, guid: 7cdc3411f156d5d4182b12ead0e38f57, type: 2}
+    - {fileID: 11400000, guid: ee7ad2e6a8d3b254f90217072171a75d, type: 2}
     archetype: 2
   guaranteedPosts:
   - postType: 0
-    content: "My baby Milo being absolutely perfect as usual \xF0\u0178\x90\u2022\xF0\u0178\u2019\u2022"
+    content: "My baby Milo being absolutely perfect as usual \U0001F415\U0001F495"
     postImage: {fileID: 0}
     daysSincePosted: 1
     likes: 312
     comments: 47
     relatedInterests: []
     relatedPersonalityTraits:
-    - {fileID: 11400000, guid: 2c32bbc66c331734faa9d6a77ff4c060, type: 2}
+    - {fileID: 11400000, guid: e4615ebb9e6143f42a77c19e5f315f52, type: 2}
+    - {fileID: 11400000, guid: 88c44cc134cd1ac42a60298a857c1561, type: 2}
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 1
   - postType: 0
     content: "Finished this piece after 40 hours of work. Mixed media portrait study
-      \xF0\u0178\u017D\xA8"
+      \U0001F3A8"
     postImage: {fileID: 0}
     daysSincePosted: 4
     likes: 289
     comments: 38
-    relatedInterests: []
+    relatedInterests:
+    - {fileID: 11400000, guid: aee96d26a3f2ab14f9777e6f7ed228a0, type: 2}
     relatedPersonalityTraits:
     - {fileID: 11400000, guid: aaffbf8cab8ecf2418d8c3248dda4332, type: 2}
     relatedLifestyleTraits: []
@@ -65,7 +71,8 @@ MonoBehaviour:
     likes: 12
     comments: 67
     relatedInterests: []
-    relatedPersonalityTraits: []
+    relatedPersonalityTraits:
+    - {fileID: 11400000, guid: 4a5080874eb642b439fc05787658af27, type: 2}
     relatedLifestyleTraits: []
     isRedFlag: 1
     isGreenFlag: 0

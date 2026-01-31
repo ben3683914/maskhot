@@ -1,0 +1,94 @@
+{
+  "lifestyleTraits": [
+    {
+      "assetName": "NightOwl",
+      "displayName": "Night Owl",
+      "description": "Most active and energetic in the evening",
+      "category": "Schedule",
+      "matchWeight": 6,
+      "conflictingTraits": ["EarlyRiser"],
+      "compatibleTraits": ["Homebody", "Creative_Spirit"]
+    },
+    {
+      "assetName": "EarlyRiser",
+      "displayName": "Early Riser",
+      "description": "Wakes up early and loves mornings",
+      "category": "Schedule",
+      "matchWeight": 6,
+      "conflictingTraits": ["NightOwl"],
+      "compatibleTraits": ["FitnessFocused", "SocialButterfly", "Career_Driven"]
+    },
+    {
+      "assetName": "Homebody",
+      "displayName": "Homebody",
+      "description": "Prefers staying in and cozy nights",
+      "category": "Social_Preference",
+      "matchWeight": 7,
+      "conflictingTraits": ["SocialButterfly"],
+      "compatibleTraits": ["NightOwl", "Minimalist"]
+    },
+    {
+      "assetName": "SocialButterfly",
+      "displayName": "Social Butterfly",
+      "description": "Always out and about; loves events",
+      "category": "Social_Preference",
+      "matchWeight": 7,
+      "conflictingTraits": ["Homebody"],
+      "compatibleTraits": ["EarlyRiser", "FitnessFocused", "Spontaneous"]
+    },
+    {
+      "assetName": "FitnessFocused",
+      "displayName": "Fitness Focused",
+      "description": "Daily workouts and healthy eating",
+      "category": "Health_Wellness",
+      "matchWeight": 6,
+      "conflictingTraits": [],
+      "compatibleTraits": ["EarlyRiser", "SocialButterfly", "Health_Conscious"]
+    },
+    {
+      "assetName": "Minimalist",
+      "displayName": "Minimalist",
+      "description": "Values simplicity and decluttered living",
+      "category": "Living_Situation",
+      "matchWeight": 5,
+      "conflictingTraits": [],
+      "compatibleTraits": ["Homebody", "Eco_Friendly"]
+    },
+    {
+      "assetName": "Spontaneous",
+      "displayName": "Spontaneous",
+      "description": "Goes with the flow and loves unplanned adventures",
+      "category": "Work_Life",
+      "matchWeight": 6,
+      "conflictingTraits": ["Career_Driven"],
+      "compatibleTraits": ["SocialButterfly", "Creative_Spirit"]
+    },
+    {
+      "assetName": "Health_Conscious",
+      "displayName": "Health Conscious",
+      "description": "Mindful about nutrition and wellness",
+      "category": "Health_Wellness",
+      "matchWeight": 7,
+      "conflictingTraits": [],
+      "compatibleTraits": ["FitnessFocused", "Eco_Friendly"]
+    },
+    {
+      "assetName": "Career_Driven",
+      "displayName": "Career Driven",
+      "description": "Focused on professional growth and success",
+      "category": "Work_Life",
+      "matchWeight": 7,
+      "conflictingTraits": ["Spontaneous"],
+      "compatibleTraits": ["EarlyRiser", "Ambitious"]
+    },
+    {
+      "assetName": "Eco_Friendly",
+      "displayName": "Eco Friendly",
+      "description": "Environmentally conscious and sustainable living",
+      "category": "Other",
+      "matchWeight": 6,
+      "conflictingTraits": [],
+      "compatibleTraits": ["Minimalist", "Health_Conscious"]
+    }
+  ]
+}

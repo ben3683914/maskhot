@@ -21,3 +21,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5b85eb22b6d5ecc47af8096ad0749df6, type: 2}
   compatibleTraits:
   - {fileID: 11400000, guid: b8e70d993f6200b4dadcbf7dcca76eae, type: 2}
+  - {fileID: 11400000, guid: 84b8608be9257a942aced56ac2d258e9, type: 2}

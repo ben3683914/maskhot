@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Data.LifestyleTraitSO
   displayName: Social Butterfly
   icon: {fileID: 0}
-  description: Always out and about, loves events
+  description: Always out and about; loves events
   category: 1
   matchWeight: 7
   conflictingTraits:
@@ -22,3 +22,4 @@ MonoBehaviour:
   compatibleTraits:
   - {fileID: 11400000, guid: b182040851b6bd54390e05870623bf49, type: 2}
   - {fileID: 11400000, guid: 7cdc3411f156d5d4182b12ead0e38f57, type: 2}
+  - {fileID: 11400000, guid: ee7ad2e6a8d3b254f90217072171a75d, type: 2}

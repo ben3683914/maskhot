@@ -19,3 +19,5 @@ MonoBehaviour:
   matchWeight: 7
   relatedInterests:
   - {fileID: 11400000, guid: 7e63e981cf8fa6c4b9fbba361879c6a9, type: 2}
+  - {fileID: 11400000, guid: cc522457632549f44a3d6e043049530c, type: 2}
+  - {fileID: 11400000, guid: 7d21719ce769098449d6ca210d8a07aa, type: 2}

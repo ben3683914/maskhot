@@ -1,0 +1,502 @@
+{
+  "candidates": [
+    {
+      "assetName": "SarahMitchell",
+      "characterName": "Sarah Mitchell",
+      "gender": "Female",
+      "age": 26,
+      "bio": "Coffee enthusiast and weekend hiker. Always planning my next adventure, whether it's a new trail or a new recipe. Looking for someone who can keep up!",
+      "archetype": "Adventurous",
+      "personalityTraits": ["Outgoing", "Adventurous", "Creative", "Ambitious"],
+      "interests": ["Hiking", "Cooking", "Reading", "Photography", "Running"],
+      "lifestyleTraits": ["EarlyRiser", "SocialButterfly", "FitnessFocused"],
+      "randomPostCount": 5,
+      "randomPostTagFilter": [],
+      "guaranteedPosts": [
+        {
+          "postType": "Photo",
+          "content": "Summit sunrise this morning! Nothing beats starting the day at 6000 feet 🏔️",
+          "daysSincePosted": 2,
+          "likes": 247,
+          "comments": 18,
+          "isGreenFlag": true,
+          "isRedFlag": false,
+          "relatedInterests": ["Hiking", "Fitness", "Photography"],
+          "relatedPersonalityTraits": ["Adventurous", "Ambitious"],
+          "relatedLifestyleTraits": ["EarlyRiser", "FitnessFocused"]
+        },
+        {
+          "postType": "Photo",
+          "content": "Tried making homemade pasta for the first time. Messy but worth it! 🍝",
+          "daysSincePosted": 5,
+          "likes": 156,
+          "comments": 23,
+          "isGreenFlag": true,
+          "isRedFlag": false,
+          "relatedInterests": ["Cooking"],
+          "relatedPersonalityTraits": ["Creative"],
+          "relatedLifestyleTraits": []
+        },
+        {
+          "postType": "TextOnly",
+          "content": "Why do people take 20 minutes to order coffee? Just pick something and move on 🙄",
+          "daysSincePosted": 7,
+          "likes": 89,
+          "comments": 34,
+          "isGreenFlag": false,
+          "isRedFlag": true,
+          "relatedInterests": [],
+          "relatedPersonalityTraits": [],
+          "relatedLifestyleTraits": []
+        }
+      ]
+    },
+    {
+      "assetName": "AlexChen",
+      "characterName": "Alex Chen",
+      "gender": "Non-binary",
+      "age": 24,
+      "bio": "Software developer by day, gamer by night. Love getting lost in a good book or a new game world. Introvert who occasionally pretends to be an extrovert.",
+      "archetype": "Intellectual",
+      "personalityTraits": ["Introverted", "Creative", "Reliable", "Analytical", "Thoughtful"],
+      "interests": ["Gaming", "Reading", "Cooking", "Movies", "BoardGames", "Podcasts"],
+      "lifestyleTraits": ["NightOwl", "Homebody", "Minimalist"],
+      "randomPostCount": 5,
+      "randomPostTagFilter": [],
+      "guaranteedPosts": [
+        {
+          "postType": "Photo",
+          "content": "Just finished the Stormlight Archive series. Brandon Sanderson is a genius! Already missing these characters 📚",
+          "daysSincePosted": 3,
+          "likes": 67,
+          "comments": 12,
+          "isGreenFlag": true,
+          "isRedFlag": false,
+          "relatedInterests": ["Reading"],
+          "relatedPersonalityTraits": ["Creative", "Introverted"],
+          "relatedLifestyleTraits": ["Homebody"]
+        },
+        {
+          "postType": "Photo",
+          "content": "Finally hit Diamond rank! Only took me 300 hours 🎮",
+          "daysSincePosted": 7,
+          "likes": 134,
+          "comments": 29,
+          "isGreenFlag": false,
+          "isRedFlag": false,
+          "relatedInterests": ["Gaming"],
+          "relatedPersonalityTraits": ["Reliable", "Analytical"],
+          "relatedLifestyleTraits": ["NightOwl", "Homebody"]
+        },
+        {
+          "postType": "TextOnly",
+          "content": "Can't stand people who are always late. Respect other people's time ffs",
+          "daysSincePosted": 14,
+          "likes": 203,
+          "comments": 45,
+          "isGreenFlag": false,
+          "isRedFlag": true,
+          "relatedInterests": [],
+          "relatedPersonalityTraits": ["Reliable"],
+          "relatedLifestyleTraits": []
+        }
+      ]
+    },
+    {
+      "assetName": "JamieRodriguez",
+      "characterName": "Jamie Rodriguez",
+      "gender": "Male",
+      "age": 28,
+      "bio": "Artist and dog dad to the world's best golden retriever. Spend my weekends at galleries or dog parks. Big personality, bigger heart.",
+      "archetype": "Creative",
+      "personalityTraits": ["Outgoing", "Creative", "Empathetic", "Humorous"],
+      "interests": ["Art", "Hiking", "Cooking", "Music", "Theater"],
+      "lifestyleTraits": ["SocialButterfly", "FitnessFocused", "Spontaneous"],
+      "randomPostCount": 5,
+      "randomPostTagFilter": [],
+      "guaranteedPosts": [
+        {
+          "postType": "Photo",
+          "content": "My baby Milo being absolutely perfect as usual 🐕💕",
+          "daysSincePosted": 1,
+          "likes": 312,
+          "comments": 47,
+          "isGreenFlag": true,
+          "isRedFlag": false,
+          "relatedInterests": [],
+          "relatedPersonalityTraits": ["Empathetic", "Humorous"],
+          "relatedLifestyleTraits": []
+        },
+        {
+          "postType": "Photo",
+          "content": "Finished this piece after 40 hours of work. Mixed media portrait study 🎨",
+          "daysSincePosted": 4,
+          "likes": 289,
+          "comments": 38,
+          "isGreenFlag": true,
+          "isRedFlag": false,
+          "relatedInterests": ["Art"],
+          "relatedPersonalityTraits": ["Creative"],
+          "relatedLifestyleTraits": []
+        },
+        {
+          "postType": "TextOnly",
+          "content": "People need to wake up and see what's really happening. Do your own research.",
+          "daysSincePosted": 7,
+          "likes": 12,
+          "comments": 67,
+          "isGreenFlag": false,
+          "isRedFlag": true,
+          "relatedInterests": [],
+          "relatedPersonalityTraits": ["Controversial"],
+          "relatedLifestyleTraits": []
+        }
+      ]
+    },
+    {
+      "assetName": "MarcusThompson",
+      "characterName": "Marcus Thompson",
+      "gender": "Male",
+      "age": 32,
+      "bio": "Data analyst with a passion for solving puzzles. Early mornings at the gym, evenings with a good documentary. Looking for someone who appreciates both ambition and downtime.",
+      "archetype": "Career_Focused",
+      "personalityTraits": ["Analytical", "Ambitious", "Reliable", "Patient"],
+      "interests": ["Fitness", "Reading", "Movies", "Podcasts"],
+      "lifestyleTraits": ["EarlyRiser", "Career_Driven", "Health_Conscious"],
+      "randomPostCount": 5,
+      "randomPostTagFilter": [],
+      "guaranteedPosts": [
+        {
+          "postType": "Photo",
+          "content": "New PR on deadlifts this morning! Consistency pays off 💪",
+          "daysSincePosted": 1,
+          "likes": 143,
+          "comments": 21,
+          "isGreenFlag": true,
+          "isRedFlag": false,
+          "relatedInterests": ["Fitness"],
+          "relatedPersonalityTraits": ["Ambitious", "Reliable"],
+          "relatedLifestyleTraits": ["EarlyRiser", "Health_Conscious"]
+        },
+        {
+          "postType": "Photo",
+          "content": "Just closed the biggest project of my career. Time to celebrate with the team! 🥂",
+          "daysSincePosted": 6,
+          "likes": 201,
+          "comments": 34,
+          "isGreenFlag": true,
+          "isRedFlag": false,
+          "relatedInterests": [],
+          "relatedPersonalityTraits": ["Ambitious", "Analytical"],
+          "relatedLifestyleTraits": ["Career_Driven"]
+        }
+      ]
+    },
+    {
+      "assetName": "RileyParker",
+      "characterName": "Riley Parker",
+      "gender": "Female",
+      "age": 27,
+      "bio": "Travel blogger and volunteer coordinator. Life's too short for routines! Always booking the next flight or finding the next cause. Let's make a difference together.",
+      "archetype": "Free_Spirit",
+      "personalityTraits": ["Adventurous", "Empathetic", "Humorous", "Patient"],
+      "interests": ["Travel", "Volunteering", "Photography", "Music", "Writing"],
+      "lifestyleTraits": ["Spontaneous", "Eco_Friendly", "SocialButterfly"],
+      "randomPostCount": 5,
+      "randomPostTagFilter": [],
+      "guaranteedPosts": [
+        {
+          "postType": "Photo",
+          "content": "Spent the day at the animal shelter and met this sweet girl. How do people not adopt them all?? 🐶❤️",
+          "daysSincePosted": 2,
+          "likes": 428,
+          "comments": 52,
+          "isGreenFlag": true,
+          "isRedFlag": false,
+          "relatedInterests": ["Volunteering"],
+          "relatedPersonalityTraits": ["Empathetic", "Patient"],
+          "relatedLifestyleTraits": ["Eco_Friendly"]
+        },
+        {
+          "postType": "Photo",
+          "content": "Sunset in Santorini hits different ✨ Already planning where to go next!",
+          "daysSincePosted": 9,
+          "likes": 567,
+          "comments": 89,
+          "isGreenFlag": true,
+          "isRedFlag": false,
+          "relatedInterests": ["Travel", "Photography"],
+          "relatedPersonalityTraits": ["Adventurous"],
+          "relatedLifestyleTraits": ["Spontaneous"]
+        },
+        {
+          "postType": "TextOnly",
+          "content": "If you're not vegan you're literally destroying the planet but go off I guess 🌱",
+          "daysSincePosted": 12,
+          "likes": 34,
+          "comments": 127,
+          "isGreenFlag": false,
+          "isRedFlag": true,
+          "relatedInterests": [],
+          "relatedPersonalityTraits": ["Controversial"],
+          "relatedLifestyleTraits": ["Eco_Friendly"]
+        }
+      ]
+    },
+    {
+      "assetName": "PriyaSharma",
+      "characterName": "Priya Sharma",
+      "gender": "Female",
+      "age": 29,
+      "bio": "Yoga instructor and wellness coach. Starting each day with gratitude and intention. Believer in balance, mindfulness, and positive energy.",
+      "archetype": "Free_Spirit",
+      "personalityTraits": ["Optimistic", "Patient", "Empathetic", "Thoughtful"],
+      "interests": ["Yoga", "Meditation", "Gardening", "Cooking", "Baking"],
+      "lifestyleTraits": ["EarlyRiser", "Health_Conscious", "Eco_Friendly"],
+      "randomPostCount": 5,
+      "randomPostTagFilter": [],
+      "guaranteedPosts": [
+        {
+          "postType": "Photo",
+          "content": "Morning practice overlooking the ocean. Grateful for these peaceful moments 🧘‍♀️☀️",
+          "daysSincePosted": 1,
+          "likes": 312,
+          "comments": 45,
+          "isGreenFlag": true,
+          "isRedFlag": false,
+          "relatedInterests": ["Yoga", "Meditation"],
+          "relatedPersonalityTraits": ["Optimistic", "Patient"],
+          "relatedLifestyleTraits": ["EarlyRiser", "Health_Conscious"]
+        }
+      ]
+    },
+    {
+      "assetName": "DerekWilliams",
+      "characterName": "Derek Williams",
+      "gender": "Male",
+      "age": 30,
+      "bio": "Former college athlete, now weekend warrior. Love the thrill of competition and pushing limits. Looking for a partner who's up for adventure and doesn't mind getting a little competitive.",
+      "archetype": "Athletic",
+      "personalityTraits": ["Competitive", "Ambitious", "Outgoing", "Optimistic"],
+      "interests": ["Sports", "Cycling", "Running", "Fitness", "Travel"],
+      "lifestyleTraits": ["EarlyRiser", "FitnessFocused", "SocialButterfly"],
+      "randomPostCount": 5,
+      "randomPostTagFilter": [],
+      "guaranteedPosts": [
+        {
+          "postType": "Photo",
+          "content": "First place at the city triathlon! All those 5am training sessions paid off 🏆",
+          "daysSincePosted": 3,
+          "likes": 534,
+          "comments": 67,
+          "isGreenFlag": true,
+          "isRedFlag": false,
+          "relatedInterests": ["Running", "Cycling", "Fitness"],
+          "relatedPersonalityTraits": ["Competitive", "Ambitious"],
+          "relatedLifestyleTraits": ["EarlyRiser", "FitnessFocused"]
+        },
+        {
+          "postType": "TextOnly",
+          "content": "Second place is just first loser. If you're not trying to win, why even show up? 🥇",
+          "daysSincePosted": 8,
+          "likes": 67,
+          "comments": 143,
+          "isGreenFlag": false,
+          "isRedFlag": true,
+          "relatedInterests": [],
+          "relatedPersonalityTraits": ["Competitive"],
+          "relatedLifestyleTraits": []
+        }
+      ]
+    },
+    {
+      "assetName": "LunaMartinez",
+      "characterName": "Luna Martinez",
+      "gender": "Female",
+      "age": 31,
+      "bio": "Art curator and gallery owner. Spend my days surrounded by beauty and creativity. Thoughtful conversations over coffee are my love language.",
+      "archetype": "Creative",
+      "personalityTraits": ["Creative", "Thoughtful", "Introverted", "Empathetic"],
+      "interests": ["Art", "Photography", "Theater", "Reading", "WineTasting", "Fashion"],
+      "lifestyleTraits": ["Minimalist", "Career_Driven", "SocialButterfly"],
+      "randomPostCount": 5,
+      "randomPostTagFilter": [],
+      "guaranteedPosts": [
+        {
+          "postType": "Photo",
+          "content": "Opening night of our new contemporary exhibit. So proud of these emerging artists 🎨✨",
+          "daysSincePosted": 2,
+          "likes": 412,
+          "comments": 56,
+          "isGreenFlag": true,
+          "isRedFlag": false,
+          "relatedInterests": ["Art"],
+          "relatedPersonalityTraits": ["Creative", "Thoughtful"],
+          "relatedLifestyleTraits": ["Career_Driven"]
+        },
+        {
+          "postType": "Photo",
+          "content": "Found this incredible vintage piece at the flea market. The details! 😍",
+          "daysSincePosted": 5,
+          "likes": 234,
+          "comments": 32,
+          "isGreenFlag": true,
+          "isRedFlag": false,
+          "relatedInterests": ["Art", "Fashion"],
+          "relatedPersonalityTraits": ["Creative"],
+          "relatedLifestyleTraits": ["Minimalist"]
+        },
+        {
+          "postType": "Photo",
+          "content": "Wine and cheese night with the best company 🍷🧀",
+          "daysSincePosted": 9,
+          "likes": 187,
+          "comments": 28,
+          "isGreenFlag": true,
+          "isRedFlag": false,
+          "relatedInterests": ["WineTasting"],
+          "relatedPersonalityTraits": ["Thoughtful"],
+          "relatedLifestyleTraits": ["SocialButterfly"]
+        },
+        {
+          "postType": "TextOnly",
+          "content": "If you don't understand contemporary art, that says more about you than the art tbh",
+          "daysSincePosted": 15,
+          "likes": 45,
+          "comments": 98,
+          "isGreenFlag": false,
+          "isRedFlag": true,
+          "relatedInterests": ["Art"],
+          "relatedPersonalityTraits": [],
+          "relatedLifestyleTraits": []
+        }
+      ]
+    },
+    {
+      "assetName": "JordanLee",
+      "characterName": "Jordan Lee",
+      "gender": "Non-binary",
+      "age": 26,
+      "bio": "Podcast host and coffee connoisseur. Asking the big questions and the small ones. Live music, deep dives, and spontaneous road trips are my thing.",
+      "archetype": "Quirky",
+      "personalityTraits": ["Laid_Back", "Humorous", "Creative", "Thoughtful"],
+      "interests": ["Podcasts", "Music", "WineTasting", "BoardGames", "Movies", "Writing"],
+      "lifestyleTraits": ["NightOwl", "Spontaneous", "SocialButterfly"],
+      "randomPostCount": 5,
+      "randomPostTagFilter": [],
+      "guaranteedPosts": [
+        {
+          "postType": "Photo",
+          "content": "Latest episode is live! Had the most fascinating conversation about dream interpretation 🎙️",
+          "daysSincePosted": 1,
+          "likes": 298,
+          "comments": 41,
+          "isGreenFlag": true,
+          "isRedFlag": false,
+          "relatedInterests": ["Podcasts", "Writing"],
+          "relatedPersonalityTraits": ["Creative", "Thoughtful"],
+          "relatedLifestyleTraits": ["Career_Driven"]
+        },
+        {
+          "postType": "Photo",
+          "content": "Impromptu road trip to see this band I've never heard of. Sometimes the best nights are unplanned 🎸",
+          "daysSincePosted": 4,
+          "likes": 156,
+          "comments": 22,
+          "isGreenFlag": true,
+          "isRedFlag": false,
+          "relatedInterests": ["Music"],
+          "relatedPersonalityTraits": ["Laid_Back"],
+          "relatedLifestyleTraits": ["Spontaneous"]
+        },
+        {
+          "postType": "Photo",
+          "content": "Game night got intense. Nothing like a friendship-ending round of Catan 😂",
+          "daysSincePosted": 7,
+          "likes": 223,
+          "comments": 38,
+          "isGreenFlag": true,
+          "isRedFlag": false,
+          "relatedInterests": ["BoardGames"],
+          "relatedPersonalityTraits": ["Humorous"],
+          "relatedLifestyleTraits": ["SocialButterfly"]
+        },
+        {
+          "postType": "Photo",
+          "content": "New coffee setup. Yes, I'm that person now ☕️",
+          "daysSincePosted": 10,
+          "likes": 167,
+          "comments": 29,
+          "isGreenFlag": false,
+          "isRedFlag": false,
+          "relatedInterests": [],
+          "relatedPersonalityTraits": ["Laid_Back"],
+          "relatedLifestyleTraits": []
+        },
+        {
+          "postType": "TextOnly",
+          "content": "Hot take: pineapple on pizza is actually good and you're just a coward",
+          "daysSincePosted": 14,
+          "likes": 89,
+          "comments": 156,
+          "isGreenFlag": false,
+          "isRedFlag": false,
+          "relatedInterests": [],
+          "relatedPersonalityTraits": ["Humorous", "Controversial"],
+          "relatedLifestyleTraits": []
+        }
+      ]
+    },
+    {
+      "assetName": "TaylorKim",
+      "gender": "Female",
+      "characterName": "Taylor Kim",
+      "age": 25,
+      "bio": "Activist, organizer, and loud voice for change. If you're not using your privilege to help others, we won't get along. No moderates, no fence-sitters.",
+      "archetype": "Free_Spirit",
+      "personalityTraits": ["Controversial", "Ambitious", "Empathetic", "Outgoing"],
+      "interests": ["Writing", "Podcasts", "Volunteering", "Art"],
+      "lifestyleTraits": ["Spontaneous", "Eco_Friendly", "SocialButterfly"],
+      "randomPostCount": 5,
+      "randomPostTagFilter": [],
+      "guaranteedPosts": [
+        {
+          "postType": "Photo",
+          "content": "200 people showed up to the protest today! This is what real change looks like ✊",
+          "daysSincePosted": 2,
+          "likes": 892,
+          "comments": 134,
+          "isGreenFlag": true,
+          "isRedFlag": false,
+          "relatedInterests": ["Volunteering"],
+          "relatedPersonalityTraits": ["Ambitious", "Empathetic"],
+          "relatedLifestyleTraits": ["SocialButterfly"]
+        },
+        {
+          "postType": "TextOnly",
+          "content": "If you're still shopping at Amazon in 2026 you're part of the problem. No excuses.",
+          "daysSincePosted": 6,
+          "likes": 234,
+          "comments": 567,
+          "isGreenFlag": false,
+          "isRedFlag": true,
+          "relatedInterests": [],
+          "relatedPersonalityTraits": ["Controversial"],
+          "relatedLifestyleTraits": ["Eco_Friendly"]
+        },
+        {
+          "postType": "TextOnly",
+          "content": "Centrists are just cowards who are too afraid to pick a side. Change my mind.",
+          "daysSincePosted": 11,
+          "likes": 156,
+          "comments": 423,
+          "isGreenFlag": false,
+          "isRedFlag": true,
+          "relatedInterests": [],
+          "relatedPersonalityTraits": ["Controversial"],
+          "relatedLifestyleTraits": []
+        }
+      ]
+    }
+  ]
+}

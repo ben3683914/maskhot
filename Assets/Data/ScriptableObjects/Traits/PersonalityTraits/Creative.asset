@@ -20,4 +20,6 @@ MonoBehaviour:
   complementaryTraits:
   - {fileID: 11400000, guid: d190f5e3f3484c74198778d3a4b45b31, type: 2}
   - {fileID: 11400000, guid: 562b1aa7863afa0428f9129534c9a302, type: 2}
+  - {fileID: 11400000, guid: 5a7d3b597a79a4747a62b10a8ed5ff62, type: 2}
+  - {fileID: 11400000, guid: 4a7d6055b3a95e240b42334fc4370b51, type: 2}
   matchWeight: 7

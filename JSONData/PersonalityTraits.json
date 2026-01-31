@@ -1,0 +1,139 @@
+{
+  "personalityTraits": [
+    {
+      "assetName": "Outgoing",
+      "displayName": "Outgoing",
+      "description": "Energetic and social; enjoys meeting new people",
+      "isPositive": true,
+      "matchWeight": 7,
+      "oppositeTraits": ["Introverted"],
+      "complementaryTraits": ["Adventurous", "Reliable", "Humorous"]
+    },
+    {
+      "assetName": "Introverted",
+      "displayName": "Introverted",
+      "description": "Prefers quiet time and smaller gatherings",
+      "isPositive": true,
+      "matchWeight": 6,
+      "oppositeTraits": ["Outgoing"],
+      "complementaryTraits": ["Creative", "Reliable", "Analytical"]
+    },
+    {
+      "assetName": "Adventurous",
+      "displayName": "Adventurous",
+      "description": "Loves trying new things and taking risks",
+      "isPositive": true,
+      "matchWeight": 8,
+      "oppositeTraits": ["Laid_Back"],
+      "complementaryTraits": ["Creative", "Outgoing", "Ambitious"]
+    },
+    {
+      "assetName": "Creative",
+      "displayName": "Creative",
+      "description": "Artistic and thinks outside the box",
+      "isPositive": true,
+      "matchWeight": 7,
+      "oppositeTraits": [],
+      "complementaryTraits": ["Adventurous", "Introverted", "Patient", "Thoughtful"]
+    },
+    {
+      "assetName": "Reliable",
+      "displayName": "Reliable",
+      "description": "Dependable and follows through on commitments",
+      "isPositive": true,
+      "matchWeight": 8,
+      "oppositeTraits": [],
+      "complementaryTraits": ["Outgoing", "Introverted", "Patient"]
+    },
+    {
+      "assetName": "Empathetic",
+      "displayName": "Empathetic",
+      "description": "Deeply understanding and sensitive to others' feelings",
+      "isPositive": true,
+      "matchWeight": 8,
+      "oppositeTraits": [],
+      "complementaryTraits": ["Patient", "Creative", "Humorous", "Thoughtful"]
+    },
+    {
+      "assetName": "Analytical",
+      "displayName": "Analytical",
+      "description": "Logical thinker who enjoys problem-solving",
+      "isPositive": true,
+      "matchWeight": 7,
+      "oppositeTraits": [],
+      "complementaryTraits": ["Introverted", "Ambitious", "Reliable", "Thoughtful"]
+    },
+    {
+      "assetName": "Humorous",
+      "displayName": "Humorous",
+      "description": "Witty and enjoys making others laugh",
+      "isPositive": true,
+      "matchWeight": 6,
+      "oppositeTraits": [],
+      "complementaryTraits": ["Outgoing", "Empathetic", "Creative", "Laid_Back"]
+    },
+    {
+      "assetName": "Ambitious",
+      "displayName": "Ambitious",
+      "description": "Goal-oriented and driven to succeed",
+      "isPositive": true,
+      "matchWeight": 7,
+      "oppositeTraits": ["Laid_Back"],
+      "complementaryTraits": ["Analytical", "Adventurous", "Reliable", "Competitive"]
+    },
+    {
+      "assetName": "Patient",
+      "displayName": "Patient",
+      "description": "Calm and understanding in difficult situations",
+      "isPositive": true,
+      "matchWeight": 8,
+      "oppositeTraits": [],
+      "complementaryTraits": ["Empathetic", "Reliable", "Creative", "Thoughtful"]
+    },
+    {
+      "assetName": "Controversial",
+      "displayName": "Controversial",
+      "description": "Tends to express strong or divisive opinions publicly",
+      "isPositive": false,
+      "matchWeight": 9,
+      "oppositeTraits": ["Thoughtful"],
+      "complementaryTraits": []
+    },
+    {
+      "assetName": "Optimistic",
+      "displayName": "Optimistic",
+      "description": "Positive outlook and sees the bright side of situations",
+      "isPositive": true,
+      "matchWeight": 7,
+      "oppositeTraits": [],
+      "complementaryTraits": ["Humorous", "Empathetic", "Patient"]
+    },
+    {
+      "assetName": "Laid_Back",
+      "displayName": "Laid Back",
+      "description": "Relaxed and goes with the flow",
+      "isPositive": true,
+      "matchWeight": 6,
+      "oppositeTraits": ["Ambitious", "Adventurous"],
+      "complementaryTraits": ["Humorous", "Patient"]
+    },
+    {
+      "assetName": "Competitive",
+      "displayName": "Competitive",
+      "description": "Driven to win and excel in challenges",
+      "isPositive": true,
+      "matchWeight": 6,
+      "oppositeTraits": [],
+      "complementaryTraits": ["Ambitious", "Analytical"]
+    },
+    {
+      "assetName": "Thoughtful",
+      "displayName": "Thoughtful",
+      "description": "Considers impact on others before speaking or acting",
+      "isPositive": true,
+      "matchWeight": 8,
+      "oppositeTraits": ["Controversial"],
+      "complementaryTraits": ["Empathetic", "Patient", "Creative", "Analytical"]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76ce24461bd99e24c9862fc56b1c06d1, type: 3}
+  m_Name: Career_Driven
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Data.LifestyleTraitSO
+  displayName: Career Driven
+  icon: {fileID: 0}
+  description: Focused on professional growth and success
+  category: 4
+  matchWeight: 7
+  conflictingTraits:
+  - {fileID: 11400000, guid: ee7ad2e6a8d3b254f90217072171a75d, type: 2}
+  compatibleTraits:
+  - {fileID: 11400000, guid: b182040851b6bd54390e05870623bf49, type: 2}

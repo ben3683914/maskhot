@@ -14,11 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Data.PersonalityTraitSO
   displayName: Outgoing
   icon: {fileID: 0}
-  description: Energetic and social, enjoys meeting new people
+  description: Energetic and social; enjoys meeting new people
   isPositiveTrait: 1
   oppositeTraits:
   - {fileID: 11400000, guid: 562b1aa7863afa0428f9129534c9a302, type: 2}
   complementaryTraits:
   - {fileID: 11400000, guid: d190f5e3f3484c74198778d3a4b45b31, type: 2}
   - {fileID: 11400000, guid: 642effaf5bb81a0489bd44043dde2f0a, type: 2}
+  - {fileID: 11400000, guid: 88c44cc134cd1ac42a60298a857c1561, type: 2}
   matchWeight: 7
