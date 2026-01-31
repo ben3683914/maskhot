@@ -1,0 +1,114 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08edf020511e9f74d84b9a788aae5406, type: 3}
+  m_Name: JordanLee
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Data.CandidateProfileSO
+  profile:
+    characterName: Jordan Lee
+    gender: 2
+    age: 26
+    profilePicture: {fileID: 0}
+    bio: Podcast host and coffee connoisseur. Asking the big questions and the small
+      ones. Live music, deep dives, and spontaneous road trips are my thing.
+    personalityTraits:
+    - {fileID: 11400000, guid: 86b4e0b28e987944190fc2f795410b4e, type: 2}
+    - {fileID: 11400000, guid: 18fd32293919b2c4986f66754928b376, type: 2}
+    - {fileID: 11400000, guid: 9e70c1a25819e444d8aa319c37760e7d, type: 2}
+    - {fileID: 11400000, guid: bebb43b5ed920104181a9c95bd5f5d45, type: 2}
+    interests:
+    - {fileID: 11400000, guid: 5ea56d809197cb847a0e6015619ddf84, type: 2}
+    - {fileID: 11400000, guid: 4a001a0bf9bb48a47a7376be3ea27e37, type: 2}
+    - {fileID: 11400000, guid: 37a576e4a983f3e489540df3d8ce9c81, type: 2}
+    - {fileID: 11400000, guid: 1fcfef9d0ea99604396fec8b46245f7a, type: 2}
+    - {fileID: 11400000, guid: 21a9d848f42791a4eb0eb111fb257885, type: 2}
+    - {fileID: 11400000, guid: f6d4ac6d28c31c148aca6adf8f154d23, type: 2}
+    lifestyleTraits:
+    - {fileID: 11400000, guid: 4b3d86fcfc1a0594c9fc9236ca30c8c0, type: 2}
+    - {fileID: 11400000, guid: 49b97bdeadcdfc9488a595fa22857bcb, type: 2}
+    - {fileID: 11400000, guid: 3299116f3eae71e4fa977c35dd44a4fb, type: 2}
+    archetype: 9
+  guaranteedPosts:
+  - postType: 0
+    content: "Latest episode is live! Had the most fascinating conversation about
+      dream interpretation \U0001F399\uFE0F"
+    postImage: {fileID: 0}
+    daysSincePosted: 1
+    likes: 298
+    comments: 41
+    relatedInterests:
+    - {fileID: 11400000, guid: 5ea56d809197cb847a0e6015619ddf84, type: 2}
+    - {fileID: 11400000, guid: f6d4ac6d28c31c148aca6adf8f154d23, type: 2}
+    relatedPersonalityTraits:
+    - {fileID: 11400000, guid: 9e70c1a25819e444d8aa319c37760e7d, type: 2}
+    - {fileID: 11400000, guid: bebb43b5ed920104181a9c95bd5f5d45, type: 2}
+    relatedLifestyleTraits:
+    - {fileID: 11400000, guid: 73e89c8c61ae219459b508cb01b43678, type: 2}
+    isRedFlag: 0
+    isGreenFlag: 1
+  - postType: 0
+    content: "Impromptu road trip to see this band I've never heard of. Sometimes
+      the best nights are unplanned \U0001F3B8"
+    postImage: {fileID: 0}
+    daysSincePosted: 4
+    likes: 156
+    comments: 22
+    relatedInterests:
+    - {fileID: 11400000, guid: 4a001a0bf9bb48a47a7376be3ea27e37, type: 2}
+    relatedPersonalityTraits:
+    - {fileID: 11400000, guid: 86b4e0b28e987944190fc2f795410b4e, type: 2}
+    relatedLifestyleTraits:
+    - {fileID: 11400000, guid: 49b97bdeadcdfc9488a595fa22857bcb, type: 2}
+    isRedFlag: 0
+    isGreenFlag: 1
+  - postType: 0
+    content: "Game night got intense. Nothing like a friendship-ending round of Catan
+      \U0001F602"
+    postImage: {fileID: 0}
+    daysSincePosted: 7
+    likes: 223
+    comments: 38
+    relatedInterests:
+    - {fileID: 11400000, guid: 1fcfef9d0ea99604396fec8b46245f7a, type: 2}
+    relatedPersonalityTraits:
+    - {fileID: 11400000, guid: 18fd32293919b2c4986f66754928b376, type: 2}
+    relatedLifestyleTraits:
+    - {fileID: 11400000, guid: 3299116f3eae71e4fa977c35dd44a4fb, type: 2}
+    isRedFlag: 0
+    isGreenFlag: 1
+  - postType: 0
+    content: "New coffee setup. Yes, I'm that person now \u2615\uFE0F"
+    postImage: {fileID: 0}
+    daysSincePosted: 10
+    likes: 167
+    comments: 29
+    relatedInterests: []
+    relatedPersonalityTraits:
+    - {fileID: 11400000, guid: 86b4e0b28e987944190fc2f795410b4e, type: 2}
+    relatedLifestyleTraits: []
+    isRedFlag: 0
+    isGreenFlag: 0
+  - postType: 1
+    content: 'Hot take: pineapple on pizza is actually good and you''re just a coward'
+    postImage: {fileID: 0}
+    daysSincePosted: 14
+    likes: 89
+    comments: 156
+    relatedInterests: []
+    relatedPersonalityTraits:
+    - {fileID: 11400000, guid: 18fd32293919b2c4986f66754928b376, type: 2}
+    - {fileID: 11400000, guid: 01a00d9749bb45a47b61c2182027ea65, type: 2}
+    relatedLifestyleTraits: []
+    isRedFlag: 0
+    isGreenFlag: 0
+  randomPostCount: 5
+  randomPostTagFilter: []
+  profileId: 

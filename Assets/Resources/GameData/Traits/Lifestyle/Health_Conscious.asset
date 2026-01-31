@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76ce24461bd99e24c9862fc56b1c06d1, type: 3}
+  m_Name: Health_Conscious
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Data.LifestyleTraitSO
+  displayName: Health Conscious
+  icon: {fileID: 0}
+  description: Mindful about nutrition and wellness
+  category: 5
+  matchWeight: 7
+  conflictingTraits: []
+  compatibleTraits:
+  - {fileID: 11400000, guid: 342cd702356f32b48a79c13a52a69490, type: 2}
+  - {fileID: 11400000, guid: a1b0728d6c19eb9449dd02e607eb34b7, type: 2}

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23c98352382c42c4c9c8aa962f49f315, type: 3}
+  m_Name: Thoughtful
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Data.PersonalityTraitSO
+  displayName: Thoughtful
+  icon: {fileID: 0}
+  description: Considers impact on others before speaking or acting
+  isPositiveTrait: 1
+  oppositeTraits:
+  - {fileID: 11400000, guid: 01a00d9749bb45a47b61c2182027ea65, type: 2}
+  complementaryTraits:
+  - {fileID: 11400000, guid: 02a072ab57d4c64429be20475430d3a8, type: 2}
+  - {fileID: 11400000, guid: 1a7c009c92f7bdf4688b1b22d357d039, type: 2}
+  - {fileID: 11400000, guid: 9e70c1a25819e444d8aa319c37760e7d, type: 2}
+  - {fileID: 11400000, guid: 67f8b8ae5499b5f4bb0f2f57f70bd637, type: 2}
+  matchWeight: 8

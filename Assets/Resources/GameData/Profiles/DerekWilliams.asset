@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08edf020511e9f74d84b9a788aae5406, type: 3}
+  m_Name: DerekWilliams
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Data.CandidateProfileSO
+  profile:
+    characterName: Derek Williams
+    gender: 0
+    age: 30
+    profilePicture: {fileID: 0}
+    bio: Former college athlete, now weekend warrior. Love the thrill of competition
+      and pushing limits. Looking for a partner who's up for adventure and doesn't
+      mind getting a little competitive.
+    personalityTraits:
+    - {fileID: 11400000, guid: 60cbe689988bcf242a8f61099738cba9, type: 2}
+    - {fileID: 11400000, guid: 42bbda8e3f71da248b20a1cf0f02f80a, type: 2}
+    - {fileID: 11400000, guid: 9b30e02595d294442bd276eb38a32a68, type: 2}
+    - {fileID: 11400000, guid: dbf34b8d6de69374e908d103dce99883, type: 2}
+    interests:
+    - {fileID: 11400000, guid: 6686e9c7f53c29f44a9666ff8bed2627, type: 2}
+    - {fileID: 11400000, guid: e36909fe7981ecb4280769fe433427ff, type: 2}
+    - {fileID: 11400000, guid: 189a100c8b4d9d14fa14e5df302b023b, type: 2}
+    - {fileID: 11400000, guid: 23f291fb352447843a2ec97825270f75, type: 2}
+    - {fileID: 11400000, guid: 4e5b5ec27d252e24690ad9a740ebaa98, type: 2}
+    lifestyleTraits:
+    - {fileID: 11400000, guid: 9edf6a408b0c574459de61d7247c1ab8, type: 2}
+    - {fileID: 11400000, guid: 342cd702356f32b48a79c13a52a69490, type: 2}
+    - {fileID: 11400000, guid: 3299116f3eae71e4fa977c35dd44a4fb, type: 2}
+    archetype: 3
+  guaranteedPosts:
+  - postType: 0
+    content: "First place at the city triathlon! All those 5am training sessions
+      paid off \U0001F3C6"
+    postImage: {fileID: 0}
+    daysSincePosted: 3
+    likes: 534
+    comments: 67
+    relatedInterests:
+    - {fileID: 11400000, guid: 189a100c8b4d9d14fa14e5df302b023b, type: 2}
+    - {fileID: 11400000, guid: e36909fe7981ecb4280769fe433427ff, type: 2}
+    - {fileID: 11400000, guid: 23f291fb352447843a2ec97825270f75, type: 2}
+    relatedPersonalityTraits:
+    - {fileID: 11400000, guid: 60cbe689988bcf242a8f61099738cba9, type: 2}
+    - {fileID: 11400000, guid: 42bbda8e3f71da248b20a1cf0f02f80a, type: 2}
+    relatedLifestyleTraits:
+    - {fileID: 11400000, guid: 9edf6a408b0c574459de61d7247c1ab8, type: 2}
+    - {fileID: 11400000, guid: 342cd702356f32b48a79c13a52a69490, type: 2}
+    isRedFlag: 0
+    isGreenFlag: 1
+  - postType: 1
+    content: "Second place is just first loser. If you're not trying to win, why
+      even show up? \U0001F947"
+    postImage: {fileID: 0}
+    daysSincePosted: 8
+    likes: 67
+    comments: 143
+    relatedInterests: []
+    relatedPersonalityTraits:
+    - {fileID: 11400000, guid: 60cbe689988bcf242a8f61099738cba9, type: 2}
+    relatedLifestyleTraits: []
+    isRedFlag: 1
+    isGreenFlag: 0
+  randomPostCount: 5
+  randomPostTagFilter: []
+  profileId: 

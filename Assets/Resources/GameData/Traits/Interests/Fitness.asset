@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17ce37a69e573e24aa4a9967b8ff9c3e, type: 3}
+  m_Name: Fitness
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Data.InterestSO
+  displayName: Fitness
+  icon: {fileID: 0}
+  description: Committed to health and exercise
+  category: 3
+  matchWeight: 7
+  relatedInterests:
+  - {fileID: 11400000, guid: 6e5007832c785dc4f8b915b8bf54851d, type: 2}
+  - {fileID: 11400000, guid: e79c808cc9dc1ee4f9610798ca5513c0, type: 2}
+  - {fileID: 11400000, guid: 189a100c8b4d9d14fa14e5df302b023b, type: 2}

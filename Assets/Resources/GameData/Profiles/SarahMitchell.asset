@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08edf020511e9f74d84b9a788aae5406, type: 3}
+  m_Name: SarahMitchell
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Data.CandidateProfileSO
+  profile:
+    characterName: Sarah Mitchell
+    gender: 1
+    age: 26
+    profilePicture: {fileID: 0}
+    bio: Coffee enthusiast and weekend hiker. Always planning my next adventure,
+      whether it's a new trail or a new recipe. Looking for someone who can keep
+      up!
+    personalityTraits:
+    - {fileID: 11400000, guid: 9b30e02595d294442bd276eb38a32a68, type: 2}
+    - {fileID: 11400000, guid: bafd4f42a73f1294b9da0f4aa7be1d9f, type: 2}
+    - {fileID: 11400000, guid: 9e70c1a25819e444d8aa319c37760e7d, type: 2}
+    - {fileID: 11400000, guid: 42bbda8e3f71da248b20a1cf0f02f80a, type: 2}
+    interests:
+    - {fileID: 11400000, guid: 6e5007832c785dc4f8b915b8bf54851d, type: 2}
+    - {fileID: 11400000, guid: afa8abb0ae95bd140aa10435d895c4b5, type: 2}
+    - {fileID: 11400000, guid: 734879b3f834b9f4ebead1897400eb19, type: 2}
+    - {fileID: 11400000, guid: ea7f0c7452498194b919333344961331, type: 2}
+    - {fileID: 11400000, guid: 189a100c8b4d9d14fa14e5df302b023b, type: 2}
+    lifestyleTraits:
+    - {fileID: 11400000, guid: 9edf6a408b0c574459de61d7247c1ab8, type: 2}
+    - {fileID: 11400000, guid: 3299116f3eae71e4fa977c35dd44a4fb, type: 2}
+    - {fileID: 11400000, guid: 342cd702356f32b48a79c13a52a69490, type: 2}
+    archetype: 0
+  guaranteedPosts:
+  - postType: 0
+    content: "Summit sunrise this morning! Nothing beats starting the day at 6000
+      feet \U0001F3D4\uFE0F"
+    postImage: {fileID: 0}
+    daysSincePosted: 2
+    likes: 247
+    comments: 18
+    relatedInterests:
+    - {fileID: 11400000, guid: 6e5007832c785dc4f8b915b8bf54851d, type: 2}
+    - {fileID: 11400000, guid: 23f291fb352447843a2ec97825270f75, type: 2}
+    - {fileID: 11400000, guid: ea7f0c7452498194b919333344961331, type: 2}
+    relatedPersonalityTraits:
+    - {fileID: 11400000, guid: bafd4f42a73f1294b9da0f4aa7be1d9f, type: 2}
+    - {fileID: 11400000, guid: 42bbda8e3f71da248b20a1cf0f02f80a, type: 2}
+    relatedLifestyleTraits:
+    - {fileID: 11400000, guid: 9edf6a408b0c574459de61d7247c1ab8, type: 2}
+    - {fileID: 11400000, guid: 342cd702356f32b48a79c13a52a69490, type: 2}
+    isRedFlag: 0
+    isGreenFlag: 1
+  - postType: 0
+    content: "Tried making homemade pasta for the first time. Messy but worth it!
+      \U0001F35D"
+    postImage: {fileID: 0}
+    daysSincePosted: 5
+    likes: 156
+    comments: 23
+    relatedInterests:
+    - {fileID: 11400000, guid: afa8abb0ae95bd140aa10435d895c4b5, type: 2}
+    relatedPersonalityTraits:
+    - {fileID: 11400000, guid: 9e70c1a25819e444d8aa319c37760e7d, type: 2}
+    relatedLifestyleTraits: []
+    isRedFlag: 0
+    isGreenFlag: 1
+  - postType: 1
+    content: "Why do people take 20 minutes to order coffee? Just pick something
+      and move on \U0001F644"
+    postImage: {fileID: 0}
+    daysSincePosted: 7
+    likes: 89
+    comments: 34
+    relatedInterests: []
+    relatedPersonalityTraits: []
+    relatedLifestyleTraits: []
+    isRedFlag: 1
+    isGreenFlag: 0
+  randomPostCount: 5
+  randomPostTagFilter: []
+  profileId: 

@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08edf020511e9f74d84b9a788aae5406, type: 3}
+  m_Name: TaylorKim
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Data.CandidateProfileSO
+  profile:
+    characterName: Taylor Kim
+    gender: 1
+    age: 25
+    profilePicture: {fileID: 0}
+    bio: Activist, organizer, and loud voice for change. If you're not using your
+      privilege to help others, we won't get along. No moderates, no fence-sitters.
+    personalityTraits:
+    - {fileID: 11400000, guid: 01a00d9749bb45a47b61c2182027ea65, type: 2}
+    - {fileID: 11400000, guid: 42bbda8e3f71da248b20a1cf0f02f80a, type: 2}
+    - {fileID: 11400000, guid: 02a072ab57d4c64429be20475430d3a8, type: 2}
+    - {fileID: 11400000, guid: 9b30e02595d294442bd276eb38a32a68, type: 2}
+    interests:
+    - {fileID: 11400000, guid: f6d4ac6d28c31c148aca6adf8f154d23, type: 2}
+    - {fileID: 11400000, guid: 5ea56d809197cb847a0e6015619ddf84, type: 2}
+    - {fileID: 11400000, guid: 9376f084032e81e4c812c05bdc3ba70a, type: 2}
+    - {fileID: 11400000, guid: 22b000627e679d94a93104d1df4b82b8, type: 2}
+    lifestyleTraits:
+    - {fileID: 11400000, guid: 49b97bdeadcdfc9488a595fa22857bcb, type: 2}
+    - {fileID: 11400000, guid: a1b0728d6c19eb9449dd02e607eb34b7, type: 2}
+    - {fileID: 11400000, guid: 3299116f3eae71e4fa977c35dd44a4fb, type: 2}
+    archetype: 7
+  guaranteedPosts:
+  - postType: 0
+    content: "200 people showed up to the protest today! This is what real change
+      looks like \u270A"
+    postImage: {fileID: 0}
+    daysSincePosted: 2
+    likes: 892
+    comments: 134
+    relatedInterests:
+    - {fileID: 11400000, guid: 9376f084032e81e4c812c05bdc3ba70a, type: 2}
+    relatedPersonalityTraits:
+    - {fileID: 11400000, guid: 42bbda8e3f71da248b20a1cf0f02f80a, type: 2}
+    - {fileID: 11400000, guid: 02a072ab57d4c64429be20475430d3a8, type: 2}
+    relatedLifestyleTraits:
+    - {fileID: 11400000, guid: 3299116f3eae71e4fa977c35dd44a4fb, type: 2}
+    isRedFlag: 0
+    isGreenFlag: 1
+  - postType: 1
+    content: If you're still shopping at Amazon in 2026 you're part of the problem.
+      No excuses.
+    postImage: {fileID: 0}
+    daysSincePosted: 6
+    likes: 234
+    comments: 567
+    relatedInterests: []
+    relatedPersonalityTraits:
+    - {fileID: 11400000, guid: 01a00d9749bb45a47b61c2182027ea65, type: 2}
+    relatedLifestyleTraits:
+    - {fileID: 11400000, guid: a1b0728d6c19eb9449dd02e607eb34b7, type: 2}
+    isRedFlag: 1
+    isGreenFlag: 0
+  - postType: 1
+    content: Centrists are just cowards who are too afraid to pick a side. Change
+      my mind.
+    postImage: {fileID: 0}
+    daysSincePosted: 11
+    likes: 156
+    comments: 423
+    relatedInterests: []
+    relatedPersonalityTraits:
+    - {fileID: 11400000, guid: 01a00d9749bb45a47b61c2182027ea65, type: 2}
+    relatedLifestyleTraits: []
+    isRedFlag: 1
+    isGreenFlag: 0
+  randomPostCount: 5
+  randomPostTagFilter: []
+  profileId: 

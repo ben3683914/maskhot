@@ -211,6 +211,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &764022256
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 764022258}
+  - component: {fileID: 764022257}
+  m_Layer: 0
+  m_Name: ProfileManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &764022257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764022256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68dc5965a101db2499234187b6385b6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Managers.ProfileManager
+--- !u!4 &764022258
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764022256}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1085720868
 GameObject:
   m_ObjectHideFlags: 0
@@ -244,7 +288,14 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9654700331092cf4eb1cafd169b0dd14, type: 2}
   - {fileID: 11400000, guid: a690b1bf014686a4ba94474659177a7e, type: 2}
   - {fileID: 11400000, guid: bd79eb145ecd8f0468f40d017655f8fe, type: 2}
-  testOnStart: 1
+  - {fileID: 11400000, guid: f1cfc6076472ffa4dabee967a3a85df2, type: 2}
+  - {fileID: 11400000, guid: fa377ebb8e595e34d8483a9411548e15, type: 2}
+  - {fileID: 11400000, guid: ceeb780152fdee6499f2692a43f9d1f5, type: 2}
+  - {fileID: 11400000, guid: 4ef6a96856056884fbdb0c1d17d7840a, type: 2}
+  - {fileID: 11400000, guid: 655e05ee18c7f714897072601b58fe58, type: 2}
+  - {fileID: 11400000, guid: cb5fc5cfc81aabf4983bcb36a9cf94df, type: 2}
+  - {fileID: 11400000, guid: 084c53d355025dd42a1a014b1de3359f, type: 2}
+  testOnStart: 0
 --- !u!4 &1085720870
 Transform:
   m_ObjectHideFlags: 0
@@ -266,3 +317,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 1085720870}
+  - {fileID: 764022258}

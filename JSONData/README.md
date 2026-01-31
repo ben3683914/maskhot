@@ -198,11 +198,13 @@ The import system will **overwrite existing assets** with the same names. If you
 **Recommendation:** Keep all data in JSON files and reimport when changes are needed.
 
 ### File Locations
-Generated assets are saved to:
-- `Assets/Data/ScriptableObjects/Traits/Interests/`
-- `Assets/Data/ScriptableObjects/Traits/PersonalityTraits/`
-- `Assets/Data/ScriptableObjects/Traits/LifestyleTraits/`
-- `Assets/Data/ScriptableObjects/Profiles/`
+Generated assets are saved to `Assets/Resources/GameData/` for runtime loading:
+- `Assets/Resources/GameData/Traits/Interests/`
+- `Assets/Resources/GameData/Traits/Personality/`
+- `Assets/Resources/GameData/Traits/Lifestyle/`
+- `Assets/Resources/GameData/Profiles/`
+
+**Note:** Assets are in the Resources folder so `ProfileManager` can auto-load them at runtime using `Resources.LoadAll<T>()`.
 
 ## Adding New Data
 
@@ -268,7 +270,9 @@ Generated assets are saved to:
 
 ## Next Steps After Import
 
-1. **Test with ProfileTester:** Attach the ProfileTester component to a GameObject and drag in your profile assets
-2. **Verify references:** Check that all trait references are properly linked in the inspector
-3. **Review generated assets:** Browse the ScriptableObjects folders to ensure everything imported correctly
-4. **Iterate:** Edit JSON files and reimport as needed to refine your data
+1. **Set up ProfileManager:** Create an empty GameObject, add the `ProfileManager` component - data loads automatically at runtime
+2. **Test with ProfileManager:** Enable `verboseLogging` on ProfileManager to see a full data dump in the console
+3. **Or use ProfileTester:** Attach the ProfileTester component to a GameObject and drag in profile assets for manual testing
+4. **Verify references:** Check that all trait references are properly linked in the inspector
+5. **Review generated assets:** Browse `Assets/Resources/GameData/` folders to ensure everything imported correctly
+6. **Iterate:** Edit JSON files and reimport as needed to refine your data

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23c98352382c42c4c9c8aa962f49f315, type: 3}
+  m_Name: Patient
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Data.PersonalityTraitSO
+  displayName: Patient
+  icon: {fileID: 0}
+  description: Calm and understanding in difficult situations
+  isPositiveTrait: 1
+  oppositeTraits: []
+  complementaryTraits:
+  - {fileID: 11400000, guid: 02a072ab57d4c64429be20475430d3a8, type: 2}
+  - {fileID: 11400000, guid: bbfddb2ad09de15419519baf65862020, type: 2}
+  - {fileID: 11400000, guid: 9e70c1a25819e444d8aa319c37760e7d, type: 2}
+  - {fileID: 11400000, guid: bebb43b5ed920104181a9c95bd5f5d45, type: 2}
+  matchWeight: 8

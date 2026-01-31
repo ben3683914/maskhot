@@ -1,6 +1,0 @@
-AssetName,DisplayName,Description,IsPositive,MatchWeight,OppositeTrait,ComplementaryTraits
-Outgoing,Outgoing,Energetic and social; enjoys meeting new people,TRUE,7,Introverted,Adventurous|Reliable
-Introverted,Introverted,Prefers quiet time and smaller gatherings,TRUE,6,Outgoing,Creative|Reliable
-Adventurous,Adventurous,Loves trying new things and taking risks,TRUE,8,,Creative|Outgoing
-Creative,Creative,Artistic and thinks outside the box,TRUE,7,,Adventurous|Introverted
-Reliable,Reliable,Dependable and follows through on commitments,TRUE,8,,Outgoing|Introverted

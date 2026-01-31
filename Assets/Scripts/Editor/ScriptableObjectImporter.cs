@@ -13,7 +13,7 @@ namespace Maskhot.Editor
 	public class ScriptableObjectImporter : EditorWindow
 	{
 		private const string JSON_DATA_PATH = "JSONData";
-		private const string ASSET_BASE_PATH = "Assets/Data/ScriptableObjects";
+		private const string ASSET_BASE_PATH = "Assets/Resources/GameData";
 
 		// Dictionaries to store created assets for reference resolution
 		private static Dictionary<string, InterestSO> interests = new Dictionary<string, InterestSO>();
@@ -67,13 +67,13 @@ namespace Maskhot.Editor
 
 		private static void CreateFolderStructure()
 		{
-			CreateFolderIfNeeded("Assets/Data");
-			CreateFolderIfNeeded("Assets/Data/ScriptableObjects");
-			CreateFolderIfNeeded("Assets/Data/ScriptableObjects/Traits");
-			CreateFolderIfNeeded("Assets/Data/ScriptableObjects/Traits/Interests");
-			CreateFolderIfNeeded("Assets/Data/ScriptableObjects/Traits/PersonalityTraits");
-			CreateFolderIfNeeded("Assets/Data/ScriptableObjects/Traits/LifestyleTraits");
-			CreateFolderIfNeeded("Assets/Data/ScriptableObjects/Profiles");
+			CreateFolderIfNeeded("Assets/Resources");
+			CreateFolderIfNeeded("Assets/Resources/GameData");
+			CreateFolderIfNeeded("Assets/Resources/GameData/Traits");
+			CreateFolderIfNeeded("Assets/Resources/GameData/Traits/Interests");
+			CreateFolderIfNeeded("Assets/Resources/GameData/Traits/Personality");
+			CreateFolderIfNeeded("Assets/Resources/GameData/Traits/Lifestyle");
+			CreateFolderIfNeeded("Assets/Resources/GameData/Profiles");
 		}
 
 		private static void CreateFolderIfNeeded(string path)
@@ -135,7 +135,7 @@ namespace Maskhot.Editor
 
 			foreach (var traitData in data.personalityTraits)
 			{
-				string assetPath = $"{ASSET_BASE_PATH}/Traits/PersonalityTraits/{traitData.assetName}.asset";
+				string assetPath = $"{ASSET_BASE_PATH}/Traits/Personality/{traitData.assetName}.asset";
 
 				PersonalityTraitSO asset = AssetDatabase.LoadAssetAtPath<PersonalityTraitSO>(assetPath);
 				if (asset == null)
@@ -170,7 +170,7 @@ namespace Maskhot.Editor
 
 			foreach (var traitData in data.lifestyleTraits)
 			{
-				string assetPath = $"{ASSET_BASE_PATH}/Traits/LifestyleTraits/{traitData.assetName}.asset";
+				string assetPath = $"{ASSET_BASE_PATH}/Traits/Lifestyle/{traitData.assetName}.asset";
 
 				LifestyleTraitSO asset = AssetDatabase.LoadAssetAtPath<LifestyleTraitSO>(assetPath);
 				if (asset == null)

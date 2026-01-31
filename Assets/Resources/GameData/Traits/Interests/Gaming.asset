@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17ce37a69e573e24aa4a9967b8ff9c3e, type: 3}
+  m_Name: Gaming
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Data.InterestSO
+  displayName: Gaming
+  icon: {fileID: 0}
+  description: Enjoys video games and streaming
+  category: 6
+  matchWeight: 5
+  relatedInterests:
+  - {fileID: 11400000, guid: 734879b3f834b9f4ebead1897400eb19, type: 2}
+  - {fileID: 11400000, guid: 1fcfef9d0ea99604396fec8b46245f7a, type: 2}

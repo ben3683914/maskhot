@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08edf020511e9f74d84b9a788aae5406, type: 3}
+  m_Name: RileyParker
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Data.CandidateProfileSO
+  profile:
+    characterName: Riley Parker
+    gender: 1
+    age: 27
+    profilePicture: {fileID: 0}
+    bio: Travel blogger and volunteer coordinator. Life's too short for routines!
+      Always booking the next flight or finding the next cause. Let's make a difference
+      together.
+    personalityTraits:
+    - {fileID: 11400000, guid: bafd4f42a73f1294b9da0f4aa7be1d9f, type: 2}
+    - {fileID: 11400000, guid: 02a072ab57d4c64429be20475430d3a8, type: 2}
+    - {fileID: 11400000, guid: 18fd32293919b2c4986f66754928b376, type: 2}
+    - {fileID: 11400000, guid: 1a7c009c92f7bdf4688b1b22d357d039, type: 2}
+    interests:
+    - {fileID: 11400000, guid: 4e5b5ec27d252e24690ad9a740ebaa98, type: 2}
+    - {fileID: 11400000, guid: 9376f084032e81e4c812c05bdc3ba70a, type: 2}
+    - {fileID: 11400000, guid: ea7f0c7452498194b919333344961331, type: 2}
+    - {fileID: 11400000, guid: 4a001a0bf9bb48a47a7376be3ea27e37, type: 2}
+    - {fileID: 11400000, guid: f6d4ac6d28c31c148aca6adf8f154d23, type: 2}
+    lifestyleTraits:
+    - {fileID: 11400000, guid: 49b97bdeadcdfc9488a595fa22857bcb, type: 2}
+    - {fileID: 11400000, guid: a1b0728d6c19eb9449dd02e607eb34b7, type: 2}
+    - {fileID: 11400000, guid: 3299116f3eae71e4fa977c35dd44a4fb, type: 2}
+    archetype: 7
+  guaranteedPosts:
+  - postType: 0
+    content: "Spent the day at the animal shelter and met this sweet girl. How do
+      people not adopt them all?? \U0001F436\u2764\uFE0F"
+    postImage: {fileID: 0}
+    daysSincePosted: 2
+    likes: 428
+    comments: 52
+    relatedInterests:
+    - {fileID: 11400000, guid: 9376f084032e81e4c812c05bdc3ba70a, type: 2}
+    relatedPersonalityTraits:
+    - {fileID: 11400000, guid: 02a072ab57d4c64429be20475430d3a8, type: 2}
+    - {fileID: 11400000, guid: 1a7c009c92f7bdf4688b1b22d357d039, type: 2}
+    relatedLifestyleTraits:
+    - {fileID: 11400000, guid: a1b0728d6c19eb9449dd02e607eb34b7, type: 2}
+    isRedFlag: 0
+    isGreenFlag: 1
+  - postType: 0
+    content: "Sunset in Santorini hits different \u2728 Already planning where to
+      go next!"
+    postImage: {fileID: 0}
+    daysSincePosted: 9
+    likes: 567
+    comments: 89
+    relatedInterests:
+    - {fileID: 11400000, guid: 4e5b5ec27d252e24690ad9a740ebaa98, type: 2}
+    - {fileID: 11400000, guid: ea7f0c7452498194b919333344961331, type: 2}
+    relatedPersonalityTraits:
+    - {fileID: 11400000, guid: bafd4f42a73f1294b9da0f4aa7be1d9f, type: 2}
+    relatedLifestyleTraits:
+    - {fileID: 11400000, guid: 49b97bdeadcdfc9488a595fa22857bcb, type: 2}
+    isRedFlag: 0
+    isGreenFlag: 1
+  - postType: 1
+    content: "If you're not vegan you're literally destroying the planet but go off
+      I guess \U0001F331"
+    postImage: {fileID: 0}
+    daysSincePosted: 12
+    likes: 34
+    comments: 127
+    relatedInterests: []
+    relatedPersonalityTraits:
+    - {fileID: 11400000, guid: 01a00d9749bb45a47b61c2182027ea65, type: 2}
+    relatedLifestyleTraits:
+    - {fileID: 11400000, guid: a1b0728d6c19eb9449dd02e607eb34b7, type: 2}
+    isRedFlag: 1
+    isGreenFlag: 0
+  randomPostCount: 5
+  randomPostTagFilter: []
+  profileId: 

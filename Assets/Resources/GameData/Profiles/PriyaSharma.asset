@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08edf020511e9f74d84b9a788aae5406, type: 3}
+  m_Name: PriyaSharma
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Data.CandidateProfileSO
+  profile:
+    characterName: Priya Sharma
+    gender: 1
+    age: 29
+    profilePicture: {fileID: 0}
+    bio: Yoga instructor and wellness coach. Starting each day with gratitude and
+      intention. Believer in balance, mindfulness, and positive energy.
+    personalityTraits:
+    - {fileID: 11400000, guid: dbf34b8d6de69374e908d103dce99883, type: 2}
+    - {fileID: 11400000, guid: 1a7c009c92f7bdf4688b1b22d357d039, type: 2}
+    - {fileID: 11400000, guid: 02a072ab57d4c64429be20475430d3a8, type: 2}
+    - {fileID: 11400000, guid: bebb43b5ed920104181a9c95bd5f5d45, type: 2}
+    interests:
+    - {fileID: 11400000, guid: e79c808cc9dc1ee4f9610798ca5513c0, type: 2}
+    - {fileID: 11400000, guid: 3f79ad421056cfc48ba2ebe0e7818f64, type: 2}
+    - {fileID: 11400000, guid: 7b1190411ca3d8b44a16e224411a5b79, type: 2}
+    - {fileID: 11400000, guid: afa8abb0ae95bd140aa10435d895c4b5, type: 2}
+    - {fileID: 11400000, guid: 8285c94cc4b9c834ea92f514e6d1bb0c, type: 2}
+    lifestyleTraits:
+    - {fileID: 11400000, guid: 9edf6a408b0c574459de61d7247c1ab8, type: 2}
+    - {fileID: 11400000, guid: 0bb881e009979794cacd509cef7c5ddc, type: 2}
+    - {fileID: 11400000, guid: a1b0728d6c19eb9449dd02e607eb34b7, type: 2}
+    archetype: 7
+  guaranteedPosts:
+  - postType: 0
+    content: "Morning practice overlooking the ocean. Grateful for these peaceful
+      moments \U0001F9D8\u200D\u2640\uFE0F\u2600\uFE0F"
+    postImage: {fileID: 0}
+    daysSincePosted: 1
+    likes: 312
+    comments: 45
+    relatedInterests:
+    - {fileID: 11400000, guid: e79c808cc9dc1ee4f9610798ca5513c0, type: 2}
+    - {fileID: 11400000, guid: 3f79ad421056cfc48ba2ebe0e7818f64, type: 2}
+    relatedPersonalityTraits:
+    - {fileID: 11400000, guid: dbf34b8d6de69374e908d103dce99883, type: 2}
+    - {fileID: 11400000, guid: 1a7c009c92f7bdf4688b1b22d357d039, type: 2}
+    relatedLifestyleTraits:
+    - {fileID: 11400000, guid: 9edf6a408b0c574459de61d7247c1ab8, type: 2}
+    - {fileID: 11400000, guid: 0bb881e009979794cacd509cef7c5ddc, type: 2}
+    isRedFlag: 0
+    isGreenFlag: 1
+  randomPostCount: 5
+  randomPostTagFilter: []
+  profileId: 

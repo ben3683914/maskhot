@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76ce24461bd99e24c9862fc56b1c06d1, type: 3}
+  m_Name: FitnessFocused
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Data.LifestyleTraitSO
+  displayName: Fitness Focused
+  icon: {fileID: 0}
+  description: Daily workouts and healthy eating
+  category: 5
+  matchWeight: 6
+  conflictingTraits: []
+  compatibleTraits:
+  - {fileID: 11400000, guid: 9edf6a408b0c574459de61d7247c1ab8, type: 2}
+  - {fileID: 11400000, guid: 3299116f3eae71e4fa977c35dd44a4fb, type: 2}
+  - {fileID: 11400000, guid: 0bb881e009979794cacd509cef7c5ddc, type: 2}

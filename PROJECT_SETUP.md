@@ -54,22 +54,21 @@ Sprites/
 └── SocialMedia/                   - Post images, story content, photos
 ```
 
-### Data Organization
+### Data Organization (Resources Folder)
+ScriptableObjects are stored in the Resources folder for automatic runtime loading by ProfileManager:
 ```
-Data/
-└── ScriptableObjects/
-    ├── Traits/
-    │   ├── Interests/             - Interest ScriptableObjects (Hiking, Gaming, etc.)
-    │   ├── PersonalityTraits/     - Personality trait SOs (Outgoing, Creative, etc.)
-    │   └── LifestyleTraits/       - Lifestyle trait SOs (Night Owl, Homebody, etc.)
-    ├── NarrativeHints/            - Narrative hint collections (Food_Hints, Travel_Hints, etc.)
-    ├── Profiles/                  - Candidate profile ScriptableObjects
-    └── Clients/                   - Client profile ScriptableObjects
+Resources/GameData/
+├── Traits/
+│   ├── Interests/             - Interest ScriptableObjects (Hiking, Gaming, etc.)
+│   ├── Personality/           - Personality trait SOs (Outgoing, Creative, etc.)
+│   └── Lifestyle/             - Lifestyle trait SOs (Night Owl, Homebody, etc.)
+├── NarrativeHints/            - Narrative hint collections (Food_Hints, Travel_Hints, etc.)
+├── Profiles/                  - Candidate profile ScriptableObjects
+└── Clients/                   - Client profile ScriptableObjects (future)
 ```
 
 ### Other Asset Folders
 ```
-Resources/                         - Runtime-loaded assets
 Audio/
 ├── Music/
 └── SFX/
@@ -180,7 +179,11 @@ Create SO classes to hold game data:
 Game-wide state management:
 
 - **GameManager** - Overall game state, level progression, game loop
-- **ProfileManager** - Loads and provides profile data to other systems
+- **ProfileManager** (IMPLEMENTED) - Singleton that auto-loads all profiles and traits from Resources folder
+  - Auto-loads on Awake via `Resources.LoadAll<T>()`
+  - Provides lookup by name: `GetCandidateByName()`, `GetInterestByName()`, etc.
+  - Category filters: `GetInterestsByCategory()`, `GetLifestyleTraitsByCategory()`
+  - Verbose logging toggle for debugging
 - **QuestManager** - Manages current quest/criteria, validates matches
 - **MatchQueueManager** - Manages the queue of potential matches (left panel data source)
 
@@ -203,13 +206,18 @@ All game data is managed through JSON files in the **JSONData/** folder:
 ### Automated Import Workflow
 1. **Edit JSON files** in `JSONData/` folder to add/modify data
 2. **In Unity**, go to: `Tools > Maskhot > Import Data from JSON`
-3. **Confirm import** - All ScriptableObjects are created automatically with proper references
-4. **Test with ProfileTester** - Attach ProfileTester component to GameObject, drag in profiles, run tests
+3. **Confirm import** - All ScriptableObjects are created in `Assets/Resources/GameData/`
+4. **Test with ProfileManager** - Add ProfileManager to a GameObject, enable `verboseLogging`, enter Play mode
+5. **Or use ProfileTester** - Attach ProfileTester component to GameObject, drag in profiles, run tests
 
 See **JSONData/README.md** for complete documentation on JSON structure and usage.
 See **SAMPLE_DATA.md** for original reference data (now available as JSON files).
 
 ### Testing Components
+- **ProfileManager.cs** - Runtime data manager with verbose logging
+  - Enable `verboseLogging` toggle in Inspector to see full data dump
+  - Outputs all loaded profiles, traits, and their relationships
+  - Usage: Add to GameObject, enable verbose logging, enter Play mode
 - **ProfileTester.cs** - Test script to verify profile data
   - Tests multiple profiles in a single run
   - Consolidated output per profile for easy debugging
@@ -233,7 +241,7 @@ See **SAMPLE_DATA.md** for original reference data (now available as JSON files)
    - Handles enum conversions
    - Creates proper folder structure
 
-3. **Test**: Use ProfileTester component to verify imported data
+3. **Test**: Use ProfileManager (with verbose logging) or ProfileTester to verify imported data
 
 **Benefits:**
 - Version control friendly (JSON diff)
@@ -247,7 +255,7 @@ See `JSONData/README.md` for complete JSON documentation.
 ### Recommended Build Order:
 1. **Data Structures** ✓ COMPLETE - Core classes implemented
 2. **ScriptableObjects** ✓ COMPLETE - JSON import system functional
-3. **Manager Layer** - Build systems to load and manage data
+3. **Manager Layer** ⏳ IN PROGRESS - ProfileManager done, GameManager/QuestManager/MatchQueueManager remaining
 4. **Controllers** - Wire up logic for game flow
 5. **UI Integration** - Hand off to UI developer with working backend
 
@@ -302,13 +310,19 @@ See `JSONData/README.md` for complete JSON documentation.
 - **Testing Tools**:
   - ProfileTester.cs (multi-profile batch testing with consolidated output)
 - Hybrid design supporting both curated (ScriptableObject) and procedural (runtime) content
+- **Manager Layer**:
+  - ProfileManager.cs (singleton, auto-loads from Resources, verbose logging toggle)
+    - Auto-loads all profiles/traits via `Resources.LoadAll<T>()`
+    - Dictionary lookups by name for fast access
+    - Category filtering for interests and lifestyle traits
+    - Narrative hint lookup by trait reference
 
 ### ⏳ In Progress
 - None - ready for next development phase
 
 ### 📋 To Do
 - Sample client data (create a few ClientProfileSO assets for story progression)
-- Manager classes (GameManager, ProfileManager, QuestManager, MatchQueueManager)
+- Remaining manager classes (GameManager, QuestManager, MatchQueueManager)
 - Controller classes (MatchListController, SocialFeedController, DecisionController)
 - Random post selection system
 - Matching/scoring algorithm
