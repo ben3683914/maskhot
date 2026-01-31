@@ -34,19 +34,12 @@ graph TB
     CandidateSO --> Candidate
     CandidateSO --> Post
 
-    style Quest fill:#90EE90
-    style ClientSO fill:#FFD700
-    style CandidateSO fill:#FFD700
-    style Hints fill:#FFD700
-    style Interest fill:#87CEEB
-    style Personality fill:#87CEEB
-    style Lifestyle fill:#87CEEB
 ```
 
 **Legend**:
-- 🟢 Green: Runtime-generated classes
-- 🟡 Yellow: ScriptableObject wrappers
-- 🔵 Blue: Core trait ScriptableObjects
+- Quest: Runtime-generated classes
+- ScriptableObjects: Authored data (ClientSO, CandidateSO, Hints)
+- Trait SOs: Core trait ScriptableObjects (Interest, Personality, Lifestyle)
 
 ---
 
@@ -74,10 +67,6 @@ graph LR
     TraitReq -->|acceptableLifestyle| Lifestyle[LifestyleTraitSO]
     TraitReq -->|level| Level[RequirementLevel enum]
 
-    style Quest fill:#90EE90
-    style Client fill:#FFE4B5
-    style Criteria fill:#FFE4B5
-    style Hints fill:#FFD700
 ```
 
 ---
@@ -105,8 +94,6 @@ graph TB
     Client -->|interests| IT[InterestSO array]
     Client -->|lifestyleTraits| LT[LifestyleTraitSO array]
 
-    style ClientSO fill:#FFD700
-    style Client fill:#FFE4B5
 ```
 
 ---
@@ -145,9 +132,6 @@ graph TB
     Post -->|relatedPersonalityTraits| PostPT[PersonalityTraitSO array]
     Post -->|relatedLifestyleTraits| PostLT[LifestyleTraitSO array]
 
-    style CandidateSO fill:#FFD700
-    style Candidate fill:#FFE4B5
-    style Post fill:#FFE4B5
 ```
 
 ---
@@ -185,9 +169,6 @@ graph TB
     Lifestyle -->|conflictingTraits| Conflict[LifestyleTraitSO array]
     Lifestyle -->|compatibleTraits| Compatible[LifestyleTraitSO array]
 
-    style Interest fill:#87CEEB
-    style Personality fill:#87CEEB
-    style Lifestyle fill:#87CEEB
 ```
 
 ---
@@ -206,8 +187,6 @@ graph TB
 
     TraitReq[TraitRequirement] -.->|references| Hints
 
-    style Hints fill:#FFD700
-    style TraitReq fill:#FFE4B5
 ```
 
 **Note**: NarrativeHintCollectionSO provides the abstract, player-facing text ("enjoys fine cuisine") while the backend trait references provide the concrete matching logic.
@@ -251,8 +230,6 @@ graph TB
         Criteria -->|lifestyleWeight| LW[float 0-1]
     end
 
-    style Criteria fill:#FFE4B5
-    style Hints fill:#FFD700
 ```
 
 ---
@@ -342,9 +319,6 @@ graph TB
     Personality --> Hints
     Lifestyle --> Hints
 
-    style Interest fill:#87CEEB
-    style Personality fill:#87CEEB
-    style Lifestyle fill:#87CEEB
 ```
 
 **Key Insight**: Trait ScriptableObjects are the central hub - they're referenced by almost every other system. This allows for:
@@ -386,11 +360,6 @@ graph TB
 
     CandidateSO -->|Always used| Gameplay[Gameplay System]
 
-    style ClientSO fill:#FFD700
-    style CandidateSO fill:#FFD700
-    style HintsSO fill:#FFD700
-    style TraitSO fill:#87CEEB
-    style Quest fill:#90EE90
 ```
 
 **Design Philosophy**:
