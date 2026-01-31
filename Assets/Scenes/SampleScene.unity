@@ -240,7 +240,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e046421e3ad2d24683d472945483b81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Maskhot.ProfileTester
-  testProfile: {fileID: 11400000, guid: bd79eb145ecd8f0468f40d017655f8fe, type: 2}
+  testProfiles:
+  - {fileID: 11400000, guid: 9654700331092cf4eb1cafd169b0dd14, type: 2}
+  - {fileID: 11400000, guid: a690b1bf014686a4ba94474659177a7e, type: 2}
+  - {fileID: 11400000, guid: bd79eb145ecd8f0468f40d017655f8fe, type: 2}
   testOnStart: 1
 --- !u!4 &1085720870
 Transform:
