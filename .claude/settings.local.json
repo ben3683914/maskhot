@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(tree:*)",
+      "Bash(find Assets -type d -empty -exec sh -c 'echo \"\"\"\" > \"\"{}/.gitkeep\"\"' ;)"
+    ]
+  }
+}
