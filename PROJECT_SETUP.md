@@ -175,8 +175,9 @@ Create SO classes to hold game data:
 - **CandidateProfileSO** (IMPLEMENTED) - Individual candidate profiles with social media content
   - Static profile data (consistent across playthroughs)
   - Guaranteed posts (always appear)
-  - Random post settings: `randomPostMin/Max` (range for post count per session)
+  - Random post settings: `randomPostMin/Max` (range for post count per session, up to 100)
   - Social metrics: `friendsCountMin/Max` (affects engagement generation)
+  - `GetPostsForPlaythrough()` method coordinates with PostPoolManager to combine guaranteed + random posts, sorted by date
 - **ClientProfileSO** (IMPLEMENTED) - Curated client profiles (hand-crafted story characters)
   - Wraps ClientProfile data
   - Story client flag and suggested level metadata
@@ -239,6 +240,12 @@ See **SAMPLE_DATA.md** for original reference data (now available as JSON files)
   - Consolidated output per profile for easy debugging
   - Validates all trait references and post data
   - Usage: Attach to GameObject, assign profile arrays, use Context Menu "Test All Profiles"
+- **RandomPostTester.cs** - Test script for verifying random post system
+  - Tests post generation including guaranteed + random posts
+  - Consolidated StringBuilder output per candidate (collapsible in Unity console)
+  - Shows trait matching, engagement generation, and flag distribution
+  - Context Menu options: "Test Specific Candidate", "Test All Assigned Candidates", "Test All Candidates (via ProfileManager)", "Reset Post Pool"
+  - Usage: Attach to GameObject alongside ProfileManager and PostPoolManager, use Context Menu to run tests
 
 ## Development Workflow
 
@@ -326,6 +333,7 @@ See `JSONData/README.md` for complete JSON documentation.
   - SAMPLE_DATA.md reference documentation
 - **Testing Tools**:
   - ProfileTester.cs (multi-profile batch testing with consolidated output)
+  - RandomPostTester.cs (random post system verification with trait matching and engagement stats)
 - Hybrid design supporting both curated (ScriptableObject) and procedural (runtime) content
 - **Manager Layer**:
   - ProfileManager.cs (singleton, auto-loads from Resources, verbose logging toggle)

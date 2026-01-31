@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Linq;
+using Maskhot.Managers;
 
 namespace Maskhot.Data
 {
@@ -20,11 +22,11 @@ namespace Maskhot.Data
 
         [Header("Random Post Settings")]
         [Tooltip("Minimum number of random posts to add")]
-        [Range(0, 20)]
+        [Range(0, 100)]
         public int randomPostMin = 2;
 
         [Tooltip("Maximum number of random posts to add")]
-        [Range(0, 20)]
+        [Range(0, 100)]
         public int randomPostMax = 5;
 
         [Header("Social Metrics")]
@@ -49,13 +51,24 @@ namespace Maskhot.Data
 
         /// <summary>
         /// Gets all posts for this profile (guaranteed + random selection)
-        /// This will be called by the ProfileManager at runtime
+        /// Combines guaranteed posts with trait-matched random posts from the pool
+        /// Posts are sorted by daysSincePosted (most recent first)
         /// </summary>
         public List<SocialMediaPost> GetPostsForPlaythrough()
         {
-            // TODO: Implement random post selection from pool
-            // For now, just return guaranteed posts
-            return new List<SocialMediaPost>(guaranteedPosts);
+            List<SocialMediaPost> allPosts = new List<SocialMediaPost>(guaranteedPosts);
+
+            // Get random posts from the pool if PostPoolManager is available
+            if (PostPoolManager.Instance != null)
+            {
+                List<SocialMediaPost> randomPosts = PostPoolManager.Instance.GetRandomPostsForCandidate(this);
+                allPosts.AddRange(randomPosts);
+            }
+
+            // Sort by daysSincePosted (most recent first)
+            allPosts = allPosts.OrderBy(p => p.daysSincePosted).ToList();
+
+            return allPosts;
         }
     }
 }
