@@ -23,9 +23,6 @@ namespace Maskhot.Data
         public int randomPostCount = 5;
 
         [Header("Randomization Rules")]
-        [Tooltip("Categories this character can pull random posts from")]
-        public PostCategory[] allowedRandomCategories;
-
         [Tooltip("Specific tags that random posts must match (optional, leave empty for any)")]
         public string[] randomPostTagFilter;
 

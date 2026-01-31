@@ -110,7 +110,7 @@ namespace Maskhot
                 Debug.Log($"\nPost {i + 1}:");
                 Debug.Log($"  Type: {post.postType}");
                 Debug.Log($"  Content: {post.content}");
-                Debug.Log($"  Timestamp: {post.timestamp}");
+                Debug.Log($"  Days Since Posted: {post.daysSincePosted}");
                 Debug.Log($"  Engagement: {post.likes} likes, {post.comments} comments");
                 Debug.Log($"  Flags: {(post.isGreenFlag ? "Green Flag" : "")} {(post.isRedFlag ? "Red Flag" : "")}");
 

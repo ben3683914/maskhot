@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 08edf020511e9f74d84b9a788aae5406, type: 3}
-  m_Name: Sarah Mitchell
+  m_Name: SarahMitchell
   m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Data.CandidateProfileSO
   profile:
     characterName: Sarah Mitchell
@@ -38,7 +38,7 @@ MonoBehaviour:
     content: "Summit sunrise this morning! Nothing beats starting the day at 6,000
       feet \U0001F3D4\uFE0F"
     postImage: {fileID: 0}
-    timestamp: 2 days ago
+    daysSincePosted: 2
     likes: 247
     comments: 18
     relatedInterests:
@@ -51,12 +51,11 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 7cdc3411f156d5d4182b12ead0e38f57, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-    categories: 0100000002000000
   - postType: 0
     content: "Tried making homemade pasta for the first time. Messy but worth it!
       \U0001F35D"
     postImage: {fileID: 0}
-    timestamp: 5 days ago
+    daysSincePosted: 5
     likes: 156
     comments: 23
     relatedInterests:
@@ -66,12 +65,11 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 1
-    categories: 010000000a000000
   - postType: 1
     content: "Why do people take 20 minutes to order coffee? Just pick something
       and move on \U0001F644"
     postImage: {fileID: 0}
-    timestamp: 1 week ago
+    daysSincePosted: 7
     likes: 89
     comments: 34
     relatedInterests: []
@@ -79,8 +77,6 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 1
     isGreenFlag: 0
-    categories: 0000000004000000
   randomPostCount: 5
-  allowedRandomCategories: 
   randomPostTagFilter: []
   profileId: f7266465-56b3-463c-9ca3-7f7aa9fd1938

@@ -22,8 +22,8 @@ namespace Maskhot.Data
         public Sprite postImage;
 
         [Header("Post Metadata")]
-        [Tooltip("When was this posted? (relative or absolute)")]
-        public string timestamp;
+        [Tooltip("Days since posted (1 = yesterday, 7 = a week ago, etc.) - used for sorting")]
+        public int daysSincePosted;
 
         [Tooltip("Number of likes")]
         public int likes;
@@ -47,9 +47,6 @@ namespace Maskhot.Data
 
         [Tooltip("Is this a green flag post?")]
         public bool isGreenFlag;
-
-        [Tooltip("Categories for organization (personality, hobby, lifestyle, controversial, etc.)")]
-        public PostCategory[] categories;
     }
 
     [Serializable]
@@ -61,23 +58,5 @@ namespace Maskhot.Data
         Story,
         SharedPost,
         Poll
-    }
-
-    [Serializable]
-    public enum PostCategory
-    {
-        Personality,
-        Hobby,
-        Lifestyle,
-        Political,
-        Controversial,
-        Wholesome,
-        Family,
-        Friends,
-        Work,
-        Travel,
-        Food,
-        Fitness,
-        Pets
     }
 }

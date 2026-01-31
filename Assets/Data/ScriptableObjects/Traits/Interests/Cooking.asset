@@ -17,4 +17,5 @@ MonoBehaviour:
   description: Passionate about food and trying new recipes
   category: 7
   matchWeight: 6
-  relatedInterests: []
+  relatedInterests:
+  - {fileID: 11400000, guid: 6e1d0b93fb03bf144a35a5ed1a39e4b4, type: 2}

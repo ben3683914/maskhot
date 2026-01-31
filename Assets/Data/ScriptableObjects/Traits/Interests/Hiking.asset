@@ -17,4 +17,5 @@ MonoBehaviour:
   description: Loves outdoor adventures and nature trails
   category: 0
   matchWeight: 7
-  relatedInterests: []
+  relatedInterests:
+  - {fileID: 11400000, guid: 9c6a08fd46ac69f498b021b7e2ec7cc4, type: 2}

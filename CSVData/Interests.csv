@@ -1,0 +1,6 @@
+AssetName,DisplayName,Description,Category,MatchWeight,RelatedInterests
+Hiking,Hiking,Loves outdoor adventures and nature trails,Outdoor,7,Fitness
+Gaming,Gaming,Enjoys video games and streaming,Entertainment,5,Reading
+Cooking,Cooking,Passionate about food and trying new recipes,Food,6,Reading
+Reading,Reading,Loves books and literature,Intellectual,6,Cooking|Gaming
+Fitness,Fitness,Committed to health and exercise,Athletic,7,Hiking

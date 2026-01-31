@@ -1,0 +1,6 @@
+AssetName,DisplayName,Description,Category,MatchWeight,ConflictingTraits,CompatibleTraits
+NightOwl,Night Owl,Most active and energetic in the evening,Schedule,6,EarlyRiser,Homebody
+EarlyRiser,Early Riser,Wakes up early and loves mornings,Schedule,6,NightOwl,FitnessFocused|SocialButterfly
+Homebody,Homebody,Prefers staying in and cozy nights,Social_Preference,7,SocialButterfly,NightOwl
+SocialButterfly,Social Butterfly,Always out and about; loves events,Social_Preference,7,Homebody,EarlyRiser|FitnessFocused
+FitnessFocused,Fitness Focused,Daily workouts and healthy eating,Health_Wellness,6,,EarlyRiser|SocialButterfly

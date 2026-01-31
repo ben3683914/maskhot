@@ -121,37 +121,34 @@
 **Post 1:**
 - Post Type: `Photo`
 - Content: `Summit sunrise this morning! Nothing beats starting the day at 6,000 feet 🏔️`
-- Timestamp: `2 days ago`
+- Days Since Posted: `2`
 - Likes: `247`
 - Comments: `18`
 - Related Interests: `Hiking`, `Fitness`
 - Related Personality Traits: `Adventurous`
 - Related Lifestyle Traits: `Early Riser`, `Fitness Focused`
-- Categories: `Hobby`, `Lifestyle`
 - Is Green Flag: `✓ Yes`
 
 **Post 2:**
 - Post Type: `Photo`
 - Content: `Tried making homemade pasta for the first time. Messy but worth it! 🍝`
-- Timestamp: `5 days ago`
+- Days Since Posted: `5`
 - Likes: `156`
 - Comments: `23`
 - Related Interests: `Cooking`
 - Related Personality Traits: `Creative`
 - Related Lifestyle Traits: (none)
-- Categories: `Hobby`, `Food`
 - Is Green Flag: `✓ Yes`
 
 **Post 3:**
 - Post Type: `TextOnly`
 - Content: `Why do people take 20 minutes to order coffee? Just pick something and move on 🙄`
-- Timestamp: `1 week ago`
+- Days Since Posted: `7`
 - Likes: `89`
 - Comments: `34`
 - Related Interests: (none)
 - Related Personality Traits: (none)
 - Related Lifestyle Traits: (none)
-- Categories: `Personality`, `Controversial`
 - Is Red Flag: `✓ Yes`
 
 ---
@@ -175,36 +172,33 @@
 **Post 1:**
 - Post Type: `Photo`
 - Content: `Just finished the Stormlight Archive series. Brandon Sanderson is a genius! Already missing these characters 📚`
-- Timestamp: `3 days ago`
+- Days Since Posted: `3`
 - Likes: `67`
 - Comments: `12`
 - Related Interests: `Reading`
 - Related Personality Traits: `Creative`, `Introverted`
 - Related Lifestyle Traits: `Homebody`
-- Categories: `Hobby`, `Intellectual`
 - Is Green Flag: `✓ Yes`
 
 **Post 2:**
 - Post Type: `Photo`
 - Content: `Finally hit Diamond rank! Only took me 300 hours 🎮`
-- Timestamp: `1 week ago`
+- Days Since Posted: `7`
 - Likes: `134`
 - Comments: `29`
 - Related Interests: `Gaming`
 - Related Personality Traits: `Reliable` (dedication/persistence)
 - Related Lifestyle Traits: `Night Owl`, `Homebody`
-- Categories: `Hobby`, `Entertainment`
 
 **Post 3:**
 - Post Type: `TextOnly`
 - Content: `Can't stand people who are always late. Respect other people's time ffs`
-- Timestamp: `2 weeks ago`
+- Days Since Posted: `14`
 - Likes: `203`
 - Comments: `45`
 - Related Interests: (none)
 - Related Personality Traits: `Reliable`
 - Related Lifestyle Traits: (none)
-- Categories: `Personality`, `Controversial`
 - Is Red Flag: `✓ Yes`
 
 ---
@@ -228,37 +222,34 @@
 **Post 1:**
 - Post Type: `Photo`
 - Content: `My baby Milo being absolutely perfect as usual 🐕💕`
-- Timestamp: `1 day ago`
+- Days Since Posted: `1`
 - Likes: `312`
 - Comments: `47`
 - Related Interests: (none - this is just wholesome pet content)
 - Related Personality Traits: `Outgoing`
 - Related Lifestyle Traits: (none)
-- Categories: `Pets`, `Wholesome`
 - Is Green Flag: `✓ Yes`
 
 **Post 2:**
 - Post Type: `Photo`
 - Content: `Finished this piece after 40 hours of work. Mixed media portrait study 🎨`
-- Timestamp: `4 days ago`
+- Days Since Posted: `4`
 - Likes: `289`
 - Comments: `38`
 - Related Interests: (none - art isn't in our sample interests, but would be in a real game)
 - Related Personality Traits: `Creative`
 - Related Lifestyle Traits: (none)
-- Categories: `Creative`, `Work`
 - Is Green Flag: `✓ Yes`
 
 **Post 3:**
-- Post Type: `SharedPost`
-- Content: `Sharing this - people need to wake up and see what's really happening`
-- Timestamp: `1 week ago`
+- Post Type: `TextOnly`
+- Content: `People need to wake up and see what's really happening. Do your own research.`
+- Days Since Posted: `7`
 - Likes: `12`
 - Comments: `67`
 - Related Interests: (none)
 - Related Personality Traits: (none)
 - Related Lifestyle Traits: (none)
-- Categories: `Political`, `Controversial`
 - Is Red Flag: `✓ Yes`
 
 ---
@@ -286,6 +277,5 @@
    - **Drag trait assets** into the "Related Interests", "Related Personality Traits", and "Related Lifestyle Traits" arrays
    - Note: You can leave these arrays empty if the post doesn't relate to specific traits (like the red flag posts)
    - Check the appropriate flags (Is Red Flag / Is Green Flag)
-   - Select categories
 
 5. **Test in Play Mode** to verify everything works!

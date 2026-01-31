@@ -19,4 +19,6 @@ MonoBehaviour:
   matchWeight: 7
   conflictingTraits:
   - {fileID: 11400000, guid: e2d820e3dd3b4de4bbb269d16e08ee1f, type: 2}
-  compatibleTraits: []
+  compatibleTraits:
+  - {fileID: 11400000, guid: b182040851b6bd54390e05870623bf49, type: 2}
+  - {fileID: 11400000, guid: 7cdc3411f156d5d4182b12ead0e38f57, type: 2}

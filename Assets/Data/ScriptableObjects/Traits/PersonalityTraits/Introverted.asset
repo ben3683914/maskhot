@@ -16,6 +16,9 @@ MonoBehaviour:
   icon: {fileID: 0}
   description: Prefers quiet time and smaller gatherings
   isPositiveTrait: 1
-  oppositeTraits: []
-  complementaryTraits: []
+  oppositeTraits:
+  - {fileID: 11400000, guid: 2c32bbc66c331734faa9d6a77ff4c060, type: 2}
+  complementaryTraits:
+  - {fileID: 11400000, guid: aaffbf8cab8ecf2418d8c3248dda4332, type: 2}
+  - {fileID: 11400000, guid: 642effaf5bb81a0489bd44043dde2f0a, type: 2}
   matchWeight: 6

@@ -17,4 +17,5 @@ MonoBehaviour:
   description: Committed to health and exercise
   category: 3
   matchWeight: 7
-  relatedInterests: []
+  relatedInterests:
+  - {fileID: 11400000, guid: 7e63e981cf8fa6c4b9fbba361879c6a9, type: 2}

@@ -17,4 +17,6 @@ MonoBehaviour:
   description: Loves books and literature
   category: 5
   matchWeight: 6
-  relatedInterests: []
+  relatedInterests:
+  - {fileID: 11400000, guid: a3fa8d611dd70304186e4ce1d680ee76, type: 2}
+  - {fileID: 11400000, guid: bb2cd4f8933fb634680435918bf83719, type: 2}

@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08edf020511e9f74d84b9a788aae5406, type: 3}
+  m_Name: AlexChen
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Data.CandidateProfileSO
+  profile:
+    characterName: Alex Chen
+    gender: 0
+    age: 28
+    profilePicture: {fileID: 0}
+    bio: Software developer by day, gamer by night. Trying to get better at cooking.
+      Big fan of sci-fi and fantasy books.
+    personalityTraits:
+    - {fileID: 11400000, guid: 562b1aa7863afa0428f9129534c9a302, type: 2}
+    - {fileID: 11400000, guid: aaffbf8cab8ecf2418d8c3248dda4332, type: 2}
+    - {fileID: 11400000, guid: 642effaf5bb81a0489bd44043dde2f0a, type: 2}
+    interests:
+    - {fileID: 11400000, guid: bb2cd4f8933fb634680435918bf83719, type: 2}
+    - {fileID: 11400000, guid: 6e1d0b93fb03bf144a35a5ed1a39e4b4, type: 2}
+    - {fileID: 11400000, guid: a3fa8d611dd70304186e4ce1d680ee76, type: 2}
+    lifestyleTraits:
+    - {fileID: 11400000, guid: b8e70d993f6200b4dadcbf7dcca76eae, type: 2}
+    - {fileID: 11400000, guid: e2d820e3dd3b4de4bbb269d16e08ee1f, type: 2}
+    archetype: 1
+  guaranteedPosts:
+  - postType: 0
+    content: "Just finished the Stormlight Archive series. Brandon Sanderson is a
+      genius! Already missing these characters \xF0\u0178\u201C\u0161"
+    postImage: {fileID: 0}
+    daysSincePosted: 3
+    likes: 67
+    comments: 12
+    relatedInterests:
+    - {fileID: 11400000, guid: 6e1d0b93fb03bf144a35a5ed1a39e4b4, type: 2}
+    relatedPersonalityTraits:
+    - {fileID: 11400000, guid: aaffbf8cab8ecf2418d8c3248dda4332, type: 2}
+    - {fileID: 11400000, guid: 562b1aa7863afa0428f9129534c9a302, type: 2}
+    relatedLifestyleTraits:
+    - {fileID: 11400000, guid: e2d820e3dd3b4de4bbb269d16e08ee1f, type: 2}
+    isRedFlag: 0
+    isGreenFlag: 1
+  - postType: 0
+    content: "Finally hit Diamond rank! Only took me 300 hours \xF0\u0178\u017D\xAE"
+    postImage: {fileID: 0}
+    daysSincePosted: 7
+    likes: 134
+    comments: 29
+    relatedInterests:
+    - {fileID: 11400000, guid: bb2cd4f8933fb634680435918bf83719, type: 2}
+    relatedPersonalityTraits:
+    - {fileID: 11400000, guid: 642effaf5bb81a0489bd44043dde2f0a, type: 2}
+    relatedLifestyleTraits:
+    - {fileID: 11400000, guid: b8e70d993f6200b4dadcbf7dcca76eae, type: 2}
+    - {fileID: 11400000, guid: e2d820e3dd3b4de4bbb269d16e08ee1f, type: 2}
+    isRedFlag: 0
+    isGreenFlag: 0
+  - postType: 1
+    content: Can't stand people who are always late. Respect other people's time
+      ffs
+    postImage: {fileID: 0}
+    daysSincePosted: 14
+    likes: 203
+    comments: 45
+    relatedInterests: []
+    relatedPersonalityTraits:
+    - {fileID: 11400000, guid: 642effaf5bb81a0489bd44043dde2f0a, type: 2}
+    relatedLifestyleTraits: []
+    isRedFlag: 1
+    isGreenFlag: 0
+  randomPostCount: 5
+  randomPostTagFilter: []
+  profileId: d6ef922f-af84-4088-b1c9-8a65cd72d5fe
