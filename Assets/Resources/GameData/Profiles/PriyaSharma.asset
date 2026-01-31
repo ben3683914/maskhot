@@ -54,6 +54,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 0bb881e009979794cacd509cef7c5ddc, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  randomPostCount: 5
-  randomPostTagFilter: []
-  profileId: 
+  randomPostMin: 12
+  randomPostMax: 25
+  friendsCountMin: 200
+  friendsCountMax: 600
+  profileId: 2f627d86-3837-4b0d-ac4c-c320ccb32e03

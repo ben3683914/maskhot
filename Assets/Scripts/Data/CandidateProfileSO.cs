@@ -18,13 +18,21 @@ namespace Maskhot.Data
         [Tooltip("Posts that ALWAYS appear for this character")]
         public List<SocialMediaPost> guaranteedPosts = new List<SocialMediaPost>();
 
-        [Tooltip("Maximum number of random posts to add (in addition to guaranteed posts)")]
+        [Header("Random Post Settings")]
+        [Tooltip("Minimum number of random posts to add")]
         [Range(0, 20)]
-        public int randomPostCount = 5;
+        public int randomPostMin = 2;
 
-        [Header("Randomization Rules")]
-        [Tooltip("Specific tags that random posts must match (optional, leave empty for any)")]
-        public string[] randomPostTagFilter;
+        [Tooltip("Maximum number of random posts to add")]
+        [Range(0, 20)]
+        public int randomPostMax = 5;
+
+        [Header("Social Metrics")]
+        [Tooltip("Minimum friends count (affects post engagement)")]
+        public int friendsCountMin = 100;
+
+        [Tooltip("Maximum friends count (affects post engagement)")]
+        public int friendsCountMax = 500;
 
         [Header("Debug")]
         [Tooltip("Unique ID for this profile (auto-generated)")]

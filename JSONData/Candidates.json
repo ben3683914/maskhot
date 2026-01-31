@@ -10,8 +10,8 @@
       "personalityTraits": ["Outgoing", "Adventurous", "Creative", "Ambitious"],
       "interests": ["Hiking", "Cooking", "Reading", "Photography", "Running"],
       "lifestyleTraits": ["EarlyRiser", "SocialButterfly", "FitnessFocused"],
-      "randomPostCount": 5,
-      "randomPostTagFilter": [],
+      "randomPostRange": [12, 25],
+      "friendsCountRange": [300, 800],
       "guaranteedPosts": [
         {
           "postType": "Photo",
@@ -61,8 +61,8 @@
       "personalityTraits": ["Introverted", "Creative", "Reliable", "Analytical", "Thoughtful"],
       "interests": ["Gaming", "Reading", "Cooking", "Movies", "BoardGames", "Podcasts"],
       "lifestyleTraits": ["NightOwl", "Homebody", "Minimalist"],
-      "randomPostCount": 5,
-      "randomPostTagFilter": [],
+      "randomPostRange": [10, 18],
+      "friendsCountRange": [50, 200],
       "guaranteedPosts": [
         {
           "postType": "Photo",
@@ -112,8 +112,8 @@
       "personalityTraits": ["Outgoing", "Creative", "Empathetic", "Humorous"],
       "interests": ["Art", "Hiking", "Cooking", "Music", "Theater"],
       "lifestyleTraits": ["SocialButterfly", "FitnessFocused", "Spontaneous"],
-      "randomPostCount": 5,
-      "randomPostTagFilter": [],
+      "randomPostRange": [15, 35],
+      "friendsCountRange": [400, 900],
       "guaranteedPosts": [
         {
           "postType": "Photo",
@@ -163,8 +163,8 @@
       "personalityTraits": ["Analytical", "Ambitious", "Reliable", "Patient"],
       "interests": ["Fitness", "Reading", "Movies", "Podcasts"],
       "lifestyleTraits": ["EarlyRiser", "Career_Driven", "Health_Conscious"],
-      "randomPostCount": 5,
-      "randomPostTagFilter": [],
+      "randomPostRange": [10, 22],
+      "friendsCountRange": [200, 500],
       "guaranteedPosts": [
         {
           "postType": "Photo",
@@ -202,8 +202,8 @@
       "personalityTraits": ["Adventurous", "Empathetic", "Humorous", "Patient"],
       "interests": ["Travel", "Volunteering", "Photography", "Music", "Writing"],
       "lifestyleTraits": ["Spontaneous", "Eco_Friendly", "SocialButterfly"],
-      "randomPostCount": 5,
-      "randomPostTagFilter": [],
+      "randomPostRange": [20, 45],
+      "friendsCountRange": [500, 1500],
       "guaranteedPosts": [
         {
           "postType": "Photo",
@@ -253,8 +253,8 @@
       "personalityTraits": ["Optimistic", "Patient", "Empathetic", "Thoughtful"],
       "interests": ["Yoga", "Meditation", "Gardening", "Cooking", "Baking"],
       "lifestyleTraits": ["EarlyRiser", "Health_Conscious", "Eco_Friendly"],
-      "randomPostCount": 5,
-      "randomPostTagFilter": [],
+      "randomPostRange": [12, 25],
+      "friendsCountRange": [200, 600],
       "guaranteedPosts": [
         {
           "postType": "Photo",
@@ -280,8 +280,8 @@
       "personalityTraits": ["Competitive", "Ambitious", "Outgoing", "Optimistic"],
       "interests": ["Sports", "Cycling", "Running", "Fitness", "Travel"],
       "lifestyleTraits": ["EarlyRiser", "FitnessFocused", "SocialButterfly"],
-      "randomPostCount": 5,
-      "randomPostTagFilter": [],
+      "randomPostRange": [15, 35],
+      "friendsCountRange": [400, 1000],
       "guaranteedPosts": [
         {
           "postType": "Photo",
@@ -319,8 +319,8 @@
       "personalityTraits": ["Creative", "Thoughtful", "Introverted", "Empathetic"],
       "interests": ["Art", "Photography", "Theater", "Reading", "WineTasting", "Fashion"],
       "lifestyleTraits": ["Minimalist", "Career_Driven", "SocialButterfly"],
-      "randomPostCount": 5,
-      "randomPostTagFilter": [],
+      "randomPostRange": [10, 20],
+      "friendsCountRange": [150, 400],
       "guaranteedPosts": [
         {
           "postType": "Photo",
@@ -382,8 +382,8 @@
       "personalityTraits": ["Laid_Back", "Humorous", "Creative", "Thoughtful"],
       "interests": ["Podcasts", "Music", "WineTasting", "BoardGames", "Movies", "Writing"],
       "lifestyleTraits": ["NightOwl", "Spontaneous", "SocialButterfly"],
-      "randomPostCount": 5,
-      "randomPostTagFilter": [],
+      "randomPostRange": [18, 40],
+      "friendsCountRange": [350, 800],
       "guaranteedPosts": [
         {
           "postType": "Photo",
@@ -457,8 +457,8 @@
       "personalityTraits": ["Controversial", "Ambitious", "Empathetic", "Outgoing"],
       "interests": ["Writing", "Podcasts", "Volunteering", "Art"],
       "lifestyleTraits": ["Spontaneous", "Eco_Friendly", "SocialButterfly"],
-      "randomPostCount": 5,
-      "randomPostTagFilter": [],
+      "randomPostRange": [25, 50],
+      "friendsCountRange": [600, 2000],
       "guaranteedPosts": [
         {
           "postType": "Photo",

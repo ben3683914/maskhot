@@ -64,6 +64,7 @@ Resources/GameData/
 │   └── Lifestyle/             - Lifestyle trait SOs (Night Owl, Homebody, etc.)
 ├── NarrativeHints/            - Narrative hint collections (Food_Hints, Travel_Hints, etc.)
 ├── Profiles/                  - Candidate profile ScriptableObjects
+├── PostPool/                  - RandomPostPool.asset (global random post pool)
 └── Clients/                   - Client profile ScriptableObjects (future)
 ```
 
@@ -158,6 +159,11 @@ Define the fundamental data types:
   - Can use curated ClientProfileSO or procedural ClientProfile
   - Helper methods: FromClientProfileSO(), CreateProcedural()
 
+- **RandomPostPoolSO** (IMPLEMENTED) - ScriptableObject holding the global random post pool
+  - List of SocialMediaPost instances
+  - Posts are selected based on trait matching with candidates
+  - Pool is tracked per session (no duplicates within a quest)
+
 ### ScriptableObject Templates (Priority 2)
 Create SO classes to hold game data:
 
@@ -169,7 +175,8 @@ Create SO classes to hold game data:
 - **CandidateProfileSO** (IMPLEMENTED) - Individual candidate profiles with social media content
   - Static profile data (consistent across playthroughs)
   - Guaranteed posts (always appear)
-  - Randomization rules (post count, allowed categories)
+  - Random post settings: `randomPostMin/Max` (range for post count per session)
+  - Social metrics: `friendsCountMin/Max` (affects engagement generation)
 - **ClientProfileSO** (IMPLEMENTED) - Curated client profiles (hand-crafted story characters)
   - Wraps ClientProfile data
   - Story client flag and suggested level metadata
@@ -183,6 +190,14 @@ Game-wide state management:
   - Auto-loads on Awake via `Resources.LoadAll<T>()`
   - Provides lookup by name: `GetCandidateByName()`, `GetInterestByName()`, etc.
   - Category filters: `GetInterestsByCategory()`, `GetLifestyleTraitsByCategory()`
+  - Verbose logging toggle for debugging
+- **PostPoolManager** (IMPLEMENTED) - Singleton that handles random post selection
+  - Loads RandomPostPool from Resources folder
+  - Selects posts based on trait matching with 10% wild card chance
+  - Generates engagement (likes/comments) based on candidate's friends count
+  - Generates `daysSincePosted` to interleave with guaranteed posts
+  - Tracks used posts per session (call `ResetPool()` for new quest)
+  - Configurable: `wildCardChance`, `photoWeight`, `baseEngagementMultiplier`
   - Verbose logging toggle for debugging
 - **QuestManager** - Manages current quest/criteria, validates matches
 - **MatchQueueManager** - Manages the queue of potential matches (left panel data source)
@@ -202,6 +217,7 @@ All game data is managed through JSON files in the **JSONData/** folder:
 - **15 Personality Traits** - Character traits including special "Controversial" trait for red flags
 - **10 Lifestyle Traits** - Daily life patterns (Night Owl, Career Driven, Eco Friendly, etc.)
 - **10 Candidate Profiles** - Complete dating profiles with 1-5 posts each (29 total posts)
+- **1000 Random Posts** - Global pool of posts for trait-based random assignment
 
 ### Automated Import Workflow
 1. **Edit JSON files** in `JSONData/` folder to add/modify data
@@ -234,6 +250,7 @@ See **SAMPLE_DATA.md** for original reference data (now available as JSON files)
    - `PersonalityTraits.json` - 15 character traits
    - `LifestyleTraits.json` - 10 daily life patterns
    - `Candidates.json` - 10 complete profiles with posts
+   - `RandomPosts.json` - 1000 global random posts for trait-based selection
 
 2. **Import to Unity**: `Tools > Maskhot > Import Data from JSON`
    - Automatically creates all ScriptableObjects
@@ -316,6 +333,17 @@ See `JSONData/README.md` for complete JSON documentation.
     - Dictionary lookups by name for fast access
     - Category filtering for interests and lifestyle traits
     - Narrative hint lookup by trait reference
+  - PostPoolManager.cs (singleton, random post selection with trait matching)
+    - Loads RandomPostPool from Resources
+    - Weighted trait-based selection with 10% wild card chance
+    - Engagement generation based on friends count
+    - Session-based uniqueness tracking
+    - Verbose logging toggle
+- **Random Post System**:
+  - RandomPostPoolSO.cs (data container for global post pool)
+  - RandomPosts.json (1000 posts with trait associations - 65% text, 35% photo)
+  - CandidateProfileSO updated with `randomPostMin/Max` and `friendsCountMin/Max` ranges
+  - ScriptableObjectImporter updated to import random posts
 
 ### ⏳ In Progress
 - None - ready for next development phase
@@ -324,7 +352,6 @@ See `JSONData/README.md` for complete JSON documentation.
 - Sample client data (create a few ClientProfileSO assets for story progression)
 - Remaining manager classes (GameManager, QuestManager, MatchQueueManager)
 - Controller classes (MatchListController, SocialFeedController, DecisionController)
-- Random post selection system
 - Matching/scoring algorithm
 - Procedural generation systems (QuestGenerator - creates Quest instances from ClientProfileSO or procedural data)
 - UI implementation

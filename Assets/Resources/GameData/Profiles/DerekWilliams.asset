@@ -69,6 +69,8 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 1
     isGreenFlag: 0
-  randomPostCount: 5
-  randomPostTagFilter: []
-  profileId: 
+  randomPostMin: 15
+  randomPostMax: 35
+  friendsCountMin: 400
+  friendsCountMax: 1000
+  profileId: 7e1c1ba9-2cd3-43f0-846a-0ad609fa3ff2

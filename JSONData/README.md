@@ -15,6 +15,7 @@ This folder contains JSON files that define all ScriptableObject data for the ga
 **15 Personality Traits** - Character traits (Outgoing, Creative, Controversial, etc.)
 **10 Lifestyle Traits** - Daily life patterns (Night Owl, Career Driven, Eco Friendly, etc.)
 **10 Candidate Profiles** - Complete dating profiles with 1-5 posts each (29 total posts)
+**1000 Random Posts** - Global pool of posts for trait-based random assignment (65% text, 35% photo)
 
 ## File Descriptions
 
@@ -115,8 +116,8 @@ Defines candidate profiles with their posts
 - `personalityTraits`: Array of personality trait asset names
 - `interests`: Array of interest asset names
 - `lifestyleTraits`: Array of lifestyle trait asset names
-- `randomPostCount`: Number of random posts to add during gameplay
-- `randomPostTagFilter`: Tags for filtering random posts (empty array = any)
+- `randomPostRange`: `[min, max]` array for random post count (e.g., `[2, 5]`)
+- `friendsCountRange`: `[min, max]` array for friends count, affects engagement (e.g., `[100, 500]`)
 - `guaranteedPosts`: Array of post objects
 
 **Post Fields:**
@@ -143,8 +144,8 @@ Defines candidate profiles with their posts
   "personalityTraits": ["Optimistic", "Patient", "Empathetic", "Thoughtful"],
   "interests": ["Yoga", "Meditation", "Gardening", "Cooking", "Baking"],
   "lifestyleTraits": ["EarlyRiser", "Health_Conscious", "Eco_Friendly"],
-  "randomPostCount": 5,
-  "randomPostTagFilter": [],
+  "randomPostRange": [2, 5],
+  "friendsCountRange": [200, 600],
   "guaranteedPosts": [
     {
       "postType": "Photo",
@@ -157,6 +158,39 @@ Defines candidate profiles with their posts
       "relatedInterests": ["Yoga", "Meditation"],
       "relatedPersonalityTraits": ["Optimistic", "Patient"],
       "relatedLifestyleTraits": ["EarlyRiser", "Health_Conscious"]
+    }
+  ]
+}
+```
+
+### RandomPosts.json
+Global pool of random posts that can be assigned to any candidate based on trait matching.
+
+**Current Count:** 1000 random posts (65% TextOnly, 35% Photo)
+
+**Fields:** (same as guaranteedPosts in Candidates.json)
+- `postType`: Type of post ("Photo", "TextOnly", etc.)
+- `content`: Text content of the post
+- `relatedInterests`: Array of interest asset names for trait matching
+- `relatedPersonalityTraits`: Array of personality trait asset names
+- `relatedLifestyleTraits`: Array of lifestyle trait asset names
+- `isGreenFlag`: Boolean - is this a green flag post?
+- `isRedFlag`: Boolean - is this a red flag post?
+
+**Note:** `daysSincePosted`, `likes`, and `comments` are generated at runtime by PostPoolManager based on candidate's friends count range.
+
+**Example:**
+```json
+{
+  "posts": [
+    {
+      "postType": "Photo",
+      "content": "Beautiful day for a walk in the park!",
+      "relatedInterests": ["Hiking", "Photography"],
+      "relatedPersonalityTraits": ["Optimistic"],
+      "relatedLifestyleTraits": ["FitnessFocused"],
+      "isGreenFlag": true,
+      "isRedFlag": false
     }
   ]
 }
@@ -190,7 +224,8 @@ This will link to the Hiking.asset, Cooking.asset, and Reading.asset files creat
 The importer automatically handles dependencies:
 1. Creates all trait ScriptableObjects first
 2. Resolves trait-to-trait references
-3. Creates candidate profiles and links them to traits
+3. Imports random posts (creates RandomPostPool.asset)
+4. Creates candidate profiles and links them to traits
 
 ### Overwriting
 The import system will **overwrite existing assets** with the same names. If you've made manual changes in Unity's inspector, they will be lost on the next import.
@@ -203,8 +238,9 @@ Generated assets are saved to `Assets/Resources/GameData/` for runtime loading:
 - `Assets/Resources/GameData/Traits/Personality/`
 - `Assets/Resources/GameData/Traits/Lifestyle/`
 - `Assets/Resources/GameData/Profiles/`
+- `Assets/Resources/GameData/PostPool/` (RandomPostPool.asset)
 
-**Note:** Assets are in the Resources folder so `ProfileManager` can auto-load them at runtime using `Resources.LoadAll<T>()`.
+**Note:** Assets are in the Resources folder so `ProfileManager` and `PostPoolManager` can auto-load them at runtime using `Resources.LoadAll<T>()` and `Resources.Load<T>()`.
 
 ## Adding New Data
 
@@ -271,8 +307,10 @@ Generated assets are saved to `Assets/Resources/GameData/` for runtime loading:
 ## Next Steps After Import
 
 1. **Set up ProfileManager:** Create an empty GameObject, add the `ProfileManager` component - data loads automatically at runtime
-2. **Test with ProfileManager:** Enable `verboseLogging` on ProfileManager to see a full data dump in the console
-3. **Or use ProfileTester:** Attach the ProfileTester component to a GameObject and drag in profile assets for manual testing
-4. **Verify references:** Check that all trait references are properly linked in the inspector
-5. **Review generated assets:** Browse `Assets/Resources/GameData/` folders to ensure everything imported correctly
-6. **Iterate:** Edit JSON files and reimport as needed to refine your data
+2. **Set up PostPoolManager:** Add the `PostPoolManager` component to the same or another GameObject for random post selection
+3. **Test with ProfileManager:** Enable `verboseLogging` on ProfileManager to see a full data dump in the console
+4. **Test with PostPoolManager:** Enable `verboseLogging` on PostPoolManager to see post selection details
+5. **Or use ProfileTester:** Attach the ProfileTester component to a GameObject and drag in profile assets for manual testing
+6. **Verify references:** Check that all trait references are properly linked in the inspector
+7. **Review generated assets:** Browse `Assets/Resources/GameData/` folders to ensure everything imported correctly
+8. **Iterate:** Edit JSON files and reimport as needed to refine your data

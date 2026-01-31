@@ -19,6 +19,8 @@ namespace Maskhot.Editor
 		private static Dictionary<string, InterestSO> interests = new Dictionary<string, InterestSO>();
 		private static Dictionary<string, PersonalityTraitSO> personalityTraits = new Dictionary<string, PersonalityTraitSO>();
 		private static Dictionary<string, LifestyleTraitSO> lifestyleTraits = new Dictionary<string, LifestyleTraitSO>();
+		private static int randomPostCount = 0;
+		private static int candidateCount = 0;
 
 		[MenuItem("Tools/Maskhot/Import Data from JSON")]
 		public static void ImportAllData()
@@ -32,10 +34,12 @@ namespace Maskhot.Editor
 
 			try
 			{
-				// Clear dictionaries
+				// Clear dictionaries and counters
 				interests.Clear();
 				personalityTraits.Clear();
 				lifestyleTraits.Clear();
+				randomPostCount = 0;
+				candidateCount = 0;
 
 				// Create folder structure
 				CreateFolderStructure();
@@ -48,6 +52,9 @@ namespace Maskhot.Editor
 				// Resolve trait references (for traits that reference other traits)
 				ResolveTraitReferences();
 
+				// Import random post pool (before candidates, so we can reference it)
+				ImportRandomPosts();
+
 				// Import candidate profiles (which reference all the traits)
 				ImportCandidates();
 
@@ -55,7 +62,7 @@ namespace Maskhot.Editor
 				AssetDatabase.Refresh();
 
 				EditorUtility.DisplayDialog("Import Complete",
-					$"Successfully imported:\n• {interests.Count} Interests\n• {personalityTraits.Count} Personality Traits\n• {lifestyleTraits.Count} Lifestyle Traits\n• Check Console for candidate import results",
+					$"Successfully imported:\n• {interests.Count} Interests\n• {personalityTraits.Count} Personality Traits\n• {lifestyleTraits.Count} Lifestyle Traits\n• {randomPostCount} Random Posts\n• {candidateCount} Candidates",
 					"OK");
 			}
 			catch (System.Exception e)
@@ -74,6 +81,7 @@ namespace Maskhot.Editor
 			CreateFolderIfNeeded("Assets/Resources/GameData/Traits/Personality");
 			CreateFolderIfNeeded("Assets/Resources/GameData/Traits/Lifestyle");
 			CreateFolderIfNeeded("Assets/Resources/GameData/Profiles");
+			CreateFolderIfNeeded("Assets/Resources/GameData/PostPool");
 		}
 
 		private static void CreateFolderIfNeeded(string path)
@@ -284,6 +292,85 @@ namespace Maskhot.Editor
 			}
 		}
 
+		private static void ImportRandomPosts()
+		{
+			string jsonPath = Path.Combine(Application.dataPath, "..", JSON_DATA_PATH, "RandomPosts.json");
+			if (!File.Exists(jsonPath))
+			{
+				Debug.LogWarning($"RandomPosts.json not found at {jsonPath} - skipping random post pool import");
+				return;
+			}
+
+			string json = File.ReadAllText(jsonPath);
+			RandomPostDataList data = JsonUtility.FromJson<RandomPostDataList>(json);
+
+			string assetPath = $"{ASSET_BASE_PATH}/PostPool/RandomPostPool.asset";
+
+			RandomPostPoolSO asset = AssetDatabase.LoadAssetAtPath<RandomPostPoolSO>(assetPath);
+			if (asset == null)
+			{
+				asset = ScriptableObject.CreateInstance<RandomPostPoolSO>();
+				AssetDatabase.CreateAsset(asset, assetPath);
+			}
+
+			asset.posts.Clear();
+
+			foreach (var postData in data.posts)
+			{
+				SocialMediaPost post = new SocialMediaPost();
+				post.postType = ParsePostType(postData.postType);
+				post.content = postData.content;
+				post.isGreenFlag = postData.isGreenFlag;
+				post.isRedFlag = postData.isRedFlag;
+
+				// Resolve post trait references
+				List<InterestSO> postInterests = new List<InterestSO>();
+				if (postData.relatedInterests != null)
+				{
+					foreach (string interestName in postData.relatedInterests)
+					{
+						if (interests.TryGetValue(interestName, out InterestSO interest))
+						{
+							postInterests.Add(interest);
+						}
+					}
+				}
+				post.relatedInterests = postInterests.ToArray();
+
+				List<PersonalityTraitSO> postPersonalities = new List<PersonalityTraitSO>();
+				if (postData.relatedPersonalityTraits != null)
+				{
+					foreach (string traitName in postData.relatedPersonalityTraits)
+					{
+						if (personalityTraits.TryGetValue(traitName, out PersonalityTraitSO trait))
+						{
+							postPersonalities.Add(trait);
+						}
+					}
+				}
+				post.relatedPersonalityTraits = postPersonalities.ToArray();
+
+				List<LifestyleTraitSO> postLifestyles = new List<LifestyleTraitSO>();
+				if (postData.relatedLifestyleTraits != null)
+				{
+					foreach (string lifestyleName in postData.relatedLifestyleTraits)
+					{
+						if (lifestyleTraits.TryGetValue(lifestyleName, out LifestyleTraitSO lifestyle))
+						{
+							postLifestyles.Add(lifestyle);
+						}
+					}
+				}
+				post.relatedLifestyleTraits = postLifestyles.ToArray();
+
+				asset.posts.Add(post);
+			}
+
+			EditorUtility.SetDirty(asset);
+			randomPostCount = asset.posts.Count;
+			Debug.Log($"Imported {asset.posts.Count} random posts to pool");
+		}
+
 		private static void ImportCandidates()
 		{
 			string jsonPath = Path.Combine(Application.dataPath, "..", JSON_DATA_PATH, "Candidates.json");
@@ -348,8 +435,18 @@ namespace Maskhot.Editor
 				asset.profile.lifestyleTraits = lifestyles.ToArray();
 
 				// Random post settings
-				asset.randomPostCount = candidateData.randomPostCount;
-				asset.randomPostTagFilter = candidateData.randomPostTagFilter;
+				if (candidateData.randomPostRange != null && candidateData.randomPostRange.Length >= 2)
+				{
+					asset.randomPostMin = candidateData.randomPostRange[0];
+					asset.randomPostMax = candidateData.randomPostRange[1];
+				}
+
+				// Friends count settings (affects engagement)
+				if (candidateData.friendsCountRange != null && candidateData.friendsCountRange.Length >= 2)
+				{
+					asset.friendsCountMin = candidateData.friendsCountRange[0];
+					asset.friendsCountMax = candidateData.friendsCountRange[1];
+				}
 
 				// Create posts
 				asset.guaranteedPosts.Clear();
@@ -401,6 +498,7 @@ namespace Maskhot.Editor
 				EditorUtility.SetDirty(asset);
 			}
 
+			candidateCount = data.candidates.Length;
 			Debug.Log($"Imported {data.candidates.Length} candidate profiles");
 		}
 
@@ -540,9 +638,15 @@ namespace Maskhot.Editor
 		public string[] personalityTraits;
 		public string[] interests;
 		public string[] lifestyleTraits;
-		public int randomPostCount;
-		public string[] randomPostTagFilter;
+		public int[] randomPostRange;
+		public int[] friendsCountRange;
 		public PostData[] guaranteedPosts;
+	}
+
+	[System.Serializable]
+	public class RandomPostDataList
+	{
+		public PostData[] posts;
 	}
 
 	[System.Serializable]
