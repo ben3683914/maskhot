@@ -5,6 +5,7 @@
     background-color: rgb(20, 20, 30);
     align-items: center;
     justify-content: center;
+    -unity-font-definition: url("project://database/Assets/Resources/Fonts/Kelseyfont-Regular SDF 1.asset");
 }
 
 .menu-container {
