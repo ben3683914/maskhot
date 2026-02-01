@@ -25,11 +25,13 @@ Track what's complete, in progress, and to do.
 - [x] MatchQueueManager - Queue population, decision tracking, candidate filtering
 - [x] QuestManager - Client loading, quest lifecycle, events
 - [x] GameManager - Session management, quest progression, state transitions
+- [x] RedactionManager - Post redaction/unredaction state management
 
 **Controller Layer**
 - [x] MatchListController - Selection state, navigation, fires events for UI
 - [x] QuestController - UI-facing interface for quest state and criteria display
 - [x] DecisionController - Accept/reject decisions, correctness evaluation, session statistics
+- [x] RedactionController - UI-facing interface for post redaction/unredaction
 
 **Matching System**
 - [x] MatchEvaluator - Static evaluation logic (currently using **ImplicitSoftening** mode)
@@ -57,6 +59,11 @@ Track what's complete, in progress, and to do.
 - [x] QuestControllerTester - Verify event subscription, cached data, cache clearing
 - [x] DecisionControllerTester - Verify decisions, correctness evaluation, statistics
 - [x] GameManagerTester - Verify session management, quest progression, state transitions
+- [x] RedactionManagerTester - Verify post unredaction data state
+- [x] RedactionControllerTester - Verify controller functionality
+
+**Redaction System**
+- [x] RedactionController - UI-facing interface for post redaction display and unredaction
 
 ### In Progress
 
@@ -66,6 +73,9 @@ Track what's complete, in progress, and to do.
 
 **Procedural Generation**
 - [ ] QuestGenerator - Creates Quest instances from ClientProfileSO or procedural data
+
+**Economy System**
+- [ ] MoneyManager - Track player money, spending on unredaction
 
 **UI Implementation** *(handled by separate developer, not using Claude)*
 - [ ] Three-panel layout (left: queue, center: feed, right: criteria)

@@ -454,6 +454,69 @@ Verifies DecisionController functionality.
 
 ---
 
+### RedactionManagerTester
+
+Verifies RedactionManager (data layer) functionality.
+
+**Location**: `Assets/Scripts/Testing/RedactionManagerTester.cs`
+
+**Setup**:
+1. Attach to a GameObject alongside ProfileManager, MatchQueueManager, and RedactionManager
+2. Optionally assign a test candidate
+3. Enter Play Mode
+
+**How to Run**: Click the buttons in the Inspector (buttons are enabled during Play Mode)
+
+**Available Tests**:
+- **Test IsUnredacted** - Verifies posts start as not unredacted
+- **Test MarkUnredacted** - Verifies marking a post and event firing
+- **Test MarkUnredacted Twice** - Verifies idempotency
+- **Test ResetAll** - Verifies reset clears all state
+- **Log Current State** - Logs unredacted count
+- **Populate Test Queue** - Adds 3 random candidates for testing
+- **Clear Queue** - Clears the queue
+
+**What it checks**:
+- IsUnredacted returns false for new posts
+- MarkUnredacted adds posts to the set and fires event
+- MarkUnredacted returns false for already unredacted posts
+- ResetAll clears all state and fires event
+- UnredactedCount property is accurate
+
+---
+
+### RedactionControllerTester
+
+Verifies RedactionController (UI-facing layer) functionality.
+
+**Location**: `Assets/Scripts/Testing/RedactionControllerTester.cs`
+
+**Setup**:
+1. Attach to a GameObject alongside ProfileManager, PostPoolManager, MatchQueueManager, RedactionManager, and RedactionController
+2. Optionally assign a test candidate
+3. Enter Play Mode
+
+**How to Run**: Click the buttons in the Inspector (buttons are enabled during Play Mode)
+
+**Available Tests**:
+- **Test Guaranteed Posts** - Verifies guaranteed posts are never redacted
+- **Test Random Posts Redacted** - Verifies random posts start redacted
+- **Test GetDisplayText** - Verifies correct content is returned
+- **Test TryUnredact** - Verifies unredaction works and fires event
+- **Test Counts** - Verifies count methods work correctly
+- **Log Current State** - Logs redaction state for all candidates in queue
+- **Populate Test Queue** - Adds 3 random candidates for testing
+- **Clear Queue** - Clears the queue
+
+**What it checks**:
+- Guaranteed posts are never redacted (IsRedacted returns false)
+- Random posts start redacted (IsRedacted returns true)
+- GetDisplayText returns blocks for redacted, content for visible
+- TryUnredact reveals content and fires event with candidate info
+- Counts are calculated correctly (redacted, visible, total, guaranteed)
+
+---
+
 ### GameManagerTester
 
 Verifies GameManager functionality.
@@ -630,6 +693,8 @@ All new tester scripts should go in `Assets/Scripts/Testing/`.
 - **QuestControllerTester**: `Assets/Scripts/Testing/QuestControllerTester.cs`
 - **DecisionControllerTester**: `Assets/Scripts/Testing/DecisionControllerTester.cs`
 - **GameManagerTester**: `Assets/Scripts/Testing/GameManagerTester.cs`
+- **RedactionManagerTester**: `Assets/Scripts/Testing/RedactionManagerTester.cs`
+- **RedactionControllerTester**: `Assets/Scripts/Testing/RedactionControllerTester.cs`
 
 **Tester editors** (in `Assets/Scripts/Editor/`):
 - `ProfileTesterEditor.cs`
@@ -642,3 +707,5 @@ All new tester scripts should go in `Assets/Scripts/Testing/`.
 - `QuestControllerTesterEditor.cs`
 - `DecisionControllerTesterEditor.cs`
 - `GameManagerTesterEditor.cs`
+- `RedactionManagerTesterEditor.cs`
+- `RedactionControllerTesterEditor.cs`

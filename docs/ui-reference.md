@@ -283,6 +283,75 @@ string FormatTimestamp(int daysSincePosted)
 
 ---
 
+## RedactionController
+
+**Handles post redaction/unredaction for the UI.** Use this instead of RedactionManager directly.
+
+### Properties
+
+```csharp
+// Singleton access
+RedactionController.Instance
+```
+
+### Methods
+
+```csharp
+// Check if a post is redacted
+bool IsRedacted(CandidateProfileSO candidate, SocialMediaPost post)
+
+// Check if a post is guaranteed (never redacted)
+bool IsGuaranteedPost(CandidateProfileSO candidate, SocialMediaPost post)
+
+// Get display text (returns blocks for redacted, content for visible)
+string GetDisplayText(CandidateProfileSO candidate, SocialMediaPost post)
+
+// Attempt to unredact a post
+bool TryUnredact(CandidateProfileSO candidate, SocialMediaPost post)
+
+// Get counts for UI display
+int GetRedactedCount(CandidateProfileSO candidate)
+int GetVisibleCount(CandidateProfileSO candidate)
+int GetTotalCount(CandidateProfileSO candidate)
+int GetGuaranteedCount(CandidateProfileSO candidate)
+```
+
+### Events
+
+```csharp
+// Fired when a post is unredacted
+event Action<CandidateProfileSO, SocialMediaPost> OnPostUnredacted;
+
+// Fired when redaction state is reset (queue changed)
+event Action OnRedactionReset;
+```
+
+### Usage Example
+
+```csharp
+public class PostCard : MonoBehaviour
+{
+    public void SetPost(CandidateProfileSO candidate, SocialMediaPost post)
+    {
+        // Get display text (blocks or content)
+        contentLabel.text = RedactionController.Instance.GetDisplayText(candidate, post);
+
+        // Show unredact button only if post is redacted
+        unredactButton.gameObject.SetActive(
+            RedactionController.Instance.IsRedacted(candidate, post)
+        );
+    }
+
+    public void OnUnredactClicked()
+    {
+        // Future: check money first
+        RedactionController.Instance.TryUnredact(currentCandidate, currentPost);
+    }
+}
+```
+
+---
+
 ## Quest Data
 
 For the right panel (criteria) and client header.
@@ -454,6 +523,8 @@ Right:  20% (quest criteria)
 
 - **MatchQueueManager**: `Assets/Scripts/Managers/MatchQueueManager.cs`
 - **MatchListController**: `Assets/Scripts/Controllers/MatchListController.cs`
+- **RedactionController**: `Assets/Scripts/Controllers/RedactionController.cs`
 - **ProfileManager**: `Assets/Scripts/Managers/ProfileManager.cs`
+- **RedactionManager**: `Assets/Scripts/Managers/RedactionManager.cs`
 - **MatchEvaluator**: `Assets/Scripts/Matching/MatchEvaluator.cs`
 - **Data classes**: `Assets/Scripts/Data/`

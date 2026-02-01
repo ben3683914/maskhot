@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 99476923}
   - component: {fileID: 99476924}
   - component: {fileID: 99476925}
+  - component: {fileID: 99476926}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -244,6 +245,19 @@ MonoBehaviour:
   candidatesPerQuest: 5
   questTransitionDelay: 1
   verboseLogging: 0
+--- !u!114 &99476926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 99476918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adde1df59d5c8fd4d9dcee80d2795639, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Managers.RedactionManager
+  verboseLogging: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,6 +361,7 @@ GameObject:
   - component: {fileID: 817613639}
   - component: {fileID: 817613640}
   - component: {fileID: 817613641}
+  - component: {fileID: 817613642}
   m_Layer: 0
   m_Name: Controllers
   m_TagString: Untagged
@@ -395,6 +410,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Controllers.QuestController
   verboseLogging: 0
+--- !u!114 &817613642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817613638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcda4d12f77e62f469a6fd717b44bf49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Controllers.RedactionController
+  verboseLogging: 0
 --- !u!1 &1667281034
 GameObject:
   m_ObjectHideFlags: 0
@@ -413,6 +441,8 @@ GameObject:
   - component: {fileID: 1667281045}
   - component: {fileID: 1667281046}
   - component: {fileID: 1667281047}
+  - component: {fileID: 1667281048}
+  - component: {fileID: 1667281049}
   m_Layer: 0
   m_Name: Testers
   m_TagString: Untagged
@@ -569,6 +599,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Testing.GameManagerTester
   testQuestCount: 2
   verboseOutput: 1
+--- !u!114 &1667281048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667281034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0119a5f27053ada46a0e2c9e02173e8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Testing.RedactionManagerTester
+  testCandidate: {fileID: 0}
+  verboseOutput: 0
+--- !u!114 &1667281049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667281034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb01e03ef8f44094199336565d064af8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Testing.RedactionControllerTester
+  testCandidate: {fileID: 0}
+  verboseOutput: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

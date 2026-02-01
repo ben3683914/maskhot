@@ -47,6 +47,28 @@ namespace Maskhot.Data
 
         [Tooltip("Is this a green flag post?")]
         public bool isGreenFlag;
+
+        /// <summary>
+        /// Generates a redacted version of this post's content.
+        /// Replaces non-whitespace characters with block characters (█),
+        /// preserving spaces and newlines for that "government document" look.
+        /// </summary>
+        /// <returns>The redacted text string</returns>
+        public string GetRedactedContent()
+        {
+            if (string.IsNullOrEmpty(content))
+            {
+                return string.Empty;
+            }
+
+            var result = new char[content.Length];
+            for (int i = 0; i < content.Length; i++)
+            {
+                // Preserve whitespace (spaces, newlines, tabs), redact everything else
+                result[i] = char.IsWhiteSpace(content[i]) ? content[i] : '█';
+            }
+            return new string(result);
+        }
     }
 
     [Serializable]

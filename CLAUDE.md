@@ -53,6 +53,7 @@ Read these docs when you need deeper context:
 | [docs/random-post-system.md](docs/random-post-system.md) | PostPoolManager, random post generation |
 | [docs/data-import.md](docs/data-import.md) | JSON import workflow, adding new data |
 | [docs/ui-reference.md](docs/ui-reference.md) | UI Toolkit specifics, SocialFeedController events/methods |
+| [docs/redaction-system.md](docs/redaction-system.md) | Post redaction/unredaction mechanics |
 | [docs/testing.md](docs/testing.md) | Tester scripts, verification workflow |
 
 ## Key Systems
@@ -62,11 +63,13 @@ Read these docs when you need deeper context:
 - **PostPoolManager** (singleton): Handles random post selection with trait matching
 - **MatchQueueManager** (singleton): Manages candidate queue, decision tracking, queue population
 - **QuestManager** (singleton): Handles quest lifecycle, client loading, fires quest events
+- **RedactionManager** (singleton): Manages post redaction/unredaction state
 
 ### Controllers (UI State/Events)
 - **MatchListController** (singleton): Manages current selection, navigation, fires `OnSelectionChanged` event
 - **QuestController** (singleton): UI-facing interface for quest state and cached criteria display
 - **DecisionController** (singleton): Handles accept/reject decisions, correctness evaluation, session statistics
+- **RedactionController** (singleton): UI-facing interface for post redaction/unredaction
 
 ### Other
 - **MatchEvaluator** (static): Evaluates candidates against match criteria, returns MatchResult with score
@@ -121,8 +124,8 @@ For multi-step tasks or significant changes, propose a plan and wait for confirm
 
 ## Implementation Status
 
-- **Complete**: Data structures, trait SOs, profile SOs, JSON import, matching system, managers (ProfileManager, PostPoolManager, MatchQueueManager, QuestManager, GameManager), controllers (MatchListController, QuestController, DecisionController)
+- **Complete**: Data structures, trait SOs, profile SOs, JSON import, matching system, managers (ProfileManager, PostPoolManager, MatchQueueManager, QuestManager, GameManager, RedactionManager), controllers (MatchListController, QuestController, DecisionController, RedactionController)
 - **In Progress**: None currently
-- **To Do**: QuestGenerator, UI implementation
+- **To Do**: QuestGenerator, MoneyManager, UI implementation
 
 See [docs/project-status.md](docs/project-status.md) for detailed status breakdown.
