@@ -79,9 +79,10 @@ For multi-step tasks or significant changes, propose a plan and wait for confirm
 
 1. **For data changes**: Edit JSON files in `JSONData/`, then reimport via Unity menu
 2. **Testing**: Use tester scripts (ProfileTester, MatchingTester, etc.) via Context Menu
-3. **ScriptableObjects**: Never create manually - always use JSON import for consistency
-4. **Controllers/Managers**: Follow singleton pattern, use events for UI communication
-5. **No git commands**: Do not perform any git operations (commit, push, etc.) - the user handles version control
+3. **Test maintenance**: When creating new managers or controllers, create a corresponding tester script. When modifying existing systems, update relevant tests. See [docs/testing.md](docs/testing.md) for conventions.
+4. **ScriptableObjects**: Never create manually - always use JSON import for consistency
+5. **Controllers/Managers**: Follow singleton pattern, use events for UI communication
+6. **No git commands**: Do not perform any git operations (commit, push, etc.) - the user handles version control
 
 ## Implementation Status
 

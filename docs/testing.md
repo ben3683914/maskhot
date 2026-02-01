@@ -2,7 +2,165 @@
 
 How to verify each system works correctly using tester scripts and verbose logging.
 
-## Tester Scripts
+## When to Create/Update Tests
+
+### Create New Tests When:
+- Adding a new **Manager** (e.g., GameManager, QuestManager)
+- Adding a new **Controller** (e.g., DecisionController, MatchListController)
+- Adding a new system with testable logic
+
+### Update Existing Tests When:
+- Modifying a system's public API (new methods, changed signatures)
+- Adding new features to an existing manager/controller
+- Fixing bugs (add test coverage for the bug scenario)
+
+---
+
+## Test Script Conventions
+
+Follow these patterns for consistency with existing testers.
+
+### File Location
+Place all tester scripts in `Assets/Scripts/Testing/` with the naming pattern `[SystemName]Tester.cs`.
+
+### Basic Structure
+
+```csharp
+using UnityEngine;
+using System.Text;
+
+namespace Maskhot.Testing
+{
+    public class MySystemTester : MonoBehaviour
+    {
+        [Header("Test Targets")]
+        [Tooltip("Specific assets to test (optional)")]
+        public MyAssetType[] testAssets;
+
+        [Header("Options")]
+        public bool verboseOutput = false;
+
+        [ContextMenu("Test Specific Asset")]
+        private void TestSpecific()
+        {
+            if (testAssets == null || testAssets.Length == 0)
+            {
+                Debug.LogWarning("MySystemTester: No assets assigned");
+                return;
+            }
+            TestAsset(testAssets[0]);
+        }
+
+        [ContextMenu("Test All Assigned")]
+        private void TestAllAssigned()
+        {
+            foreach (var asset in testAssets)
+            {
+                TestAsset(asset);
+            }
+        }
+
+        [ContextMenu("Test All (from Resources)")]
+        private void TestAllFromResources()
+        {
+            // Load from ProfileManager or Resources
+            var allAssets = ProfileManager.Instance.GetAllX();
+            foreach (var asset in allAssets)
+            {
+                TestAsset(asset);
+            }
+        }
+
+        private void TestAsset(MyAssetType asset)
+        {
+            var sb = new StringBuilder();
+            sb.AppendLine($"=== TESTING: {asset.name} ===");
+            sb.AppendLine();
+
+            // Section 1
+            sb.AppendLine("--- BASIC INFO ---");
+            sb.AppendLine($"  Name: {asset.displayName}");
+            sb.AppendLine($"  Type: {asset.type}");
+            sb.AppendLine();
+
+            // Section 2
+            sb.AppendLine("--- RELATIONSHIPS ---");
+            if (asset.relatedItems != null && asset.relatedItems.Length > 0)
+            {
+                foreach (var item in asset.relatedItems)
+                {
+                    sb.AppendLine($"  - {item.name}");
+                }
+            }
+            else
+            {
+                sb.AppendLine("  (none)");
+            }
+            sb.AppendLine();
+
+            // Verbose details (optional)
+            if (verboseOutput)
+            {
+                sb.AppendLine("--- VERBOSE DETAILS ---");
+                // Additional detailed output
+                sb.AppendLine();
+            }
+
+            sb.AppendLine("=== END TEST ===");
+            Debug.Log(sb.ToString());
+        }
+    }
+}
+```
+
+### Output Formatting Rules
+
+1. **Use StringBuilder** - Consolidate all output into a single `Debug.Log()` call for clean console logs
+
+2. **Section Headers** - Use clear separators for logical groupings:
+   ```
+   === MAIN HEADER ===
+   --- Section Name ---
+   ```
+
+3. **Indentation** - Use consistent spacing for hierarchy:
+   ```
+   --- SECTION ---
+     Property: value
+       - Sub-item 1
+       - Sub-item 2
+   ```
+
+4. **Blank Lines** - Add blank lines between sections for readability
+
+5. **Null Handling** - Always check for null and show "(none)" or "(not set)" instead of crashing
+
+6. **Summary Counts** - Include counts where helpful:
+   ```
+   --- POSTS (3 total) ---
+   ```
+
+### Context Menu Options
+
+Provide multiple test granularities:
+- **Test Specific X** - Test first assigned asset (quick single test)
+- **Test All Assigned** - Test all assets in the Inspector array
+- **Test All (from Resources/Manager)** - Test everything loaded in the system
+
+### Inspector Fields
+
+```csharp
+[Header("Test Targets")]
+public MyAssetType[] testAssets;           // Optional specific assets
+
+[Header("Options")]
+public bool verboseOutput = false;         // Toggle detailed output
+public bool showBreakdown = false;         // Toggle score/detail breakdown
+```
+
+---
+
+## Existing Tester Scripts
 
 All tester scripts use Unity's Context Menu (right-click the component in Inspector) to run tests.
 
@@ -228,7 +386,10 @@ public bool verboseLogging = false;
 
 ## File Locations
 
-- **ProfileTester**: `Assets/Scripts/Data/ProfileTester.cs`
+All new tester scripts should go in `Assets/Scripts/Testing/`.
+
+**Existing testers:**
+- **ProfileTester**: `Assets/Scripts/Data/ProfileTester.cs` *(legacy location)*
 - **RandomPostTester**: `Assets/Scripts/Testing/RandomPostTester.cs`
 - **ClientTester**: `Assets/Scripts/Testing/ClientTester.cs`
 - **MatchingTester**: `Assets/Scripts/Testing/MatchingTester.cs`
