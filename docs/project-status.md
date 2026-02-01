@@ -4,13 +4,19 @@
 
 *Nothing currently in progress*
 
+## Completed (Recent)
+
+**Economy System** ✓
+- [x] MoneyManager - Track player balance, spending, adding money
+- [x] MoneyController - UI-facing interface for money (unredact costs, spend validation)
+
 ## To Do
 
 **Procedural Generation**
 - [ ] QuestGenerator - Creates Quest instances from ClientProfileSO or procedural data
 
-**Economy System**
-- [ ] MoneyManager - Track player money, spending on unredaction
+**UI Implementation** *(handled by me)*
+- [ ] Start Menu - Should be a new scene. Start game, Credits, Quit
 
 **UI Implementation** *(handled by separate developer, not using Claude)*
 - [ ] Three-panel layout (left: queue, center: feed, right: criteria)

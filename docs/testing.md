@@ -32,6 +32,8 @@ See [templates.md](templates.md) for code templates.
 | GameManagerTester | `Scripts/Testing/GameManagerTester.cs` | Verify session management and state transitions |
 | RedactionManagerTester | `Scripts/Testing/RedactionManagerTester.cs` | Verify redaction data state |
 | RedactionControllerTester | `Scripts/Testing/RedactionControllerTester.cs` | Verify redaction UI layer |
+| MoneyManagerTester | `Scripts/Testing/MoneyManagerTester.cs` | Verify balance tracking and transactions |
+| MoneyControllerTester | `Scripts/Testing/MoneyControllerTester.cs` | Verify unredact costs and spend validation |
 
 Tester editors are in `Assets/Scripts/Editor/[Name]TesterEditor.cs`.
 

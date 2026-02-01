@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 99476924}
   - component: {fileID: 99476925}
   - component: {fileID: 99476926}
+  - component: {fileID: 99476927}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -257,6 +258,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adde1df59d5c8fd4d9dcee80d2795639, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Managers.RedactionManager
+  verboseLogging: 0
+--- !u!114 &99476927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 99476918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47529e29ee9f164e9825166e9f5bf5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Managers.MoneyManager
+  startingBalance: 500
   verboseLogging: 0
 --- !u!1 &145607621
 GameObject:
@@ -430,6 +445,7 @@ GameObject:
   - component: {fileID: 817613640}
   - component: {fileID: 817613641}
   - component: {fileID: 817613642}
+  - component: {fileID: 817613643}
   m_Layer: 0
   m_Name: Controllers
   m_TagString: Untagged
@@ -491,6 +507,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Controllers.RedactionController
   verboseLogging: 0
+--- !u!114 &817613643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817613638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee9e074d3e1299741b06f7825f41315a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Controllers.MoneyController
+  unredactCost: 50
+  verboseLogging: 0
 --- !u!1 &1667281034
 GameObject:
   m_ObjectHideFlags: 0
@@ -511,6 +541,8 @@ GameObject:
   - component: {fileID: 1667281047}
   - component: {fileID: 1667281048}
   - component: {fileID: 1667281049}
+  - component: {fileID: 1667281051}
+  - component: {fileID: 1667281050}
   m_Layer: 0
   m_Name: Testers
   m_TagString: Untagged
@@ -694,6 +726,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Testing.RedactionControllerTester
   testCandidate: {fileID: 0}
+  verboseOutput: 0
+--- !u!114 &1667281050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667281034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 687e3c13695bc474eb2e59fb21074f9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Testing.MoneyManagerTester
+  testAmount: 100
+  verboseOutput: 0
+--- !u!114 &1667281051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667281034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3501556b9ff41494ca6a193fdd91e2b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Testing.MoneyControllerTester
   verboseOutput: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
