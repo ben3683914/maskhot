@@ -4,7 +4,8 @@
       "Bash(tree:*)",
       "Bash(find Assets -type d -empty -exec sh -c 'echo \"\"\"\" > \"\"{}/.gitkeep\"\"' ;)",
       "Bash(ls:*)",
-      "Bash(dir /s /b c:UsersBenjiDocumentsreposmaskhot*setup*.md)"
+      "Bash(dir /s /b c:UsersBenjiDocumentsreposmaskhot*setup*.md)",
+      "Bash(git mv:*)"
     ]
   }
 }
