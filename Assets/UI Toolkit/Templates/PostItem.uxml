@@ -16,7 +16,7 @@
                 </Bindings>
             </ui:Image>
         </ui:VisualElement>
-        <ui:VisualElement name="post-footer" style="flex-grow: initial; flex-direction: row; font-size: 12px; justify-content: space-between;">
+        <ui:VisualElement name="post-footer" style="flex-grow: initial; flex-direction: row; font-size: 20px; justify-content: space-between;">
             <ui:VisualElement name="post-timestamp-container" style="flex-grow: 1; flex-direction: row;">
                 <ui:Label text="Posted:"/>
                 <ui:Label text="7 Days ago" name="post-timestamp">

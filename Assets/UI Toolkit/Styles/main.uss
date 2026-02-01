@@ -1,5 +1,6 @@
 :root {
     -unity-font-definition: url("project://database/Assets/Resources/Fonts/Kelseyfont-Regular SDF 1.asset");
+    font-size: 24px;
 }
 
 .pane {
