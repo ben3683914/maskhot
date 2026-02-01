@@ -152,6 +152,7 @@ graph LR
 
 ## Related Docs
 
+- [architecture.md](architecture.md) - Component patterns, dependency rules, conventions
 - [profiles-and-traits.md](profiles-and-traits.md) - Profile and trait system details
 - [matching-system.md](matching-system.md) - How matching and scoring works
 - [quest-system.md](quest-system.md) - Quest structure and criteria

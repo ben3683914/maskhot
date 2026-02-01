@@ -188,6 +188,73 @@ sequenceDiagram
 
 ---
 
+## QuestManager
+
+Singleton manager that handles quest lifecycle and client data.
+
+```csharp
+// Assets/Scripts/Managers/QuestManager.cs
+namespace Maskhot.Managers
+{
+    public class QuestManager : MonoBehaviour
+    {
+        public static QuestManager Instance { get; private set; }
+
+        // Properties
+        public Quest CurrentQuest { get; }
+        public bool HasActiveQuest { get; }
+        public int ClientCount { get; }
+
+        // Events
+        public event Action<Quest> OnQuestStarted;
+        public event Action<Quest> OnQuestCompleted;
+        public event Action OnQuestCleared;
+
+        // Quest management
+        public void StartQuest(ClientProfileSO client);
+        public void StartQuest(Quest quest);  // For procedural quests
+        public void CompleteQuest();
+        public void ClearQuest();
+
+        // Client lookup
+        public ClientProfileSO[] GetAllClients();
+        public ClientProfileSO GetClientByName(string name);
+        public ClientProfileSO[] GetStoryClients();
+        public ClientProfileSO[] GetClientsForLevel(int level);
+        public ClientProfileSO GetRandomClient();
+        public ClientProfileSO GetRandomStoryClient();
+    }
+}
+```
+
+### Usage Example
+
+```csharp
+// Start a quest from a specific client
+var client = QuestManager.Instance.GetClientByName("Emma");
+QuestManager.Instance.StartQuest(client);
+
+// Or start from a random story client
+var randomClient = QuestManager.Instance.GetRandomStoryClient();
+QuestManager.Instance.StartQuest(randomClient);
+
+// Populate the queue for this quest
+MatchQueueManager.Instance.PopulateForQuest(QuestManager.Instance.CurrentQuest, 5);
+
+// When player finishes all decisions
+QuestManager.Instance.CompleteQuest();
+```
+
+### Events
+
+| Event | When Fired |
+|-------|------------|
+| `OnQuestStarted` | After `StartQuest()` creates and sets the current quest |
+| `OnQuestCompleted` | After `CompleteQuest()` marks the quest as done |
+| `OnQuestCleared` | After `ClearQuest()` abandons the quest without completion |
+
+---
+
 ## Creating Quests
 
 ### From Curated ClientProfileSO
@@ -251,5 +318,7 @@ public class ClientProfileSO : ScriptableObject
 - **MatchCriteria**: `Assets/Scripts/Data/MatchCriteria.cs`
 - **NarrativeHintCollectionSO**: `Assets/Scripts/Data/NarrativeHintCollectionSO.cs`
 - **ClientProfileSO**: `Assets/Scripts/Data/ClientProfileSO.cs`
+- **QuestManager**: `Assets/Scripts/Managers/QuestManager.cs`
+- **QuestManagerTester**: `Assets/Scripts/Testing/QuestManagerTester.cs`
 - **Client data**: `JSONData/Clients.json`
 - **Hint data**: `JSONData/NarrativeHints.json`

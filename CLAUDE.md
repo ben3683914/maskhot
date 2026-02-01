@@ -45,6 +45,7 @@ Read these docs when you need deeper context:
 | Doc | When to Read |
 |-----|--------------|
 | [docs/overview.md](docs/overview.md) | High-level system diagrams, how all systems connect |
+| [docs/architecture.md](docs/architecture.md) | Component patterns (Manager vs Controller), dependency rules, conventions |
 | [docs/project-status.md](docs/project-status.md) | Implementation status, what's done/in-progress/to-do |
 | [docs/profiles-and-traits.md](docs/profiles-and-traits.md) | Working with CandidateProfile, ClientProfile, trait SOs |
 | [docs/matching-system.md](docs/matching-system.md) | MatchEvaluator, scoring algorithm, MatchResult |

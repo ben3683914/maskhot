@@ -14,11 +14,13 @@ How to verify each system works correctly using tester scripts and verbose loggi
 - Adding new features to an existing manager/controller
 - Fixing bugs (add test coverage for the bug scenario)
 
-### Always Provide Testing Instructions
-When creating or updating a test script, include clear instructions for the user:
-1. **Setup steps** - What components need to be in the scene, what to drag into Inspector fields
-2. **How to run** - Which Inspector button to click (create a custom editor with buttons)
-3. **What to verify** - What output to look for in the console, what indicates success/failure
+### Checklist for New/Updated Testers
+
+When creating or updating a test script:
+1. **Create the tester script** - `Assets/Scripts/Testing/[Name]Tester.cs`
+2. **Create the custom editor** - `Assets/Scripts/Editor/[Name]TesterEditor.cs` with Inspector buttons
+3. **Document in the tester's summary** - Setup steps, how to run, what to verify
+4. **Add to testing.md** - Add a section describing available tests
 
 ---
 
@@ -26,8 +28,10 @@ When creating or updating a test script, include clear instructions for the user
 
 Follow these patterns for consistency with existing testers.
 
-### File Location
-Place all tester scripts in `Assets/Scripts/Testing/` with the naming pattern `[SystemName]Tester.cs`.
+### File Locations
+
+- **Tester scripts**: `Assets/Scripts/Testing/[SystemName]Tester.cs`
+- **Custom editors**: `Assets/Scripts/Editor/[SystemName]TesterEditor.cs`
 
 ### Basic Structure
 
@@ -146,12 +150,60 @@ namespace Maskhot.Testing
    --- POSTS (3 total) ---
    ```
 
-### Context Menu Options
+### Custom Editor with Inspector Buttons
 
-Provide multiple test granularities:
+**Every tester script must have a corresponding custom editor** in `Assets/Scripts/Editor/` that displays buttons in the Inspector.
+
+**Required pattern:**
+1. Create `[TesterName]Editor.cs` in `Assets/Scripts/Editor/`
+2. Use `[CustomEditor(typeof(TesterClass))]` attribute
+3. Add buttons for each test method using `GUILayout.Button()`
+4. Disable buttons when not in Play Mode
+
+**Example editor:**
+```csharp
+using UnityEngine;
+using UnityEditor;
+using Maskhot.Testing;
+
+namespace Maskhot.Editor
+{
+    [CustomEditor(typeof(MyTester))]
+    public class MyTesterEditor : UnityEditor.Editor
+    {
+        public override void OnInspectorGUI()
+        {
+            DrawDefaultInspector();
+
+            MyTester tester = (MyTester)target;
+
+            EditorGUILayout.Space(10);
+            EditorGUILayout.LabelField("Test Actions", EditorStyles.boldLabel);
+
+            bool wasEnabled = GUI.enabled;
+            GUI.enabled = Application.isPlaying;
+
+            if (GUILayout.Button("Test Something"))
+            {
+                tester.TestSomething();
+            }
+
+            GUI.enabled = wasEnabled;
+
+            if (!Application.isPlaying)
+            {
+                EditorGUILayout.HelpBox("Enter Play Mode to run tests.", MessageType.Info);
+            }
+        }
+    }
+}
+```
+
+**Button organization:**
 - **Test Specific X** - Test first assigned asset (quick single test)
 - **Test All Assigned** - Test all assets in the Inspector array
 - **Test All (from Resources/Manager)** - Test everything loaded in the system
+- Add a space before utility buttons (Log State, Clear, etc.)
 
 ### Inspector Fields
 
@@ -322,6 +374,52 @@ Verifies MatchListController functionality.
 
 ---
 
+### QuestManagerTester
+
+Verifies QuestManager functionality.
+
+**Location**: `Assets/Scripts/Testing/QuestManagerTester.cs`
+
+**Setup**:
+1. Attach to a GameObject alongside QuestManager
+2. Optionally assign a test client
+3. Enter Play Mode
+
+**How to Run**: Click the buttons in the Inspector (buttons are enabled during Play Mode)
+
+**Available Tests**:
+- **Test Client Loading** - Verifies clients load from Resources
+- **Test Start Quest** - Tests starting a quest from a ClientProfileSO
+- **Test Quest Lifecycle** - Tests start, complete, and clear events
+- **Test Quest with Queue Population** - Tests integration with MatchQueueManager
+- **Log Current State** - Logs current quest state
+- **Clear Current Quest** - Clears the active quest
+
+---
+
+### QuestControllerTester
+
+Verifies QuestController functionality.
+
+**Location**: `Assets/Scripts/Testing/QuestControllerTester.cs`
+
+**Setup**:
+1. Attach to a GameObject alongside QuestManager and QuestController
+2. Optionally assign a test client
+3. Enter Play Mode
+
+**How to Run**: Click the buttons in the Inspector (buttons are enabled during Play Mode)
+
+**Available Tests**:
+- **Test Event Subscription** - Verifies controller receives QuestManager events
+- **Test Cached Data** - Tests that requirements/hints are cached consistently
+- **Test Cache Clearing** - Tests that cache is cleared when quest ends
+- **Log Current State** - Logs current controller state
+- **Start Test Quest** - Convenience button to start a quest
+- **Clear Quest** - Convenience button to clear the quest
+
+---
+
 ## Verbose Logging
 
 Enable detailed logging on manager components.
@@ -393,7 +491,7 @@ public bool verboseLogging = false;
 
 1. Add ProfileManager, PostPoolManager, RandomPostTester to a GameObject
 2. Enter Play mode
-3. Right-click RandomPostTester → "Test All Candidates (via ProfileManager)"
+3. Click "Test All Candidates (via ProfileManager)" button in Inspector
 4. Check output for trait matching and engagement
 
 ### Testing Matching
@@ -401,7 +499,7 @@ public bool verboseLogging = false;
 1. Add MatchingTester to a GameObject
 2. Enable `showScoreBreakdown` and `verboseRequirements`
 3. Enter Play mode
-4. Right-click → "Test All (from Resources)"
+4. Click "Test All (from Resources)" button in Inspector
 5. Cycle through algorithm modes to compare
 
 ### Testing Queue and Selection
@@ -448,3 +546,15 @@ All new tester scripts should go in `Assets/Scripts/Testing/`.
 - **MatchingTester**: `Assets/Scripts/Testing/MatchingTester.cs`
 - **MatchQueueTester**: `Assets/Scripts/Testing/MatchQueueTester.cs`
 - **MatchListTester**: `Assets/Scripts/Testing/MatchListTester.cs`
+- **QuestManagerTester**: `Assets/Scripts/Testing/QuestManagerTester.cs`
+- **QuestControllerTester**: `Assets/Scripts/Testing/QuestControllerTester.cs`
+
+**Tester editors** (in `Assets/Scripts/Editor/`):
+- `ProfileTesterEditor.cs`
+- `RandomPostTesterEditor.cs`
+- `ClientTesterEditor.cs`
+- `MatchingTesterEditor.cs`
+- `MatchQueueTesterEditor.cs`
+- `MatchListTesterEditor.cs`
+- `QuestManagerTesterEditor.cs`
+- `QuestControllerTesterEditor.cs`

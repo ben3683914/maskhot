@@ -23,9 +23,11 @@ Track what's complete, in progress, and to do.
 - [x] ProfileManager - Loads/serves all profiles and traits from Resources
 - [x] PostPoolManager - Random post selection with trait matching
 - [x] MatchQueueManager - Queue population, decision tracking, candidate filtering
+- [x] QuestManager - Client loading, quest lifecycle, events
 
 **Controller Layer**
 - [x] MatchListController - Selection state, navigation, fires events for UI
+- [x] QuestController - UI-facing interface for quest state and criteria display
 
 **Matching System**
 - [x] MatchEvaluator - Static evaluation logic (currently using **ImplicitSoftening** mode)
@@ -49,6 +51,8 @@ Track what's complete, in progress, and to do.
 - [x] MatchingTester - Verify matching algorithm
 - [x] MatchQueueTester - Verify queue population and decisions
 - [x] MatchListTester - Verify selection, navigation, events
+- [x] QuestManagerTester - Verify client loading, quest lifecycle, events
+- [x] QuestControllerTester - Verify event subscription, cached data, cache clearing
 
 ### In Progress
 
@@ -58,7 +62,6 @@ Track what's complete, in progress, and to do.
 
 **Manager Layer**
 - [ ] GameManager - Overall game state, level progression
-- [ ] QuestManager - Current quest management, validation
 
 **Controllers**
 - [ ] DecisionController - Accept/reject decisions and scoring
@@ -77,9 +80,9 @@ Track what's complete, in progress, and to do.
 
 ## Current Priorities
 
-1. **Remaining Managers** - GameManager, QuestManager
-2. **Remaining Controllers** - DecisionController
-3. **Integration** - Connect backend systems to UI (once UI is ready)
+Candidates for next:
+- **DecisionController** - Accept/reject decisions and scoring
+- **GameManager** - Overall game state, level progression
 
 ---
 
@@ -87,12 +90,12 @@ Track what's complete, in progress, and to do.
 
 1. ~~Data Structures~~ COMPLETE
 2. ~~ScriptableObjects~~ COMPLETE
-3. ~~Manager Layer (ProfileManager, PostPoolManager, MatchQueueManager)~~ COMPLETE
+3. ~~Manager Layer (ProfileManager, PostPoolManager, MatchQueueManager, QuestManager)~~ COMPLETE
 4. ~~Matching System~~ COMPLETE
-5. ~~Controller Layer (MatchListController)~~ COMPLETE
+5. ~~Controller Layer (MatchListController, QuestController)~~ COMPLETE
 6. UI Implementation *(separate developer)*
-7. **Remaining Managers (GameManager, QuestManager)** <- CURRENT FOCUS
-8. Remaining Controllers (DecisionController)
+7. Remaining Controllers (DecisionController)
+8. Remaining Managers (GameManager)
 9. QuestGenerator for procedural quests
 10. Integration and polish
 
@@ -100,4 +103,12 @@ Track what's complete, in progress, and to do.
 
 ## Notes
 
-*Add development notes here as the project progresses*
+### Validation Workflow
+
+When implementing new managers or controllers:
+1. Create the component and its tester script
+2. Mark as **In Progress** (pending validation)
+3. Wait for user to run tests and confirm everything works
+4. Only mark as **Completed** after user validation
+
+Do not automatically mark items complete or shift focus until validation is confirmed.
