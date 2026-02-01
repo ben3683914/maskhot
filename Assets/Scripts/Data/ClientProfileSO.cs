@@ -19,5 +19,13 @@ namespace Maskhot.Data
 
         [Tooltip("When does this client appear? (level/day number, 0 = any)")]
         public int suggestedLevel = 0;
+
+        [Header("Quest Content")]
+        [Tooltip("What the client says when introducing their request")]
+        [TextArea(3, 6)]
+        public string introduction;
+
+        [Tooltip("What the client is looking for in a match")]
+        public MatchCriteria matchCriteria;
     }
 }

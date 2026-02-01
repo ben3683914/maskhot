@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0093c6924794fbb4198edb976d339ac4, type: 3}
+  m_Name: CreativeType_Hints
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Data.NarrativeHintCollectionSO
+  relatedInterests:
+  - {fileID: 11400000, guid: 22b000627e679d94a93104d1df4b82b8, type: 2}
+  - {fileID: 11400000, guid: ea7f0c7452498194b919333344961331, type: 2}
+  - {fileID: 11400000, guid: 4a001a0bf9bb48a47a7376be3ea27e37, type: 2}
+  - {fileID: 11400000, guid: f6d4ac6d28c31c148aca6adf8f154d23, type: 2}
+  - {fileID: 11400000, guid: 618ae68366adf794596c56d7b829194e, type: 2}
+  relatedPersonalityTraits:
+  - {fileID: 11400000, guid: 9e70c1a25819e444d8aa319c37760e7d, type: 2}
+  relatedLifestyleTraits: []
+  hints:
+  - Appreciates creativity
+  - Looking for someone artistic
+  - Values self-expression
+  - Wants a creative soul
+  - Must have an artistic side
+  - Someone who sees beauty everywhere
+  - Creativity is very attractive
+  - Prefers someone with imagination
+  - Artists and dreamers welcome

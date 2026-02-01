@@ -19,8 +19,10 @@ namespace Maskhot.Editor
 		private static Dictionary<string, InterestSO> interests = new Dictionary<string, InterestSO>();
 		private static Dictionary<string, PersonalityTraitSO> personalityTraits = new Dictionary<string, PersonalityTraitSO>();
 		private static Dictionary<string, LifestyleTraitSO> lifestyleTraits = new Dictionary<string, LifestyleTraitSO>();
+		private static Dictionary<string, NarrativeHintCollectionSO> narrativeHints = new Dictionary<string, NarrativeHintCollectionSO>();
 		private static int randomPostCount = 0;
 		private static int candidateCount = 0;
+		private static int clientCount = 0;
 
 		[MenuItem("Tools/Maskhot/Import Data from JSON")]
 		public static void ImportAllData()
@@ -38,8 +40,10 @@ namespace Maskhot.Editor
 				interests.Clear();
 				personalityTraits.Clear();
 				lifestyleTraits.Clear();
+				narrativeHints.Clear();
 				randomPostCount = 0;
 				candidateCount = 0;
+				clientCount = 0;
 
 				// Create folder structure
 				CreateFolderStructure();
@@ -52,17 +56,23 @@ namespace Maskhot.Editor
 				// Resolve trait references (for traits that reference other traits)
 				ResolveTraitReferences();
 
+				// Import narrative hints (after traits, before clients which reference them)
+				ImportNarrativeHints();
+
 				// Import random post pool (before candidates, so we can reference it)
 				ImportRandomPosts();
 
 				// Import candidate profiles (which reference all the traits)
 				ImportCandidates();
 
+				// Import client profiles (which reference traits and narrative hints)
+				ImportClients();
+
 				AssetDatabase.SaveAssets();
 				AssetDatabase.Refresh();
 
 				EditorUtility.DisplayDialog("Import Complete",
-					$"Successfully imported:\n• {interests.Count} Interests\n• {personalityTraits.Count} Personality Traits\n• {lifestyleTraits.Count} Lifestyle Traits\n• {randomPostCount} Random Posts\n• {candidateCount} Candidates",
+					$"Successfully imported:\n• {interests.Count} Interests\n• {personalityTraits.Count} Personality Traits\n• {lifestyleTraits.Count} Lifestyle Traits\n• {narrativeHints.Count} Narrative Hint Collections\n• {randomPostCount} Random Posts\n• {candidateCount} Candidates\n• {clientCount} Clients",
 					"OK");
 			}
 			catch (System.Exception e)
@@ -80,7 +90,9 @@ namespace Maskhot.Editor
 			CreateFolderIfNeeded("Assets/Resources/GameData/Traits/Interests");
 			CreateFolderIfNeeded("Assets/Resources/GameData/Traits/Personality");
 			CreateFolderIfNeeded("Assets/Resources/GameData/Traits/Lifestyle");
+			CreateFolderIfNeeded("Assets/Resources/GameData/NarrativeHints");
 			CreateFolderIfNeeded("Assets/Resources/GameData/Profiles");
+			CreateFolderIfNeeded("Assets/Resources/GameData/Clients");
 			CreateFolderIfNeeded("Assets/Resources/GameData/PostPool");
 		}
 
@@ -290,6 +302,81 @@ namespace Maskhot.Editor
 					EditorUtility.SetDirty(asset);
 				}
 			}
+		}
+
+		private static void ImportNarrativeHints()
+		{
+			string jsonPath = Path.Combine(Application.dataPath, "..", JSON_DATA_PATH, "NarrativeHints.json");
+			if (!File.Exists(jsonPath))
+			{
+				Debug.LogWarning($"NarrativeHints.json not found at {jsonPath} - skipping narrative hints import");
+				return;
+			}
+
+			string json = File.ReadAllText(jsonPath);
+			NarrativeHintDataList data = JsonUtility.FromJson<NarrativeHintDataList>(json);
+
+			foreach (var hintData in data.narrativeHints)
+			{
+				string assetPath = $"{ASSET_BASE_PATH}/NarrativeHints/{hintData.assetName}.asset";
+
+				NarrativeHintCollectionSO asset = AssetDatabase.LoadAssetAtPath<NarrativeHintCollectionSO>(assetPath);
+				if (asset == null)
+				{
+					asset = ScriptableObject.CreateInstance<NarrativeHintCollectionSO>();
+					AssetDatabase.CreateAsset(asset, assetPath);
+				}
+
+				// Resolve related interests
+				List<InterestSO> relatedInterestsList = new List<InterestSO>();
+				if (hintData.relatedInterests != null)
+				{
+					foreach (string interestName in hintData.relatedInterests)
+					{
+						if (interests.TryGetValue(interestName, out InterestSO interest))
+						{
+							relatedInterestsList.Add(interest);
+						}
+					}
+				}
+				asset.relatedInterests = relatedInterestsList.ToArray();
+
+				// Resolve related personality traits
+				List<PersonalityTraitSO> relatedPersonalitiesList = new List<PersonalityTraitSO>();
+				if (hintData.relatedPersonalityTraits != null)
+				{
+					foreach (string traitName in hintData.relatedPersonalityTraits)
+					{
+						if (personalityTraits.TryGetValue(traitName, out PersonalityTraitSO trait))
+						{
+							relatedPersonalitiesList.Add(trait);
+						}
+					}
+				}
+				asset.relatedPersonalityTraits = relatedPersonalitiesList.ToArray();
+
+				// Resolve related lifestyle traits
+				List<LifestyleTraitSO> relatedLifestylesList = new List<LifestyleTraitSO>();
+				if (hintData.relatedLifestyleTraits != null)
+				{
+					foreach (string lifestyleName in hintData.relatedLifestyleTraits)
+					{
+						if (lifestyleTraits.TryGetValue(lifestyleName, out LifestyleTraitSO lifestyle))
+						{
+							relatedLifestylesList.Add(lifestyle);
+						}
+					}
+				}
+				asset.relatedLifestyleTraits = relatedLifestylesList.ToArray();
+
+				// Set hints
+				asset.hints = hintData.hints ?? new string[0];
+
+				EditorUtility.SetDirty(asset);
+				narrativeHints[hintData.assetName] = asset;
+			}
+
+			Debug.Log($"Imported {data.narrativeHints.Length} narrative hint collections");
 		}
 
 		private static void ImportRandomPosts()
@@ -502,6 +589,246 @@ namespace Maskhot.Editor
 			Debug.Log($"Imported {data.candidates.Length} candidate profiles");
 		}
 
+		private static void ImportClients()
+		{
+			string jsonPath = Path.Combine(Application.dataPath, "..", JSON_DATA_PATH, "Clients.json");
+			if (!File.Exists(jsonPath))
+			{
+				Debug.LogWarning($"Clients.json not found at {jsonPath} - skipping client import");
+				return;
+			}
+
+			string json = File.ReadAllText(jsonPath);
+			ClientDataList data = JsonUtility.FromJson<ClientDataList>(json);
+
+			foreach (var clientData in data.clients)
+			{
+				string assetPath = $"{ASSET_BASE_PATH}/Clients/{clientData.assetName}.asset";
+
+				ClientProfileSO asset = AssetDatabase.LoadAssetAtPath<ClientProfileSO>(assetPath);
+				if (asset == null)
+				{
+					asset = ScriptableObject.CreateInstance<ClientProfileSO>();
+					AssetDatabase.CreateAsset(asset, assetPath);
+				}
+
+				// Story metadata
+				asset.isStoryClient = clientData.isStoryClient;
+				asset.suggestedLevel = clientData.suggestedLevel;
+
+				// Basic profile data
+				asset.profile.clientName = clientData.profile.clientName;
+				asset.profile.gender = ParseGender(clientData.profile.gender);
+				asset.profile.age = clientData.profile.age;
+				asset.profile.relationship = clientData.profile.relationship;
+				asset.profile.backstory = clientData.profile.backstory;
+				asset.profile.archetype = ParseArchetype(clientData.profile.archetype);
+
+				// Resolve personality traits
+				List<PersonalityTraitSO> personalities = new List<PersonalityTraitSO>();
+				if (clientData.profile.personalityTraits != null)
+				{
+					foreach (string traitName in clientData.profile.personalityTraits)
+					{
+						if (personalityTraits.TryGetValue(traitName, out PersonalityTraitSO trait))
+						{
+							personalities.Add(trait);
+						}
+					}
+				}
+				asset.profile.personalityTraits = personalities.ToArray();
+
+				// Resolve interests
+				List<InterestSO> interestsList = new List<InterestSO>();
+				if (clientData.profile.interests != null)
+				{
+					foreach (string interestName in clientData.profile.interests)
+					{
+						if (interests.TryGetValue(interestName, out InterestSO interest))
+						{
+							interestsList.Add(interest);
+						}
+					}
+				}
+				asset.profile.interests = interestsList.ToArray();
+
+				// Resolve lifestyle traits
+				List<LifestyleTraitSO> lifestyles = new List<LifestyleTraitSO>();
+				if (clientData.profile.lifestyleTraits != null)
+				{
+					foreach (string lifestyleName in clientData.profile.lifestyleTraits)
+					{
+						if (lifestyleTraits.TryGetValue(lifestyleName, out LifestyleTraitSO lifestyle))
+						{
+							lifestyles.Add(lifestyle);
+						}
+					}
+				}
+				asset.profile.lifestyleTraits = lifestyles.ToArray();
+
+				// Introduction text
+				asset.introduction = clientData.introduction ?? "";
+
+				// Match criteria
+				if (clientData.matchCriteria != null)
+				{
+					var mc = clientData.matchCriteria;
+
+					// Initialize matchCriteria if null
+					if (asset.matchCriteria == null)
+					{
+						asset.matchCriteria = new MatchCriteria();
+					}
+
+					// Acceptable genders
+					List<Gender> genders = new List<Gender>();
+					if (mc.acceptableGenders != null)
+					{
+						foreach (string genderStr in mc.acceptableGenders)
+						{
+							genders.Add(ParseGender(genderStr));
+						}
+					}
+					asset.matchCriteria.acceptableGenders = genders.ToArray();
+
+					// Age range
+					asset.matchCriteria.minAge = mc.minAge;
+					asset.matchCriteria.maxAge = mc.maxAge;
+
+					// Red flag tolerance
+					asset.matchCriteria.maxRedFlags = mc.maxRedFlags;
+					asset.matchCriteria.minGreenFlags = mc.minGreenFlags;
+
+					// Scoring weights
+					asset.matchCriteria.personalityWeight = mc.personalityWeight;
+					asset.matchCriteria.interestsWeight = mc.interestsWeight;
+					asset.matchCriteria.lifestyleWeight = mc.lifestyleWeight;
+
+					// Dealbreaker personality traits
+					List<PersonalityTraitSO> dealbreakerPersonalities = new List<PersonalityTraitSO>();
+					if (mc.dealbreakerPersonalityTraits != null)
+					{
+						foreach (string traitName in mc.dealbreakerPersonalityTraits)
+						{
+							if (personalityTraits.TryGetValue(traitName, out PersonalityTraitSO trait))
+							{
+								dealbreakerPersonalities.Add(trait);
+							}
+						}
+					}
+					asset.matchCriteria.dealbreakerPersonalityTraits = dealbreakerPersonalities.ToArray();
+
+					// Dealbreaker interests
+					List<InterestSO> dealbreakerInterestsList = new List<InterestSO>();
+					if (mc.dealbreakerInterests != null)
+					{
+						foreach (string interestName in mc.dealbreakerInterests)
+						{
+							if (interests.TryGetValue(interestName, out InterestSO interest))
+							{
+								dealbreakerInterestsList.Add(interest);
+							}
+						}
+					}
+					asset.matchCriteria.dealbreakerInterests = dealbreakerInterestsList.ToArray();
+
+					// Dealbreaker lifestyle traits
+					List<LifestyleTraitSO> dealbreakerLifestylesList = new List<LifestyleTraitSO>();
+					if (mc.dealbreakerLifestyleTraits != null)
+					{
+						foreach (string lifestyleName in mc.dealbreakerLifestyleTraits)
+						{
+							if (lifestyleTraits.TryGetValue(lifestyleName, out LifestyleTraitSO lifestyle))
+							{
+								dealbreakerLifestylesList.Add(lifestyle);
+							}
+						}
+					}
+					asset.matchCriteria.dealbreakerLifestyleTraits = dealbreakerLifestylesList.ToArray();
+
+					// Trait requirements
+					List<TraitRequirement> requirements = new List<TraitRequirement>();
+					if (mc.traitRequirements != null)
+					{
+						foreach (var reqData in mc.traitRequirements)
+						{
+							TraitRequirement req = new TraitRequirement();
+
+							// Narrative hints
+							if (!string.IsNullOrEmpty(reqData.narrativeHints) &&
+								narrativeHints.TryGetValue(reqData.narrativeHints, out NarrativeHintCollectionSO hintCollection))
+							{
+								req.narrativeHints = hintCollection;
+							}
+
+							// Acceptable interests
+							List<InterestSO> acceptableInterestsList = new List<InterestSO>();
+							if (reqData.acceptableInterests != null)
+							{
+								foreach (string interestName in reqData.acceptableInterests)
+								{
+									if (interests.TryGetValue(interestName, out InterestSO interest))
+									{
+										acceptableInterestsList.Add(interest);
+									}
+								}
+							}
+							req.acceptableInterests = acceptableInterestsList.ToArray();
+
+							// Acceptable personality traits
+							List<PersonalityTraitSO> acceptablePersonalitiesList = new List<PersonalityTraitSO>();
+							if (reqData.acceptablePersonalityTraits != null)
+							{
+								foreach (string traitName in reqData.acceptablePersonalityTraits)
+								{
+									if (personalityTraits.TryGetValue(traitName, out PersonalityTraitSO trait))
+									{
+										acceptablePersonalitiesList.Add(trait);
+									}
+								}
+							}
+							req.acceptablePersonalityTraits = acceptablePersonalitiesList.ToArray();
+
+							// Acceptable lifestyle traits
+							List<LifestyleTraitSO> acceptableLifestylesList = new List<LifestyleTraitSO>();
+							if (reqData.acceptableLifestyleTraits != null)
+							{
+								foreach (string lifestyleName in reqData.acceptableLifestyleTraits)
+								{
+									if (lifestyleTraits.TryGetValue(lifestyleName, out LifestyleTraitSO lifestyle))
+									{
+										acceptableLifestylesList.Add(lifestyle);
+									}
+								}
+							}
+							req.acceptableLifestyleTraits = acceptableLifestylesList.ToArray();
+
+							// Requirement level
+							req.level = ParseRequirementLevel(reqData.level ?? "Preferred");
+
+							requirements.Add(req);
+						}
+					}
+					asset.matchCriteria.traitRequirements = requirements.ToArray();
+				}
+
+				EditorUtility.SetDirty(asset);
+			}
+
+			clientCount = data.clients.Length;
+			Debug.Log($"Imported {data.clients.Length} client profiles");
+		}
+
+		private static RequirementLevel ParseRequirementLevel(string level)
+		{
+			if (System.Enum.TryParse(level, true, out RequirementLevel result))
+			{
+				return result;
+			}
+			Debug.LogWarning($"Unknown RequirementLevel '{level}', defaulting to Preferred");
+			return RequirementLevel.Preferred;
+		}
+
 		// ===== ENUM PARSING HELPERS =====
 
 		private static InterestCategory ParseInterestCategory(string category)
@@ -662,5 +989,79 @@ namespace Maskhot.Editor
 		public string[] relatedInterests;
 		public string[] relatedPersonalityTraits;
 		public string[] relatedLifestyleTraits;
+	}
+
+	[System.Serializable]
+	public class NarrativeHintDataList
+	{
+		public NarrativeHintData[] narrativeHints;
+	}
+
+	[System.Serializable]
+	public class NarrativeHintData
+	{
+		public string assetName;
+		public string[] relatedInterests;
+		public string[] relatedPersonalityTraits;
+		public string[] relatedLifestyleTraits;
+		public string[] hints;
+	}
+
+	[System.Serializable]
+	public class ClientDataList
+	{
+		public ClientData[] clients;
+	}
+
+	[System.Serializable]
+	public class ClientData
+	{
+		public string assetName;
+		public bool isStoryClient;
+		public int suggestedLevel;
+		public ClientProfileData profile;
+		public MatchCriteriaData matchCriteria;
+		public string introduction;
+	}
+
+	[System.Serializable]
+	public class ClientProfileData
+	{
+		public string clientName;
+		public string gender;
+		public int age;
+		public string relationship;
+		public string backstory;
+		public string[] personalityTraits;
+		public string[] interests;
+		public string[] lifestyleTraits;
+		public string archetype;
+	}
+
+	[System.Serializable]
+	public class MatchCriteriaData
+	{
+		public string[] acceptableGenders;
+		public int minAge;
+		public int maxAge;
+		public TraitRequirementData[] traitRequirements;
+		public string[] dealbreakerPersonalityTraits;
+		public string[] dealbreakerInterests;
+		public string[] dealbreakerLifestyleTraits;
+		public int maxRedFlags;
+		public int minGreenFlags;
+		public float personalityWeight;
+		public float interestsWeight;
+		public float lifestyleWeight;
+	}
+
+	[System.Serializable]
+	public class TraitRequirementData
+	{
+		public string narrativeHints;
+		public string[] acceptableInterests;
+		public string[] acceptablePersonalityTraits;
+		public string[] acceptableLifestyleTraits;
+		public string level;
 	}
 }

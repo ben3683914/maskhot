@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e65d5d4d98ea0514fa755d0e84f2cf63, type: 3}
+  m_Name: AishaPatel
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Data.ClientProfileSO
+  profile:
+    clientName: Aisha Patel
+    gender: 1
+    age: 33
+    profilePicture: {fileID: 0}
+    relationship: Your neighbor who's become a close friend
+    backstory: Aisha runs a wellness studio and lives a very intentional life. She
+      meditates every morning, tends her rooftop garden, and is deeply committed
+      to sustainability. She's looking for someone who shares her values.
+    personalityTraits:
+    - {fileID: 11400000, guid: 1a7c009c92f7bdf4688b1b22d357d039, type: 2}
+    - {fileID: 11400000, guid: 02a072ab57d4c64429be20475430d3a8, type: 2}
+    - {fileID: 11400000, guid: dbf34b8d6de69374e908d103dce99883, type: 2}
+    - {fileID: 11400000, guid: bebb43b5ed920104181a9c95bd5f5d45, type: 2}
+    interests:
+    - {fileID: 11400000, guid: e79c808cc9dc1ee4f9610798ca5513c0, type: 2}
+    - {fileID: 11400000, guid: 3f79ad421056cfc48ba2ebe0e7818f64, type: 2}
+    - {fileID: 11400000, guid: 7b1190411ca3d8b44a16e224411a5b79, type: 2}
+    - {fileID: 11400000, guid: afa8abb0ae95bd140aa10435d895c4b5, type: 2}
+    - {fileID: 11400000, guid: 9376f084032e81e4c812c05bdc3ba70a, type: 2}
+    lifestyleTraits:
+    - {fileID: 11400000, guid: 9edf6a408b0c574459de61d7247c1ab8, type: 2}
+    - {fileID: 11400000, guid: 0bb881e009979794cacd509cef7c5ddc, type: 2}
+    - {fileID: 11400000, guid: a1b0728d6c19eb9449dd02e607eb34b7, type: 2}
+    archetype: 7
+  isStoryClient: 1
+  suggestedLevel: 5
+  introduction: I've been focusing on myself for a long time, and I think I'm finally
+    ready to share my energy with someone special. But they need to understand that
+    wellness isn't just a hobby for me - it's my whole life. I need someone peaceful,
+    kind, and who actually cares about the world. Someone who'd rather watch the
+    sunrise than stay out until 2am.
+  matchCriteria:
+    acceptableGenders: 000000000100000002000000
+    minAge: 28
+    maxAge: 40
+    traitRequirements:
+    - narrativeHints: {fileID: 11400000, guid: a20a18ecfe049b240b8634375922438d, type: 2}
+      acceptableInterests:
+      - {fileID: 11400000, guid: e79c808cc9dc1ee4f9610798ca5513c0, type: 2}
+      - {fileID: 11400000, guid: 3f79ad421056cfc48ba2ebe0e7818f64, type: 2}
+      - {fileID: 11400000, guid: 23f291fb352447843a2ec97825270f75, type: 2}
+      acceptablePersonalityTraits:
+      - {fileID: 11400000, guid: 1a7c009c92f7bdf4688b1b22d357d039, type: 2}
+      acceptableLifestyleTraits:
+      - {fileID: 11400000, guid: 0bb881e009979794cacd509cef7c5ddc, type: 2}
+      level: 0
+    - narrativeHints: {fileID: 11400000, guid: a0934184af444364da33dbff253de281, type: 2}
+      acceptableInterests:
+      - {fileID: 11400000, guid: 9376f084032e81e4c812c05bdc3ba70a, type: 2}
+      - {fileID: 11400000, guid: 7b1190411ca3d8b44a16e224411a5b79, type: 2}
+      acceptablePersonalityTraits:
+      - {fileID: 11400000, guid: 02a072ab57d4c64429be20475430d3a8, type: 2}
+      acceptableLifestyleTraits:
+      - {fileID: 11400000, guid: a1b0728d6c19eb9449dd02e607eb34b7, type: 2}
+      level: 0
+    - narrativeHints: {fileID: 11400000, guid: feaaadec826c4694e9bc60f9366a8931, type: 2}
+      acceptableInterests: []
+      acceptablePersonalityTraits: []
+      acceptableLifestyleTraits:
+      - {fileID: 11400000, guid: 9edf6a408b0c574459de61d7247c1ab8, type: 2}
+      level: 1
+    - narrativeHints: {fileID: 11400000, guid: 640d01329828a46428f99252b49f508b, type: 2}
+      acceptableInterests: []
+      acceptablePersonalityTraits:
+      - {fileID: 11400000, guid: 86b4e0b28e987944190fc2f795410b4e, type: 2}
+      - {fileID: 11400000, guid: dbf34b8d6de69374e908d103dce99883, type: 2}
+      acceptableLifestyleTraits: []
+      level: 1
+    dealbreakerPersonalityTraits:
+    - {fileID: 11400000, guid: 01a00d9749bb45a47b61c2182027ea65, type: 2}
+    - {fileID: 11400000, guid: 60cbe689988bcf242a8f61099738cba9, type: 2}
+    dealbreakerInterests: []
+    dealbreakerLifestyleTraits:
+    - {fileID: 11400000, guid: 4b3d86fcfc1a0594c9fc9236ca30c8c0, type: 2}
+    maxRedFlags: 0
+    minGreenFlags: 3
+    personalityWeight: 0.35
+    interestsWeight: 0.3
+    lifestyleWeight: 0.35

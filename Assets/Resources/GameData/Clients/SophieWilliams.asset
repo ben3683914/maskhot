@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e65d5d4d98ea0514fa755d0e84f2cf63, type: 3}
+  m_Name: SophieWilliams
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Data.ClientProfileSO
+  profile:
+    clientName: Sophie Williams
+    gender: 1
+    age: 26
+    profilePicture: {fileID: 0}
+    relationship: Your younger sister
+    backstory: Sophie just finished law school and landed her dream job. She's ambitious
+      and driven, but she also has a big heart. She wants someone who understands
+      work-life balance and won't be intimidated by her success.
+    personalityTraits:
+    - {fileID: 11400000, guid: 42bbda8e3f71da248b20a1cf0f02f80a, type: 2}
+    - {fileID: 11400000, guid: 02a072ab57d4c64429be20475430d3a8, type: 2}
+    - {fileID: 11400000, guid: 67f8b8ae5499b5f4bb0f2f57f70bd637, type: 2}
+    interests:
+    - {fileID: 11400000, guid: 734879b3f834b9f4ebead1897400eb19, type: 2}
+    - {fileID: 11400000, guid: e79c808cc9dc1ee4f9610798ca5513c0, type: 2}
+    - {fileID: 11400000, guid: 37a576e4a983f3e489540df3d8ce9c81, type: 2}
+    - {fileID: 11400000, guid: 9376f084032e81e4c812c05bdc3ba70a, type: 2}
+    lifestyleTraits:
+    - {fileID: 11400000, guid: 73e89c8c61ae219459b508cb01b43678, type: 2}
+    - {fileID: 11400000, guid: 0bb881e009979794cacd509cef7c5ddc, type: 2}
+    - {fileID: 11400000, guid: 9edf6a408b0c574459de61d7247c1ab8, type: 2}
+    archetype: 6
+  isStoryClient: 1
+  suggestedLevel: 3
+  introduction: Okay so, I know you're going to say I'm being too picky again, but
+    hear me out. I need someone who gets that my career is important to me AND who
+    isn't a complete workaholic robot. They need to have a heart, you know? But also
+    goals. Is that too much to ask?
+  matchCriteria:
+    acceptableGenders: 000000000100000002000000
+    minAge: 25
+    maxAge: 34
+    traitRequirements:
+    - narrativeHints: {fileID: 11400000, guid: 62689a38a5ae1ee499099499a201d0f0, type: 2}
+      acceptableInterests: []
+      acceptablePersonalityTraits:
+      - {fileID: 11400000, guid: 42bbda8e3f71da248b20a1cf0f02f80a, type: 2}
+      - {fileID: 11400000, guid: 67f8b8ae5499b5f4bb0f2f57f70bd637, type: 2}
+      acceptableLifestyleTraits:
+      - {fileID: 11400000, guid: 73e89c8c61ae219459b508cb01b43678, type: 2}
+      level: 0
+    - narrativeHints: {fileID: 11400000, guid: a0934184af444364da33dbff253de281, type: 2}
+      acceptableInterests:
+      - {fileID: 11400000, guid: 9376f084032e81e4c812c05bdc3ba70a, type: 2}
+      acceptablePersonalityTraits:
+      - {fileID: 11400000, guid: 02a072ab57d4c64429be20475430d3a8, type: 2}
+      - {fileID: 11400000, guid: 1a7c009c92f7bdf4688b1b22d357d039, type: 2}
+      acceptableLifestyleTraits: []
+      level: 0
+    - narrativeHints: {fileID: 11400000, guid: a20a18ecfe049b240b8634375922438d, type: 2}
+      acceptableInterests:
+      - {fileID: 11400000, guid: e79c808cc9dc1ee4f9610798ca5513c0, type: 2}
+      - {fileID: 11400000, guid: 3f79ad421056cfc48ba2ebe0e7818f64, type: 2}
+      - {fileID: 11400000, guid: 23f291fb352447843a2ec97825270f75, type: 2}
+      acceptablePersonalityTraits: []
+      acceptableLifestyleTraits:
+      - {fileID: 11400000, guid: 0bb881e009979794cacd509cef7c5ddc, type: 2}
+      level: 1
+    dealbreakerPersonalityTraits:
+    - {fileID: 11400000, guid: 86b4e0b28e987944190fc2f795410b4e, type: 2}
+    - {fileID: 11400000, guid: 01a00d9749bb45a47b61c2182027ea65, type: 2}
+    dealbreakerInterests: []
+    dealbreakerLifestyleTraits: []
+    maxRedFlags: 1
+    minGreenFlags: 3
+    personalityWeight: 0.45
+    interestsWeight: 0.25
+    lifestyleWeight: 0.3

@@ -65,7 +65,7 @@ Resources/GameData/
 ├── NarrativeHints/            - Narrative hint collections (Food_Hints, Travel_Hints, etc.)
 ├── Profiles/                  - Candidate profile ScriptableObjects
 ├── PostPool/                  - RandomPostPool.asset (global random post pool)
-└── Clients/                   - Client profile ScriptableObjects (future)
+└── Clients/                   - Client profile ScriptableObjects (5 story clients)
 ```
 
 ### Other Asset Folders
@@ -246,6 +246,12 @@ See **SAMPLE_DATA.md** for original reference data (now available as JSON files)
   - Shows trait matching, engagement generation, and flag distribution
   - Context Menu options: "Test Specific Candidate", "Test All Assigned Candidates", "Test All Candidates (via ProfileManager)", "Reset Post Pool"
   - Usage: Attach to GameObject alongside ProfileManager and PostPoolManager, use Context Menu to run tests
+- **ClientTester.cs** - Test script for verifying client profiles and match criteria
+  - Tests client info, introduction, and match criteria
+  - Shows trait requirements with narrative hints and acceptable traits
+  - Displays dealbreakers and scoring weights
+  - Context Menu options: "Test Specific Client", "Test All Assigned Clients", "Test All Clients (from Resources)"
+  - Usage: Attach to GameObject, drag in client assets or use Resources loader
 
 ## Development Workflow
 
@@ -256,7 +262,9 @@ See **SAMPLE_DATA.md** for original reference data (now available as JSON files)
    - `Interests.json` - 25 hobbies/activities
    - `PersonalityTraits.json` - 15 character traits
    - `LifestyleTraits.json` - 10 daily life patterns
+   - `NarrativeHints.json` - 15 hint collections for quest requirements
    - `Candidates.json` - 10 complete profiles with posts
+   - `Clients.json` - 5 story clients with match criteria
    - `RandomPosts.json` - 1000 global random posts for trait-based selection
 
 2. **Import to Unity**: `Tools > Maskhot > Import Data from JSON`
@@ -334,6 +342,7 @@ See `JSONData/README.md` for complete JSON documentation.
 - **Testing Tools**:
   - ProfileTester.cs (multi-profile batch testing with consolidated output)
   - RandomPostTester.cs (random post system verification with trait matching and engagement stats)
+  - ClientTester.cs (client profiles and match criteria verification)
 - Hybrid design supporting both curated (ScriptableObject) and procedural (runtime) content
 - **Manager Layer**:
   - ProfileManager.cs (singleton, auto-loads from Resources, verbose logging toggle)
@@ -352,12 +361,17 @@ See `JSONData/README.md` for complete JSON documentation.
   - RandomPosts.json (1000 posts with trait associations - 65% text, 35% photo)
   - CandidateProfileSO updated with `randomPostMin/Max` and `friendsCountMin/Max` ranges
   - ScriptableObjectImporter updated to import random posts
+- **Client Data System**:
+  - NarrativeHintCollectionSO.cs (hint collections that map to traits)
+  - NarrativeHints.json (15 hint collections for quest requirements)
+  - Clients.json (5 story clients with match criteria)
+  - ClientProfileSO updated with `introduction` and `matchCriteria` fields
+  - ScriptableObjectImporter updated to import narrative hints and clients
 
 ### ⏳ In Progress
 - None - ready for next development phase
 
 ### 📋 To Do
-- Sample client data (create a few ClientProfileSO assets for story progression)
 - Remaining manager classes (GameManager, QuestManager, MatchQueueManager)
 - Controller classes (MatchListController, SocialFeedController, DecisionController)
 - Matching/scoring algorithm

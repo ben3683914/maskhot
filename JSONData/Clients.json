@@ -1,0 +1,269 @@
+{
+  "clients": [
+    {
+      "assetName": "EmmaChen",
+      "isStoryClient": true,
+      "suggestedLevel": 1,
+      "profile": {
+        "clientName": "Emma Chen",
+        "gender": "Female",
+        "age": 28,
+        "relationship": "Your best friend from college",
+        "backstory": "Emma has been single for two years after a rough breakup. She's finally ready to date again but is nervous about putting herself out there. She trusts your judgment completely.",
+        "personalityTraits": ["Creative", "Thoughtful", "Reliable"],
+        "interests": ["Art", "Reading", "Cooking", "Movies"],
+        "lifestyleTraits": ["Homebody", "Career_Driven"],
+        "archetype": "Creative"
+      },
+      "matchCriteria": {
+        "acceptableGenders": ["Male", "Non-binary"],
+        "minAge": 26,
+        "maxAge": 35,
+        "traitRequirements": [
+          {
+            "narrativeHints": "CreativeType_Hints",
+            "acceptableInterests": ["Art", "Photography", "Music", "Writing"],
+            "acceptablePersonalityTraits": ["Creative"],
+            "acceptableLifestyleTraits": [],
+            "level": "Preferred"
+          },
+          {
+            "narrativeHints": "Reliable_Hints",
+            "acceptableInterests": [],
+            "acceptablePersonalityTraits": ["Reliable", "Thoughtful"],
+            "acceptableLifestyleTraits": [],
+            "level": "Required"
+          }
+        ],
+        "dealbreakerPersonalityTraits": ["Controversial"],
+        "dealbreakerInterests": [],
+        "dealbreakerLifestyleTraits": [],
+        "maxRedFlags": 1,
+        "minGreenFlags": 2,
+        "personalityWeight": 0.4,
+        "interestsWeight": 0.35,
+        "lifestyleWeight": 0.25
+      },
+      "introduction": "Hey! So I know I've been saying I'm not ready to date, but... I think I finally am? I just need someone who gets me, you know? Someone creative who I can actually count on. No drama though, please. My ex was enough drama for a lifetime."
+    },
+    {
+      "assetName": "DavidMartinez",
+      "isStoryClient": true,
+      "suggestedLevel": 2,
+      "profile": {
+        "clientName": "David Martinez",
+        "gender": "Male",
+        "age": 31,
+        "relationship": "Your coworker from the marketing team",
+        "backstory": "David is the life of every office party. He's always planning the next hiking trip or weekend getaway. He's looking for someone who can match his energy and keep up with his adventurous lifestyle.",
+        "personalityTraits": ["Outgoing", "Adventurous", "Humorous"],
+        "interests": ["Hiking", "Travel", "Photography", "Sports"],
+        "lifestyleTraits": ["FitnessFocused", "SocialButterfly", "Spontaneous"],
+        "archetype": "Adventurous"
+      },
+      "matchCriteria": {
+        "acceptableGenders": ["Female"],
+        "minAge": 25,
+        "maxAge": 35,
+        "traitRequirements": [
+          {
+            "narrativeHints": "ActiveLifestyle_Hints",
+            "acceptableInterests": ["Hiking", "Running", "Fitness", "Cycling", "Sports"],
+            "acceptablePersonalityTraits": [],
+            "acceptableLifestyleTraits": ["FitnessFocused"],
+            "level": "Required"
+          },
+          {
+            "narrativeHints": "Adventurous_Hints",
+            "acceptableInterests": ["Travel"],
+            "acceptablePersonalityTraits": ["Adventurous"],
+            "acceptableLifestyleTraits": ["Spontaneous"],
+            "level": "Required"
+          },
+          {
+            "narrativeHints": "SocialPerson_Hints",
+            "acceptableInterests": [],
+            "acceptablePersonalityTraits": ["Outgoing", "Humorous"],
+            "acceptableLifestyleTraits": ["SocialButterfly"],
+            "level": "Preferred"
+          }
+        ],
+        "dealbreakerPersonalityTraits": ["Introverted"],
+        "dealbreakerInterests": [],
+        "dealbreakerLifestyleTraits": ["Homebody"],
+        "maxRedFlags": 2,
+        "minGreenFlags": 2,
+        "personalityWeight": 0.3,
+        "interestsWeight": 0.4,
+        "lifestyleWeight": 0.3
+      },
+      "introduction": "Yo! So I need your help. I've been on like a dozen dates this year and they're all the same - nice people but they don't want to DO anything! I need someone who's down for spontaneous road trips, sunrise hikes, the whole deal. Think you can find me an adventure partner?"
+    },
+    {
+      "assetName": "SophieWilliams",
+      "isStoryClient": true,
+      "suggestedLevel": 3,
+      "profile": {
+        "clientName": "Sophie Williams",
+        "gender": "Female",
+        "age": 26,
+        "relationship": "Your younger sister",
+        "backstory": "Sophie just finished law school and landed her dream job. She's ambitious and driven, but she also has a big heart. She wants someone who understands work-life balance and won't be intimidated by her success.",
+        "personalityTraits": ["Ambitious", "Empathetic", "Analytical"],
+        "interests": ["Reading", "Yoga", "WineTasting", "Volunteering"],
+        "lifestyleTraits": ["Career_Driven", "Health_Conscious", "EarlyRiser"],
+        "archetype": "Career_Focused"
+      },
+      "matchCriteria": {
+        "acceptableGenders": ["Male", "Female", "Non-binary"],
+        "minAge": 25,
+        "maxAge": 34,
+        "traitRequirements": [
+          {
+            "narrativeHints": "Ambitious_Hints",
+            "acceptableInterests": [],
+            "acceptablePersonalityTraits": ["Ambitious", "Analytical"],
+            "acceptableLifestyleTraits": ["Career_Driven"],
+            "level": "Required"
+          },
+          {
+            "narrativeHints": "Caring_Hints",
+            "acceptableInterests": ["Volunteering"],
+            "acceptablePersonalityTraits": ["Empathetic", "Patient"],
+            "acceptableLifestyleTraits": [],
+            "level": "Required"
+          },
+          {
+            "narrativeHints": "Wellness_Hints",
+            "acceptableInterests": ["Yoga", "Meditation", "Fitness"],
+            "acceptablePersonalityTraits": [],
+            "acceptableLifestyleTraits": ["Health_Conscious"],
+            "level": "Preferred"
+          }
+        ],
+        "dealbreakerPersonalityTraits": ["Laid_Back", "Controversial"],
+        "dealbreakerInterests": [],
+        "dealbreakerLifestyleTraits": [],
+        "maxRedFlags": 1,
+        "minGreenFlags": 3,
+        "personalityWeight": 0.45,
+        "interestsWeight": 0.25,
+        "lifestyleWeight": 0.3
+      },
+      "introduction": "Okay so, I know you're going to say I'm being too picky again, but hear me out. I need someone who gets that my career is important to me AND who isn't a complete workaholic robot. They need to have a heart, you know? But also goals. Is that too much to ask?"
+    },
+    {
+      "assetName": "MichaelJohnson",
+      "isStoryClient": true,
+      "suggestedLevel": 4,
+      "profile": {
+        "clientName": "Michael Johnson",
+        "gender": "Male",
+        "age": 29,
+        "relationship": "Your roommate",
+        "backstory": "Michael is a software developer who loves his quiet life. After years of dating extroverts who exhausted him, he's looking for someone who enjoys the simple things - video games, movies, and takeout on Friday nights.",
+        "personalityTraits": ["Introverted", "Thoughtful", "Reliable", "Humorous"],
+        "interests": ["Gaming", "Movies", "Cooking", "BoardGames", "Podcasts"],
+        "lifestyleTraits": ["NightOwl", "Homebody", "Minimalist"],
+        "archetype": "Intellectual"
+      },
+      "matchCriteria": {
+        "acceptableGenders": ["Female", "Non-binary"],
+        "minAge": 24,
+        "maxAge": 33,
+        "traitRequirements": [
+          {
+            "narrativeHints": "Homebody_Hints",
+            "acceptableInterests": ["Gaming", "Movies", "BoardGames"],
+            "acceptablePersonalityTraits": ["Introverted"],
+            "acceptableLifestyleTraits": ["Homebody"],
+            "level": "Required"
+          },
+          {
+            "narrativeHints": "EasyGoing_Hints",
+            "acceptableInterests": [],
+            "acceptablePersonalityTraits": ["Laid_Back", "Patient"],
+            "acceptableLifestyleTraits": [],
+            "level": "Preferred"
+          },
+          {
+            "narrativeHints": "Intellectual_Hints",
+            "acceptableInterests": ["Reading", "Podcasts", "BoardGames"],
+            "acceptablePersonalityTraits": ["Thoughtful", "Analytical"],
+            "acceptableLifestyleTraits": [],
+            "level": "Preferred"
+          }
+        ],
+        "dealbreakerPersonalityTraits": [],
+        "dealbreakerInterests": [],
+        "dealbreakerLifestyleTraits": ["SocialButterfly"],
+        "maxRedFlags": 2,
+        "minGreenFlags": 1,
+        "personalityWeight": 0.35,
+        "interestsWeight": 0.4,
+        "lifestyleWeight": 0.25
+      },
+      "introduction": "So, uh, I know you've noticed I haven't dated in a while. Look, I just want someone who's happy with pizza and a movie night, you know? Someone who won't drag me to parties every weekend. Just... someone chill who gets that staying in is actually fun."
+    },
+    {
+      "assetName": "AishaPatel",
+      "isStoryClient": true,
+      "suggestedLevel": 5,
+      "profile": {
+        "clientName": "Aisha Patel",
+        "gender": "Female",
+        "age": 33,
+        "relationship": "Your neighbor who's become a close friend",
+        "backstory": "Aisha runs a wellness studio and lives a very intentional life. She meditates every morning, tends her rooftop garden, and is deeply committed to sustainability. She's looking for someone who shares her values.",
+        "personalityTraits": ["Patient", "Empathetic", "Optimistic", "Thoughtful"],
+        "interests": ["Yoga", "Meditation", "Gardening", "Cooking", "Volunteering"],
+        "lifestyleTraits": ["EarlyRiser", "Health_Conscious", "Eco_Friendly"],
+        "archetype": "Free_Spirit"
+      },
+      "matchCriteria": {
+        "acceptableGenders": ["Male", "Female", "Non-binary"],
+        "minAge": 28,
+        "maxAge": 40,
+        "traitRequirements": [
+          {
+            "narrativeHints": "Wellness_Hints",
+            "acceptableInterests": ["Yoga", "Meditation", "Fitness"],
+            "acceptablePersonalityTraits": ["Patient"],
+            "acceptableLifestyleTraits": ["Health_Conscious"],
+            "level": "Required"
+          },
+          {
+            "narrativeHints": "Caring_Hints",
+            "acceptableInterests": ["Volunteering", "Gardening"],
+            "acceptablePersonalityTraits": ["Empathetic"],
+            "acceptableLifestyleTraits": ["Eco_Friendly"],
+            "level": "Required"
+          },
+          {
+            "narrativeHints": "MorningPerson_Hints",
+            "acceptableInterests": [],
+            "acceptablePersonalityTraits": [],
+            "acceptableLifestyleTraits": ["EarlyRiser"],
+            "level": "Preferred"
+          },
+          {
+            "narrativeHints": "EasyGoing_Hints",
+            "acceptableInterests": [],
+            "acceptablePersonalityTraits": ["Laid_Back", "Optimistic"],
+            "acceptableLifestyleTraits": [],
+            "level": "Preferred"
+          }
+        ],
+        "dealbreakerPersonalityTraits": ["Controversial", "Competitive"],
+        "dealbreakerInterests": [],
+        "dealbreakerLifestyleTraits": ["NightOwl"],
+        "maxRedFlags": 0,
+        "minGreenFlags": 3,
+        "personalityWeight": 0.35,
+        "interestsWeight": 0.3,
+        "lifestyleWeight": 0.35
+      },
+      "introduction": "I've been focusing on myself for a long time, and I think I'm finally ready to share my energy with someone special. But they need to understand that wellness isn't just a hobby for me - it's my whole life. I need someone peaceful, kind, and who actually cares about the world. Someone who'd rather watch the sunrise than stay out until 2am."
+    }
+  ]
+}

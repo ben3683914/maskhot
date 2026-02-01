@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0093c6924794fbb4198edb976d339ac4, type: 3}
+  m_Name: NightOwl_Hints
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Data.NarrativeHintCollectionSO
+  relatedInterests:
+  - {fileID: 11400000, guid: 0e88a4d63722a4f42b01a605026e620d, type: 2}
+  - {fileID: 11400000, guid: 21a9d848f42791a4eb0eb111fb257885, type: 2}
+  relatedPersonalityTraits: []
+  relatedLifestyleTraits:
+  - {fileID: 11400000, guid: 4b3d86fcfc1a0594c9fc9236ca30c8c0, type: 2}
+  hints:
+  - Night owl preferred
+  - Looking for late night company
+  - Someone who comes alive after dark
+  - Wants a fellow insomniac
+  - Midnight conversations are the best
+  - Early mornings are not happening
+  - Best ideas come after midnight
+  - Should appreciate the quiet hours
+  - Late night snack runs together

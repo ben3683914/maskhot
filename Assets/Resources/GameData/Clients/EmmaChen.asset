@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e65d5d4d98ea0514fa755d0e84f2cf63, type: 3}
+  m_Name: EmmaChen
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Data.ClientProfileSO
+  profile:
+    clientName: Emma Chen
+    gender: 1
+    age: 28
+    profilePicture: {fileID: 0}
+    relationship: Your best friend from college
+    backstory: Emma has been single for two years after a rough breakup. She's finally
+      ready to date again but is nervous about putting herself out there. She trusts
+      your judgment completely.
+    personalityTraits:
+    - {fileID: 11400000, guid: 9e70c1a25819e444d8aa319c37760e7d, type: 2}
+    - {fileID: 11400000, guid: bebb43b5ed920104181a9c95bd5f5d45, type: 2}
+    - {fileID: 11400000, guid: bbfddb2ad09de15419519baf65862020, type: 2}
+    interests:
+    - {fileID: 11400000, guid: 22b000627e679d94a93104d1df4b82b8, type: 2}
+    - {fileID: 11400000, guid: 734879b3f834b9f4ebead1897400eb19, type: 2}
+    - {fileID: 11400000, guid: afa8abb0ae95bd140aa10435d895c4b5, type: 2}
+    - {fileID: 11400000, guid: 21a9d848f42791a4eb0eb111fb257885, type: 2}
+    lifestyleTraits:
+    - {fileID: 11400000, guid: 1995010a888601c49977996b471f76a6, type: 2}
+    - {fileID: 11400000, guid: 73e89c8c61ae219459b508cb01b43678, type: 2}
+    archetype: 2
+  isStoryClient: 1
+  suggestedLevel: 1
+  introduction: Hey! So I know I've been saying I'm not ready to date, but... I think
+    I finally am? I just need someone who gets me, you know? Someone creative who
+    I can actually count on. No drama though, please. My ex was enough drama for
+    a lifetime.
+  matchCriteria:
+    acceptableGenders: 0000000002000000
+    minAge: 26
+    maxAge: 35
+    traitRequirements:
+    - narrativeHints: {fileID: 11400000, guid: e3804f06bb7d05e4daaa9fe37aec7d79, type: 2}
+      acceptableInterests:
+      - {fileID: 11400000, guid: 22b000627e679d94a93104d1df4b82b8, type: 2}
+      - {fileID: 11400000, guid: ea7f0c7452498194b919333344961331, type: 2}
+      - {fileID: 11400000, guid: 4a001a0bf9bb48a47a7376be3ea27e37, type: 2}
+      - {fileID: 11400000, guid: f6d4ac6d28c31c148aca6adf8f154d23, type: 2}
+      acceptablePersonalityTraits:
+      - {fileID: 11400000, guid: 9e70c1a25819e444d8aa319c37760e7d, type: 2}
+      acceptableLifestyleTraits: []
+      level: 1
+    - narrativeHints: {fileID: 11400000, guid: 2a25522009caf2e4cb6a6e405bf298be, type: 2}
+      acceptableInterests: []
+      acceptablePersonalityTraits:
+      - {fileID: 11400000, guid: bbfddb2ad09de15419519baf65862020, type: 2}
+      - {fileID: 11400000, guid: bebb43b5ed920104181a9c95bd5f5d45, type: 2}
+      acceptableLifestyleTraits: []
+      level: 0
+    dealbreakerPersonalityTraits:
+    - {fileID: 11400000, guid: 01a00d9749bb45a47b61c2182027ea65, type: 2}
+    dealbreakerInterests: []
+    dealbreakerLifestyleTraits: []
+    maxRedFlags: 1
+    minGreenFlags: 2
+    personalityWeight: 0.4
+    interestsWeight: 0.35
+    lifestyleWeight: 0.25
