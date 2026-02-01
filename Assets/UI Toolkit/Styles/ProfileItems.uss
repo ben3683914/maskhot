@@ -1,0 +1,12 @@
+:root {
+}
+
+.profile-text {
+    flex-grow: 1;
+    -unity-text-align: upper-right;
+}
+
+.profile-data-container {
+    flex-grow: 0;
+    flex-direction: row;
+}

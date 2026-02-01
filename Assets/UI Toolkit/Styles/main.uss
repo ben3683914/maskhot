@@ -1,0 +1,16 @@
+:root {
+}
+
+.pane {
+    flex-grow: 1;
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    border-left-color: rgb(0, 0, 0);
+    border-right-color: rgb(0, 0, 0);
+    border-top-color: rgb(0, 0, 0);
+    border-bottom-color: rgb(0, 0, 0);
+    flex-basis: 33%;
+    flex-shrink: 0;
+}
