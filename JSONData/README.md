@@ -14,7 +14,9 @@ This folder contains JSON files that define all ScriptableObject data for the ga
 **25 Interests** - Hobbies and activities (Hiking, Gaming, Yoga, Photography, etc.)
 **15 Personality Traits** - Character traits (Outgoing, Creative, Controversial, etc.)
 **10 Lifestyle Traits** - Daily life patterns (Night Owl, Career Driven, Eco Friendly, etc.)
+**15 Narrative Hint Collections** - Abstract player-facing hints that map to traits for quest requirements
 **10 Candidate Profiles** - Complete dating profiles with 1-5 posts each (29 total posts)
+**5 Client Profiles** - Story clients with match criteria (Emma, David, Sophie, Michael, Aisha)
 **1000 Random Posts** - Global pool of posts for trait-based random assignment (65% text, 35% photo)
 
 ## File Descriptions
@@ -196,6 +198,99 @@ Global pool of random posts that can be assigned to any candidate based on trait
 }
 ```
 
+### NarrativeHints.json
+Collections of narrative hints used for quest requirements. These map abstract player-facing text to concrete trait requirements.
+
+**Current Count:** 15 hint collections
+
+**Fields:**
+- `assetName`: Unique identifier for the asset file
+- `relatedInterests`: Array of interest asset names this hint maps to
+- `relatedPersonalityTraits`: Array of personality trait asset names
+- `relatedLifestyleTraits`: Array of lifestyle trait asset names
+- `hints`: Array of hint variations (one randomly selected at runtime)
+
+**Example:**
+```json
+{
+  "assetName": "ActiveLifestyle_Hints",
+  "relatedInterests": ["Hiking", "Running", "Fitness"],
+  "relatedPersonalityTraits": [],
+  "relatedLifestyleTraits": ["FitnessFocused"],
+  "hints": [
+    "Needs someone who can keep up",
+    "Looking for an active partner",
+    "Wants someone who enjoys the outdoors"
+  ]
+}
+```
+
+### Clients.json
+Client profiles - the people asking for matches. Each client has their own personality, backstory, and match criteria.
+
+**Current Count:** 5 story clients
+
+**Profile Fields:**
+- `assetName`: Unique identifier for the asset file
+- `isStoryClient`: Whether this is a main story client (true/false)
+- `suggestedLevel`: When this client appears (level/day number, 0 = any)
+- `profile`: Client's personal information (same structure as CandidateProfile)
+  - `clientName`, `gender`, `age`, `relationship`, `backstory`
+  - `personalityTraits`, `interests`, `lifestyleTraits`, `archetype`
+- `introduction`: What the client says when introducing their request
+- `matchCriteria`: What the client is looking for
+
+**MatchCriteria Fields:**
+- `acceptableGenders`: Array of acceptable genders
+- `minAge`, `maxAge`: Age range
+- `traitRequirements`: Array of requirement objects with:
+  - `narrativeHints`: Asset name of NarrativeHintCollection to display
+  - `acceptableInterests`, `acceptablePersonalityTraits`, `acceptableLifestyleTraits`: Traits that satisfy this requirement
+  - `level`: "Required", "Preferred", or "Avoid"
+- `minRequiredMet`: How many Required traits must be met (0 = all must be met, 1+ = at least that many)
+- `dealbreakerPersonalityTraits`, `dealbreakerInterests`, `dealbreakerLifestyleTraits`: Auto-reject traits
+- `maxRedFlags`, `minGreenFlags`: Flag tolerance
+- `personalityWeight`, `interestsWeight`, `lifestyleWeight`: Scoring weights (0-1)
+
+**Example:**
+```json
+{
+  "assetName": "EmmaChen",
+  "isStoryClient": true,
+  "suggestedLevel": 1,
+  "profile": {
+    "clientName": "Emma Chen",
+    "gender": "Female",
+    "age": 28,
+    "relationship": "Your best friend from college",
+    "backstory": "Emma has been single for two years...",
+    "personalityTraits": ["Creative", "Thoughtful"],
+    "interests": ["Art", "Reading"],
+    "lifestyleTraits": ["Homebody"],
+    "archetype": "Creative"
+  },
+  "introduction": "Hey! So I know I've been saying I'm not ready to date...",
+  "matchCriteria": {
+    "acceptableGenders": ["Male", "Non-binary"],
+    "minAge": 26,
+    "maxAge": 35,
+    "traitRequirements": [
+      {
+        "narrativeHints": "CreativeType_Hints",
+        "acceptableInterests": ["Art", "Photography"],
+        "acceptablePersonalityTraits": ["Creative"],
+        "acceptableLifestyleTraits": [],
+        "level": "Preferred"
+      }
+    ],
+    "minRequiredMet": 1,
+    "dealbreakerPersonalityTraits": ["Controversial"],
+    "maxRedFlags": 1,
+    "minGreenFlags": 2
+  }
+}
+```
+
 ## Important Notes
 
 ### Asset References
@@ -222,10 +317,12 @@ This will link to the Hiking.asset, Cooking.asset, and Reading.asset files creat
 
 ### Import Order
 The importer automatically handles dependencies:
-1. Creates all trait ScriptableObjects first
+1. Creates all trait ScriptableObjects first (Interests, Personality, Lifestyle)
 2. Resolves trait-to-trait references
-3. Imports random posts (creates RandomPostPool.asset)
-4. Creates candidate profiles and links them to traits
+3. Imports narrative hint collections (references traits)
+4. Imports random posts (creates RandomPostPool.asset)
+5. Creates candidate profiles and links them to traits
+6. Creates client profiles with match criteria (references traits and narrative hints)
 
 ### Overwriting
 The import system will **overwrite existing assets** with the same names. If you've made manual changes in Unity's inspector, they will be lost on the next import.
@@ -237,7 +334,9 @@ Generated assets are saved to `Assets/Resources/GameData/` for runtime loading:
 - `Assets/Resources/GameData/Traits/Interests/`
 - `Assets/Resources/GameData/Traits/Personality/`
 - `Assets/Resources/GameData/Traits/Lifestyle/`
+- `Assets/Resources/GameData/NarrativeHints/`
 - `Assets/Resources/GameData/Profiles/`
+- `Assets/Resources/GameData/Clients/`
 - `Assets/Resources/GameData/PostPool/` (RandomPostPool.asset)
 
 **Note:** Assets are in the Resources folder so `ProfileManager` and `PostPoolManager` can auto-load them at runtime using `Resources.LoadAll<T>()` and `Resources.Load<T>()`.
@@ -306,11 +405,12 @@ Generated assets are saved to `Assets/Resources/GameData/` for runtime loading:
 
 ## Next Steps After Import
 
-1. **Set up ProfileManager:** Create an empty GameObject, add the `ProfileManager` component - data loads automatically at runtime
-2. **Set up PostPoolManager:** Add the `PostPoolManager` component to the same or another GameObject for random post selection
-3. **Test with ProfileManager:** Enable `verboseLogging` on ProfileManager to see a full data dump in the console
-4. **Test with PostPoolManager:** Enable `verboseLogging` on PostPoolManager to see post selection details
-5. **Or use ProfileTester:** Attach the ProfileTester component to a GameObject and drag in profile assets for manual testing
-6. **Verify references:** Check that all trait references are properly linked in the inspector
-7. **Review generated assets:** Browse `Assets/Resources/GameData/` folders to ensure everything imported correctly
-8. **Iterate:** Edit JSON files and reimport as needed to refine your data
+1. **Set up Managers:** Create GameObjects with `ProfileManager` and `PostPoolManager` components - data loads automatically at runtime
+2. **Test with ProfileTester:** Attach ProfileTester to a GameObject, drag in profile assets, use Context Menu "Test All Profiles"
+3. **Test with RandomPostTester:** Use Context Menu "Test All Candidates (via ProfileManager)" to verify random post generation
+4. **Test with ClientTester:** Use Context Menu "Test All Clients (from Resources)" to verify client profiles and match criteria
+5. **Test with MatchingTester:** Use Context Menu "Test All (from Resources)" to verify matching algorithm across all candidates and clients
+6. **Enable verbose logging:** Toggle `verboseLogging` on ProfileManager and PostPoolManager for detailed console output
+7. **Verify references:** Check that all trait references are properly linked in the inspector
+8. **Review generated assets:** Browse `Assets/Resources/GameData/` folders to ensure everything imported correctly
+9. **Iterate:** Edit JSON files and reimport as needed to refine your data

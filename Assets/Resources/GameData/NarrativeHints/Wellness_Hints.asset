@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0093c6924794fbb4198edb976d339ac4, type: 3}
+  m_Name: Wellness_Hints
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Data.NarrativeHintCollectionSO
+  relatedInterests:
+  - {fileID: 11400000, guid: e79c808cc9dc1ee4f9610798ca5513c0, type: 2}
+  - {fileID: 11400000, guid: 3f79ad421056cfc48ba2ebe0e7818f64, type: 2}
+  - {fileID: 11400000, guid: 23f291fb352447843a2ec97825270f75, type: 2}
+  relatedPersonalityTraits:
+  - {fileID: 11400000, guid: 1a7c009c92f7bdf4688b1b22d357d039, type: 2}
+  - {fileID: 11400000, guid: dbf34b8d6de69374e908d103dce99883, type: 2}
+  relatedLifestyleTraits:
+  - {fileID: 11400000, guid: 0bb881e009979794cacd509cef7c5ddc, type: 2}
+  - {fileID: 11400000, guid: 9edf6a408b0c574459de61d7247c1ab8, type: 2}
+  hints:
+  - Wellness-focused
+  - Health-conscious partner wanted
+  - Values mind-body connection
+  - Looking for zen energy
+  - Self-care is important
+  - Should prioritize mental health
+  - Balance is key
+  - Mindfulness matters
+  - Healthy lifestyle is attractive

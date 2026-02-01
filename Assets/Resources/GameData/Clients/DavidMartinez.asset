@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e65d5d4d98ea0514fa755d0e84f2cf63, type: 3}
+  m_Name: DavidMartinez
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Data.ClientProfileSO
+  profile:
+    clientName: David Martinez
+    gender: 0
+    age: 31
+    profilePicture: {fileID: 0}
+    relationship: Your coworker from the marketing team
+    backstory: David is the life of every office party. He's always planning the
+      next hiking trip or weekend getaway. He's looking for someone who can match
+      his energy and keep up with his adventurous lifestyle.
+    personalityTraits:
+    - {fileID: 11400000, guid: 9b30e02595d294442bd276eb38a32a68, type: 2}
+    - {fileID: 11400000, guid: bafd4f42a73f1294b9da0f4aa7be1d9f, type: 2}
+    - {fileID: 11400000, guid: 18fd32293919b2c4986f66754928b376, type: 2}
+    interests:
+    - {fileID: 11400000, guid: 6e5007832c785dc4f8b915b8bf54851d, type: 2}
+    - {fileID: 11400000, guid: 4e5b5ec27d252e24690ad9a740ebaa98, type: 2}
+    - {fileID: 11400000, guid: ea7f0c7452498194b919333344961331, type: 2}
+    - {fileID: 11400000, guid: 6686e9c7f53c29f44a9666ff8bed2627, type: 2}
+    lifestyleTraits:
+    - {fileID: 11400000, guid: 342cd702356f32b48a79c13a52a69490, type: 2}
+    - {fileID: 11400000, guid: 3299116f3eae71e4fa977c35dd44a4fb, type: 2}
+    - {fileID: 11400000, guid: 49b97bdeadcdfc9488a595fa22857bcb, type: 2}
+    archetype: 0
+  isStoryClient: 1
+  suggestedLevel: 2
+  introduction: Yo! So I need your help. I've been on like a dozen dates this year
+    and they're all the same - nice people but they don't want to DO anything! I
+    need someone who's down for spontaneous road trips, sunrise hikes, the whole
+    deal. Think you can find me an adventure partner?
+  matchCriteria:
+    acceptableGenders: 01000000
+    minAge: 25
+    maxAge: 35
+    traitRequirements:
+    - narrativeHints: {fileID: 11400000, guid: a1c1be2af3f692a49b2620e910e0bab4, type: 2}
+      acceptableInterests:
+      - {fileID: 11400000, guid: 6e5007832c785dc4f8b915b8bf54851d, type: 2}
+      - {fileID: 11400000, guid: 189a100c8b4d9d14fa14e5df302b023b, type: 2}
+      - {fileID: 11400000, guid: 23f291fb352447843a2ec97825270f75, type: 2}
+      - {fileID: 11400000, guid: e36909fe7981ecb4280769fe433427ff, type: 2}
+      - {fileID: 11400000, guid: 6686e9c7f53c29f44a9666ff8bed2627, type: 2}
+      acceptablePersonalityTraits: []
+      acceptableLifestyleTraits:
+      - {fileID: 11400000, guid: 342cd702356f32b48a79c13a52a69490, type: 2}
+      level: 0
+    - narrativeHints: {fileID: 11400000, guid: 0432a5c8eb808f94eba65b117c372311, type: 2}
+      acceptableInterests:
+      - {fileID: 11400000, guid: 4e5b5ec27d252e24690ad9a740ebaa98, type: 2}
+      acceptablePersonalityTraits:
+      - {fileID: 11400000, guid: bafd4f42a73f1294b9da0f4aa7be1d9f, type: 2}
+      acceptableLifestyleTraits:
+      - {fileID: 11400000, guid: 49b97bdeadcdfc9488a595fa22857bcb, type: 2}
+      level: 0
+    - narrativeHints: {fileID: 11400000, guid: 9cca15a0c6606444f9140e1adad8d664, type: 2}
+      acceptableInterests: []
+      acceptablePersonalityTraits:
+      - {fileID: 11400000, guid: 9b30e02595d294442bd276eb38a32a68, type: 2}
+      - {fileID: 11400000, guid: 18fd32293919b2c4986f66754928b376, type: 2}
+      acceptableLifestyleTraits:
+      - {fileID: 11400000, guid: 3299116f3eae71e4fa977c35dd44a4fb, type: 2}
+      level: 1
+    minRequiredMet: 1
+    dealbreakerPersonalityTraits:
+    - {fileID: 11400000, guid: e786512a0eb90a44e87348a418254c61, type: 2}
+    dealbreakerInterests: []
+    dealbreakerLifestyleTraits:
+    - {fileID: 11400000, guid: 1995010a888601c49977996b471f76a6, type: 2}
+    maxRedFlags: 2
+    minGreenFlags: 2
+    personalityWeight: 0.3
+    interestsWeight: 0.4
+    lifestyleWeight: 0.3

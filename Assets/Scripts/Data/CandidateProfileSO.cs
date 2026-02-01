@@ -49,13 +49,66 @@ namespace Maskhot.Data
             }
         }
 
+        // Cached default sprites (loaded once)
+        private static Sprite cachedMaleSprite;
+        private static Sprite cachedFemaleSprite;
+
+        // Cached posts for current playthrough (persists until reset)
+        [System.NonSerialized]
+        private List<SocialMediaPost> cachedPlaythroughPosts;
+
+        /// <summary>
+        /// Gets the profile picture for this candidate.
+        /// If no picture is assigned, returns a gender-based default.
+        /// NonBinary candidates get a 50/50 random selection between male/female.
+        /// </summary>
+        public Sprite GetProfilePicture()
+        {
+            // Return assigned picture if available
+            if (profile.profilePicture != null)
+            {
+                return profile.profilePicture;
+            }
+
+            // Load and cache default sprites if needed
+            if (cachedMaleSprite == null)
+            {
+                cachedMaleSprite = Resources.Load<Sprite>("Sprites/Profiles/male");
+            }
+            if (cachedFemaleSprite == null)
+            {
+                cachedFemaleSprite = Resources.Load<Sprite>("Sprites/Profiles/female");
+            }
+
+            // Return gender-based default
+            switch (profile.gender)
+            {
+                case Gender.Male:
+                    return cachedMaleSprite;
+                case Gender.Female:
+                    return cachedFemaleSprite;
+                case Gender.NonBinary:
+                    // 50/50 random selection for NonBinary
+                    return Random.value < 0.5f ? cachedMaleSprite : cachedFemaleSprite;
+                default:
+                    return cachedMaleSprite;
+            }
+        }
+
         /// <summary>
         /// Gets all posts for this profile (guaranteed + random selection)
         /// Combines guaranteed posts with trait-matched random posts from the pool
         /// Posts are sorted by daysSincePosted (most recent first)
+        /// Results are cached - call ResetPlaythroughPosts() to clear for a new session.
         /// </summary>
         public List<SocialMediaPost> GetPostsForPlaythrough()
         {
+            // Return cached posts if already generated this session
+            if (cachedPlaythroughPosts != null)
+            {
+                return cachedPlaythroughPosts;
+            }
+
             List<SocialMediaPost> allPosts = new List<SocialMediaPost>(guaranteedPosts);
 
             // Get random posts from the pool if PostPoolManager is available
@@ -66,9 +119,18 @@ namespace Maskhot.Data
             }
 
             // Sort by daysSincePosted (most recent first)
-            allPosts = allPosts.OrderBy(p => p.daysSincePosted).ToList();
+            cachedPlaythroughPosts = allPosts.OrderBy(p => p.daysSincePosted).ToList();
 
-            return allPosts;
+            return cachedPlaythroughPosts;
+        }
+
+        /// <summary>
+        /// Clears the cached posts for this candidate.
+        /// Call when starting a new quest/session to get fresh random posts.
+        /// </summary>
+        public void ResetPlaythroughPosts()
+        {
+            cachedPlaythroughPosts = null;
         }
     }
 }

@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e65d5d4d98ea0514fa755d0e84f2cf63, type: 3}
+  m_Name: MichaelJohnson
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Data.ClientProfileSO
+  profile:
+    clientName: Michael Johnson
+    gender: 0
+    age: 29
+    profilePicture: {fileID: 0}
+    relationship: Your roommate
+    backstory: Michael is a software developer who loves his quiet life. After years
+      of dating extroverts who exhausted him, he's looking for someone who enjoys
+      the simple things - video games, movies, and takeout on Friday nights.
+    personalityTraits:
+    - {fileID: 11400000, guid: e786512a0eb90a44e87348a418254c61, type: 2}
+    - {fileID: 11400000, guid: bebb43b5ed920104181a9c95bd5f5d45, type: 2}
+    - {fileID: 11400000, guid: bbfddb2ad09de15419519baf65862020, type: 2}
+    - {fileID: 11400000, guid: 18fd32293919b2c4986f66754928b376, type: 2}
+    interests:
+    - {fileID: 11400000, guid: 0e88a4d63722a4f42b01a605026e620d, type: 2}
+    - {fileID: 11400000, guid: 21a9d848f42791a4eb0eb111fb257885, type: 2}
+    - {fileID: 11400000, guid: afa8abb0ae95bd140aa10435d895c4b5, type: 2}
+    - {fileID: 11400000, guid: 1fcfef9d0ea99604396fec8b46245f7a, type: 2}
+    - {fileID: 11400000, guid: 5ea56d809197cb847a0e6015619ddf84, type: 2}
+    lifestyleTraits:
+    - {fileID: 11400000, guid: 4b3d86fcfc1a0594c9fc9236ca30c8c0, type: 2}
+    - {fileID: 11400000, guid: 1995010a888601c49977996b471f76a6, type: 2}
+    - {fileID: 11400000, guid: 13ebe7b133c63c84c897debff8fa0c14, type: 2}
+    archetype: 1
+  isStoryClient: 1
+  suggestedLevel: 4
+  introduction: So, uh, I know you've noticed I haven't dated in a while. Look, I
+    just want someone who's happy with pizza and a movie night, you know? Someone
+    who won't drag me to parties every weekend. Just... someone chill who gets that
+    staying in is actually fun.
+  matchCriteria:
+    acceptableGenders: 0100000002000000
+    minAge: 24
+    maxAge: 33
+    traitRequirements:
+    - narrativeHints: {fileID: 11400000, guid: bf78f9e885a90204b9e14f5346d442b6, type: 2}
+      acceptableInterests:
+      - {fileID: 11400000, guid: 0e88a4d63722a4f42b01a605026e620d, type: 2}
+      - {fileID: 11400000, guid: 21a9d848f42791a4eb0eb111fb257885, type: 2}
+      - {fileID: 11400000, guid: 1fcfef9d0ea99604396fec8b46245f7a, type: 2}
+      acceptablePersonalityTraits:
+      - {fileID: 11400000, guid: e786512a0eb90a44e87348a418254c61, type: 2}
+      acceptableLifestyleTraits:
+      - {fileID: 11400000, guid: 1995010a888601c49977996b471f76a6, type: 2}
+      level: 0
+    - narrativeHints: {fileID: 11400000, guid: 640d01329828a46428f99252b49f508b, type: 2}
+      acceptableInterests: []
+      acceptablePersonalityTraits:
+      - {fileID: 11400000, guid: 86b4e0b28e987944190fc2f795410b4e, type: 2}
+      - {fileID: 11400000, guid: 1a7c009c92f7bdf4688b1b22d357d039, type: 2}
+      acceptableLifestyleTraits: []
+      level: 1
+    - narrativeHints: {fileID: 11400000, guid: befd4b4afc8ea3b469b31865eb3421ab, type: 2}
+      acceptableInterests:
+      - {fileID: 11400000, guid: 734879b3f834b9f4ebead1897400eb19, type: 2}
+      - {fileID: 11400000, guid: 5ea56d809197cb847a0e6015619ddf84, type: 2}
+      - {fileID: 11400000, guid: 1fcfef9d0ea99604396fec8b46245f7a, type: 2}
+      acceptablePersonalityTraits:
+      - {fileID: 11400000, guid: bebb43b5ed920104181a9c95bd5f5d45, type: 2}
+      - {fileID: 11400000, guid: 67f8b8ae5499b5f4bb0f2f57f70bd637, type: 2}
+      acceptableLifestyleTraits: []
+      level: 1
+    minRequiredMet: 1
+    dealbreakerPersonalityTraits: []
+    dealbreakerInterests: []
+    dealbreakerLifestyleTraits:
+    - {fileID: 11400000, guid: 3299116f3eae71e4fa977c35dd44a4fb, type: 2}
+    maxRedFlags: 2
+    minGreenFlags: 1
+    personalityWeight: 0.35
+    interestsWeight: 0.4
+    lifestyleWeight: 0.25

@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0093c6924794fbb4198edb976d339ac4, type: 3}
+  m_Name: Caring_Hints
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Data.NarrativeHintCollectionSO
+  relatedInterests:
+  - {fileID: 11400000, guid: 9376f084032e81e4c812c05bdc3ba70a, type: 2}
+  - {fileID: 11400000, guid: 7b1190411ca3d8b44a16e224411a5b79, type: 2}
+  relatedPersonalityTraits:
+  - {fileID: 11400000, guid: 02a072ab57d4c64429be20475430d3a8, type: 2}
+  - {fileID: 11400000, guid: 1a7c009c92f7bdf4688b1b22d357d039, type: 2}
+  relatedLifestyleTraits:
+  - {fileID: 11400000, guid: a1b0728d6c19eb9449dd02e607eb34b7, type: 2}
+  hints:
+  - Needs someone kind
+  - Looking for a caring soul
+  - Wants a good heart
+  - Values compassion
+  - Empathy is essential
+  - Should care about others
+  - Big heart required
+  - Kindness is the most attractive trait
+  - Someone who gives back

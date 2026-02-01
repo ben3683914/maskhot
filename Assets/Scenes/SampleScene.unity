@@ -119,6 +119,145 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &99476918
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 99476919}
+  - component: {fileID: 99476922}
+  - component: {fileID: 99476921}
+  - component: {fileID: 99476920}
+  - component: {fileID: 99476923}
+  - component: {fileID: 99476924}
+  - component: {fileID: 99476925}
+  - component: {fileID: 99476926}
+  m_Layer: 0
+  m_Name: Managers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &99476919
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 99476918}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &99476920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 99476918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dfd4bbc1fd84564194588f7b74a0a71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Managers.MatchQueueManager
+  defaultQueueSize: 5
+  minGoodMatches: 1
+  verboseLogging: 0
+--- !u!114 &99476921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 99476918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd2aa41bb83846b49b1428148af234f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Managers.PostPoolManager
+  wildCardChance: 0.1
+  photoWeight: 0.7
+  verboseLogging: 0
+  baseEngagementMultiplier: 0.1
+  commentToLikeRatio: 0.1
+--- !u!114 &99476922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 99476918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68dc5965a101db2499234187b6385b6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Managers.ProfileManager
+  verboseLogging: 0
+--- !u!114 &99476923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 99476918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08afd6153265c354598f7c600ce93614, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Managers.QuestManager
+  verboseLogging: 0
+--- !u!114 &99476924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 99476918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81466c3e1a4961f48a75a4a3fa8b01be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Controllers.DecisionController
+  autoAdvance: 1
+  verboseLogging: 0
+--- !u!114 &99476925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 99476918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0b49fa752981a44a9a9c80e60a67c6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Managers.GameManager
+  passingAccuracyThreshold: 70
+  candidatesPerQuest: 5
+  questTransitionDelay: 1
+  verboseLogging: 0
+--- !u!114 &99476926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 99476918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adde1df59d5c8fd4d9dcee80d2795639, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Managers.RedactionManager
+  verboseLogging: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -211,7 +350,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &764022256
+--- !u!1 &817613638
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -219,44 +358,72 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 764022258}
-  - component: {fileID: 764022257}
+  - component: {fileID: 817613639}
+  - component: {fileID: 817613640}
+  - component: {fileID: 817613641}
+  - component: {fileID: 817613642}
   m_Layer: 0
-  m_Name: ProfileManager
+  m_Name: Controllers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &764022257
+--- !u!4 &817613639
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817613638}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &817613640
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 764022256}
+  m_GameObject: {fileID: 817613638}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68dc5965a101db2499234187b6385b6d, type: 3}
+  m_Script: {fileID: 11500000, guid: 37aadd175842c6549bbd3ef990c2b0a4, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Managers.ProfileManager
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Controllers.MatchListController
   verboseLogging: 0
---- !u!4 &764022258
-Transform:
+--- !u!114 &817613641
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 764022256}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1085720868
+  m_GameObject: {fileID: 817613638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66a4cbd5638494a42aca9de6d7d97c8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Controllers.QuestController
+  verboseLogging: 0
+--- !u!114 &817613642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817613638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcda4d12f77e62f469a6fd717b44bf49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Controllers.RedactionController
+  verboseLogging: 0
+--- !u!1 &1667281034
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -264,46 +431,32 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1085720870}
-  - component: {fileID: 1085720869}
+  - component: {fileID: 1667281035}
+  - component: {fileID: 1667281043}
+  - component: {fileID: 1667281042}
+  - component: {fileID: 1667281041}
+  - component: {fileID: 1667281040}
+  - component: {fileID: 1667281039}
+  - component: {fileID: 1667281044}
+  - component: {fileID: 1667281045}
+  - component: {fileID: 1667281046}
+  - component: {fileID: 1667281047}
+  - component: {fileID: 1667281048}
+  - component: {fileID: 1667281049}
   m_Layer: 0
-  m_Name: Profile Tester
+  m_Name: Testers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1085720869
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1085720868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e046421e3ad2d24683d472945483b81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.ProfileTester
-  testProfiles:
-  - {fileID: 11400000, guid: 9654700331092cf4eb1cafd169b0dd14, type: 2}
-  - {fileID: 11400000, guid: a690b1bf014686a4ba94474659177a7e, type: 2}
-  - {fileID: 11400000, guid: bd79eb145ecd8f0468f40d017655f8fe, type: 2}
-  - {fileID: 11400000, guid: f1cfc6076472ffa4dabee967a3a85df2, type: 2}
-  - {fileID: 11400000, guid: fa377ebb8e595e34d8483a9411548e15, type: 2}
-  - {fileID: 11400000, guid: ceeb780152fdee6499f2692a43f9d1f5, type: 2}
-  - {fileID: 11400000, guid: 4ef6a96856056884fbdb0c1d17d7840a, type: 2}
-  - {fileID: 11400000, guid: 655e05ee18c7f714897072601b58fe58, type: 2}
-  - {fileID: 11400000, guid: cb5fc5cfc81aabf4983bcb36a9cf94df, type: 2}
-  - {fileID: 11400000, guid: 084c53d355025dd42a1a014b1de3359f, type: 2}
-  testOnStart: 0
---- !u!4 &1085720870
+--- !u!4 &1667281035
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1085720868}
+  m_GameObject: {fileID: 1667281034}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -312,177 +465,173 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1267366486
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1267366488}
-  - component: {fileID: 1267366487}
-  - component: {fileID: 1267366489}
-  m_Layer: 5
-  m_Name: UIDocument
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1267366487
+--- !u!114 &1667281039
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1267366486}
+  m_GameObject: {fileID: 1667281034}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Script: {fileID: 11500000, guid: 3fdc3c43d9803c748b266819d067f506, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.UIElements.UIDocument
-  m_PanelSettings: {fileID: 11400000, guid: d397daced484341488c7d823edda23af, type: 2}
-  m_ParentUI: {fileID: 0}
-  sourceAsset: {fileID: 9197481963319205126, guid: 28dd29c2689c0724e94cc6c68518e541, type: 3}
-  m_SortingOrder: 0
-  m_Position: 0
-  m_WorldSpaceSizeMode: 1
-  m_WorldSpaceWidth: 1920
-  m_WorldSpaceHeight: 1080
-  m_PivotReferenceSize: 0
-  m_Pivot: 0
-  m_WorldSpaceCollider: {fileID: 0}
---- !u!4 &1267366488
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1267366486}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1267366489
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Testing.MatchListTester
+  testCandidates: []
+  verboseOutput: 0
+--- !u!114 &1667281040
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1267366486}
+  m_GameObject: {fileID: 1667281034}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee417ac246b0e8d4ba903d41230d1ac9, type: 3}
+  m_Script: {fileID: 11500000, guid: 6b924ecae91b10a41b7cedf110fdf508, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UIManager
---- !u!1 &1285467072
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1285467074}
-  - component: {fileID: 1285467073}
-  m_Layer: 0
-  m_Name: RandomPostTester
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1285467073
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Testing.MatchQueueTester
+  testQueueSize: 5
+  testClient: {fileID: 0}
+  verboseOutput: 0
+--- !u!114 &1667281041
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1285467072}
+  m_GameObject: {fileID: 1667281034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c78b128346440e45b5d4781f4a79a89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Testing.MatchingTester
+  specificCandidate: {fileID: 0}
+  specificClient: {fileID: 0}
+  candidatesToTest: []
+  clientsToTest: []
+  requirementMode: 1
+  showScoreBreakdown: 1
+  verboseRequirements: 0
+--- !u!114 &1667281042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667281034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f9d71f6bf52205499abdc3498642bfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Testing.ClientTester
+  specificClient: {fileID: 0}
+  verboseMatchCriteria: 1
+  clientsToTest: []
+--- !u!114 &1667281043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667281034}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7d4bdf507934cf94ab33548c942e7864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Testing.RandomPostTester
-  specificCandidate: {fileID: 11400000, guid: f18c02443213959489d497a15538c421, type: 2}
+  specificCandidate: {fileID: 0}
   verbosePostLogging: 1
   candidatesToTest: []
---- !u!4 &1285467074
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1285467072}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1524636219
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1524636221}
-  - component: {fileID: 1524636220}
-  m_Layer: 0
-  m_Name: PostPoolManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1524636220
+--- !u!114 &1667281044
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1524636219}
+  m_GameObject: {fileID: 1667281034}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd2aa41bb83846b49b1428148af234f3, type: 3}
+  m_Script: {fileID: 11500000, guid: a409d674317caf6429861ad91574043f, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Managers.PostPoolManager
-  wildCardChance: 0.1
-  photoWeight: 0.3
-  verboseLogging: 0
-  baseEngagementMultiplier: 0.1
-  commentToLikeRatio: 0.1
---- !u!4 &1524636221
-Transform:
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Testing.QuestManagerTester
+  testClient: {fileID: 0}
+  verboseOutput: 1
+--- !u!114 &1667281045
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1524636219}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 1667281034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29251fb96a2cdce4aab028ee48849558, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Testing.QuestControllerTester
+  testClient: {fileID: 0}
+  verboseOutput: 1
+--- !u!114 &1667281046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667281034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e91b9a629fed924baac6ad00d758f1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Testing.DecisionControllerTester
+  testClient: {fileID: 0}
+  verboseOutput: 0
+--- !u!114 &1667281047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667281034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db09e6b541430e489a13d38f6d0ed0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Testing.GameManagerTester
+  testQuestCount: 2
+  verboseOutput: 1
+--- !u!114 &1667281048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667281034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0119a5f27053ada46a0e2c9e02173e8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Testing.RedactionManagerTester
+  testCandidate: {fileID: 0}
+  verboseOutput: 0
+--- !u!114 &1667281049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667281034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb01e03ef8f44094199336565d064af8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Testing.RedactionControllerTester
+  testCandidate: {fileID: 0}
+  verboseOutput: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
-  - {fileID: 1085720870}
-  - {fileID: 764022258}
-  - {fileID: 1524636221}
-  - {fileID: 1285467074}
-  - {fileID: 1267366488}
+  - {fileID: 99476919}
+  - {fileID: 817613639}
+  - {fileID: 1667281035}

@@ -1,0 +1,259 @@
+{
+  "narrativeHints": [
+    {
+      "assetName": "ActiveLifestyle_Hints",
+      "relatedInterests": ["Hiking", "Running", "Fitness", "Cycling", "Sports"],
+      "relatedPersonalityTraits": [],
+      "relatedLifestyleTraits": ["FitnessFocused"],
+      "hints": [
+        "Needs someone who can keep up",
+        "Looking for an active partner",
+        "Wants someone who enjoys the outdoors",
+        "Prefers someone who takes care of themselves",
+        "Gym buddy potential is a must",
+        "Should enjoy breaking a sweat",
+        "Athletic types preferred",
+        "Someone who won't skip leg day",
+        "Wants a partner for morning runs"
+      ]
+    },
+    {
+      "assetName": "CreativeType_Hints",
+      "relatedInterests": ["Art", "Photography", "Music", "Writing", "Theater"],
+      "relatedPersonalityTraits": ["Creative"],
+      "relatedLifestyleTraits": [],
+      "hints": [
+        "Appreciates creativity",
+        "Looking for someone artistic",
+        "Values self-expression",
+        "Wants a creative soul",
+        "Must have an artistic side",
+        "Someone who sees beauty everywhere",
+        "Creativity is very attractive",
+        "Prefers someone with imagination",
+        "Artists and dreamers welcome"
+      ]
+    },
+    {
+      "assetName": "Foodie_Hints",
+      "relatedInterests": ["Cooking", "Baking", "WineTasting"],
+      "relatedPersonalityTraits": [],
+      "relatedLifestyleTraits": ["Health_Conscious"],
+      "hints": [
+        "Loves good food",
+        "Enjoys cooking together",
+        "Appreciates a nice meal",
+        "Someone who can cook is a plus",
+        "Foodie adventures are a must",
+        "Should know their way around a kitchen",
+        "Bonus points for baking skills",
+        "Date nights should involve good restaurants",
+        "Wants someone who appreciates fine dining"
+      ]
+    },
+    {
+      "assetName": "Intellectual_Hints",
+      "relatedInterests": ["Reading", "Podcasts", "BoardGames", "Writing"],
+      "relatedPersonalityTraits": ["Analytical", "Thoughtful"],
+      "relatedLifestyleTraits": [],
+      "hints": [
+        "Values deep conversations",
+        "Wants someone who thinks before speaking",
+        "Looking for intellectual stimulation",
+        "Needs someone who reads",
+        "Must enjoy meaningful discussions",
+        "Brains over everything",
+        "Someone who asks good questions",
+        "Prefers substance over small talk",
+        "Curious minds only"
+      ]
+    },
+    {
+      "assetName": "SocialPerson_Hints",
+      "relatedInterests": [],
+      "relatedPersonalityTraits": ["Outgoing", "Humorous"],
+      "relatedLifestyleTraits": ["SocialButterfly"],
+      "hints": [
+        "Must love parties",
+        "Looking for someone social",
+        "Needs a people person",
+        "Wants someone who can work a room",
+        "Should be comfortable meeting new people",
+        "Life of the party type",
+        "Extroverts preferred",
+        "Someone who makes friends easily",
+        "Good with crowds is a must"
+      ]
+    },
+    {
+      "assetName": "Homebody_Hints",
+      "relatedInterests": ["Gaming", "Reading", "Movies", "BoardGames"],
+      "relatedPersonalityTraits": ["Introverted"],
+      "relatedLifestyleTraits": ["Homebody"],
+      "hints": [
+        "Prefers quiet nights in",
+        "Netflix and chill type",
+        "Wants a cozy homebody",
+        "Someone who enjoys staying in",
+        "Movie marathon partner needed",
+        "Comfortable with silence",
+        "No need to go out every weekend",
+        "Home is where the heart is",
+        "Couch potato compatibility required"
+      ]
+    },
+    {
+      "assetName": "Adventurous_Hints",
+      "relatedInterests": ["Travel", "Hiking"],
+      "relatedPersonalityTraits": ["Adventurous"],
+      "relatedLifestyleTraits": ["Spontaneous"],
+      "hints": [
+        "Must love adventure",
+        "Looking for a travel buddy",
+        "Wants spontaneous getaways",
+        "Someone up for anything",
+        "Passport should be well-stamped",
+        "Ready for last-minute trips",
+        "Thrill-seeker preferred",
+        "No comfort zone clingers",
+        "Wanderlust is attractive"
+      ]
+    },
+    {
+      "assetName": "MorningPerson_Hints",
+      "relatedInterests": ["Yoga", "Meditation", "Running"],
+      "relatedPersonalityTraits": [],
+      "relatedLifestyleTraits": ["EarlyRiser", "Health_Conscious"],
+      "hints": [
+        "Needs a morning person",
+        "Early bird preferred",
+        "Wants someone who starts the day early",
+        "Looking for a sunrise partner",
+        "5am workouts are a lifestyle",
+        "Breakfast dates are the best dates",
+        "Should be functional before coffee",
+        "Morning routines matter",
+        "Up with the sun is ideal"
+      ]
+    },
+    {
+      "assetName": "NightOwl_Hints",
+      "relatedInterests": ["Gaming", "Movies"],
+      "relatedPersonalityTraits": [],
+      "relatedLifestyleTraits": ["NightOwl"],
+      "hints": [
+        "Night owl preferred",
+        "Looking for late night company",
+        "Someone who comes alive after dark",
+        "Wants a fellow insomniac",
+        "Midnight conversations are the best",
+        "Early mornings are not happening",
+        "Best ideas come after midnight",
+        "Should appreciate the quiet hours",
+        "Late night snack runs together"
+      ]
+    },
+    {
+      "assetName": "Ambitious_Hints",
+      "relatedInterests": [],
+      "relatedPersonalityTraits": ["Ambitious", "Competitive"],
+      "relatedLifestyleTraits": ["Career_Driven"],
+      "hints": [
+        "Wants someone driven",
+        "Looking for ambition",
+        "Needs a go-getter",
+        "Values hard work",
+        "Career-focused is attractive",
+        "Should have big dreams",
+        "Hustle is respected",
+        "No slackers please",
+        "Success-minded individuals only"
+      ]
+    },
+    {
+      "assetName": "Caring_Hints",
+      "relatedInterests": ["Volunteering", "Gardening"],
+      "relatedPersonalityTraits": ["Empathetic", "Patient"],
+      "relatedLifestyleTraits": ["Eco_Friendly"],
+      "hints": [
+        "Needs someone kind",
+        "Looking for a caring soul",
+        "Wants a good heart",
+        "Values compassion",
+        "Empathy is essential",
+        "Should care about others",
+        "Big heart required",
+        "Kindness is the most attractive trait",
+        "Someone who gives back"
+      ]
+    },
+    {
+      "assetName": "EasyGoing_Hints",
+      "relatedInterests": [],
+      "relatedPersonalityTraits": ["Laid_Back", "Optimistic", "Patient"],
+      "relatedLifestyleTraits": [],
+      "hints": [
+        "No drama please",
+        "Looking for chill vibes",
+        "Wants someone relaxed",
+        "Easy-going is a must",
+        "Go with the flow type",
+        "Low maintenance preferred",
+        "Should not stress the small stuff",
+        "Positive energy only",
+        "Calm under pressure"
+      ]
+    },
+    {
+      "assetName": "Reliable_Hints",
+      "relatedInterests": [],
+      "relatedPersonalityTraits": ["Reliable", "Thoughtful"],
+      "relatedLifestyleTraits": [],
+      "hints": [
+        "Must be dependable",
+        "Looking for someone trustworthy",
+        "Wants a stable partner",
+        "Values consistency",
+        "Should follow through on promises",
+        "Reliability is sexy",
+        "No flaky types",
+        "Someone who shows up",
+        "Steady and grounded"
+      ]
+    },
+    {
+      "assetName": "Controversial_Avoid",
+      "relatedInterests": [],
+      "relatedPersonalityTraits": ["Controversial"],
+      "relatedLifestyleTraits": [],
+      "hints": [
+        "No drama queens",
+        "Avoid political types",
+        "No controversy please",
+        "Keep it peaceful",
+        "Don't need constant debates",
+        "Prefers harmony over arguments",
+        "No hot takes necessary",
+        "Should know when to stay quiet",
+        "Diplomatic personalities preferred"
+      ]
+    },
+    {
+      "assetName": "Wellness_Hints",
+      "relatedInterests": ["Yoga", "Meditation", "Fitness"],
+      "relatedPersonalityTraits": ["Patient", "Optimistic"],
+      "relatedLifestyleTraits": ["Health_Conscious", "EarlyRiser"],
+      "hints": [
+        "Wellness-focused",
+        "Health-conscious partner wanted",
+        "Values mind-body connection",
+        "Looking for zen energy",
+        "Self-care is important",
+        "Should prioritize mental health",
+        "Balance is key",
+        "Mindfulness matters",
+        "Healthy lifestyle is attractive"
+      ]
+    }
+  ]
+}
