@@ -22,7 +22,7 @@ public class PostPoolManager : MonoBehaviour
 
     // Configuration
     public float wildCardChance = 0.1f;        // 10% chance to ignore trait matching
-    public float photoWeight = 0.7f;           // 70% photo, 30% text
+    public float photoWeight = 0.1f;           // 10% photo, 90% text (adjust in Inspector)
     public float baseEngagementMultiplier = 0.1f;
     public float commentToLikeRatio = 0.1f;
     public bool verboseLogging = false;
@@ -71,7 +71,7 @@ Higher scoring posts are more likely to be selected (weighted random).
 
 ### 4. Type Weighting
 After trait matching, applies photo vs text preference:
-- `photoWeight = 0.7` → 70% photo posts, 30% text posts
+- `photoWeight = 0.1` → 10% photo posts, 90% text posts (configurable in Inspector)
 
 ### 5. Cloning
 Posts are cloned before modification to preserve the original pool.
@@ -90,6 +90,15 @@ Modifiers:
 
 ### 7. Timestamp Generation
 `daysSincePosted` is generated to interleave with guaranteed posts.
+
+### 8. Photo Image Selection
+Photo posts automatically select an appropriate image based on content and traits:
+
+1. **Dog-related** → `Dog.png` (keywords: dog, puppy, pup, canine, pupper, doggo; category: Animals)
+2. **Travel-related** → `Santorini sunset.png` (keywords: travel, sunset, vacation, trip, adventure; category: Travel/Outdoor)
+3. **Default** → Random selection from all available images (deterministic based on content hash)
+
+Images are loaded from `Resources/Sprites/Posts/`. The `DisplayImage` property in `SocialMediaPost` handles selection automatically.
 
 ---
 
