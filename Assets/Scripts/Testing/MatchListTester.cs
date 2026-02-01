@@ -65,6 +65,8 @@ namespace Maskhot.Testing
                 string name = candidate != null ? candidate.profile.characterName : "null";
                 Debug.Log($"MatchListTester: OnSelectionChanged fired - {name}");
             }
+
+            UIManager.Instance.updatePostList(MatchListController.Instance.CurrentPosts);
         }
 
         private void HandleQueueUpdated()
@@ -73,6 +75,8 @@ namespace Maskhot.Testing
             {
                 Debug.Log("MatchListTester: OnQueueUpdated fired");
             }
+
+            UIManager.Instance.updateProfileList(MatchListController.Instance.Queue);
         }
 
         /// <summary>
