@@ -310,6 +310,55 @@ namespace Maskhot.Testing
         }
 
         /// <summary>
+        /// Tests Queue, Count, PendingCount, and GetDecision properties
+        /// </summary>
+        [ContextMenu("Test Queue Properties")]
+        public void TestQueueProperties()
+        {
+            if (!ValidateControllers()) return;
+
+            var sb = new StringBuilder();
+            sb.AppendLine("=== MATCH LIST TESTER: Queue Properties ===");
+            sb.AppendLine();
+
+            EnsureQueuePopulated();
+
+            sb.AppendLine("--- QUEUE ACCESS ---");
+            var queue = MatchListController.Instance.Queue;
+            sb.AppendLine($"  Queue.Count: {queue.Count}");
+            sb.AppendLine($"  Count property: {MatchListController.Instance.Count}");
+            sb.AppendLine($"  PendingCount: {MatchListController.Instance.PendingCount}");
+            sb.AppendLine();
+
+            // Show first 3 candidates
+            sb.AppendLine("--- FIRST 3 CANDIDATES ---");
+            int toShow = Mathf.Min(3, queue.Count);
+            for (int i = 0; i < toShow; i++)
+            {
+                var candidate = queue[i];
+                var decision = MatchListController.Instance.GetDecision(candidate);
+                sb.AppendLine($"  [{i}] {candidate.profile.characterName} - {decision}");
+            }
+            sb.AppendLine();
+
+            // Make some decisions and verify GetDecision
+            if (queue.Count >= 2)
+            {
+                sb.AppendLine("--- AFTER DECISIONS ---");
+                MatchQueueManager.Instance.Accept(queue[0]);
+                MatchQueueManager.Instance.Reject(queue[1]);
+
+                sb.AppendLine($"  {queue[0].profile.characterName}: {MatchListController.Instance.GetDecision(queue[0])}");
+                sb.AppendLine($"  {queue[1].profile.characterName}: {MatchListController.Instance.GetDecision(queue[1])}");
+                sb.AppendLine($"  PendingCount now: {MatchListController.Instance.PendingCount}");
+                sb.AppendLine();
+            }
+
+            sb.AppendLine("=== END TEST ===");
+            Debug.Log(sb.ToString());
+        }
+
+        /// <summary>
         /// Logs current controller state
         /// </summary>
         [ContextMenu("Log Current State")]
@@ -321,6 +370,12 @@ namespace Maskhot.Testing
             sb.AppendLine("=== MATCH LIST CONTROLLER STATE ===");
             sb.AppendLine();
 
+            sb.AppendLine("--- QUEUE ---");
+            sb.AppendLine($"  Count: {MatchListController.Instance.Count}");
+            sb.AppendLine($"  PendingCount: {MatchListController.Instance.PendingCount}");
+            sb.AppendLine();
+
+            sb.AppendLine("--- SELECTION ---");
             sb.AppendLine($"  HasSelection: {MatchListController.Instance.HasSelection}");
             sb.AppendLine($"  CurrentCandidate: {MatchListController.Instance.CurrentCandidate?.profile.characterName ?? "null"}");
             sb.AppendLine($"  CurrentIndex: {MatchListController.Instance.CurrentIndex}");

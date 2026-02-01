@@ -87,6 +87,32 @@ namespace Maskhot.Controllers
         /// </summary>
         public bool HasPrevious => currentIndex > 0;
 
+        /// <summary>
+        /// The candidate queue (read-only).
+        /// Use this for displaying the candidate list in UI.
+        /// </summary>
+        public IReadOnlyList<CandidateProfileSO> Queue =>
+            MatchQueueManager.Instance?.Queue ?? (IReadOnlyList<CandidateProfileSO>)Array.Empty<CandidateProfileSO>();
+
+        /// <summary>
+        /// Total number of candidates in the queue.
+        /// </summary>
+        public int Count => MatchQueueManager.Instance?.Count ?? 0;
+
+        /// <summary>
+        /// Number of candidates still pending a decision.
+        /// </summary>
+        public int PendingCount => MatchQueueManager.Instance?.PendingCount ?? 0;
+
+        /// <summary>
+        /// Gets the decision state for a candidate.
+        /// Use this for styling candidates in the queue UI.
+        /// </summary>
+        public CandidateDecision GetDecision(CandidateProfileSO candidate)
+        {
+            return MatchQueueManager.Instance?.GetDecision(candidate) ?? CandidateDecision.Pending;
+        }
+
         #endregion
 
         #region Unity Lifecycle

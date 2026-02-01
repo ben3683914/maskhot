@@ -46,6 +46,11 @@ namespace Maskhot.Editor
                 tester.TestClearSelection();
             }
 
+            if (GUILayout.Button("Test Queue Properties"))
+            {
+                tester.TestQueueProperties();
+            }
+
             EditorGUILayout.Space(5);
 
             if (GUILayout.Button("Log Current State"))
