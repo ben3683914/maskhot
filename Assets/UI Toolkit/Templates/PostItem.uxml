@@ -10,9 +10,9 @@
                     <ui:DataBinding property="text" data-source-path="content" binding-mode="ToTarget"/>
                 </Bindings>
             </ui:Label>
-            <ui:Image source="project://database/Assets/Sprites/Profiles/profile.jpg?fileID=-4268459230832778112&amp;guid=de3c7f88c382cf04a941ef423892726d&amp;type=3#profile_0" style="background-color: rgb(0, 6, 170); flex-grow: 1;">
+            <ui:Image name="post-image" style="background-color: rgb(0, 6, 170); flex-grow: 1;">
                 <Bindings>
-                    <ui:DataBinding property="source" data-source-path="postImage" binding-mode="ToTarget"/>
+                    <ui:DataBinding property="source" data-source-path="DisplayImage" binding-mode="ToTarget"/>
                 </Bindings>
             </ui:Image>
         </ui:VisualElement>

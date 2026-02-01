@@ -21,6 +21,143 @@ namespace Maskhot.Data
         [Tooltip("Image/photo for this post (if applicable)")]
         public Sprite postImage;
 
+        private static Sprite s_BeachImage;
+        private static Sprite s_DogImage;
+        private static Sprite s_SantoriniImage;
+
+        /// <summary>
+        /// Returns the post image for Photo posts only. Returns null for other post types.
+        /// Intelligently selects an image based on post content/traits, falling back to Beach.
+        /// </summary>
+        public Sprite DisplayImage
+        {
+            get
+            {
+                if (postType != PostType.Photo)
+                    return null;
+
+                if (postImage != null)
+                    return postImage;
+
+                // Check content and traits for appropriate image
+                string lowerContent = content?.ToLowerInvariant() ?? "";
+
+                // Check for dog-related content
+                if (ContainsDogKeywords(lowerContent) || HasDogRelatedTraits())
+                {
+                    if (s_DogImage == null)
+                        s_DogImage = Resources.Load<Sprite>("Sprites/Posts/Dog");
+                    return s_DogImage;
+                }
+
+                // Check for travel/sunset-related content
+                if (ContainsTravelKeywords(lowerContent) || HasTravelRelatedTraits())
+                {
+                    if (s_SantoriniImage == null)
+                        s_SantoriniImage = Resources.Load<Sprite>("Sprites/Posts/Santorini sunset");
+                    return s_SantoriniImage;
+                }
+
+                // Default to random image (deterministic based on content)
+                return GetRandomDefaultImage();
+            }
+        }
+
+        private bool ContainsDogKeywords(string lowerContent)
+        {
+            return lowerContent.Contains("dog") ||
+                   lowerContent.Contains("puppy") ||
+                   lowerContent.Contains("pup") ||
+                   lowerContent.Contains("canine") ||
+                   lowerContent.Contains("pupper") ||
+                   lowerContent.Contains("doggo");
+        }
+
+        private bool ContainsTravelKeywords(string lowerContent)
+        {
+            return lowerContent.Contains("travel") ||
+                   lowerContent.Contains("sunset") ||
+                   lowerContent.Contains("sunrise") ||
+                   lowerContent.Contains("santorini") ||
+                   lowerContent.Contains("greece") ||
+                   lowerContent.Contains("vacation") ||
+                   lowerContent.Contains("holiday") ||
+                   lowerContent.Contains("trip") ||
+                   lowerContent.Contains("abroad") ||
+                   lowerContent.Contains("adventure");
+        }
+
+        private bool HasDogRelatedTraits()
+        {
+            if (relatedInterests != null)
+            {
+                foreach (var interest in relatedInterests)
+                {
+                    if (interest != null)
+                    {
+                        // Check category
+                        if (interest.category == InterestCategory.Animals)
+                            return true;
+
+                        // Check display name
+                        string name = interest.displayName?.ToLowerInvariant() ?? "";
+                        if (name.Contains("dog") || name.Contains("pet") || name.Contains("animal"))
+                            return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        private bool HasTravelRelatedTraits()
+        {
+            if (relatedInterests != null)
+            {
+                foreach (var interest in relatedInterests)
+                {
+                    if (interest != null)
+                    {
+                        // Check category
+                        if (interest.category == InterestCategory.Travel || interest.category == InterestCategory.Outdoor)
+                            return true;
+
+                        // Check display name
+                        string name = interest.displayName?.ToLowerInvariant() ?? "";
+                        if (name.Contains("travel") || name.Contains("adventure") || name.Contains("outdoor"))
+                            return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        private Sprite GetRandomDefaultImage()
+        {
+            // Load all images if needed
+            if (s_BeachImage == null)
+                s_BeachImage = Resources.Load<Sprite>("Sprites/Posts/Beach");
+            if (s_DogImage == null)
+                s_DogImage = Resources.Load<Sprite>("Sprites/Posts/Dog");
+            if (s_SantoriniImage == null)
+                s_SantoriniImage = Resources.Load<Sprite>("Sprites/Posts/Santorini sunset");
+
+            // Use content hash for deterministic "random" selection
+            int hash = content?.GetHashCode() ?? 0;
+            int index = Mathf.Abs(hash) % 3;
+
+            return index switch
+            {
+                0 => s_BeachImage,
+                1 => s_DogImage,
+                _ => s_SantoriniImage
+            };
+        }
+
+        /// <summary>
+        /// Whether this post should display an image (Photo type only).
+        /// </summary>
+        public bool ShowImage => postType == PostType.Photo;
+
         [Header("Post Metadata")]
         [Tooltip("Days since posted (1 = yesterday, 7 = a week ago, etc.) - used for sorting")]
         public int daysSincePosted;

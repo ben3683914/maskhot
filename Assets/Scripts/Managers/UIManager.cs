@@ -117,8 +117,9 @@ public class UIManager : MonoBehaviour
         });
 
         m_PostList.bindItem = (VisualElement element, int index) => {
-            // 1. Get the specific data for this row
-            var post = socialMediaPosts[index];
+            // 1. Get the specific data for this row (use itemsSource to avoid stale closure)
+            var post = m_PostList.itemsSource[index] as SocialMediaPost;
+            if (post == null) return;
 
             // 2. Unregister any previous clicks (Crucial for recycled elements!)
             element.UnregisterCallback<ClickEvent>(OnPostClicked);
@@ -131,7 +132,12 @@ public class UIManager : MonoBehaviour
             var candidate = MatchListController.Instance.CurrentCandidate;
             element.Q("post-header").Q<Label>().text = RedactionController.Instance.GetDisplayText(candidate, post);
             element.Q("post-header").Q<Image>().sprite = candidate.GetProfilePicture();
-           // element.Q<Label>("post-timestamp").text = candidate.get;
+
+            // Show/hide post image based on post type
+            var postImage = element.Q<Image>("post-image");
+            postImage.style.display = post.ShowImage ? DisplayStyle.Flex : DisplayStyle.None;
+            if (post.ShowImage)
+                postImage.sprite = post.DisplayImage;
         };
 
         m_PostList.unbindItem = (element, index) => {

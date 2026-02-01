@@ -58,7 +58,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 1995010a888601c49977996b471f76a6, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 1
+  - postType: 0
     content: "6 AM gym sessions hit different. No excuses, just results \U0001F4AA"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -282,7 +282,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 9edf6a408b0c574459de61d7247c1ab8, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 1
+  - postType: 0
     content: "Just discovered a new coffee shop with the BEST lattes. Life is good
       \u2615"
     postImage: {fileID: 0}
@@ -309,7 +309,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 1
+  - postType: 0
     content: Made it to the gym 5 days this week. Consistency is everything.
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -339,7 +339,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 342cd702356f32b48a79c13a52a69490, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 1
+  - postType: 0
     content: Just spent 3 hours meal prepping for the week. Future me will be so
       grateful
     postImage: {fileID: 0}
@@ -408,7 +408,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 1
+  - postType: 0
     content: Late night gaming session with the squad. We may have lost but we had
       fun
     postImage: {fileID: 0}
@@ -498,7 +498,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 1
     isGreenFlag: 0
-  - postType: 1
+  - postType: 0
     content: Finally trying that new running route everyone's been talking about
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -512,7 +512,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 342cd702356f32b48a79c13a52a69490, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 1
+  - postType: 0
     content: Baked cookies for my neighbors. They're new to the building!
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -702,7 +702,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 1
     isGreenFlag: 0
-  - postType: 1
+  - postType: 0
     content: Spent the morning helping at the food bank. Heart is full.
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -741,7 +741,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 4b3d86fcfc1a0594c9fc9236ca30c8c0, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 1
+  - postType: 0
     content: Hosted game night for 8 people. Chaotic but so worth it!
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -796,7 +796,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 1
+  - postType: 0
     content: My plants are thriving. I might actually be good at this gardening thing.
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -903,7 +903,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 73e89c8c61ae219459b508cb01b43678, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 1
+  - postType: 0
     content: Tried a new workout class today. Sore but happy!
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -956,7 +956,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 1
+  - postType: 0
     content: Spent the day exploring a new part of town. Love playing tourist in
       my own city.
     postImage: {fileID: 0}
@@ -972,7 +972,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 49b97bdeadcdfc9488a595fa22857bcb, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 1
+  - postType: 0
     content: Really proud of my friend for landing their dream job. Celebrating tonight!
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -1109,7 +1109,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 49b97bdeadcdfc9488a595fa22857bcb, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 1
+  - postType: 0
     content: Made dinner for my parents tonight. Simple pleasures.
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -1122,7 +1122,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 1
+  - postType: 0
     content: Clean apartment, fresh flowers, good music. Self-care Sunday complete.
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -1176,7 +1176,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 1
+  - postType: 0
     content: Just signed up for a pottery class. Time to try something new!
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -1190,7 +1190,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 1
+  - postType: 0
     content: Midnight snack run with my best friend. Core memories being made.
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -1284,7 +1284,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 73e89c8c61ae219459b508cb01b43678, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 1
+  - postType: 0
     content: Spent the day at a street fair. Found some amazing vintage pieces!
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -1339,7 +1339,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 0bb881e009979794cacd509cef7c5ddc, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 1
+  - postType: 0
     content: Made my grandma's recipe today. The kitchen smells like home.
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -1458,7 +1458,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 1
+  - postType: 0
     content: Batch cooking Sunday is my favorite self-care activity.
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -1576,7 +1576,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Cycling through the countryside. Pure freedom \U0001F6B4\u200D\u2642\uFE0F"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -1644,7 +1644,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 1995010a888601c49977996b471f76a6, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Caught the perfect moment at the aquarium. Nature is art \U0001F420"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -1658,7 +1658,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 1
+  - postType: 0
     content: Cooked dinner while listening to jazz. Channeling my inner chef.
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -1697,7 +1697,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Coffee shop writing session. Chapter 5 is finally done! \u2615"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -1722,7 +1722,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 1
+  - postType: 0
     content: Joined a hiking group. Made some great new friends!
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -1867,7 +1867,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "DIY project complete! Made this shelf from reclaimed wood \U0001F528"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -1893,7 +1893,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 1995010a888601c49977996b471f76a6, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 1
+  - postType: 0
     content: Biked to work today. Starting the day with endorphins hits different.
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -1919,7 +1919,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Art supplies restocked. Creative weekend incoming! \U0001F3A8"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -1973,7 +1973,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Vintage finds at the thrift store today! One person's trash is another's
       treasure \U0001F6CD\uFE0F"
     postImage: {fileID: 0}
@@ -2025,7 +2025,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 0bb881e009979794cacd509cef7c5ddc, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Night market adventures! The food was incredible \U0001F95F"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -2092,7 +2092,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Garden is coming along nicely! Can't wait for harvest season \U0001F331"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -2117,7 +2117,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 1
+  - postType: 0
     content: Spent the evening stargazing. We're so small in the grand scheme of
       things.
     postImage: {fileID: 0}
@@ -2131,7 +2131,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 4b3d86fcfc1a0594c9fc9236ca30c8c0, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 1
+  - postType: 0
     content: Tried rock climbing for the first time. Arms are sore but I'm hooked!
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -2145,7 +2145,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Homemade bread success! My kitchen smells amazing \U0001F35E"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -2254,7 +2254,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 3299116f3eae71e4fa977c35dd44a4fb, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Perfect weather for an outdoor yoga session \U0001F9D8"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -2306,7 +2306,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Look who visited my bird feeder today! \U0001F426"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -2347,7 +2347,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 0bb881e009979794cacd509cef7c5ddc, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 1
+  - postType: 0
     content: The gym at 5 AM is the most peaceful place on earth.
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -2361,7 +2361,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 342cd702356f32b48a79c13a52a69490, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Weekend getaway to the cabin. Exactly what I needed \U0001F3D5\uFE0F"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -2414,7 +2414,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: a1b0728d6c19eb9449dd02e607eb34b7, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "New running shoes = new motivation. Ready to crush some miles! \U0001F45F"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -2548,7 +2548,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 1
+  - postType: 0
     content: Finally crossed off a bucket list item today. Feeling accomplished!
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -2625,7 +2625,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 0bb881e009979794cacd509cef7c5ddc, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Finally visited the botanical garden. Spring in full bloom! \U0001F338"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -2678,7 +2678,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Tried my hand at latte art today. Getting better! \u2615"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -2703,7 +2703,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 1
     isGreenFlag: 0
-  - postType: 1
+  - postType: 0
     content: Made a new friend at the dog park today. His owner is cool too!
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -2849,7 +2849,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 1995010a888601c49977996b471f76a6, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: Art museum day! This exhibit on modern sculpture really got me thinking
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -2920,7 +2920,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 1
     isGreenFlag: 0
-  - postType: 1
+  - postType: 0
     content: "5k PR this morning! All those early runs are finally paying off \U0001F3C3"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -2937,7 +2937,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 342cd702356f32b48a79c13a52a69490, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Learning to play guitar. Week 3 and my fingers finally don't hurt as
       much \U0001F3B8"
     postImage: {fileID: 0}
@@ -2982,7 +2982,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Bike ride along the coast today. 40 miles of pure freedom \U0001F6B4"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -3028,7 +3028,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 9edf6a408b0c574459de61d7247c1ab8, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Wine tasting in the valley! Found a new favorite Pinot \U0001F377"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -3075,7 +3075,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 0bb881e009979794cacd509cef7c5ddc, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: Watched the game with friends. We lost but the company was worth it!
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -3120,7 +3120,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Picked up these vintage finds at the flea market! Love giving old things
       new life \u267B\uFE0F"
     postImage: {fileID: 0}
@@ -3213,7 +3213,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 13ebe7b133c63c84c897debff8fa0c14, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Farmers market haul! Supporting local is the way to go \U0001F96C\U0001F34E"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -3258,7 +3258,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 49b97bdeadcdfc9488a595fa22857bcb, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Baked goods for the office! Nothing brings people together like fresh
       cookies \U0001F36A"
     postImage: {fileID: 0}
@@ -3347,7 +3347,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 1
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Planted my first tree today! Small steps toward a greener future \U0001F333"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -3392,7 +3392,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 13ebe7b133c63c84c897debff8fa0c14, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Concert last night was incredible! Nothing beats live music \U0001F3B5"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -3434,7 +3434,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Finally mastered croissants from scratch! Buttery perfection \U0001F950"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -3477,7 +3477,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 73e89c8c61ae219459b508cb01b43678, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Volunteered at the food bank today. Small actions, big impact \U0001F49A"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -3523,7 +3523,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 342cd702356f32b48a79c13a52a69490, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Trying my hand at watercolors. Not great yet, but I'm having fun \U0001F3A8"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -3564,7 +3564,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 1
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Completed my first century ride! 100 miles on two wheels \U0001F6B4"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -3650,7 +3650,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 1995010a888601c49977996b471f76a6, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "New PR at the gym today! Hard work pays off \U0001F4AA"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -3696,7 +3696,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 73e89c8c61ae219459b508cb01b43678, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Pottery class was so therapeutic! Made this slightly lopsided bowl
       \U0001F605"
     postImage: {fileID: 0}
@@ -3741,7 +3741,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 0bb881e009979794cacd509cef7c5ddc, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Visited a new botanical garden. So many beautiful orchids! \U0001F33A"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -3784,7 +3784,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 3299116f3eae71e4fa977c35dd44a4fb, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Road trip vibes! 6 hours of scenic routes and good conversations \U0001F697"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -3826,7 +3826,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 1
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Finally tried stand-up paddleboarding. Only fell in twice! \U0001F3C4"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -3855,7 +3855,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 1
+  - postType: 0
     content: Working remotely from a cabin this week. Best decision I've made in
       months.
     postImage: {fileID: 0}
@@ -3870,7 +3870,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 49b97bdeadcdfc9488a595fa22857bcb, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Team won the pub trivia! Turns out random facts do come in handy \U0001F3C6"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -3911,7 +3911,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Cozy movie night in. Popcorn, blankets, and zero plans to move \U0001F37F"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -3997,7 +3997,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Brunch with the squad. Mimosas and good vibes only \U0001F942"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -4036,7 +4036,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "New plants for the office! Bringing some green to the workspace \U0001F331"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -4080,7 +4080,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 9edf6a408b0c574459de61d7247c1ab8, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Street food tour in the city! So many hidden gems to discover \U0001F35C"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -4122,7 +4122,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 0bb881e009979794cacd509cef7c5ddc, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "DIY furniture project complete! Only took 3 trips to the hardware store
       \U0001F528"
     postImage: {fileID: 0}
@@ -4281,7 +4281,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Farmers market finds! Fresh bread and local honey \U0001F36F\U0001F956"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -4323,7 +4323,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 73e89c8c61ae219459b508cb01b43678, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Escape room with friends! We escaped with 2 minutes to spare \U0001F510"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -4365,7 +4365,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 9edf6a408b0c574459de61d7247c1ab8, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Trail running through the forest. Nature is the best gym \U0001F332"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -4406,7 +4406,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 1
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Art gallery opening tonight. So inspiring to see new talent! \U0001F3A8"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -4447,7 +4447,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 0bb881e009979794cacd509cef7c5ddc, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Volunteer training complete! Ready to make a difference \U0001F4AA"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -4534,7 +4534,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 0bb881e009979794cacd509cef7c5ddc, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Dance class was so much fun! New skills unlocked \U0001F483"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -4620,7 +4620,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 4b3d86fcfc1a0594c9fc9236ca30c8c0, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Learned to make sushi today! It's not pretty but it tastes great \U0001F363"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -4660,7 +4660,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "City bike share is underrated. Quick errands made easy! \U0001F6B2"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -4703,7 +4703,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 73e89c8c61ae219459b508cb01b43678, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Museum day with a friend. Art makes everything better \U0001F5BC\uFE0F"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -4787,7 +4787,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 342cd702356f32b48a79c13a52a69490, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Book club meetup! Great discussions and even better snacks \U0001F4DA"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -4827,7 +4827,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 1
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Completed a 30-day fitness challenge! Body and mind transformed \U0001F4AA"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -4870,7 +4870,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 73e89c8c61ae219459b508cb01b43678, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Homemade birthday cake for a friend! Not perfect but made with love
       \U0001F382"
     postImage: {fileID: 0}
@@ -4914,7 +4914,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 73e89c8c61ae219459b508cb01b43678, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Fresh pasta making with friends! Messy but memorable \U0001F35D"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -4957,7 +4957,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 49b97bdeadcdfc9488a595fa22857bcb, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Snowshoeing adventure! Winter has its own kind of magic \u2744\uFE0F"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -5000,7 +5000,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 3299116f3eae71e4fa977c35dd44a4fb, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Street art tour in the city. Art is everywhere if you look \U0001F3A8"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -5039,7 +5039,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 1
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Cooking class mastered! Thai green curry from scratch \U0001F35B"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -5080,7 +5080,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Rock climbing day! Conquered a new route today \U0001F9D7\u200D\u2640\uFE0F"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -5165,7 +5165,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Wine pairing dinner was incredible. Each course better than the last
       \U0001F377"
     postImage: {fileID: 0}
@@ -5209,7 +5209,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Basketball with the crew! Rusty but still got it \U0001F3C0"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -5254,7 +5254,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Thrift store finds! Vintage jacket and books for under $20 \U0001F4DA\U0001F454"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -5297,7 +5297,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 0bb881e009979794cacd509cef7c5ddc, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Tried axe throwing! Surprisingly therapeutic and fun \U0001FA93"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -5338,7 +5338,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Farmers market fresh flowers brighten up any room \U0001F490"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -5380,7 +5380,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 0bb881e009979794cacd509cef7c5ddc, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Comedy show last night! My face still hurts from laughing \U0001F602"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -5421,7 +5421,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 1
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "New yoga mat broke in! Feeling bendy and peaceful \U0001F9D8\u200D\u2640\uFE0F"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -5462,7 +5462,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 73e89c8c61ae219459b508cb01b43678, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Sunrise run along the pier. Best way to start the weekend \U0001F305"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -5505,7 +5505,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 1
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Vintage record store find! Added three classics to my collection \U0001F3B5"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -5546,7 +5546,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 1995010a888601c49977996b471f76a6, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Local art fair was amazing! So much talent in this community \U0001F3A8"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -5592,7 +5592,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 4b3d86fcfc1a0594c9fc9236ca30c8c0, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Beach day with a good book. Simple perfection \U0001F4D6\U0001F3D6\uFE0F"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -5631,7 +5631,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 342cd702356f32b48a79c13a52a69490, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Candle making workshop was so fun! Made lavender and vanilla \U0001F56F\uFE0F"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -5670,7 +5670,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Indoor climbing gym session! Working on that overhang technique \U0001F9D7"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -5714,7 +5714,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 1995010a888601c49977996b471f76a6, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Pottery turned out better than expected! Not too wobbly \U0001F3FA"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -5756,7 +5756,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 342cd702356f32b48a79c13a52a69490, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Jazz night at the local bar. Live music hits different \U0001F3B7"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -5801,7 +5801,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 342cd702356f32b48a79c13a52a69490, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Home office upgrade complete! New desk setup is perfect \U0001F4BB"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -5843,7 +5843,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 3299116f3eae71e4fa977c35dd44a4fb, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Farmer's market breakfast: fresh fruit and local pastries \U0001F353\U0001F950"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -5886,7 +5886,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 1995010a888601c49977996b471f76a6, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Group fitness class was intense! New personal best today \U0001F3CB\uFE0F"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -5929,7 +5929,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 1995010a888601c49977996b471f76a6, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Volunteer appreciation dinner! Grateful for this community \U0001F49A"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -6012,7 +6012,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 0bb881e009979794cacd509cef7c5ddc, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Stargazing night! Saw three shooting stars \U0001F320"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -6054,7 +6054,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 1
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Cooking competition at home! Made the best tacos \U0001F32E\U0001F3C6"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -6138,7 +6138,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 1995010a888601c49977996b471f76a6, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Bike tour through wine country. Calories balanced! \U0001F6B4\U0001F377"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -6179,7 +6179,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Sunset paddleboard session. So peaceful on the water \U0001F305"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -6309,7 +6309,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Improv class is teaching me to say yes to life! \U0001F3AD"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -6354,7 +6354,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 49b97bdeadcdfc9488a595fa22857bcb, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Snow day! Made the most of it with hot chocolate and movies \u2603\uFE0F"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -6396,7 +6396,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 73e89c8c61ae219459b508cb01b43678, type: 2}
     isRedFlag: 1
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Birdwatching morning! Spotted a rare warbler \U0001F426"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -6440,7 +6440,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 13ebe7b133c63c84c897debff8fa0c14, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Urban sketching in the park. So many details to capture \u270F\uFE0F"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -6483,7 +6483,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Completed the local fun run! Not fast but finished \U0001F3C5"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -6525,7 +6525,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 1995010a888601c49977996b471f76a6, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Tried aerial yoga! Hanging upside down is surprisingly calming \U0001F9D8\u200D\u2640\uFE0F"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -6570,7 +6570,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 3299116f3eae71e4fa977c35dd44a4fb, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Mountain biking adventure! The trails were perfect today \U0001F6B5"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -6610,7 +6610,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 0bb881e009979794cacd509cef7c5ddc, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Community garden plot is thriving! Tomatoes coming in strong \U0001F345"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -6652,7 +6652,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Made croissants from scratch! 27 hours of work but so worth it \U0001F950"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -6692,7 +6692,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 1
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Salsa dancing night! Two left feet but having a blast \U0001F483"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -6735,7 +6735,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Pottery glazing day! Can't wait to see the final result \U0001F3A8"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -6820,7 +6820,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 13ebe7b133c63c84c897debff8fa0c14, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Sunrise yoga session at the beach. Starting the day centered \U0001F305\U0001F9D8"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -6862,7 +6862,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 1
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Tried glass blowing today! Made a slightly wobbly vase \U0001F3FA"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -6906,7 +6906,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 0bb881e009979794cacd509cef7c5ddc, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Found a secret garden in the city. Hidden gem discovered! \U0001F338"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -6951,7 +6951,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 4b3d86fcfc1a0594c9fc9236ca30c8c0, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Pickleball is my new obsession. Fast games, fun people! \U0001F3F8"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -7038,7 +7038,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Learning to surf! Stood up for 3 seconds today \U0001F3C4\u200D\u2642\uFE0F"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -7082,7 +7082,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 0bb881e009979794cacd509cef7c5ddc, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Cheese making class! Fresh mozzarella from scratch \U0001F9C0"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -7122,7 +7122,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 73e89c8c61ae219459b508cb01b43678, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Ice cream making at home! Salted caramel perfection \U0001F366"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -7164,7 +7164,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 73e89c8c61ae219459b508cb01b43678, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Attended a cultural festival! Food, music, and dance \U0001F389"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -7206,7 +7206,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 4b3d86fcfc1a0594c9fc9236ca30c8c0, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Archery lesson! Robin Hood would be proud \U0001F3F9"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -7248,7 +7248,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Zip lining through the forest! Adrenaline rush achieved \U0001F332"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -7288,7 +7288,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 1
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Fruit picking at the orchard! Fresh apples for days \U0001F34E"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -7332,7 +7332,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Drumming circle was incredible! Community rhythm \U0001F941"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -7414,7 +7414,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 73e89c8c61ae219459b508cb01b43678, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Volunteered at the animal shelter. So many good dogs! \U0001F415"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -7454,7 +7454,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 1995010a888601c49977996b471f76a6, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Tennis lesson progress! Actually hitting the ball now \U0001F3BE"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -7499,7 +7499,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 0bb881e009979794cacd509cef7c5ddc, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Tried fencing! En garde! \u2694\uFE0F"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -7541,7 +7541,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Kayaking through mangroves. Nature at its finest \U0001F6F6"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -7583,7 +7583,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Lantern festival was breathtaking! Thousands of lights \U0001F3EE"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -7628,7 +7628,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 4b3d86fcfc1a0594c9fc9236ca30c8c0, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Cooking class graduation! Can finally make pasta from scratch \U0001F35D\U0001F468\u200D\U0001F373"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -7669,7 +7669,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 0bb881e009979794cacd509cef7c5ddc, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Paint and sip night! Not Picasso but had fun \U0001F3A8\U0001F377"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -7712,7 +7712,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Hiking with the pup. Best adventure buddy \U0001F415\U0001F3D4\uFE0F"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -7752,7 +7752,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 1
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Sunrise photography at the mountain top. Worth the hike! \U0001F4F8\U0001F304"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -7797,7 +7797,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Partner yoga session! Trust falls taken to the next level \U0001F9D8\u200D\u2642\uFE0F\U0001F9D8\u200D\u2640\uFE0F"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -7842,7 +7842,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 0bb881e009979794cacd509cef7c5ddc, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "City night photography! Urban lights are mesmerizing \U0001F303"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -7883,7 +7883,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Bouldering gym session! Conquering new problems \U0001F9D7\u200D\u2642\uFE0F"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -7925,7 +7925,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "BBQ skills improving! Smoked brisket for 12 hours \U0001F356"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -7966,7 +7966,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 9edf6a408b0c574459de61d7247c1ab8, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Urban exploring an abandoned building. History everywhere \U0001F4F8"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -8049,7 +8049,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 1
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Winery tour with incredible views! Wine education day \U0001F347\U0001F377"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -8091,7 +8091,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Beach volleyball tournament! Sun, sand, and competition \U0001F3D0"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -8133,7 +8133,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 1
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Pottery collection growing! Each piece has a story \U0001F3FA"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -8177,7 +8177,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 0bb881e009979794cacd509cef7c5ddc, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Bird photography morning! Patience rewarded with great shots \U0001F4F8\U0001F426"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -8219,7 +8219,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: a1b0728d6c19eb9449dd02e607eb34b7, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Glassblowing workshop! Made a wobbly ornament \U0001F384"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -8259,7 +8259,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Trail marathon complete! 26.2 miles through the mountains \U0001F3D4\uFE0F\U0001F3C3"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -8304,7 +8304,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 1995010a888601c49977996b471f76a6, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Boxing class was intense! Great stress relief \U0001F94A"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -8344,7 +8344,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Cooking with grandma's cast iron skillet. Generations of flavor \U0001F475\U0001F373"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -8385,7 +8385,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 9edf6a408b0c574459de61d7247c1ab8, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Pottery wheel mastery in progress! No more lopsided bowls \U0001F3A8"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -8428,7 +8428,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 3299116f3eae71e4fa977c35dd44a4fb, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Obstacle course race complete! Muddy but victorious \U0001F3C3\u200D\u2642\uFE0F\U0001F4AA"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -8470,7 +8470,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 1
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Garden harvested! Fresh vegetables for the week \U0001F96C\U0001F345"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -8514,7 +8514,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Escape room victory! Solved it with 5 seconds left \u23F1\uFE0F\U0001F513"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -8556,7 +8556,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Tried indoor skydiving! Floating on air is surreal \U0001FA82"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -8595,7 +8595,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 1995010a888601c49977996b471f76a6, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Book swap meet! Found some amazing reads today \U0001F4DA"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -8639,7 +8639,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 0bb881e009979794cacd509cef7c5ddc, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Volunteered at the community garden. Growing food for neighbors \U0001F331"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -8680,7 +8680,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 1
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Watercolor landscapes are my new therapy \U0001F3A8\U0001F3DE\uFE0F"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -8722,7 +8722,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 0bb881e009979794cacd509cef7c5ddc, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Spin class was no joke! Legs are gone but endorphins are high \U0001F6B4"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -8763,7 +8763,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Hiking through autumn colors. Nature's art gallery \U0001F342\U0001F3C3"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -8804,7 +8804,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 3299116f3eae71e4fa977c35dd44a4fb, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Sunset sailing was magical. Wind, water, and wonder \u26F5\U0001F305"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -8845,7 +8845,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Tried acro yoga! Trust exercises taken to new heights \U0001F9D8\u200D\u2640\uFE0F"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -8889,7 +8889,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 342cd702356f32b48a79c13a52a69490, type: 2}
     isRedFlag: 1
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Sushi making class mastered! Rolling technique on point \U0001F363"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -8931,7 +8931,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 3299116f3eae71e4fa977c35dd44a4fb, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Early morning fishing! Peaceful start to the day \U0001F3A3"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -8971,7 +8971,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 13ebe7b133c63c84c897debff8fa0c14, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Tried aerial silks! Upper body strength: work in progress \U0001F3AA"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -9011,7 +9011,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Farmers market flowers brighten any room! \U0001F490"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -9054,7 +9054,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 1995010a888601c49977996b471f76a6, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Street food tour was incredible! Tried 10 different things \U0001F95F"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -9095,7 +9095,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 1
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Moonlight hike was surreal! Stars and silence \U0001F319\U0001F3D4\uFE0F"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -9137,7 +9137,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Ultimate frisbee tournament! Team won the finals \U0001F94F\U0001F3C6"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -9183,7 +9183,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 4b3d86fcfc1a0594c9fc9236ca30c8c0, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Baking sourdough discard crackers! Nothing goes to waste \U0001F35E"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -9224,7 +9224,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Martial arts progress! Yellow belt earned \U0001F94B"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -9265,7 +9265,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Jazz brunch with live music! Perfect Sunday vibes \U0001F3B7\U0001F942"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -9306,7 +9306,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 1
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Foraging workshop! Learned to identify edible mushrooms \U0001F344"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -9349,7 +9349,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 13ebe7b133c63c84c897debff8fa0c14, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Roller skating at sunset! Retro vibes activated \U0001F6FC\U0001F305"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -9392,7 +9392,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 0bb881e009979794cacd509cef7c5ddc, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Charity gala was elegant! Raised funds for a great cause \u2728"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -9433,7 +9433,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 13ebe7b133c63c84c897debff8fa0c14, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Snowboarding season begins! First powder day of the year \U0001F3C2"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -9475,7 +9475,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 1
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Beekeeping workshop! Honey harvest coming soon \U0001F41D"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -9520,7 +9520,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 0bb881e009979794cacd509cef7c5ddc, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Tried pole dancing fitness! Incredible core workout \U0001F4AA"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -9562,7 +9562,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: a1b0728d6c19eb9449dd02e607eb34b7, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Botanical illustration class! Learning to draw plants \U0001F33F"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -9602,7 +9602,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Swimming in a natural hot spring. Bucket list checked \u2668\uFE0F"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -9642,7 +9642,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 1995010a888601c49977996b471f76a6, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Sculpture garden visit! Art in nature \U0001F3A8\U0001F333"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -9684,7 +9684,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Tried trapeze class! Flying through the air is exhilarating \U0001F3AA"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -9724,7 +9724,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Sunset paddle on the lake. Peaceful end to the day \U0001F6A3\u200D\u2640\uFE0F"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -9767,7 +9767,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 1995010a888601c49977996b471f76a6, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Urban gardening project! Growing veggies on my balcony \U0001F331"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -9808,7 +9808,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 1
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Food photography practice! Making meals look as good as they taste
       \U0001F4F8\U0001F37D\uFE0F"
     postImage: {fileID: 0}
@@ -9849,7 +9849,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Cider making season! Fresh apples from the orchard \U0001F34E"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -9893,7 +9893,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 0bb881e009979794cacd509cef7c5ddc, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Historical walking tour! Learning about my city's past \U0001F3DB\uFE0F"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -9935,7 +9935,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: a1b0728d6c19eb9449dd02e607eb34b7, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Kickboxing class was intense! Great cardio workout \U0001F94A"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -9977,7 +9977,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Canoe camping adventure! Two days on the water \U0001F6F6\u26FA"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -10018,7 +10018,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 1
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Cheese making workshop! Fresh ricotta is life-changing \U0001F9C0"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -10059,7 +10059,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 4b3d86fcfc1a0594c9fc9236ca30c8c0, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Tried falconry! Hawks are majestic creatures \U0001F985"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -10099,7 +10099,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 0bb881e009979794cacd509cef7c5ddc, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Dawn patrol surf session! Early morning waves are the best \U0001F3C4"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -10140,7 +10140,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Wine and paint night success! Not terrible for a beginner \U0001F3A8\U0001F377"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -10183,7 +10183,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 0bb881e009979794cacd509cef7c5ddc, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Learning calligraphy! Each letter is a meditation \U0001F58B\uFE0F"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -10224,7 +10224,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 73e89c8c61ae219459b508cb01b43678, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Rock collecting on the beach! Each one is unique \U0001FAA8"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -10267,7 +10267,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Indoor rowing workout! Great full-body burn \U0001F6A3\u200D\u2642\uFE0F"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -10308,7 +10308,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: a1b0728d6c19eb9449dd02e607eb34b7, type: 2}
     isRedFlag: 1
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Sourdough pizza night! Homemade everything \U0001F355"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -10351,7 +10351,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Pottery barn crawl with friends! So many treasures found \U0001F3FA"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -10392,7 +10392,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 1
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Plant propagation success! Growing new plants from cuttings \U0001F331"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -10434,7 +10434,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Sunset beach bonfire with friends. Perfect end to summer \U0001F525\U0001F305"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -10473,7 +10473,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 1
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Morning jog through the park! Fresh air and exercise \U0001F3C3\u200D\u2642\uFE0F"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -10518,7 +10518,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 73e89c8c61ae219459b508cb01b43678, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Stargazing night with telescope! Saw Saturn's rings \U0001FA90"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -10559,7 +10559,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Completed a puzzle in one sitting! 1000 pieces of satisfaction \U0001F9E9"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -10598,7 +10598,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 1
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Sunrise meditation on the dock. Peaceful beginning \U0001F305\U0001F9D8\u200D\u2642\uFE0F"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -10643,7 +10643,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Paddleboarding at sunrise. Calm water, clear mind \U0001F3C4\u200D\u2640\uFE0F"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -10687,7 +10687,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 1995010a888601c49977996b471f76a6, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Fermented pickles are ready! Tangy perfection \U0001F952"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -10728,7 +10728,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 9edf6a408b0c574459de61d7247c1ab8, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Pottery throwing progress! Making functional cups now \U0001F3FA\u2615"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -10772,7 +10772,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 0bb881e009979794cacd509cef7c5ddc, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Tried wall climbing today! Grip strength: work in progress \U0001F9D7\u200D\u2642\uFE0F"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -10814,7 +10814,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 1995010a888601c49977996b471f76a6, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Homemade bone broth simmering! House smells incredible \U0001F372"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -10854,7 +10854,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: a1b0728d6c19eb9449dd02e607eb34b7, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Aerial photography attempt! Drone learning curve is steep \U0001F4F8"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -10896,7 +10896,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "First marathon completed! 26.2 miles of perseverance \U0001F3C3\u200D\u2642\uFE0F\U0001F3C5"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -10937,7 +10937,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 1
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Kombucha brewing in progress! Second fermentation next \U0001F375"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -10978,7 +10978,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Spelunking adventure! Caves are otherworldly \U0001F56F\uFE0F"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -11021,7 +11021,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 13ebe7b133c63c84c897debff8fa0c14, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Herb garden harvest! Fresh basil, rosemary, and thyme \U0001F33F"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -11061,7 +11061,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Tried go-karting! Competitive fun with friends \U0001F3CE\uFE0F"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -11102,7 +11102,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Bread scoring practice! Artisan patterns emerging \U0001F35E"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -11142,7 +11142,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 1
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Mountain sunrise was worth the 4 AM wake-up \U0001F3D4\uFE0F\U0001F304"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -11184,7 +11184,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 0bb881e009979794cacd509cef7c5ddc, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Tried disc golf! New favorite outdoor activity \U0001F94F"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -11226,7 +11226,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: a1b0728d6c19eb9449dd02e607eb34b7, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Volunteered at a literacy program today. Reading matters \U0001F4D6"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -11268,7 +11268,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: a1b0728d6c19eb9449dd02e607eb34b7, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Morning tai chi in the park. Flowing movement meditation \U0001F9D8\u200D\u2642\uFE0F"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -11312,7 +11312,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 13ebe7b133c63c84c897debff8fa0c14, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Blackberry picking season! Nature's bounty \U0001FAD0"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -11352,7 +11352,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 1
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Joined a running club! Motivation multiplied \U0001F3C3\u200D\u2640\uFE0F"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -11395,7 +11395,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 0bb881e009979794cacd509cef7c5ddc, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Macrame project complete! Wall hanging perfection \U0001F9F6"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -11437,7 +11437,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Cheese tasting flight! Learning about terroir \U0001F9C0"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -11475,7 +11475,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 9edf6a408b0c574459de61d7247c1ab8, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Tried stand-up comedy! Open mic was terrifying but fun \U0001F3A4"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -11519,7 +11519,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Biking to work! Eco-friendly commute \U0001F6B4"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -11558,7 +11558,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 1
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Mushroom foraging success! Found chanterelles \U0001F344"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -11599,7 +11599,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 1995010a888601c49977996b471f76a6, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Yoga retreat weekend! Mind and body reset complete \U0001F9D8\u200D\u2640\uFE0F"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -11643,7 +11643,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Geocaching adventure! Found treasures all over the city \U0001F5FA\uFE0F"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -11683,7 +11683,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Community cleanup day! Making the neighborhood beautiful \U0001F9F9"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -11724,7 +11724,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Olive oil tasting experience! Learning the nuances \U0001FAD2"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -11764,7 +11764,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 1
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Winter hiking! Snowy trails have their own magic \u2744\uFE0F\U0001F97E"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -11805,7 +11805,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Farmers market flowers always brighten the week \U0001F490"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -11845,7 +11845,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 1
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Tried laser tag! Inner child activated \U0001F52B"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -11886,7 +11886,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: a1b0728d6c19eb9449dd02e607eb34b7, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Indoor gardening setup complete! Year-round herbs \U0001F33F"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -11927,7 +11927,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 9edf6a408b0c574459de61d7247c1ab8, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Dance workshop was so freeing! Moving to the music \U0001F483"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -11970,7 +11970,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 1995010a888601c49977996b471f76a6, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "River rafting adventure! Rapids were exhilarating \U0001F6A3"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -12010,7 +12010,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 1995010a888601c49977996b471f76a6, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Community yoga in the park! Free fitness with friends \U0001F9D8\u200D\u2642\uFE0F"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -12054,7 +12054,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Vintage market finds! Mid-century modern pieces \U0001FA91"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -12095,7 +12095,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 0bb881e009979794cacd509cef7c5ddc, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Tried pottery painting! Personalized mug incoming \u2615\U0001F3A8"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -12136,7 +12136,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Early morning bird watching! Spotted a kingfisher \U0001F426"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -12177,7 +12177,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 1
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Cooking class with a friend! Learning and laughing \U0001F468\u200D\U0001F373\U0001F469\u200D\U0001F373"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -12217,7 +12217,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 9edf6a408b0c574459de61d7247c1ab8, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Tried aerial hoop! Circus arts are fascinating \U0001F3AA"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -12259,7 +12259,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Historical tour of the old town! Architecture appreciation \U0001F3DB\uFE0F"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -12298,7 +12298,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Sunset photography session! Golden hour magic \U0001F4F8\U0001F305"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -12340,7 +12340,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 0bb881e009979794cacd509cef7c5ddc, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Board game night tournament! Championship bracket intense \U0001F3B2\U0001F3C6"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -12381,7 +12381,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 1
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Jam making with fresh berries! Summer in a jar \U0001FAD9\U0001F353"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -12424,7 +12424,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 0bb881e009979794cacd509cef7c5ddc, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Tried indoor bouldering! Problem-solving with your body \U0001F9D7\u200D\u2640\uFE0F"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -12465,7 +12465,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: a1b0728d6c19eb9449dd02e607eb34b7, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Morning swim in the lake! Fresh start to the day \U0001F3CA\u200D\u2640\uFE0F"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -12507,7 +12507,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 13ebe7b133c63c84c897debff8fa0c14, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Art therapy session! Processing emotions through creation \U0001F3A8"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -12549,7 +12549,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 0bb881e009979794cacd509cef7c5ddc, type: 2}
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Group hike to the summit! Shared accomplishment \U0001F3D4\uFE0F\U0001F465"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -12593,7 +12593,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 1
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Homemade pasta drying! Fresh is always better \U0001F35D"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -12634,7 +12634,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Charity auction night! Supporting local causes \U0001F49A"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -12677,7 +12677,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Sunrise paddle! Starting the day on the water \U0001F305\U0001F6F6"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -12717,7 +12717,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 13ebe7b133c63c84c897debff8fa0c14, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Tried contact juggling! Mesmerizing and challenging \U0001F52E"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -12756,7 +12756,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 1995010a888601c49977996b471f76a6, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Pie baking day! Apple season is the best season \U0001F967\U0001F34E"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -12796,7 +12796,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 1
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Autumn foliage hike! Peak colors achieved \U0001F342\U0001F341"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -12838,7 +12838,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 0bb881e009979794cacd509cef7c5ddc, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "DIY furniture project! Built a bookshelf from scratch \U0001F4DA\U0001F528"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -12879,7 +12879,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 1
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Night market exploration! Street food paradise \U0001F35C\U0001F319"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -12921,7 +12921,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 0
     isGreenFlag: 1
-  - postType: 0
+  - postType: 1
     content: "Outdoor cinema night! Movies under the stars \U0001F3AC\U0001F31F"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -12961,7 +12961,7 @@ MonoBehaviour:
     relatedLifestyleTraits: []
     isRedFlag: 1
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Finished my first knitting project! Slightly wonky scarf \U0001F9F6"
     postImage: {fileID: 0}
     daysSincePosted: 0
@@ -13002,7 +13002,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 13ebe7b133c63c84c897debff8fa0c14, type: 2}
     isRedFlag: 0
     isGreenFlag: 0
-  - postType: 0
+  - postType: 1
     content: "Completed a color run! Covered in rainbow powder \U0001F308\U0001F3C3"
     postImage: {fileID: 0}
     daysSincePosted: 0

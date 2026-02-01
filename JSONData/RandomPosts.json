@@ -28,7 +28,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "TextOnly",
+      "postType": "Photo",
       "content": "6 AM gym sessions hit different. No excuses, just results 💪",
       "relatedInterests": ["Fitness"],
       "relatedPersonalityTraits": ["Ambitious"],
@@ -172,7 +172,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "TextOnly",
+      "postType": "Photo",
       "content": "Just discovered a new coffee shop with the BEST lattes. Life is good ☕",
       "relatedInterests": [],
       "relatedPersonalityTraits": ["Optimistic"],
@@ -190,7 +190,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "TextOnly",
+      "postType": "Photo",
       "content": "Made it to the gym 5 days this week. Consistency is everything.",
       "relatedInterests": ["Fitness"],
       "relatedPersonalityTraits": ["Reliable", "Ambitious"],
@@ -208,7 +208,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "TextOnly",
+      "postType": "Photo",
       "content": "Just spent 3 hours meal prepping for the week. Future me will be so grateful",
       "relatedInterests": ["Cooking"],
       "relatedPersonalityTraits": ["Reliable"],
@@ -253,7 +253,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "TextOnly",
+      "postType": "Photo",
       "content": "Late night gaming session with the squad. We may have lost but we had fun",
       "relatedInterests": ["Gaming"],
       "relatedPersonalityTraits": ["Laid_Back"],
@@ -316,7 +316,7 @@
       "isRedFlag": true
     },
     {
-      "postType": "TextOnly",
+      "postType": "Photo",
       "content": "Finally trying that new running route everyone's been talking about",
       "relatedInterests": ["Running"],
       "relatedPersonalityTraits": ["Adventurous"],
@@ -325,7 +325,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "TextOnly",
+      "postType": "Photo",
       "content": "Baked cookies for my neighbors. They're new to the building!",
       "relatedInterests": ["Baking"],
       "relatedPersonalityTraits": ["Empathetic"],
@@ -451,7 +451,7 @@
       "isRedFlag": true
     },
     {
-      "postType": "TextOnly",
+      "postType": "Photo",
       "content": "Spent the morning helping at the food bank. Heart is full.",
       "relatedInterests": ["Volunteering"],
       "relatedPersonalityTraits": ["Empathetic"],
@@ -478,7 +478,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "TextOnly",
+      "postType": "Photo",
       "content": "Hosted game night for 8 people. Chaotic but so worth it!",
       "relatedInterests": ["BoardGames"],
       "relatedPersonalityTraits": ["Outgoing"],
@@ -514,7 +514,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "TextOnly",
+      "postType": "Photo",
       "content": "My plants are thriving. I might actually be good at this gardening thing.",
       "relatedInterests": ["Gardening"],
       "relatedPersonalityTraits": ["Patient"],
@@ -586,7 +586,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "TextOnly",
+      "postType": "Photo",
       "content": "Tried a new workout class today. Sore but happy!",
       "relatedInterests": ["Fitness"],
       "relatedPersonalityTraits": ["Adventurous"],
@@ -622,7 +622,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "TextOnly",
+      "postType": "Photo",
       "content": "Spent the day exploring a new part of town. Love playing tourist in my own city.",
       "relatedInterests": ["Travel", "Photography"],
       "relatedPersonalityTraits": ["Adventurous"],
@@ -631,7 +631,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "TextOnly",
+      "postType": "Photo",
       "content": "Really proud of my friend for landing their dream job. Celebrating tonight!",
       "relatedInterests": [],
       "relatedPersonalityTraits": ["Empathetic", "Outgoing"],
@@ -721,7 +721,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "TextOnly",
+      "postType": "Photo",
       "content": "Made dinner for my parents tonight. Simple pleasures.",
       "relatedInterests": ["Cooking"],
       "relatedPersonalityTraits": ["Empathetic"],
@@ -730,7 +730,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "TextOnly",
+      "postType": "Photo",
       "content": "Clean apartment, fresh flowers, good music. Self-care Sunday complete.",
       "relatedInterests": [],
       "relatedPersonalityTraits": ["Patient"],
@@ -766,7 +766,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "TextOnly",
+      "postType": "Photo",
       "content": "Just signed up for a pottery class. Time to try something new!",
       "relatedInterests": ["Art"],
       "relatedPersonalityTraits": ["Creative", "Adventurous"],
@@ -775,7 +775,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "TextOnly",
+      "postType": "Photo",
       "content": "Midnight snack run with my best friend. Core memories being made.",
       "relatedInterests": [],
       "relatedPersonalityTraits": ["Outgoing"],
@@ -838,7 +838,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "TextOnly",
+      "postType": "Photo",
       "content": "Spent the day at a street fair. Found some amazing vintage pieces!",
       "relatedInterests": ["Fashion"],
       "relatedPersonalityTraits": ["Creative"],
@@ -874,7 +874,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "TextOnly",
+      "postType": "Photo",
       "content": "Made my grandma's recipe today. The kitchen smells like home.",
       "relatedInterests": ["Cooking"],
       "relatedPersonalityTraits": ["Empathetic"],
@@ -955,7 +955,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "TextOnly",
+      "postType": "Photo",
       "content": "Batch cooking Sunday is my favorite self-care activity.",
       "relatedInterests": ["Cooking"],
       "relatedPersonalityTraits": ["Reliable"],
@@ -1036,7 +1036,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Cycling through the countryside. Pure freedom 🚴‍♂️",
       "relatedInterests": ["Cycling"],
       "relatedPersonalityTraits": ["Adventurous"],
@@ -1081,7 +1081,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Caught the perfect moment at the aquarium. Nature is art 🐠",
       "relatedInterests": ["Photography"],
       "relatedPersonalityTraits": ["Creative", "Patient"],
@@ -1090,7 +1090,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "TextOnly",
+      "postType": "Photo",
       "content": "Cooked dinner while listening to jazz. Channeling my inner chef.",
       "relatedInterests": ["Cooking", "Music"],
       "relatedPersonalityTraits": ["Creative"],
@@ -1117,7 +1117,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Coffee shop writing session. Chapter 5 is finally done! ☕",
       "relatedInterests": ["Writing"],
       "relatedPersonalityTraits": ["Creative"],
@@ -1135,7 +1135,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "TextOnly",
+      "postType": "Photo",
       "content": "Joined a hiking group. Made some great new friends!",
       "relatedInterests": ["Hiking"],
       "relatedPersonalityTraits": ["Outgoing", "Adventurous"],
@@ -1234,7 +1234,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "DIY project complete! Made this shelf from reclaimed wood 🔨",
       "relatedInterests": [],
       "relatedPersonalityTraits": ["Creative"],
@@ -1252,7 +1252,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "TextOnly",
+      "postType": "Photo",
       "content": "Biked to work today. Starting the day with endorphins hits different.",
       "relatedInterests": ["Cycling"],
       "relatedPersonalityTraits": [],
@@ -1270,7 +1270,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Art supplies restocked. Creative weekend incoming! 🎨",
       "relatedInterests": ["Art"],
       "relatedPersonalityTraits": ["Creative"],
@@ -1306,7 +1306,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Vintage finds at the thrift store today! One person's trash is another's treasure 🛍️",
       "relatedInterests": ["Fashion"],
       "relatedPersonalityTraits": ["Creative"],
@@ -1342,7 +1342,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Night market adventures! The food was incredible 🥟",
       "relatedInterests": ["Travel", "Cooking"],
       "relatedPersonalityTraits": ["Adventurous"],
@@ -1387,7 +1387,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Garden is coming along nicely! Can't wait for harvest season 🌱",
       "relatedInterests": ["Gardening"],
       "relatedPersonalityTraits": ["Patient"],
@@ -1405,7 +1405,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "TextOnly",
+      "postType": "Photo",
       "content": "Spent the evening stargazing. We're so small in the grand scheme of things.",
       "relatedInterests": [],
       "relatedPersonalityTraits": ["Thoughtful"],
@@ -1414,7 +1414,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "TextOnly",
+      "postType": "Photo",
       "content": "Tried rock climbing for the first time. Arms are sore but I'm hooked!",
       "relatedInterests": ["Sports", "Fitness"],
       "relatedPersonalityTraits": ["Adventurous"],
@@ -1423,7 +1423,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Homemade bread success! My kitchen smells amazing 🍞",
       "relatedInterests": ["Baking"],
       "relatedPersonalityTraits": ["Patient", "Creative"],
@@ -1495,7 +1495,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Perfect weather for an outdoor yoga session 🧘",
       "relatedInterests": ["Yoga"],
       "relatedPersonalityTraits": ["Patient"],
@@ -1531,7 +1531,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Look who visited my bird feeder today! 🐦",
       "relatedInterests": ["Photography", "Gardening"],
       "relatedPersonalityTraits": ["Patient"],
@@ -1558,7 +1558,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "TextOnly",
+      "postType": "Photo",
       "content": "The gym at 5 AM is the most peaceful place on earth.",
       "relatedInterests": ["Fitness"],
       "relatedPersonalityTraits": [],
@@ -1567,7 +1567,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Weekend getaway to the cabin. Exactly what I needed 🏕️",
       "relatedInterests": ["Travel"],
       "relatedPersonalityTraits": ["Adventurous"],
@@ -1603,7 +1603,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "New running shoes = new motivation. Ready to crush some miles! 👟",
       "relatedInterests": ["Running"],
       "relatedPersonalityTraits": ["Ambitious"],
@@ -1693,7 +1693,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "TextOnly",
+      "postType": "Photo",
       "content": "Finally crossed off a bucket list item today. Feeling accomplished!",
       "relatedInterests": [],
       "relatedPersonalityTraits": ["Adventurous", "Ambitious"],
@@ -1747,7 +1747,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Finally visited the botanical garden. Spring in full bloom! 🌸",
       "relatedInterests": ["Photography", "Gardening"],
       "relatedPersonalityTraits": [],
@@ -1783,7 +1783,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Tried my hand at latte art today. Getting better! ☕",
       "relatedInterests": [],
       "relatedPersonalityTraits": ["Creative", "Patient"],
@@ -1801,7 +1801,7 @@
       "isRedFlag": true
     },
     {
-      "postType": "TextOnly",
+      "postType": "Photo",
       "content": "Made a new friend at the dog park today. His owner is cool too!",
       "relatedInterests": [],
       "relatedPersonalityTraits": ["Outgoing", "Empathetic"],
@@ -1891,7 +1891,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Art museum day! This exhibit on modern sculpture really got me thinking",
       "relatedInterests": ["Art"],
       "relatedPersonalityTraits": ["Creative", "Thoughtful"],
@@ -1936,7 +1936,7 @@
       "isRedFlag": true
     },
     {
-      "postType": "TextOnly",
+      "postType": "Photo",
       "content": "5k PR this morning! All those early runs are finally paying off 🏃",
       "relatedInterests": ["Running", "Fitness"],
       "relatedPersonalityTraits": ["Ambitious", "Competitive"],
@@ -1945,7 +1945,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Learning to play guitar. Week 3 and my fingers finally don't hurt as much 🎸",
       "relatedInterests": ["Music"],
       "relatedPersonalityTraits": ["Creative", "Patient"],
@@ -1972,7 +1972,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Bike ride along the coast today. 40 miles of pure freedom 🚴",
       "relatedInterests": ["Cycling", "Fitness"],
       "relatedPersonalityTraits": ["Adventurous"],
@@ -1999,7 +1999,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Wine tasting in the valley! Found a new favorite Pinot 🍷",
       "relatedInterests": ["WineTasting", "Travel"],
       "relatedPersonalityTraits": ["Outgoing"],
@@ -2026,7 +2026,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Watched the game with friends. We lost but the company was worth it!",
       "relatedInterests": ["Sports"],
       "relatedPersonalityTraits": ["Outgoing"],
@@ -2053,7 +2053,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Picked up these vintage finds at the flea market! Love giving old things new life ♻️",
       "relatedInterests": ["Fashion", "Art"],
       "relatedPersonalityTraits": ["Creative"],
@@ -2107,7 +2107,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Farmers market haul! Supporting local is the way to go 🥬🍎",
       "relatedInterests": ["Cooking", "Gardening"],
       "relatedPersonalityTraits": ["Empathetic"],
@@ -2134,7 +2134,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Baked goods for the office! Nothing brings people together like fresh cookies 🍪",
       "relatedInterests": ["Baking"],
       "relatedPersonalityTraits": ["Empathetic", "Creative"],
@@ -2188,7 +2188,7 @@
       "isRedFlag": true
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Planted my first tree today! Small steps toward a greener future 🌳",
       "relatedInterests": ["Gardening", "Volunteering"],
       "relatedPersonalityTraits": ["Empathetic", "Patient"],
@@ -2215,7 +2215,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Concert last night was incredible! Nothing beats live music 🎵",
       "relatedInterests": ["Music"],
       "relatedPersonalityTraits": ["Outgoing"],
@@ -2242,7 +2242,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Finally mastered croissants from scratch! Buttery perfection 🥐",
       "relatedInterests": ["Baking"],
       "relatedPersonalityTraits": ["Patient", "Creative"],
@@ -2269,7 +2269,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Volunteered at the food bank today. Small actions, big impact 💚",
       "relatedInterests": ["Volunteering"],
       "relatedPersonalityTraits": ["Empathetic"],
@@ -2296,7 +2296,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Trying my hand at watercolors. Not great yet, but I'm having fun 🎨",
       "relatedInterests": ["Art"],
       "relatedPersonalityTraits": ["Creative", "Patient"],
@@ -2323,7 +2323,7 @@
       "isRedFlag": true
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Completed my first century ride! 100 miles on two wheels 🚴",
       "relatedInterests": ["Cycling", "Fitness"],
       "relatedPersonalityTraits": ["Ambitious", "Competitive"],
@@ -2377,7 +2377,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "New PR at the gym today! Hard work pays off 💪",
       "relatedInterests": ["Fitness"],
       "relatedPersonalityTraits": ["Competitive", "Ambitious"],
@@ -2404,7 +2404,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Pottery class was so therapeutic! Made this slightly lopsided bowl 😅",
       "relatedInterests": ["Art"],
       "relatedPersonalityTraits": ["Creative", "Humorous"],
@@ -2431,7 +2431,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Visited a new botanical garden. So many beautiful orchids! 🌺",
       "relatedInterests": ["Gardening", "Photography"],
       "relatedPersonalityTraits": ["Patient", "Thoughtful"],
@@ -2458,7 +2458,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Road trip vibes! 6 hours of scenic routes and good conversations 🚗",
       "relatedInterests": ["Travel", "Photography"],
       "relatedPersonalityTraits": ["Adventurous", "Outgoing"],
@@ -2485,7 +2485,7 @@
       "isRedFlag": true
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Finally tried stand-up paddleboarding. Only fell in twice! 🏄",
       "relatedInterests": ["Fitness"],
       "relatedPersonalityTraits": ["Adventurous", "Humorous"],
@@ -2503,7 +2503,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "TextOnly",
+      "postType": "Photo",
       "content": "Working remotely from a cabin this week. Best decision I've made in months.",
       "relatedInterests": [],
       "relatedPersonalityTraits": ["Creative"],
@@ -2512,7 +2512,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Team won the pub trivia! Turns out random facts do come in handy 🏆",
       "relatedInterests": [],
       "relatedPersonalityTraits": ["Competitive", "Outgoing"],
@@ -2539,7 +2539,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Cozy movie night in. Popcorn, blankets, and zero plans to move 🍿",
       "relatedInterests": ["Movies"],
       "relatedPersonalityTraits": ["Laid_Back"],
@@ -2593,7 +2593,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Brunch with the squad. Mimosas and good vibes only 🥂",
       "relatedInterests": [],
       "relatedPersonalityTraits": ["Outgoing"],
@@ -2620,7 +2620,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "New plants for the office! Bringing some green to the workspace 🌱",
       "relatedInterests": ["Gardening"],
       "relatedPersonalityTraits": ["Creative"],
@@ -2647,7 +2647,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Street food tour in the city! So many hidden gems to discover 🍜",
       "relatedInterests": ["Cooking", "Travel"],
       "relatedPersonalityTraits": ["Adventurous"],
@@ -2674,7 +2674,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "DIY furniture project complete! Only took 3 trips to the hardware store 🔨",
       "relatedInterests": ["Art"],
       "relatedPersonalityTraits": ["Creative", "Patient"],
@@ -2773,7 +2773,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Farmers market finds! Fresh bread and local honey 🍯🥖",
       "relatedInterests": ["Cooking"],
       "relatedPersonalityTraits": ["Empathetic"],
@@ -2800,7 +2800,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Escape room with friends! We escaped with 2 minutes to spare 🔐",
       "relatedInterests": ["BoardGames"],
       "relatedPersonalityTraits": ["Competitive", "Analytical"],
@@ -2827,7 +2827,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Trail running through the forest. Nature is the best gym 🌲",
       "relatedInterests": ["Running", "Hiking"],
       "relatedPersonalityTraits": ["Adventurous"],
@@ -2854,7 +2854,7 @@
       "isRedFlag": true
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Art gallery opening tonight. So inspiring to see new talent! 🎨",
       "relatedInterests": ["Art"],
       "relatedPersonalityTraits": ["Creative", "Outgoing"],
@@ -2881,7 +2881,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Volunteer training complete! Ready to make a difference 💪",
       "relatedInterests": ["Volunteering"],
       "relatedPersonalityTraits": ["Empathetic", "Ambitious"],
@@ -2935,7 +2935,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Dance class was so much fun! New skills unlocked 💃",
       "relatedInterests": ["Fitness"],
       "relatedPersonalityTraits": ["Adventurous", "Outgoing"],
@@ -2989,7 +2989,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Learned to make sushi today! It's not pretty but it tastes great 🍣",
       "relatedInterests": ["Cooking"],
       "relatedPersonalityTraits": ["Creative", "Patient"],
@@ -3016,7 +3016,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "City bike share is underrated. Quick errands made easy! 🚲",
       "relatedInterests": ["Cycling"],
       "relatedPersonalityTraits": ["Adventurous"],
@@ -3043,7 +3043,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Museum day with a friend. Art makes everything better 🖼️",
       "relatedInterests": ["Art"],
       "relatedPersonalityTraits": ["Creative", "Thoughtful"],
@@ -3097,7 +3097,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Book club meetup! Great discussions and even better snacks 📚",
       "relatedInterests": ["Reading"],
       "relatedPersonalityTraits": ["Thoughtful", "Outgoing"],
@@ -3124,7 +3124,7 @@
       "isRedFlag": true
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Completed a 30-day fitness challenge! Body and mind transformed 💪",
       "relatedInterests": ["Fitness"],
       "relatedPersonalityTraits": ["Ambitious", "Reliable"],
@@ -3151,7 +3151,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Homemade birthday cake for a friend! Not perfect but made with love 🎂",
       "relatedInterests": ["Baking"],
       "relatedPersonalityTraits": ["Empathetic", "Creative"],
@@ -3178,7 +3178,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Fresh pasta making with friends! Messy but memorable 🍝",
       "relatedInterests": ["Cooking"],
       "relatedPersonalityTraits": ["Outgoing", "Creative"],
@@ -3205,7 +3205,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Snowshoeing adventure! Winter has its own kind of magic ❄️",
       "relatedInterests": ["Hiking", "Fitness"],
       "relatedPersonalityTraits": ["Adventurous"],
@@ -3232,7 +3232,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Street art tour in the city. Art is everywhere if you look 🎨",
       "relatedInterests": ["Art", "Photography"],
       "relatedPersonalityTraits": ["Creative"],
@@ -3259,7 +3259,7 @@
       "isRedFlag": true
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Cooking class mastered! Thai green curry from scratch 🍛",
       "relatedInterests": ["Cooking"],
       "relatedPersonalityTraits": ["Creative", "Patient"],
@@ -3286,7 +3286,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Rock climbing day! Conquered a new route today 🧗‍♀️",
       "relatedInterests": ["Fitness"],
       "relatedPersonalityTraits": ["Adventurous", "Competitive"],
@@ -3340,7 +3340,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Wine pairing dinner was incredible. Each course better than the last 🍷",
       "relatedInterests": ["WineTasting", "Cooking"],
       "relatedPersonalityTraits": ["Adventurous"],
@@ -3367,7 +3367,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Basketball with the crew! Rusty but still got it 🏀",
       "relatedInterests": ["Sports", "Fitness"],
       "relatedPersonalityTraits": ["Competitive", "Outgoing"],
@@ -3394,7 +3394,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Thrift store finds! Vintage jacket and books for under $20 📚👔",
       "relatedInterests": ["Fashion", "Reading"],
       "relatedPersonalityTraits": ["Creative"],
@@ -3421,7 +3421,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Tried axe throwing! Surprisingly therapeutic and fun 🪓",
       "relatedInterests": [],
       "relatedPersonalityTraits": ["Adventurous", "Outgoing"],
@@ -3448,7 +3448,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Farmers market fresh flowers brighten up any room 💐",
       "relatedInterests": ["Gardening"],
       "relatedPersonalityTraits": ["Optimistic"],
@@ -3475,7 +3475,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Comedy show last night! My face still hurts from laughing 😂",
       "relatedInterests": ["Theater"],
       "relatedPersonalityTraits": ["Outgoing", "Humorous"],
@@ -3502,7 +3502,7 @@
       "isRedFlag": true
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "New yoga mat broke in! Feeling bendy and peaceful 🧘‍♀️",
       "relatedInterests": ["Yoga"],
       "relatedPersonalityTraits": ["Patient"],
@@ -3529,7 +3529,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Sunrise run along the pier. Best way to start the weekend 🌅",
       "relatedInterests": ["Running", "Photography"],
       "relatedPersonalityTraits": ["Ambitious"],
@@ -3556,7 +3556,7 @@
       "isRedFlag": true
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Vintage record store find! Added three classics to my collection 🎵",
       "relatedInterests": ["Music"],
       "relatedPersonalityTraits": ["Creative"],
@@ -3583,7 +3583,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Local art fair was amazing! So much talent in this community 🎨",
       "relatedInterests": ["Art"],
       "relatedPersonalityTraits": ["Creative", "Empathetic"],
@@ -3610,7 +3610,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Beach day with a good book. Simple perfection 📖🏖️",
       "relatedInterests": ["Reading"],
       "relatedPersonalityTraits": ["Laid_Back"],
@@ -3637,7 +3637,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Candle making workshop was so fun! Made lavender and vanilla 🕯️",
       "relatedInterests": ["Art"],
       "relatedPersonalityTraits": ["Creative"],
@@ -3664,7 +3664,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Indoor climbing gym session! Working on that overhang technique 🧗",
       "relatedInterests": ["Fitness"],
       "relatedPersonalityTraits": ["Adventurous", "Patient"],
@@ -3691,7 +3691,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Pottery turned out better than expected! Not too wobbly 🏺",
       "relatedInterests": ["Art"],
       "relatedPersonalityTraits": ["Creative", "Patient"],
@@ -3718,7 +3718,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Jazz night at the local bar. Live music hits different 🎷",
       "relatedInterests": ["Music"],
       "relatedPersonalityTraits": ["Laid_Back", "Creative"],
@@ -3745,7 +3745,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Home office upgrade complete! New desk setup is perfect 💻",
       "relatedInterests": [],
       "relatedPersonalityTraits": ["Analytical"],
@@ -3772,7 +3772,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Farmer's market breakfast: fresh fruit and local pastries 🍓🥐",
       "relatedInterests": ["Cooking"],
       "relatedPersonalityTraits": [],
@@ -3799,7 +3799,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Group fitness class was intense! New personal best today 🏋️",
       "relatedInterests": ["Fitness"],
       "relatedPersonalityTraits": ["Competitive", "Outgoing"],
@@ -3826,7 +3826,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Volunteer appreciation dinner! Grateful for this community 💚",
       "relatedInterests": ["Volunteering"],
       "relatedPersonalityTraits": ["Empathetic"],
@@ -3880,7 +3880,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Stargazing night! Saw three shooting stars 🌠",
       "relatedInterests": ["Photography"],
       "relatedPersonalityTraits": ["Adventurous", "Thoughtful"],
@@ -3907,7 +3907,7 @@
       "isRedFlag": true
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Cooking competition at home! Made the best tacos 🌮🏆",
       "relatedInterests": ["Cooking"],
       "relatedPersonalityTraits": ["Competitive", "Creative"],
@@ -3961,7 +3961,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Bike tour through wine country. Calories balanced! 🚴🍷",
       "relatedInterests": ["Cycling", "WineTasting"],
       "relatedPersonalityTraits": ["Adventurous"],
@@ -3988,7 +3988,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Sunset paddleboard session. So peaceful on the water 🌅",
       "relatedInterests": ["Fitness"],
       "relatedPersonalityTraits": ["Adventurous", "Laid_Back"],
@@ -4069,7 +4069,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Improv class is teaching me to say yes to life! 🎭",
       "relatedInterests": ["Theater"],
       "relatedPersonalityTraits": ["Outgoing", "Creative"],
@@ -4096,7 +4096,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Snow day! Made the most of it with hot chocolate and movies ☃️",
       "relatedInterests": ["Movies"],
       "relatedPersonalityTraits": ["Laid_Back"],
@@ -4123,7 +4123,7 @@
       "isRedFlag": true
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Birdwatching morning! Spotted a rare warbler 🐦",
       "relatedInterests": ["Photography", "Hiking"],
       "relatedPersonalityTraits": ["Patient", "Thoughtful"],
@@ -4150,7 +4150,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Urban sketching in the park. So many details to capture ✏️",
       "relatedInterests": ["Art", "Photography"],
       "relatedPersonalityTraits": ["Creative", "Patient"],
@@ -4177,7 +4177,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Completed the local fun run! Not fast but finished 🏅",
       "relatedInterests": ["Running", "Fitness"],
       "relatedPersonalityTraits": ["Optimistic", "Reliable"],
@@ -4204,7 +4204,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Tried aerial yoga! Hanging upside down is surprisingly calming 🧘‍♀️",
       "relatedInterests": ["Yoga", "Fitness"],
       "relatedPersonalityTraits": ["Adventurous"],
@@ -4231,7 +4231,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Mountain biking adventure! The trails were perfect today 🚵",
       "relatedInterests": ["Cycling", "Hiking"],
       "relatedPersonalityTraits": ["Adventurous"],
@@ -4258,7 +4258,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Community garden plot is thriving! Tomatoes coming in strong 🍅",
       "relatedInterests": ["Gardening"],
       "relatedPersonalityTraits": ["Patient", "Empathetic"],
@@ -4285,7 +4285,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Made croissants from scratch! 27 hours of work but so worth it 🥐",
       "relatedInterests": ["Baking"],
       "relatedPersonalityTraits": ["Patient", "Ambitious"],
@@ -4312,7 +4312,7 @@
       "isRedFlag": true
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Salsa dancing night! Two left feet but having a blast 💃",
       "relatedInterests": ["Music", "Fitness"],
       "relatedPersonalityTraits": ["Outgoing", "Adventurous"],
@@ -4339,7 +4339,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Pottery glazing day! Can't wait to see the final result 🎨",
       "relatedInterests": ["Art"],
       "relatedPersonalityTraits": ["Creative", "Patient"],
@@ -4393,7 +4393,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Sunrise yoga session at the beach. Starting the day centered 🌅🧘",
       "relatedInterests": ["Yoga"],
       "relatedPersonalityTraits": ["Patient", "Optimistic"],
@@ -4420,7 +4420,7 @@
       "isRedFlag": true
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Tried glass blowing today! Made a slightly wobbly vase 🏺",
       "relatedInterests": ["Art"],
       "relatedPersonalityTraits": ["Creative", "Adventurous"],
@@ -4447,7 +4447,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Found a secret garden in the city. Hidden gem discovered! 🌸",
       "relatedInterests": ["Photography", "Gardening"],
       "relatedPersonalityTraits": ["Adventurous", "Creative"],
@@ -4474,7 +4474,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Pickleball is my new obsession. Fast games, fun people! 🏸",
       "relatedInterests": ["Sports", "Fitness"],
       "relatedPersonalityTraits": ["Competitive", "Outgoing"],
@@ -4528,7 +4528,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Learning to surf! Stood up for 3 seconds today 🏄‍♂️",
       "relatedInterests": ["Fitness"],
       "relatedPersonalityTraits": ["Adventurous", "Patient"],
@@ -4555,7 +4555,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Cheese making class! Fresh mozzarella from scratch 🧀",
       "relatedInterests": ["Cooking"],
       "relatedPersonalityTraits": ["Creative", "Patient"],
@@ -4582,7 +4582,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Ice cream making at home! Salted caramel perfection 🍦",
       "relatedInterests": ["Baking", "Cooking"],
       "relatedPersonalityTraits": ["Creative"],
@@ -4609,7 +4609,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Attended a cultural festival! Food, music, and dance 🎉",
       "relatedInterests": ["Music", "Cooking"],
       "relatedPersonalityTraits": ["Outgoing", "Adventurous"],
@@ -4636,7 +4636,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Archery lesson! Robin Hood would be proud 🏹",
       "relatedInterests": ["Sports"],
       "relatedPersonalityTraits": ["Adventurous", "Patient"],
@@ -4663,7 +4663,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Zip lining through the forest! Adrenaline rush achieved 🌲",
       "relatedInterests": ["Travel", "Hiking"],
       "relatedPersonalityTraits": ["Adventurous"],
@@ -4690,7 +4690,7 @@
       "isRedFlag": true
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Fruit picking at the orchard! Fresh apples for days 🍎",
       "relatedInterests": ["Cooking", "Gardening"],
       "relatedPersonalityTraits": ["Optimistic"],
@@ -4717,7 +4717,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Drumming circle was incredible! Community rhythm 🥁",
       "relatedInterests": ["Music"],
       "relatedPersonalityTraits": ["Outgoing", "Creative"],
@@ -4771,7 +4771,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Volunteered at the animal shelter. So many good dogs! 🐕",
       "relatedInterests": ["Volunteering"],
       "relatedPersonalityTraits": ["Empathetic"],
@@ -4798,7 +4798,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Tennis lesson progress! Actually hitting the ball now 🎾",
       "relatedInterests": ["Sports", "Fitness"],
       "relatedPersonalityTraits": ["Patient", "Competitive"],
@@ -4825,7 +4825,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Tried fencing! En garde! ⚔️",
       "relatedInterests": ["Sports", "Fitness"],
       "relatedPersonalityTraits": ["Adventurous", "Competitive"],
@@ -4852,7 +4852,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Kayaking through mangroves. Nature at its finest 🛶",
       "relatedInterests": ["Fitness", "Photography"],
       "relatedPersonalityTraits": ["Adventurous"],
@@ -4879,7 +4879,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Lantern festival was breathtaking! Thousands of lights 🏮",
       "relatedInterests": ["Photography", "Travel"],
       "relatedPersonalityTraits": ["Adventurous"],
@@ -4906,7 +4906,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Cooking class graduation! Can finally make pasta from scratch 🍝👨‍🍳",
       "relatedInterests": ["Cooking"],
       "relatedPersonalityTraits": ["Patient", "Ambitious"],
@@ -4933,7 +4933,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Paint and sip night! Not Picasso but had fun 🎨🍷",
       "relatedInterests": ["Art", "WineTasting"],
       "relatedPersonalityTraits": ["Creative", "Outgoing"],
@@ -4960,7 +4960,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Hiking with the pup. Best adventure buddy 🐕🏔️",
       "relatedInterests": ["Hiking"],
       "relatedPersonalityTraits": ["Adventurous", "Empathetic"],
@@ -4987,7 +4987,7 @@
       "isRedFlag": true
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Sunrise photography at the mountain top. Worth the hike! 📸🌄",
       "relatedInterests": ["Photography", "Hiking"],
       "relatedPersonalityTraits": ["Adventurous", "Patient"],
@@ -5014,7 +5014,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Partner yoga session! Trust falls taken to the next level 🧘‍♂️🧘‍♀️",
       "relatedInterests": ["Yoga", "Fitness"],
       "relatedPersonalityTraits": ["Patient", "Outgoing"],
@@ -5041,7 +5041,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "City night photography! Urban lights are mesmerizing 🌃",
       "relatedInterests": ["Photography"],
       "relatedPersonalityTraits": ["Creative"],
@@ -5068,7 +5068,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Bouldering gym session! Conquering new problems 🧗‍♂️",
       "relatedInterests": ["Fitness"],
       "relatedPersonalityTraits": ["Competitive", "Adventurous"],
@@ -5095,7 +5095,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "BBQ skills improving! Smoked brisket for 12 hours 🍖",
       "relatedInterests": ["Cooking"],
       "relatedPersonalityTraits": ["Patient"],
@@ -5122,7 +5122,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Urban exploring an abandoned building. History everywhere 📸",
       "relatedInterests": ["Photography"],
       "relatedPersonalityTraits": ["Adventurous", "Creative"],
@@ -5176,7 +5176,7 @@
       "isRedFlag": true
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Winery tour with incredible views! Wine education day 🍇🍷",
       "relatedInterests": ["WineTasting", "Travel"],
       "relatedPersonalityTraits": ["Adventurous"],
@@ -5203,7 +5203,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Beach volleyball tournament! Sun, sand, and competition 🏐",
       "relatedInterests": ["Sports", "Fitness"],
       "relatedPersonalityTraits": ["Competitive", "Outgoing"],
@@ -5230,7 +5230,7 @@
       "isRedFlag": true
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Pottery collection growing! Each piece has a story 🏺",
       "relatedInterests": ["Art"],
       "relatedPersonalityTraits": ["Creative", "Patient"],
@@ -5257,7 +5257,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Bird photography morning! Patience rewarded with great shots 📸🐦",
       "relatedInterests": ["Photography"],
       "relatedPersonalityTraits": ["Patient", "Creative"],
@@ -5284,7 +5284,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Glassblowing workshop! Made a wobbly ornament 🎄",
       "relatedInterests": ["Art"],
       "relatedPersonalityTraits": ["Creative", "Adventurous"],
@@ -5311,7 +5311,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Trail marathon complete! 26.2 miles through the mountains 🏔️🏃",
       "relatedInterests": ["Running", "Hiking"],
       "relatedPersonalityTraits": ["Ambitious", "Competitive"],
@@ -5338,7 +5338,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Boxing class was intense! Great stress relief 🥊",
       "relatedInterests": ["Fitness"],
       "relatedPersonalityTraits": ["Competitive", "Ambitious"],
@@ -5365,7 +5365,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Cooking with grandma's cast iron skillet. Generations of flavor 👵🍳",
       "relatedInterests": ["Cooking"],
       "relatedPersonalityTraits": ["Empathetic", "Thoughtful"],
@@ -5392,7 +5392,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Pottery wheel mastery in progress! No more lopsided bowls 🎨",
       "relatedInterests": ["Art"],
       "relatedPersonalityTraits": ["Patient", "Creative"],
@@ -5419,7 +5419,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Obstacle course race complete! Muddy but victorious 🏃‍♂️💪",
       "relatedInterests": ["Fitness", "Running"],
       "relatedPersonalityTraits": ["Competitive", "Adventurous"],
@@ -5446,7 +5446,7 @@
       "isRedFlag": true
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Garden harvested! Fresh vegetables for the week 🥬🍅",
       "relatedInterests": ["Gardening", "Cooking"],
       "relatedPersonalityTraits": ["Patient"],
@@ -5473,7 +5473,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Escape room victory! Solved it with 5 seconds left ⏱️🔓",
       "relatedInterests": ["BoardGames"],
       "relatedPersonalityTraits": ["Competitive", "Analytical"],
@@ -5500,7 +5500,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Tried indoor skydiving! Floating on air is surreal 🪂",
       "relatedInterests": [],
       "relatedPersonalityTraits": ["Adventurous"],
@@ -5527,7 +5527,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Book swap meet! Found some amazing reads today 📚",
       "relatedInterests": ["Reading"],
       "relatedPersonalityTraits": ["Thoughtful"],
@@ -5554,7 +5554,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Volunteered at the community garden. Growing food for neighbors 🌱",
       "relatedInterests": ["Volunteering", "Gardening"],
       "relatedPersonalityTraits": ["Empathetic"],
@@ -5581,7 +5581,7 @@
       "isRedFlag": true
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Watercolor landscapes are my new therapy 🎨🏞️",
       "relatedInterests": ["Art", "Photography"],
       "relatedPersonalityTraits": ["Creative", "Patient"],
@@ -5608,7 +5608,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Spin class was no joke! Legs are gone but endorphins are high 🚴",
       "relatedInterests": ["Fitness", "Cycling"],
       "relatedPersonalityTraits": ["Ambitious"],
@@ -5635,7 +5635,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Hiking through autumn colors. Nature's art gallery 🍂🏃",
       "relatedInterests": ["Hiking", "Photography"],
       "relatedPersonalityTraits": ["Adventurous"],
@@ -5662,7 +5662,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Sunset sailing was magical. Wind, water, and wonder ⛵🌅",
       "relatedInterests": ["Travel"],
       "relatedPersonalityTraits": ["Adventurous"],
@@ -5689,7 +5689,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Tried acro yoga! Trust exercises taken to new heights 🧘‍♀️",
       "relatedInterests": ["Yoga", "Fitness"],
       "relatedPersonalityTraits": ["Adventurous", "Outgoing"],
@@ -5716,7 +5716,7 @@
       "isRedFlag": true
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Sushi making class mastered! Rolling technique on point 🍣",
       "relatedInterests": ["Cooking"],
       "relatedPersonalityTraits": ["Creative", "Patient"],
@@ -5743,7 +5743,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Early morning fishing! Peaceful start to the day 🎣",
       "relatedInterests": [],
       "relatedPersonalityTraits": ["Patient"],
@@ -5770,7 +5770,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Tried aerial silks! Upper body strength: work in progress 🎪",
       "relatedInterests": ["Fitness"],
       "relatedPersonalityTraits": ["Adventurous"],
@@ -5797,7 +5797,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Farmers market flowers brighten any room! 💐",
       "relatedInterests": ["Gardening"],
       "relatedPersonalityTraits": ["Optimistic"],
@@ -5824,7 +5824,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Street food tour was incredible! Tried 10 different things 🥟",
       "relatedInterests": ["Cooking", "Travel"],
       "relatedPersonalityTraits": ["Adventurous"],
@@ -5851,7 +5851,7 @@
       "isRedFlag": true
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Moonlight hike was surreal! Stars and silence 🌙🏔️",
       "relatedInterests": ["Hiking", "Photography"],
       "relatedPersonalityTraits": ["Adventurous"],
@@ -5878,7 +5878,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Ultimate frisbee tournament! Team won the finals 🥏🏆",
       "relatedInterests": ["Sports", "Fitness"],
       "relatedPersonalityTraits": ["Competitive", "Outgoing"],
@@ -5905,7 +5905,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Baking sourdough discard crackers! Nothing goes to waste 🍞",
       "relatedInterests": ["Baking", "Cooking"],
       "relatedPersonalityTraits": ["Creative"],
@@ -5932,7 +5932,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Martial arts progress! Yellow belt earned 🥋",
       "relatedInterests": ["Fitness"],
       "relatedPersonalityTraits": ["Patient", "Ambitious"],
@@ -5959,7 +5959,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Jazz brunch with live music! Perfect Sunday vibes 🎷🥂",
       "relatedInterests": ["Music"],
       "relatedPersonalityTraits": ["Outgoing"],
@@ -5986,7 +5986,7 @@
       "isRedFlag": true
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Foraging workshop! Learned to identify edible mushrooms 🍄",
       "relatedInterests": ["Cooking", "Hiking"],
       "relatedPersonalityTraits": ["Adventurous", "Analytical"],
@@ -6013,7 +6013,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Roller skating at sunset! Retro vibes activated 🛼🌅",
       "relatedInterests": ["Fitness"],
       "relatedPersonalityTraits": ["Adventurous", "Outgoing"],
@@ -6040,7 +6040,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Charity gala was elegant! Raised funds for a great cause ✨",
       "relatedInterests": ["Volunteering"],
       "relatedPersonalityTraits": ["Empathetic", "Outgoing"],
@@ -6067,7 +6067,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Snowboarding season begins! First powder day of the year 🏂",
       "relatedInterests": ["Fitness", "Travel"],
       "relatedPersonalityTraits": ["Adventurous"],
@@ -6094,7 +6094,7 @@
       "isRedFlag": true
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Beekeeping workshop! Honey harvest coming soon 🐝",
       "relatedInterests": ["Gardening"],
       "relatedPersonalityTraits": ["Patient", "Adventurous"],
@@ -6121,7 +6121,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Tried pole dancing fitness! Incredible core workout 💪",
       "relatedInterests": ["Fitness"],
       "relatedPersonalityTraits": ["Adventurous"],
@@ -6148,7 +6148,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Botanical illustration class! Learning to draw plants 🌿",
       "relatedInterests": ["Art", "Gardening"],
       "relatedPersonalityTraits": ["Creative", "Patient"],
@@ -6175,7 +6175,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Swimming in a natural hot spring. Bucket list checked ♨️",
       "relatedInterests": ["Travel"],
       "relatedPersonalityTraits": ["Adventurous"],
@@ -6202,7 +6202,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Sculpture garden visit! Art in nature 🎨🌳",
       "relatedInterests": ["Art", "Photography"],
       "relatedPersonalityTraits": ["Creative", "Thoughtful"],
@@ -6229,7 +6229,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Tried trapeze class! Flying through the air is exhilarating 🎪",
       "relatedInterests": ["Fitness"],
       "relatedPersonalityTraits": ["Adventurous"],
@@ -6256,7 +6256,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Sunset paddle on the lake. Peaceful end to the day 🚣‍♀️",
       "relatedInterests": ["Fitness", "Photography"],
       "relatedPersonalityTraits": ["Adventurous", "Laid_Back"],
@@ -6283,7 +6283,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Urban gardening project! Growing veggies on my balcony 🌱",
       "relatedInterests": ["Gardening", "Cooking"],
       "relatedPersonalityTraits": ["Patient"],
@@ -6310,7 +6310,7 @@
       "isRedFlag": true
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Food photography practice! Making meals look as good as they taste 📸🍽️",
       "relatedInterests": ["Photography", "Cooking"],
       "relatedPersonalityTraits": ["Creative"],
@@ -6337,7 +6337,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Cider making season! Fresh apples from the orchard 🍎",
       "relatedInterests": ["Cooking"],
       "relatedPersonalityTraits": ["Patient", "Creative"],
@@ -6364,7 +6364,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Historical walking tour! Learning about my city's past 🏛️",
       "relatedInterests": ["Travel", "Photography"],
       "relatedPersonalityTraits": ["Analytical", "Adventurous"],
@@ -6391,7 +6391,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Kickboxing class was intense! Great cardio workout 🥊",
       "relatedInterests": ["Fitness"],
       "relatedPersonalityTraits": ["Competitive", "Ambitious"],
@@ -6418,7 +6418,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Canoe camping adventure! Two days on the water 🛶⛺",
       "relatedInterests": ["Hiking", "Travel"],
       "relatedPersonalityTraits": ["Adventurous"],
@@ -6445,7 +6445,7 @@
       "isRedFlag": true
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Cheese making workshop! Fresh ricotta is life-changing 🧀",
       "relatedInterests": ["Cooking"],
       "relatedPersonalityTraits": ["Patient", "Creative"],
@@ -6472,7 +6472,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Tried falconry! Hawks are majestic creatures 🦅",
       "relatedInterests": [],
       "relatedPersonalityTraits": ["Adventurous"],
@@ -6499,7 +6499,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Dawn patrol surf session! Early morning waves are the best 🏄",
       "relatedInterests": ["Fitness"],
       "relatedPersonalityTraits": ["Adventurous"],
@@ -6526,7 +6526,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Wine and paint night success! Not terrible for a beginner 🎨🍷",
       "relatedInterests": ["Art", "WineTasting"],
       "relatedPersonalityTraits": ["Creative", "Outgoing"],
@@ -6553,7 +6553,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Learning calligraphy! Each letter is a meditation 🖋️",
       "relatedInterests": ["Art", "Writing"],
       "relatedPersonalityTraits": ["Patient", "Creative"],
@@ -6580,7 +6580,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Rock collecting on the beach! Each one is unique 🪨",
       "relatedInterests": ["Hiking", "Photography"],
       "relatedPersonalityTraits": ["Patient", "Creative"],
@@ -6607,7 +6607,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Indoor rowing workout! Great full-body burn 🚣‍♂️",
       "relatedInterests": ["Fitness"],
       "relatedPersonalityTraits": ["Ambitious"],
@@ -6634,7 +6634,7 @@
       "isRedFlag": true
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Sourdough pizza night! Homemade everything 🍕",
       "relatedInterests": ["Cooking", "Baking"],
       "relatedPersonalityTraits": ["Creative", "Patient"],
@@ -6661,7 +6661,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Pottery barn crawl with friends! So many treasures found 🏺",
       "relatedInterests": ["Art"],
       "relatedPersonalityTraits": ["Creative", "Outgoing"],
@@ -6688,7 +6688,7 @@
       "isRedFlag": true
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Plant propagation success! Growing new plants from cuttings 🌱",
       "relatedInterests": ["Gardening"],
       "relatedPersonalityTraits": ["Patient"],
@@ -6715,7 +6715,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Sunset beach bonfire with friends. Perfect end to summer 🔥🌅",
       "relatedInterests": ["Photography"],
       "relatedPersonalityTraits": ["Outgoing"],
@@ -6742,7 +6742,7 @@
       "isRedFlag": true
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Morning jog through the park! Fresh air and exercise 🏃‍♂️",
       "relatedInterests": ["Running", "Fitness"],
       "relatedPersonalityTraits": ["Ambitious"],
@@ -6769,7 +6769,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Stargazing night with telescope! Saw Saturn's rings 🪐",
       "relatedInterests": ["Photography"],
       "relatedPersonalityTraits": ["Analytical", "Adventurous"],
@@ -6796,7 +6796,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Completed a puzzle in one sitting! 1000 pieces of satisfaction 🧩",
       "relatedInterests": ["BoardGames"],
       "relatedPersonalityTraits": ["Patient"],
@@ -6823,7 +6823,7 @@
       "isRedFlag": true
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Sunrise meditation on the dock. Peaceful beginning 🌅🧘‍♂️",
       "relatedInterests": ["Meditation", "Yoga"],
       "relatedPersonalityTraits": ["Patient", "Thoughtful"],
@@ -6850,7 +6850,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Paddleboarding at sunrise. Calm water, clear mind 🏄‍♀️",
       "relatedInterests": ["Fitness"],
       "relatedPersonalityTraits": ["Adventurous"],
@@ -6877,7 +6877,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Fermented pickles are ready! Tangy perfection 🥒",
       "relatedInterests": ["Cooking"],
       "relatedPersonalityTraits": ["Patient", "Creative"],
@@ -6904,7 +6904,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Pottery throwing progress! Making functional cups now 🏺☕",
       "relatedInterests": ["Art"],
       "relatedPersonalityTraits": ["Creative", "Patient"],
@@ -6931,7 +6931,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Tried wall climbing today! Grip strength: work in progress 🧗‍♂️",
       "relatedInterests": ["Fitness"],
       "relatedPersonalityTraits": ["Adventurous"],
@@ -6958,7 +6958,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Homemade bone broth simmering! House smells incredible 🍲",
       "relatedInterests": ["Cooking"],
       "relatedPersonalityTraits": ["Patient"],
@@ -6985,7 +6985,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Aerial photography attempt! Drone learning curve is steep 📸",
       "relatedInterests": ["Photography"],
       "relatedPersonalityTraits": ["Creative", "Patient"],
@@ -7012,7 +7012,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "First marathon completed! 26.2 miles of perseverance 🏃‍♂️🏅",
       "relatedInterests": ["Running", "Fitness"],
       "relatedPersonalityTraits": ["Ambitious", "Reliable"],
@@ -7039,7 +7039,7 @@
       "isRedFlag": true
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Kombucha brewing in progress! Second fermentation next 🍵",
       "relatedInterests": ["Cooking"],
       "relatedPersonalityTraits": ["Patient", "Creative"],
@@ -7066,7 +7066,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Spelunking adventure! Caves are otherworldly 🕯️",
       "relatedInterests": ["Hiking", "Travel"],
       "relatedPersonalityTraits": ["Adventurous"],
@@ -7093,7 +7093,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Herb garden harvest! Fresh basil, rosemary, and thyme 🌿",
       "relatedInterests": ["Gardening", "Cooking"],
       "relatedPersonalityTraits": ["Patient"],
@@ -7120,7 +7120,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Tried go-karting! Competitive fun with friends 🏎️",
       "relatedInterests": [],
       "relatedPersonalityTraits": ["Competitive", "Outgoing"],
@@ -7147,7 +7147,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Bread scoring practice! Artisan patterns emerging 🍞",
       "relatedInterests": ["Baking"],
       "relatedPersonalityTraits": ["Creative", "Patient"],
@@ -7174,7 +7174,7 @@
       "isRedFlag": true
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Mountain sunrise was worth the 4 AM wake-up 🏔️🌄",
       "relatedInterests": ["Hiking", "Photography"],
       "relatedPersonalityTraits": ["Adventurous"],
@@ -7201,7 +7201,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Tried disc golf! New favorite outdoor activity 🥏",
       "relatedInterests": ["Sports"],
       "relatedPersonalityTraits": ["Adventurous", "Outgoing"],
@@ -7228,7 +7228,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Volunteered at a literacy program today. Reading matters 📖",
       "relatedInterests": ["Volunteering", "Reading"],
       "relatedPersonalityTraits": ["Empathetic"],
@@ -7255,7 +7255,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Morning tai chi in the park. Flowing movement meditation 🧘‍♂️",
       "relatedInterests": ["Fitness", "Meditation"],
       "relatedPersonalityTraits": ["Patient"],
@@ -7282,7 +7282,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Blackberry picking season! Nature's bounty 🫐",
       "relatedInterests": ["Gardening", "Hiking"],
       "relatedPersonalityTraits": ["Patient"],
@@ -7309,7 +7309,7 @@
       "isRedFlag": true
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Joined a running club! Motivation multiplied 🏃‍♀️",
       "relatedInterests": ["Running", "Fitness"],
       "relatedPersonalityTraits": ["Outgoing"],
@@ -7336,7 +7336,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Macrame project complete! Wall hanging perfection 🧶",
       "relatedInterests": ["Art"],
       "relatedPersonalityTraits": ["Creative", "Patient"],
@@ -7363,7 +7363,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Cheese tasting flight! Learning about terroir 🧀",
       "relatedInterests": ["Cooking", "WineTasting"],
       "relatedPersonalityTraits": ["Adventurous"],
@@ -7390,7 +7390,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Tried stand-up comedy! Open mic was terrifying but fun 🎤",
       "relatedInterests": ["Theater"],
       "relatedPersonalityTraits": ["Outgoing", "Humorous"],
@@ -7417,7 +7417,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Biking to work! Eco-friendly commute 🚴",
       "relatedInterests": ["Cycling", "Fitness"],
       "relatedPersonalityTraits": [],
@@ -7444,7 +7444,7 @@
       "isRedFlag": true
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Mushroom foraging success! Found chanterelles 🍄",
       "relatedInterests": ["Hiking", "Cooking"],
       "relatedPersonalityTraits": ["Adventurous", "Patient"],
@@ -7471,7 +7471,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Yoga retreat weekend! Mind and body reset complete 🧘‍♀️",
       "relatedInterests": ["Yoga", "Meditation"],
       "relatedPersonalityTraits": ["Patient", "Thoughtful"],
@@ -7498,7 +7498,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Geocaching adventure! Found treasures all over the city 🗺️",
       "relatedInterests": ["Hiking"],
       "relatedPersonalityTraits": ["Adventurous", "Analytical"],
@@ -7525,7 +7525,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Community cleanup day! Making the neighborhood beautiful 🧹",
       "relatedInterests": ["Volunteering"],
       "relatedPersonalityTraits": ["Empathetic"],
@@ -7552,7 +7552,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Olive oil tasting experience! Learning the nuances 🫒",
       "relatedInterests": ["Cooking"],
       "relatedPersonalityTraits": ["Adventurous", "Analytical"],
@@ -7579,7 +7579,7 @@
       "isRedFlag": true
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Winter hiking! Snowy trails have their own magic ❄️🥾",
       "relatedInterests": ["Hiking", "Photography"],
       "relatedPersonalityTraits": ["Adventurous"],
@@ -7606,7 +7606,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Farmers market flowers always brighten the week 💐",
       "relatedInterests": ["Gardening"],
       "relatedPersonalityTraits": ["Optimistic"],
@@ -7633,7 +7633,7 @@
       "isRedFlag": true
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Tried laser tag! Inner child activated 🔫",
       "relatedInterests": [],
       "relatedPersonalityTraits": ["Outgoing", "Competitive"],
@@ -7660,7 +7660,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Indoor gardening setup complete! Year-round herbs 🌿",
       "relatedInterests": ["Gardening", "Cooking"],
       "relatedPersonalityTraits": ["Patient"],
@@ -7687,7 +7687,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Dance workshop was so freeing! Moving to the music 💃",
       "relatedInterests": ["Music", "Fitness"],
       "relatedPersonalityTraits": ["Outgoing", "Creative"],
@@ -7714,7 +7714,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "River rafting adventure! Rapids were exhilarating 🚣",
       "relatedInterests": ["Travel", "Fitness"],
       "relatedPersonalityTraits": ["Adventurous"],
@@ -7741,7 +7741,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Community yoga in the park! Free fitness with friends 🧘‍♂️",
       "relatedInterests": ["Yoga", "Fitness"],
       "relatedPersonalityTraits": ["Outgoing"],
@@ -7768,7 +7768,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Vintage market finds! Mid-century modern pieces 🪑",
       "relatedInterests": ["Art", "Fashion"],
       "relatedPersonalityTraits": ["Creative"],
@@ -7795,7 +7795,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Tried pottery painting! Personalized mug incoming ☕🎨",
       "relatedInterests": ["Art"],
       "relatedPersonalityTraits": ["Creative"],
@@ -7822,7 +7822,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Early morning bird watching! Spotted a kingfisher 🐦",
       "relatedInterests": ["Photography"],
       "relatedPersonalityTraits": ["Patient"],
@@ -7849,7 +7849,7 @@
       "isRedFlag": true
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Cooking class with a friend! Learning and laughing 👨‍🍳👩‍🍳",
       "relatedInterests": ["Cooking"],
       "relatedPersonalityTraits": ["Outgoing"],
@@ -7876,7 +7876,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Tried aerial hoop! Circus arts are fascinating 🎪",
       "relatedInterests": ["Fitness"],
       "relatedPersonalityTraits": ["Adventurous"],
@@ -7903,7 +7903,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Historical tour of the old town! Architecture appreciation 🏛️",
       "relatedInterests": ["Travel", "Photography"],
       "relatedPersonalityTraits": ["Analytical"],
@@ -7930,7 +7930,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Sunset photography session! Golden hour magic 📸🌅",
       "relatedInterests": ["Photography"],
       "relatedPersonalityTraits": ["Creative", "Patient"],
@@ -7957,7 +7957,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Board game night tournament! Championship bracket intense 🎲🏆",
       "relatedInterests": ["BoardGames"],
       "relatedPersonalityTraits": ["Competitive", "Outgoing"],
@@ -7984,7 +7984,7 @@
       "isRedFlag": true
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Jam making with fresh berries! Summer in a jar 🫙🍓",
       "relatedInterests": ["Cooking", "Gardening"],
       "relatedPersonalityTraits": ["Patient", "Creative"],
@@ -8011,7 +8011,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Tried indoor bouldering! Problem-solving with your body 🧗‍♀️",
       "relatedInterests": ["Fitness"],
       "relatedPersonalityTraits": ["Adventurous", "Analytical"],
@@ -8038,7 +8038,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Morning swim in the lake! Fresh start to the day 🏊‍♀️",
       "relatedInterests": ["Fitness"],
       "relatedPersonalityTraits": ["Adventurous"],
@@ -8065,7 +8065,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Art therapy session! Processing emotions through creation 🎨",
       "relatedInterests": ["Art"],
       "relatedPersonalityTraits": ["Creative", "Thoughtful"],
@@ -8092,7 +8092,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Group hike to the summit! Shared accomplishment 🏔️👥",
       "relatedInterests": ["Hiking", "Fitness"],
       "relatedPersonalityTraits": ["Outgoing", "Adventurous"],
@@ -8119,7 +8119,7 @@
       "isRedFlag": true
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Homemade pasta drying! Fresh is always better 🍝",
       "relatedInterests": ["Cooking"],
       "relatedPersonalityTraits": ["Patient", "Creative"],
@@ -8146,7 +8146,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Charity auction night! Supporting local causes 💚",
       "relatedInterests": ["Volunteering"],
       "relatedPersonalityTraits": ["Empathetic", "Outgoing"],
@@ -8173,7 +8173,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Sunrise paddle! Starting the day on the water 🌅🛶",
       "relatedInterests": ["Fitness"],
       "relatedPersonalityTraits": ["Adventurous"],
@@ -8200,7 +8200,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Tried contact juggling! Mesmerizing and challenging 🔮",
       "relatedInterests": [],
       "relatedPersonalityTraits": ["Creative", "Patient"],
@@ -8227,7 +8227,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Pie baking day! Apple season is the best season 🥧🍎",
       "relatedInterests": ["Baking"],
       "relatedPersonalityTraits": ["Patient", "Creative"],
@@ -8254,7 +8254,7 @@
       "isRedFlag": true
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Autumn foliage hike! Peak colors achieved 🍂🍁",
       "relatedInterests": ["Hiking", "Photography"],
       "relatedPersonalityTraits": ["Adventurous"],
@@ -8281,7 +8281,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "DIY furniture project! Built a bookshelf from scratch 📚🔨",
       "relatedInterests": ["Art"],
       "relatedPersonalityTraits": ["Creative", "Patient"],
@@ -8308,7 +8308,7 @@
       "isRedFlag": true
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Night market exploration! Street food paradise 🍜🌙",
       "relatedInterests": ["Cooking", "Travel"],
       "relatedPersonalityTraits": ["Adventurous"],
@@ -8335,7 +8335,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Outdoor cinema night! Movies under the stars 🎬🌟",
       "relatedInterests": ["Movies"],
       "relatedPersonalityTraits": ["Outgoing"],
@@ -8362,7 +8362,7 @@
       "isRedFlag": true
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Finished my first knitting project! Slightly wonky scarf 🧶",
       "relatedInterests": ["Art"],
       "relatedPersonalityTraits": ["Patient", "Creative"],
@@ -8389,7 +8389,7 @@
       "isRedFlag": false
     },
     {
-      "postType": "Photo",
+      "postType": "TextOnly",
       "content": "Completed a color run! Covered in rainbow powder 🌈🏃",
       "relatedInterests": ["Running", "Fitness"],
       "relatedPersonalityTraits": ["Outgoing", "Adventurous"],

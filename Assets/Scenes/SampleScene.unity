@@ -185,7 +185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Managers.PostPoolManager
   wildCardChance: 0.1
-  photoWeight: 0.7
+  photoWeight: 0.05
   verboseLogging: 0
   baseEngagementMultiplier: 0.1
   commentToLikeRatio: 0.1

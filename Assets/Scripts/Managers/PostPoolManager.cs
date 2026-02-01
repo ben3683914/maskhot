@@ -21,7 +21,7 @@ namespace Maskhot.Managers
 
         [Tooltip("Weight for Photo posts in selection (vs TextOnly)")]
         [Range(0f, 1f)]
-        public float photoWeight = 0.7f;
+        public float photoWeight = 0.1f;
 
         [Tooltip("Enable detailed logging of post selection")]
         public bool verboseLogging = false;
