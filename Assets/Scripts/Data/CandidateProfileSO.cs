@@ -53,6 +53,10 @@ namespace Maskhot.Data
         private static Sprite cachedMaleSprite;
         private static Sprite cachedFemaleSprite;
 
+        // Cached posts for current playthrough (persists until reset)
+        [System.NonSerialized]
+        private List<SocialMediaPost> cachedPlaythroughPosts;
+
         /// <summary>
         /// Gets the profile picture for this candidate.
         /// If no picture is assigned, returns a gender-based default.
@@ -95,9 +99,16 @@ namespace Maskhot.Data
         /// Gets all posts for this profile (guaranteed + random selection)
         /// Combines guaranteed posts with trait-matched random posts from the pool
         /// Posts are sorted by daysSincePosted (most recent first)
+        /// Results are cached - call ResetPlaythroughPosts() to clear for a new session.
         /// </summary>
         public List<SocialMediaPost> GetPostsForPlaythrough()
         {
+            // Return cached posts if already generated this session
+            if (cachedPlaythroughPosts != null)
+            {
+                return cachedPlaythroughPosts;
+            }
+
             List<SocialMediaPost> allPosts = new List<SocialMediaPost>(guaranteedPosts);
 
             // Get random posts from the pool if PostPoolManager is available
@@ -108,9 +119,18 @@ namespace Maskhot.Data
             }
 
             // Sort by daysSincePosted (most recent first)
-            allPosts = allPosts.OrderBy(p => p.daysSincePosted).ToList();
+            cachedPlaythroughPosts = allPosts.OrderBy(p => p.daysSincePosted).ToList();
 
-            return allPosts;
+            return cachedPlaythroughPosts;
+        }
+
+        /// <summary>
+        /// Clears the cached posts for this candidate.
+        /// Call when starting a new quest/session to get fresh random posts.
+        /// </summary>
+        public void ResetPlaythroughPosts()
+        {
+            cachedPlaythroughPosts = null;
         }
     }
 }

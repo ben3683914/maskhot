@@ -465,5 +465,24 @@ namespace Maskhot.Managers
         }
 
         #endregion
+
+        #region Session Management
+
+        /// <summary>
+        /// Resets cached playthrough posts for all candidates.
+        /// Call when starting a new quest/session to get fresh random posts.
+        /// </summary>
+        public void ResetAllCandidatePosts()
+        {
+            foreach (var candidate in candidateProfiles)
+            {
+                if (candidate != null)
+                {
+                    candidate.ResetPlaythroughPosts();
+                }
+            }
+        }
+
+        #endregion
     }
 }
