@@ -28,6 +28,7 @@ Track what's complete, in progress, and to do.
 **Controller Layer**
 - [x] MatchListController - Selection state, navigation, fires events for UI
 - [x] QuestController - UI-facing interface for quest state and criteria display
+- [x] DecisionController - Accept/reject decisions, correctness evaluation, session statistics
 
 **Matching System**
 - [x] MatchEvaluator - Static evaluation logic (currently using **ImplicitSoftening** mode)
@@ -53,6 +54,7 @@ Track what's complete, in progress, and to do.
 - [x] MatchListTester - Verify selection, navigation, events
 - [x] QuestManagerTester - Verify client loading, quest lifecycle, events
 - [x] QuestControllerTester - Verify event subscription, cached data, cache clearing
+- [x] DecisionControllerTester - Verify decisions, correctness evaluation, statistics
 
 ### In Progress
 
@@ -62,9 +64,6 @@ Track what's complete, in progress, and to do.
 
 **Manager Layer**
 - [ ] GameManager - Overall game state, level progression
-
-**Controllers**
-- [ ] DecisionController - Accept/reject decisions and scoring
 
 **Procedural Generation**
 - [ ] QuestGenerator - Creates Quest instances from ClientProfileSO or procedural data
@@ -81,8 +80,8 @@ Track what's complete, in progress, and to do.
 ## Current Priorities
 
 Candidates for next:
-- **DecisionController** - Accept/reject decisions and scoring
 - **GameManager** - Overall game state, level progression
+- **QuestGenerator** - Creates Quest instances from procedural data
 
 ---
 
@@ -92,12 +91,11 @@ Candidates for next:
 2. ~~ScriptableObjects~~ COMPLETE
 3. ~~Manager Layer (ProfileManager, PostPoolManager, MatchQueueManager, QuestManager)~~ COMPLETE
 4. ~~Matching System~~ COMPLETE
-5. ~~Controller Layer (MatchListController, QuestController)~~ COMPLETE
+5. ~~Controller Layer (MatchListController, QuestController, DecisionController)~~ COMPLETE
 6. UI Implementation *(separate developer)*
-7. Remaining Controllers (DecisionController)
-8. Remaining Managers (GameManager)
-9. QuestGenerator for procedural quests
-10. Integration and polish
+7. Remaining Managers (GameManager)
+8. QuestGenerator for procedural quests
+9. Integration and polish
 
 ---
 

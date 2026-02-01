@@ -420,6 +420,40 @@ Verifies QuestController functionality.
 
 ---
 
+### DecisionControllerTester
+
+Verifies DecisionController functionality.
+
+**Location**: `Assets/Scripts/Testing/DecisionControllerTester.cs`
+
+**Setup**:
+1. Attach to a GameObject alongside ProfileManager, MatchQueueManager, MatchListController, QuestManager, and DecisionController
+2. Optionally assign a test client
+3. Enter Play Mode
+
+**How to Run**: Click the buttons in the Inspector (buttons are enabled during Play Mode)
+
+**Available Tests**:
+- **Test Accept Current** - Tests accepting the currently selected candidate
+- **Test Reject Current** - Tests rejecting the currently selected candidate
+- **Test Decide All** - Decides on all candidates, verifies completion event
+- **Test Auto-Advance** - Tests auto-advancing to next pending after decision
+- **Test Statistics** - Shows current session statistics (TP, TN, FP, FN, accuracy)
+- **Test Session Reset** - Tests clearing session statistics
+- **Log Current State** - Logs current controller state
+- **Start Test Quest** - Starts a quest and populates queue for testing
+- **Clear Setup** - Clears quest and queue
+
+**What it checks**:
+- Decisions are recorded correctly (accept/reject)
+- Correctness evaluation works (comparing to quest criteria)
+- Statistics update properly (true/false positives/negatives)
+- Events fire on decision and completion
+- Auto-advance works when enabled
+- Session resets on new quest
+
+---
+
 ## Verbose Logging
 
 Enable detailed logging on manager components.
@@ -475,6 +509,19 @@ public bool verboseLogging = false;
 - Post count for current candidate
 - Navigation attempts and results
 - Skip messages when same candidate selected
+
+### DecisionController
+
+```csharp
+// In Inspector, enable verboseLogging
+public bool verboseLogging = false;
+```
+
+**Outputs**:
+- Decision outcomes (candidate name, decision, correct/incorrect)
+- Match evaluation details (was match, score)
+- Session completion with final accuracy
+- Quest start/clear notifications
 
 ---
 
@@ -548,6 +595,7 @@ All new tester scripts should go in `Assets/Scripts/Testing/`.
 - **MatchListTester**: `Assets/Scripts/Testing/MatchListTester.cs`
 - **QuestManagerTester**: `Assets/Scripts/Testing/QuestManagerTester.cs`
 - **QuestControllerTester**: `Assets/Scripts/Testing/QuestControllerTester.cs`
+- **DecisionControllerTester**: `Assets/Scripts/Testing/DecisionControllerTester.cs`
 
 **Tester editors** (in `Assets/Scripts/Editor/`):
 - `ProfileTesterEditor.cs`
@@ -558,3 +606,4 @@ All new tester scripts should go in `Assets/Scripts/Testing/`.
 - `MatchListTesterEditor.cs`
 - `QuestManagerTesterEditor.cs`
 - `QuestControllerTesterEditor.cs`
+- `DecisionControllerTesterEditor.cs`
