@@ -101,12 +101,15 @@ Candidates for next:
 
 ## Notes
 
-### Validation Workflow
+### CRITICAL: Validation Workflow
+
+**Claude: You MUST follow this workflow. Do NOT mark items as Completed until the user explicitly confirms.**
 
 When implementing new managers or controllers:
 1. Create the component and its tester script
-2. Mark as **In Progress** (pending validation)
-3. Wait for user to run tests and confirm everything works
-4. Only mark as **Completed** after user validation
+2. Mark as **In Progress** in this file (NOT Completed)
+3. Provide testing instructions to the user
+4. **STOP and WAIT** for the user to run tests and explicitly confirm everything works
+5. Only mark as **Completed** AFTER the user validates
 
-Do not automatically mark items complete or shift focus until validation is confirmed.
+**VIOLATION**: Marking something as "Completed" before user validation is a workflow violation. The user must explicitly say the component is validated before you update the status.

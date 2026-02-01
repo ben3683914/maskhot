@@ -61,15 +61,31 @@ Read these docs when you need deeper context:
 - **ProfileManager** (singleton): Loads all profiles/traits from Resources, provides lookup methods
 - **PostPoolManager** (singleton): Handles random post selection with trait matching
 - **MatchQueueManager** (singleton): Manages candidate queue, decision tracking, queue population
+- **QuestManager** (singleton): Handles quest lifecycle, client loading, fires quest events
 
 ### Controllers (UI State/Events)
 - **MatchListController** (singleton): Manages current selection, navigation, fires `OnSelectionChanged` event
+- **QuestController** (singleton): UI-facing interface for quest state and cached criteria display
+- **DecisionController** (singleton): Handles accept/reject decisions, correctness evaluation, session statistics
 
 ### Other
 - **MatchEvaluator** (static): Evaluates candidates against match criteria, returns MatchResult with score
 - **ScriptableObjectImporter**: Editor tool (`Tools > Maskhot > Import Data from JSON`)
 
 ## Working with Claude
+
+### CRITICAL: Validation Workflow for New Components
+
+**DO NOT mark new managers or controllers as "Completed" until the user explicitly validates them.**
+
+When implementing a new manager or controller:
+1. Create the component and its tester script
+2. Mark as **"In Progress"** in project-status.md (NOT completed)
+3. Tell the user how to test it
+4. **WAIT** for the user to run tests and confirm everything works
+5. Only mark as **"Completed"** AFTER the user says it's validated
+
+This is a blocking requirement. Do not skip steps or assume validation passed.
 
 ### Ask Clarifying Questions
 When requirements are ambiguous or there are multiple valid approaches, ask clarifying questions before proceeding. It's better to confirm intent than to make assumptions.
@@ -80,7 +96,7 @@ For multi-step tasks or significant changes, propose a plan and wait for confirm
 ### Keep Documentation Updated
 1. **After modifying systems**: Update relevant documentation in `docs/` to reflect changes
 2. **When adding new features**: Create or update appropriate doc with system design
-3. **Update project-status.md**: Mark items complete, add new to-do items as discovered
+3. **Update project-status.md**: Mark items in progress or complete per validation workflow above
 
 ## Development Guidelines
 
@@ -93,8 +109,8 @@ For multi-step tasks or significant changes, propose a plan and wait for confirm
 
 ## Implementation Status
 
-- **Complete**: Data structures, trait SOs, profile SOs, JSON import, matching system, managers (ProfileManager, PostPoolManager, MatchQueueManager), MatchListController
+- **Complete**: Data structures, trait SOs, profile SOs, JSON import, matching system, managers (ProfileManager, PostPoolManager, MatchQueueManager, QuestManager), controllers (MatchListController, QuestController, DecisionController)
 - **In Progress**: None currently
-- **To Do**: GameManager, QuestManager, DecisionController, UI implementation
+- **To Do**: GameManager, QuestGenerator, UI implementation
 
 See [docs/project-status.md](docs/project-status.md) for detailed status breakdown.
