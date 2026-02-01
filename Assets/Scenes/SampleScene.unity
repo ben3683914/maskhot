@@ -228,8 +228,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81466c3e1a4961f48a75a4a3fa8b01be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Controllers.DecisionController
-  autoAdvance: 0
-  verboseLogging: 0
+  autoAdvance: 1
+  correctRewardMultiplier: 3
+  incorrectReward: 50
+  verboseLogging: 1
 --- !u!114 &99476925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,7 +247,8 @@ MonoBehaviour:
   passingAccuracyThreshold: 70
   candidatesPerQuest: 5
   questTransitionDelay: 1
-  verboseLogging: 0
+  verboseLogging: 1
+  autoStartSession: 0
 --- !u!114 &99476926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,7 +275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Managers.MoneyManager
   startingBalance: 500
-  verboseLogging: 0
+  verboseLogging: 1
 --- !u!1 &145607621
 GameObject:
   m_ObjectHideFlags: 0
@@ -481,7 +484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37aadd175842c6549bbd3ef990c2b0a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Controllers.MatchListController
-  verboseLogging: 0
+  verboseLogging: 1
 --- !u!114 &817613641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -507,7 +510,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcda4d12f77e62f469a6fd717b44bf49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Controllers.RedactionController
-  verboseLogging: 0
+  verboseLogging: 1
 --- !u!114 &817613643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -521,7 +524,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Controllers.MoneyController
   unredactCost: 50
-  verboseLogging: 0
+  verboseLogging: 1
 --- !u!1 &1667281034
 GameObject:
   m_ObjectHideFlags: 0

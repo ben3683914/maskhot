@@ -69,6 +69,7 @@ public class UIManager : MonoBehaviour
         {
             MoneyController.Instance.OnBalanceChanged -= UpdateBalance;
             MoneyController.Instance.OnBalanceChanged += UpdateBalance;
+            UpdateBalance(MoneyController.Instance.CurrentBalance);
         }
 
         RegisterCallbacks();
@@ -125,14 +126,23 @@ public class UIManager : MonoBehaviour
 
     private void RegisterCallbacks()
     {
+        if (m_EventRegistry == null) return;
+
         m_Root = GetComponent<UIDocument>()?.rootVisualElement;
-        m_EventRegistry.RegisterCallback<ClickEvent>(m_Root.Q("button-approve"), evt => DecisionController.Instance.AcceptCurrent());
-        m_EventRegistry.RegisterCallback<ClickEvent>(m_Root.Q("button-reject"), evt => DecisionController.Instance.RejectCurrent());
+        if (m_Root == null) return;
+
+        var approveButton = m_Root.Q("button-approve");
+        var rejectButton = m_Root.Q("button-reject");
+
+        if (approveButton != null)
+            m_EventRegistry.RegisterCallback<ClickEvent>(approveButton, evt => DecisionController.Instance.AcceptCurrent());
+        if (rejectButton != null)
+            m_EventRegistry.RegisterCallback<ClickEvent>(rejectButton, evt => DecisionController.Instance.RejectCurrent());
     }
 
     private void UnregisterCallbacks()
     {
-        m_EventRegistry.Dispose();
+        m_EventRegistry?.Dispose();
     }
 
     private void RefreshCriteria()

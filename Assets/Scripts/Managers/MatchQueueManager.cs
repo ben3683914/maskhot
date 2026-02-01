@@ -2,6 +2,7 @@ using UnityEngine;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Maskhot.Controllers;
 using Maskhot.Data;
 
 namespace Maskhot.Managers
@@ -107,6 +108,64 @@ namespace Maskhot.Managers
             if (verboseLogging)
             {
                 Debug.Log("MatchQueueManager: Initialized");
+            }
+        }
+
+        private void OnEnable()
+        {
+            SubscribeToEvents();
+        }
+
+        private void OnDisable()
+        {
+            UnsubscribeFromEvents();
+        }
+
+        private void Start()
+        {
+            // Re-subscribe in Start in case QuestManager wasn't ready in OnEnable
+            UnsubscribeFromEvents();
+            SubscribeToEvents();
+        }
+
+        private void SubscribeToEvents()
+        {
+            if (QuestManager.Instance != null)
+            {
+                QuestManager.Instance.OnQuestStarted += HandleQuestStarted;
+            }
+        }
+
+        private void UnsubscribeFromEvents()
+        {
+            if (QuestManager.Instance != null)
+            {
+                QuestManager.Instance.OnQuestStarted -= HandleQuestStarted;
+            }
+        }
+
+        #endregion
+
+        #region Event Handlers
+
+        private void HandleQuestStarted(Quest quest)
+        {
+            // Populate queue for the new quest
+            if (ProfileManager.Instance != null)
+            {
+                PopulateForQuest(quest);
+
+                // Auto-select first candidate
+                if (MatchListController.Instance != null && queue.Count > 0)
+                {
+                    MatchListController.Instance.SelectFirst();
+                }
+            }
+
+            if (verboseLogging)
+            {
+                string clientName = quest?.client?.clientName ?? "Unknown";
+                Debug.Log($"MatchQueueManager: Quest started for '{clientName}', populated {queue.Count} candidates");
             }
         }
 

@@ -41,10 +41,6 @@ namespace Maskhot.Managers
         public static GameManager Instance { get; private set; }
 
         [Header("Session Settings")]
-        [Tooltip("Accuracy threshold (0-100) to win a quest")]
-        [Range(0, 100)]
-        public float passingAccuracyThreshold = 70f;
-
         [Tooltip("Number of candidates per quest (0 = use MatchQueueManager default)")]
         public int candidatesPerQuest = 0;
 
@@ -201,6 +197,27 @@ namespace Maskhot.Managers
             // Re-subscribe in Start in case controllers weren't ready in OnEnable
             UnsubscribeFromEvents();
             SubscribeToEvents();
+
+            if (verboseLogging)
+            {
+                Debug.Log($"GameManager.Start: DecisionController.Instance = {(DecisionController.Instance != null ? "OK" : "NULL")}");
+                Debug.Log($"GameManager.Start: QuestManager.Instance = {(QuestManager.Instance != null ? "OK" : "NULL")}");
+            }
+        }
+
+        /// <summary>
+        /// Called when a new session starts to ensure event subscriptions are current.
+        /// Call this after all managers are initialized.
+        /// </summary>
+        public void EnsureEventSubscriptions()
+        {
+            UnsubscribeFromEvents();
+            SubscribeToEvents();
+
+            if (verboseLogging)
+            {
+                Debug.Log("GameManager: Event subscriptions refreshed");
+            }
         }
 
         private void SubscribeToEvents()
@@ -208,6 +225,19 @@ namespace Maskhot.Managers
             if (DecisionController.Instance != null)
             {
                 DecisionController.Instance.OnAllDecisionsComplete += HandleAllDecisionsComplete;
+                if (verboseLogging)
+                {
+                    Debug.Log("GameManager: Subscribed to DecisionController.OnAllDecisionsComplete");
+                }
+            }
+            else if (verboseLogging)
+            {
+                Debug.LogWarning("GameManager: DecisionController.Instance is null, cannot subscribe to OnAllDecisionsComplete");
+            }
+
+            if (QuestManager.Instance != null)
+            {
+                QuestManager.Instance.OnQuestStarted += HandleQuestStarted;
             }
         }
 
@@ -216,6 +246,11 @@ namespace Maskhot.Managers
             if (DecisionController.Instance != null)
             {
                 DecisionController.Instance.OnAllDecisionsComplete -= HandleAllDecisionsComplete;
+            }
+
+            if (QuestManager.Instance != null)
+            {
+                QuestManager.Instance.OnQuestStarted -= HandleQuestStarted;
             }
         }
 
@@ -294,6 +329,9 @@ namespace Maskhot.Managers
                 StopCoroutine(transitionCoroutine);
                 transitionCoroutine = null;
             }
+
+            // Ensure event subscriptions are current (controllers should be ready by now)
+            EnsureEventSubscriptions();
 
             // Reset session state
             sessionClients = clients;
@@ -470,6 +508,11 @@ namespace Maskhot.Managers
 
             transitionCoroutine = null;
 
+            if (verboseLogging)
+            {
+                Debug.Log($"GameManager.TransitionToNextQuest: HasMoreQuests = {HasMoreQuests}, currentQuestIndex = {currentQuestIndex}, TotalQuestsInSession = {TotalQuestsInSession}");
+            }
+
             if (HasMoreQuests)
             {
                 BeginNextQuest();
@@ -484,29 +527,55 @@ namespace Maskhot.Managers
 
         #region Event Handlers
 
-        private void HandleAllDecisionsComplete()
+        private void HandleQuestStarted(Quest quest)
         {
+            // Sync state when any quest starts (even if not started through GameManager)
             if (currentState != GameState.InQuest)
             {
+                SetState(GameState.InQuest);
+
+                if (verboseLogging)
+                {
+                    string clientName = quest?.client?.clientName ?? "Unknown";
+                    Debug.Log($"GameManager: Synced to InQuest state for '{clientName}'");
+                }
+            }
+        }
+
+        private void HandleAllDecisionsComplete()
+        {
+            if (verboseLogging)
+            {
+                Debug.Log($"GameManager.HandleAllDecisionsComplete: currentState = {currentState}");
+            }
+
+            if (currentState != GameState.InQuest)
+            {
+                if (verboseLogging)
+                {
+                    Debug.LogWarning($"GameManager: HandleAllDecisionsComplete ignored - not in InQuest state (current: {currentState})");
+                }
                 return;
             }
 
-            // Get accuracy from DecisionController
+            // Determine win/loss based on whether a correct match was found
+            // Win = found a correct match (TruePositive)
+            // Loss = exhausted all candidates without finding a correct match
+            bool foundCorrectMatch = false;
             float accuracy = 0f;
+
             if (DecisionController.Instance != null)
             {
+                foundCorrectMatch = DecisionController.Instance.CorrectAccepts > 0;
                 accuracy = DecisionController.Instance.Accuracy;
             }
 
-            // Determine win/loss
-            bool won = accuracy >= passingAccuracyThreshold;
-
-            if (won)
+            if (foundCorrectMatch)
             {
                 questsWon++;
                 if (verboseLogging)
                 {
-                    Debug.Log($"GameManager: Quest WON with {accuracy:F1}% accuracy");
+                    Debug.Log($"GameManager: Quest WON - found correct match! (accuracy: {accuracy:F1}%)");
                 }
                 OnQuestWon?.Invoke(currentQuestIndex, accuracy);
             }
@@ -515,7 +584,7 @@ namespace Maskhot.Managers
                 questsLost++;
                 if (verboseLogging)
                 {
-                    Debug.Log($"GameManager: Quest LOST with {accuracy:F1}% accuracy");
+                    Debug.Log($"GameManager: Quest LOST - no correct match found (accuracy: {accuracy:F1}%)");
                 }
                 OnQuestLost?.Invoke(currentQuestIndex, accuracy);
             }
@@ -532,10 +601,19 @@ namespace Maskhot.Managers
             // Move to next quest
             currentQuestIndex++;
 
+            if (verboseLogging)
+            {
+                Debug.Log($"GameManager: Quest {currentQuestIndex}/{TotalQuestsInSession} complete. HasMoreQuests: {HasMoreQuests}");
+            }
+
             // Transition
             SetState(GameState.BetweenQuests);
 
             // Start auto-advance coroutine
+            if (verboseLogging)
+            {
+                Debug.Log($"GameManager: Starting transition coroutine (delay: {questTransitionDelay}s)");
+            }
             transitionCoroutine = StartCoroutine(TransitionToNextQuest());
         }
 

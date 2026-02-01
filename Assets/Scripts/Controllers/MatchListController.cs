@@ -375,6 +375,12 @@ namespace Maskhot.Controllers
                 }
             }
 
+            // Auto-select first candidate if nothing selected and queue has candidates
+            if (currentCandidate == null && MatchQueueManager.Instance != null && MatchQueueManager.Instance.Count > 0)
+            {
+                SelectFirst();
+            }
+
             OnQueueUpdated?.Invoke();
         }
 

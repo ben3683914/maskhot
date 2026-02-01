@@ -20,6 +20,13 @@ namespace Maskhot.Controllers
         [Tooltip("Automatically advance to next pending candidate after decision")]
         public bool autoAdvance = true;
 
+        [Header("Rewards")]
+        [Tooltip("Multiplier for correct decision rewards (reward = score × multiplier)")]
+        public float correctRewardMultiplier = 3f;
+
+        [Tooltip("Flat reward for incorrect decisions (to continue playing)")]
+        public int incorrectReward = 50;
+
         [Header("Debug")]
         [Tooltip("Enable detailed logging")]
         public bool verboseLogging = false;
@@ -314,18 +321,41 @@ namespace Maskhot.Controllers
             // Fire event
             OnDecisionResult?.Invoke(result);
 
-            // Check if all decided
-            if (MatchQueueManager.Instance.AllDecided)
+            // Determine next action based on decision outcome
+            // Correct accept (TruePositive) = found a match, quest complete
+            // Incorrect or reject = continue reviewing
+            if (result.Outcome == DecisionOutcome.TruePositive)
             {
+                // Found a good match! Quest complete - award score-based reward
+                int reward = Mathf.RoundToInt(result.MatchScore * correctRewardMultiplier);
+                if (reward > 0 && MoneyController.Instance != null)
+                {
+                    MoneyController.Instance.AddMoney(reward);
+                }
+
                 if (verboseLogging)
                 {
-                    Debug.Log($"DecisionController: All decisions complete! Accuracy: {Accuracy:F1}%");
+                    Debug.Log($"DecisionController: Correct match found! Quest complete. Reward: ${reward}");
+                }
+                OnAllDecisionsComplete?.Invoke();
+            }
+            else if (MatchQueueManager.Instance.AllDecided)
+            {
+                // Ran out of candidates without finding a match - award consolation reward
+                if (incorrectReward > 0 && MoneyController.Instance != null)
+                {
+                    MoneyController.Instance.AddMoney(incorrectReward);
+                }
+
+                if (verboseLogging)
+                {
+                    Debug.Log($"DecisionController: All candidates exhausted. Consolation: ${incorrectReward}");
                 }
                 OnAllDecisionsComplete?.Invoke();
             }
             else if (autoAdvance && MatchListController.Instance != null)
             {
-                // Auto-advance to next pending
+                // Continue reviewing - advance to next pending candidate
                 MatchListController.Instance.SelectNextPending();
             }
 

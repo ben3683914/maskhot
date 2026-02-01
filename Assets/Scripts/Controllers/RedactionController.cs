@@ -213,6 +213,16 @@ namespace Maskhot.Controllers
                 return false;
             }
 
+            // Try to spend money first
+            if (MoneyController.Instance == null || !MoneyController.Instance.TrySpendForUnredact())
+            {
+                if (verboseLogging)
+                {
+                    Debug.Log("RedactionController: Cannot afford to unredact");
+                }
+                return false;
+            }
+
             // Cache the owner for event enrichment
             postOwnerCache[post] = candidate;
 
