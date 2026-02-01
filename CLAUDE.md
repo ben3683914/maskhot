@@ -1,5 +1,44 @@
 # Maskhot - Claude Code Context
 
+## CRITICAL: Working with Claude
+
+**Read this section first. These are blocking requirements.**
+
+### Validation Workflow for New Components
+
+**DO NOT mark new managers or controllers as "Completed" until the user explicitly validates them.**
+
+1. Create the component and its tester script
+2. Mark as **"In Progress"** in project-status.md (NOT completed)
+3. Tell the user how to test it
+4. **WAIT** for the user to run tests and confirm everything works
+5. Only mark as **"Completed"** AFTER the user says it's validated
+
+### Verify Documentation Compliance
+
+**Before marking any implementation task as done, you MUST verify you have followed ALL instructions in the relevant documentation.**
+
+1. Read the relevant doc (e.g., `docs/testing.md` for testers, `docs/architecture.md` for managers)
+2. Follow ALL conventions and requirements listed there
+3. Create ALL required files (e.g., testers require BOTH the tester script AND the custom editor)
+4. Update ALL documentation that needs updating
+
+**Do not rely on memory. Re-read the docs if unsure.**
+
+### Always Check Project Status
+
+Before starting work, check [docs/project-status.md](docs/project-status.md) for current implementation status and priorities.
+
+### Ask Clarifying Questions
+
+When requirements are ambiguous or there are multiple valid approaches, ask clarifying questions before proceeding.
+
+### Propose Plans Before Executing
+
+For multi-step tasks or significant changes, propose a plan and wait for confirmation before executing.
+
+---
+
 ## Project Overview
 
 A **Unity 2D social media matchmaking game** inspired by Papers Please. Players review candidates' social media profiles to find matches for clients based on abstract criteria (narrative hints).
@@ -24,108 +63,47 @@ A **Unity 2D social media matchmaking game** inspired by Papers Please. Players 
 ## Folder Structure
 
 ```
-Assets/
-├── Scripts/
-│   ├── Data/           # Data classes, SOs (CandidateProfileSO, SocialMediaPost, etc.)
-│   ├── Managers/       # Singletons (ProfileManager, PostPoolManager)
-│   ├── Matching/       # MatchEvaluator, MatchResult
-│   ├── Controllers/    # SocialFeedController, others to be implemented
-│   ├── Testing/        # Tester scripts for verification
-│   └── Editor/         # ScriptableObjectImporter (JSON → SO)
-├── Resources/GameData/ # Runtime-loaded ScriptableObjects
-└── Scenes/
-JSONData/               # Source JSON files for data import
-docs/                   # Detailed documentation (see below)
+Assets/Scripts/
+├── Controllers/     # UI state controllers
+├── Data/            # Data classes, ScriptableObjects
+├── Editor/          # Editor scripts (importers, tester editors)
+├── Managers/        # Data/logic managers
+├── Matching/        # MatchEvaluator, MatchResult
+└── Testing/         # Tester scripts
 ```
 
-## Documentation Index
-
-Read these docs when you need deeper context:
+## Documentation
 
 | Doc | When to Read |
 |-----|--------------|
-| [docs/overview.md](docs/overview.md) | High-level system diagrams, how all systems connect |
-| [docs/architecture.md](docs/architecture.md) | Component patterns (Manager vs Controller), dependency rules, conventions |
-| [docs/project-status.md](docs/project-status.md) | Implementation status, what's done/in-progress/to-do |
-| [docs/profiles-and-traits.md](docs/profiles-and-traits.md) | Working with CandidateProfile, ClientProfile, trait SOs |
-| [docs/matching-system.md](docs/matching-system.md) | MatchEvaluator, scoring algorithm, MatchResult |
-| [docs/quest-system.md](docs/quest-system.md) | Quest, MatchCriteria, narrative hints |
-| [docs/random-post-system.md](docs/random-post-system.md) | PostPoolManager, random post generation |
-| [docs/data-import.md](docs/data-import.md) | JSON import workflow, adding new data |
-| [docs/ui-reference.md](docs/ui-reference.md) | UI Toolkit specifics, SocialFeedController events/methods |
-| [docs/redaction-system.md](docs/redaction-system.md) | Post redaction/unredaction mechanics |
-| [docs/testing.md](docs/testing.md) | Tester scripts, verification workflow |
+| [project-status.md](docs/project-status.md) | **Always** - Check before starting work |
+| [architecture.md](docs/architecture.md) | When creating managers/controllers |
+| [testing.md](docs/testing.md) | When creating/updating testers |
+| [ui-reference.md](docs/ui-reference.md) | For UI implementation |
+| [templates.md](docs/templates.md) | Code templates for new components |
+| [overview.md](docs/overview.md) | System diagrams |
+| [profiles-and-traits.md](docs/profiles-and-traits.md) | Working with profiles/traits |
+| [matching-system.md](docs/matching-system.md) | MatchEvaluator details |
+| [quest-system.md](docs/quest-system.md) | Quest/criteria details |
+| [random-post-system.md](docs/random-post-system.md) | PostPoolManager details |
+| [data-import.md](docs/data-import.md) | JSON import workflow |
+| [redaction-system.md](docs/redaction-system.md) | Post redaction mechanics |
 
 ## Key Systems
 
-### Managers (Data/Logic)
-- **ProfileManager** (singleton): Loads all profiles/traits from Resources, provides lookup methods
-- **PostPoolManager** (singleton): Handles random post selection with trait matching
-- **MatchQueueManager** (singleton): Manages candidate queue, decision tracking, queue population
-- **QuestManager** (singleton): Handles quest lifecycle, client loading, fires quest events
-- **RedactionManager** (singleton): Manages post redaction/unredaction state
+**Managers** (data/logic, singleton, `Maskhot.Managers`):
+ProfileManager, PostPoolManager, MatchQueueManager, QuestManager, GameManager, RedactionManager
 
-### Controllers (UI State/Events)
-- **MatchListController** (singleton): Manages current selection, navigation, fires `OnSelectionChanged` event
-- **QuestController** (singleton): UI-facing interface for quest state and cached criteria display
-- **DecisionController** (singleton): Handles accept/reject decisions, correctness evaluation, session statistics
-- **RedactionController** (singleton): UI-facing interface for post redaction/unredaction
+**Controllers** (UI state/events, singleton, `Maskhot.Controllers`):
+MatchListController, QuestController, DecisionController, RedactionController
 
-### Other
-- **MatchEvaluator** (static): Evaluates candidates against match criteria, returns MatchResult with score
-- **ScriptableObjectImporter**: Editor tool (`Tools > Maskhot > Import Data from JSON`)
-
-## Working with Claude
-
-### CRITICAL: Validation Workflow for New Components
-
-**DO NOT mark new managers or controllers as "Completed" until the user explicitly validates them.**
-
-When implementing a new manager or controller:
-1. Create the component and its tester script
-2. Mark as **"In Progress"** in project-status.md (NOT completed)
-3. Tell the user how to test it
-4. **WAIT** for the user to run tests and confirm everything works
-5. Only mark as **"Completed"** AFTER the user says it's validated
-
-This is a blocking requirement. Do not skip steps or assume validation passed.
-
-### CRITICAL: Verify Documentation Compliance
-
-**Before marking any implementation task as done, you MUST verify you have followed ALL instructions in the relevant documentation.**
-
-Checklist for new components:
-1. Read the relevant doc (e.g., `docs/testing.md` for testers, `docs/architecture.md` for managers)
-2. Follow ALL conventions and requirements listed there
-3. Create ALL required files (e.g., testers require BOTH the tester script AND the custom editor)
-4. Update ALL documentation that needs updating (testing.md, project-status.md, etc.)
-
-**Do not rely on memory. Re-read the docs if unsure.** Missing steps (like forgetting to create an Editor script) wastes time and breaks workflow.
-
-### Ask Clarifying Questions
-When requirements are ambiguous or there are multiple valid approaches, ask clarifying questions before proceeding. It's better to confirm intent than to make assumptions.
-
-### Propose Plans Before Executing
-For multi-step tasks or significant changes, propose a plan and wait for confirmation before executing. Outline what you intend to do and ask if this approach works.
-
-### Keep Documentation Updated
-1. **After modifying systems**: Update relevant documentation in `docs/` to reflect changes
-2. **When adding new features**: Create or update appropriate doc with system design
-3. **Update project-status.md**: Mark items in progress or complete per validation workflow above
+**Other**: MatchEvaluator (static), ScriptableObjectImporter (`Tools > Maskhot > Import Data from JSON`)
 
 ## Development Guidelines
 
-1. **For data changes**: Edit JSON files in `JSONData/`, then reimport via Unity menu
-2. **Testing**: Use tester scripts (ProfileTester, MatchingTester, etc.) via Context Menu
-3. **Test maintenance**: When creating new managers or controllers, create a corresponding tester script. When modifying existing systems, update relevant tests. **Always provide testing instructions** (how to run, what to look for) when creating or updating tests. See [docs/testing.md](docs/testing.md) for conventions.
-4. **ScriptableObjects**: Never create manually - always use JSON import for consistency
-5. **Controllers/Managers**: Follow singleton pattern, use events for UI communication
-6. **No git commands**: Do not perform any git operations (commit, push, etc.) - the user handles version control
-
-## Implementation Status
-
-- **Complete**: Data structures, trait SOs, profile SOs, JSON import, matching system, managers (ProfileManager, PostPoolManager, MatchQueueManager, QuestManager, GameManager, RedactionManager), controllers (MatchListController, QuestController, DecisionController, RedactionController)
-- **In Progress**: None currently
-- **To Do**: QuestGenerator, MoneyManager, UI implementation
-
-See [docs/project-status.md](docs/project-status.md) for detailed status breakdown.
+1. **Data changes**: Edit JSON in `JSONData/`, reimport via Unity menu
+2. **Testing**: Use tester scripts via Inspector buttons (Play Mode)
+3. **ScriptableObjects**: Never create manually - use JSON import
+4. **Managers/Controllers**: Follow singleton pattern, use events for UI
+5. **No git**: User handles version control
+6. **Keep docs updated**: Update relevant docs after changes

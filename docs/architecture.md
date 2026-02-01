@@ -1,6 +1,6 @@
-# Maskhot - Architecture Guidelines
+# Architecture Guidelines
 
-This document defines the architectural patterns and conventions used in the codebase. Follow these guidelines when creating new components.
+Patterns and conventions for creating new components. See [templates.md](templates.md) for code templates.
 
 ## Component Types
 
@@ -8,140 +8,35 @@ This document defines the architectural patterns and conventions used in the cod
 
 **Purpose**: Own data and execute business logic.
 
-**Responsibilities**:
-- Load and store data
-- Provide accessor methods for data retrieval
-- Execute domain logic and computations
-- Fire events when data changes
-- May depend on other Managers
+**Responsibilities**: Load/store data, provide accessors, execute domain logic, fire events on data changes.
 
 **Characteristics**:
 - Namespace: `Maskhot.Managers`
-- Singleton pattern with `static Instance`
-- Inherit from `MonoBehaviour`
-- Use `DontDestroyOnLoad` for persistence
+- Singleton with `static Instance`
+- `MonoBehaviour` with `DontDestroyOnLoad`
 - Initialize in `Awake()`
 
-**Examples**: ProfileManager, PostPoolManager, MatchQueueManager
-
-**Template**:
-```csharp
-namespace Maskhot.Managers
-{
-    public class ExampleManager : MonoBehaviour
-    {
-        public static ExampleManager Instance { get; private set; }
-
-        // Data events
-        public event Action OnDataChanged;
-
-        // Private data storage
-        private List<SomeData> data = new List<SomeData>();
-
-        private void Awake()
-        {
-            if (Instance != null && Instance != this)
-            {
-                Destroy(gameObject);
-                return;
-            }
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-
-            LoadData();
-        }
-
-        // Public accessor methods
-        public SomeData GetData() { ... }
-
-        // Business logic methods
-        public void DoSomething() { ... }
-    }
-}
-```
-
----
+**Examples**: ProfileManager, PostPoolManager, MatchQueueManager, QuestManager, GameManager, RedactionManager
 
 ### Controllers
 
-**Purpose**: Manage UI state and provide a UI-facing interface.
+**Purpose**: Manage UI state and provide UI-facing interface.
 
-**Responsibilities**:
-- Track selection, navigation, and UI-related state
-- Subscribe to Manager events and react to data changes
-- Expose events for UI components to subscribe to
-- Translate user actions into Manager calls
-- Never own domain data (delegate to Managers)
+**Responsibilities**: Track selection/navigation state, subscribe to Manager events, expose events for UI, translate user actions to Manager calls. Never own domain data.
 
 **Characteristics**:
 - Namespace: `Maskhot.Controllers`
-- Singleton pattern with `static Instance`
-- Inherit from `MonoBehaviour`
-- Use `DontDestroyOnLoad` for persistence
-- Subscribe to Manager events in `OnEnable` / `Start`
-- Unsubscribe in `OnDisable`
+- Singleton with `static Instance`
+- `MonoBehaviour` with `DontDestroyOnLoad`
+- Subscribe in `OnEnable`/`Start`, unsubscribe in `OnDisable`
 
-**Examples**: MatchListController
-
-**Template**:
-```csharp
-namespace Maskhot.Controllers
-{
-    public class ExampleController : MonoBehaviour
-    {
-        public static ExampleController Instance { get; private set; }
-
-        // UI-facing events
-        public event Action<SomeData> OnSelectionChanged;
-
-        // UI state (not domain data)
-        private SomeData currentSelection;
-
-        private void Awake()
-        {
-            if (Instance != null && Instance != this)
-            {
-                Destroy(gameObject);
-                return;
-            }
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-
-        private void OnEnable()
-        {
-            SomeManager.Instance.OnDataChanged += HandleDataChanged;
-        }
-
-        private void OnDisable()
-        {
-            SomeManager.Instance.OnDataChanged -= HandleDataChanged;
-        }
-
-        // Selection/navigation methods
-        public void Select(SomeData item) { ... }
-
-        // Event handlers
-        private void HandleDataChanged() { ... }
-    }
-}
-```
-
----
+**Examples**: MatchListController, QuestController, DecisionController, RedactionController
 
 ### Static Utility Classes
 
 **Purpose**: Stateless helper functions and algorithms.
 
-**Responsibilities**:
-- Execute pure computations
-- Return results without side effects
-- No state, no events, no Unity lifecycle
-
-**Characteristics**:
-- Static class with static methods
-- No inheritance from `MonoBehaviour`
-- Namespace varies by domain (e.g., `Maskhot.Matching`)
+**Characteristics**: Static class, no `MonoBehaviour`, no state/events.
 
 **Examples**: MatchEvaluator
 
@@ -149,163 +44,71 @@ namespace Maskhot.Controllers
 
 ## Dependency Rules
 
-```
-┌─────────────────────────────────────────────────┐
-│                   UI Layer                       │
-│         (UI Toolkit, MonoBehaviours)            │
-└───────────────────────┬─────────────────────────┘
-                        │ subscribes to events
-                        ▼
-┌─────────────────────────────────────────────────┐
-│              Controller Layer                    │
-│    (MatchListController, future controllers)    │
-└───────────────────────┬─────────────────────────┘
-                        │ calls methods, subscribes to events
-                        ▼
-┌─────────────────────────────────────────────────┐
-│               Manager Layer                      │
-│  (ProfileManager, MatchQueueManager, etc.)      │
-└───────────────────────┬─────────────────────────┘
-                        │ loads
-                        ▼
-┌─────────────────────────────────────────────────┐
-│                Data Layer                        │
-│       (ScriptableObjects, Resources/)           │
-└─────────────────────────────────────────────────┘
-```
-
-### Allowed Dependencies
-
 | From | To | Allowed? |
 |------|----|----------|
 | UI | Controller | ✅ Subscribe to events, call methods |
-| UI | Manager | ⚠️ Read-only access OK, prefer Controller |
+| UI | Manager | ⚠️ Read-only OK, prefer Controller |
 | Controller | Manager | ✅ Call methods, subscribe to events |
-| Controller | Controller | ⚠️ Avoid; coordinate via shared Manager |
+| Controller | Controller | ⚠️ Avoid; use shared Manager |
 | Manager | Manager | ✅ Call methods, subscribe to events |
-| Manager | Controller | ❌ Never - breaks layering |
-| Manager | UI | ❌ Never - use events instead |
+| Manager | Controller | ❌ Never |
+| Manager | UI | ❌ Never |
 
-### Key Principle
-
-**Managers are unaware of Controllers.** Data flows up via events, commands flow down via method calls. This keeps Managers testable and reusable.
+**Key Principle**: Managers are unaware of Controllers. Data flows up via events, commands flow down via method calls.
 
 ---
 
 ## Event Patterns
 
-### When to Use Events
-
-- **Data changed**: Manager fires event when its data is modified
-- **State changed**: Controller fires event when selection/navigation changes
-- **Process completed**: Manager fires event when async operation finishes
-
-### Naming Conventions
-
+**Naming**:
 - Manager events: `On[Data]Changed`, `On[Action]Completed`
-- Controller events: `On[State]Changed`, `On[UI action]`
+- Controller events: `On[State]Changed`
 
-### Event Signatures
-
+**Signatures**:
 ```csharp
-// Simple notification (something changed, re-query if needed)
-public event Action OnQueueChanged;
-
-// State change with new value
-public event Action<CandidateProfileSO> OnSelectionChanged;
-
-// Action completed with context
-public event Action<CandidateProfileSO, CandidateDecision> OnDecisionMade;
+public event Action OnQueueChanged;                              // Simple notification
+public event Action<CandidateProfileSO> OnSelectionChanged;      // With new value
+public event Action<CandidateProfileSO, CandidateDecision> OnDecisionMade;  // With context
 ```
 
 ---
 
-## Singleton Initialization Order
+## Singleton Initialization
 
-Singletons initialize in `Awake()`. If a singleton depends on another, handle missing references gracefully:
-
-1. **Check for null before accessing**: Always verify `Instance != null`
-2. **Re-subscribe in Start()**: If a dependency might not exist in `OnEnable`, also subscribe in `Start()`
-3. **Fail gracefully**: Log warnings, don't throw exceptions
-
-Example from MatchListController:
-```csharp
-private void OnEnable()
-{
-    if (MatchQueueManager.Instance != null)
-    {
-        MatchQueueManager.Instance.OnQueueChanged += HandleQueueChanged;
-    }
-}
-
-private void Start()
-{
-    // Re-subscribe in case MatchQueueManager wasn't ready in OnEnable
-    if (MatchQueueManager.Instance != null)
-    {
-        MatchQueueManager.Instance.OnQueueChanged -= HandleQueueChanged;
-        MatchQueueManager.Instance.OnQueueChanged += HandleQueueChanged;
-    }
-}
-```
-
----
-
-## Folder Structure
-
-```
-Assets/Scripts/
-├── Controllers/     # UI state controllers
-├── Data/            # Data classes, ScriptableObjects
-├── Editor/          # Editor-only scripts
-├── Managers/        # Data/logic managers
-├── Matching/        # Matching system (MatchEvaluator, etc.)
-├── Testing/         # Tester scripts
-└── UI/              # Future UI components
-```
+Check for null before accessing other singletons. Re-subscribe in `Start()` if dependency might not exist in `OnEnable()`. See [templates.md](templates.md) for full pattern.
 
 ---
 
 ## Decision Guide
 
-**"Where does this code belong?"**
-
 | If you need to... | Use a... |
 |-------------------|----------|
-| Load or store persistent data | Manager |
+| Load or store data | Manager |
 | Execute business logic | Manager |
-| Track what's currently selected | Controller |
-| Handle navigation (next/previous) | Controller |
+| Track current selection | Controller |
+| Handle navigation | Controller |
 | React to user input | Controller → Manager |
-| Notify UI of changes | Events (from Controller or Manager) |
-| Compute a result without side effects | Static utility class |
+| Notify UI of changes | Events |
+| Pure computation | Static utility class |
 
 ---
 
-## Checklist for New Components
+## Checklists
 
 ### New Manager
-- [ ] Namespace is `Maskhot.Managers`
-- [ ] Implements singleton pattern
-- [ ] Uses `DontDestroyOnLoad`
-- [ ] Initializes in `Awake()`
-- [ ] Does not reference any Controllers
+- [ ] Namespace: `Maskhot.Managers`
+- [ ] Singleton pattern
+- [ ] `DontDestroyOnLoad`
+- [ ] Initialize in `Awake()`
+- [ ] Does NOT reference Controllers
 - [ ] Fires events for data changes
-- [ ] Has corresponding tester script
+- [ ] Has tester script + editor
 
 ### New Controller
-- [ ] Namespace is `Maskhot.Controllers`
-- [ ] Implements singleton pattern
-- [ ] Uses `DontDestroyOnLoad`
-- [ ] Subscribes to Manager events in `OnEnable` and `Start`
-- [ ] Unsubscribes in `OnDisable`
-- [ ] Fires events for UI state changes
-- [ ] Has corresponding tester script
-
----
-
-## Related Docs
-
-- [overview.md](overview.md) - System diagrams
-- [testing.md](testing.md) - Tester script conventions
-- [project-status.md](project-status.md) - Implementation status
+- [ ] Namespace: `Maskhot.Controllers`
+- [ ] Singleton pattern
+- [ ] `DontDestroyOnLoad`
+- [ ] Subscribe in `OnEnable`/`Start`
+- [ ] Unsubscribe in `OnDisable`
+- [ ] Fires events for state changes
+- [ ] Has tester script + editor
