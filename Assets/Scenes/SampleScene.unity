@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 99476920}
   - component: {fileID: 99476923}
   - component: {fileID: 99476924}
+  - component: {fileID: 99476925}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -226,6 +227,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Controllers.DecisionController
   autoAdvance: 1
+  verboseLogging: 0
+--- !u!114 &99476925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 99476918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0b49fa752981a44a9a9c80e60a67c6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Managers.GameManager
+  passingAccuracyThreshold: 70
+  candidatesPerQuest: 5
+  questTransitionDelay: 1
   verboseLogging: 0
 --- !u!1 &519420028
 GameObject:
@@ -395,6 +412,7 @@ GameObject:
   - component: {fileID: 1667281044}
   - component: {fileID: 1667281045}
   - component: {fileID: 1667281046}
+  - component: {fileID: 1667281047}
   m_Layer: 0
   m_Name: Testers
   m_TagString: Untagged
@@ -537,6 +555,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Testing.DecisionControllerTester
   testClient: {fileID: 0}
   verboseOutput: 0
+--- !u!114 &1667281047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667281034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db09e6b541430e489a13d38f6d0ed0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Testing.GameManagerTester
+  testQuestCount: 2
+  verboseOutput: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

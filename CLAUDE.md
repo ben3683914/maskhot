@@ -87,6 +87,18 @@ When implementing a new manager or controller:
 
 This is a blocking requirement. Do not skip steps or assume validation passed.
 
+### CRITICAL: Verify Documentation Compliance
+
+**Before marking any implementation task as done, you MUST verify you have followed ALL instructions in the relevant documentation.**
+
+Checklist for new components:
+1. Read the relevant doc (e.g., `docs/testing.md` for testers, `docs/architecture.md` for managers)
+2. Follow ALL conventions and requirements listed there
+3. Create ALL required files (e.g., testers require BOTH the tester script AND the custom editor)
+4. Update ALL documentation that needs updating (testing.md, project-status.md, etc.)
+
+**Do not rely on memory. Re-read the docs if unsure.** Missing steps (like forgetting to create an Editor script) wastes time and breaks workflow.
+
 ### Ask Clarifying Questions
 When requirements are ambiguous or there are multiple valid approaches, ask clarifying questions before proceeding. It's better to confirm intent than to make assumptions.
 
@@ -109,8 +121,8 @@ For multi-step tasks or significant changes, propose a plan and wait for confirm
 
 ## Implementation Status
 
-- **Complete**: Data structures, trait SOs, profile SOs, JSON import, matching system, managers (ProfileManager, PostPoolManager, MatchQueueManager, QuestManager), controllers (MatchListController, QuestController, DecisionController)
+- **Complete**: Data structures, trait SOs, profile SOs, JSON import, matching system, managers (ProfileManager, PostPoolManager, MatchQueueManager, QuestManager, GameManager), controllers (MatchListController, QuestController, DecisionController)
 - **In Progress**: None currently
-- **To Do**: GameManager, QuestGenerator, UI implementation
+- **To Do**: QuestGenerator, UI implementation
 
 See [docs/project-status.md](docs/project-status.md) for detailed status breakdown.

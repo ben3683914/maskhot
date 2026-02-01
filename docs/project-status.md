@@ -24,6 +24,7 @@ Track what's complete, in progress, and to do.
 - [x] PostPoolManager - Random post selection with trait matching
 - [x] MatchQueueManager - Queue population, decision tracking, candidate filtering
 - [x] QuestManager - Client loading, quest lifecycle, events
+- [x] GameManager - Session management, quest progression, state transitions
 
 **Controller Layer**
 - [x] MatchListController - Selection state, navigation, fires events for UI
@@ -55,15 +56,13 @@ Track what's complete, in progress, and to do.
 - [x] QuestManagerTester - Verify client loading, quest lifecycle, events
 - [x] QuestControllerTester - Verify event subscription, cached data, cache clearing
 - [x] DecisionControllerTester - Verify decisions, correctness evaluation, statistics
+- [x] GameManagerTester - Verify session management, quest progression, state transitions
 
 ### In Progress
 
 *Nothing currently in progress*
 
 ### To Do
-
-**Manager Layer**
-- [ ] GameManager - Overall game state, level progression
 
 **Procedural Generation**
 - [ ] QuestGenerator - Creates Quest instances from ClientProfileSO or procedural data
@@ -79,8 +78,7 @@ Track what's complete, in progress, and to do.
 
 ## Current Priorities
 
-Candidates for next:
-- **GameManager** - Overall game state, level progression
+Next candidates:
 - **QuestGenerator** - Creates Quest instances from procedural data
 
 ---

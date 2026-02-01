@@ -454,6 +454,39 @@ Verifies DecisionController functionality.
 
 ---
 
+### GameManagerTester
+
+Verifies GameManager functionality.
+
+**Location**: `Assets/Scripts/Testing/GameManagerTester.cs`
+
+**Setup**:
+1. Attach to a GameObject alongside GameManager, QuestManager, MatchQueueManager, DecisionController, and MatchListController
+2. Set `testQuestCount` for how many quests to use in session tests
+3. Enter Play Mode
+
+**How to Run**: Click the buttons in the Inspector (buttons are enabled during Play Mode)
+
+**Available Tests**:
+- **Log Current State** - Logs current GameManager state and session stats
+- **Test Start Session** - Tests starting a session with N random clients
+- **Test Begin Quest** - Tests beginning the next quest in a session
+- **Test Complete Quest (Simulate Decisions)** - Simulates all decisions and verifies quest completion
+- **Test Full Session Flow** - Runs a complete session from start to GameOver
+- **Test State Transitions** - Tests all state changes (Idle → BetweenQuests → InQuest → etc.)
+- **Test Reset Session** - Tests that reset clears all state
+
+**What it checks**:
+- Session starts correctly with client list
+- State transitions fire OnStateChanged events
+- Quest progression (BeginNextQuest loads quest and populates queue)
+- Quest completion triggers OnQuestWon or OnQuestLost based on accuracy
+- Session ends with OnSessionEnded after all quests
+- Auto-advance works with configurable delay
+- Reset clears all session state
+
+---
+
 ## Verbose Logging
 
 Enable detailed logging on manager components.
@@ -596,6 +629,7 @@ All new tester scripts should go in `Assets/Scripts/Testing/`.
 - **QuestManagerTester**: `Assets/Scripts/Testing/QuestManagerTester.cs`
 - **QuestControllerTester**: `Assets/Scripts/Testing/QuestControllerTester.cs`
 - **DecisionControllerTester**: `Assets/Scripts/Testing/DecisionControllerTester.cs`
+- **GameManagerTester**: `Assets/Scripts/Testing/GameManagerTester.cs`
 
 **Tester editors** (in `Assets/Scripts/Editor/`):
 - `ProfileTesterEditor.cs`
@@ -607,3 +641,4 @@ All new tester scripts should go in `Assets/Scripts/Testing/`.
 - `QuestManagerTesterEditor.cs`
 - `QuestControllerTesterEditor.cs`
 - `DecisionControllerTesterEditor.cs`
+- `GameManagerTesterEditor.cs`
