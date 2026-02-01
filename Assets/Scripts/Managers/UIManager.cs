@@ -137,7 +137,47 @@ public class UIManager : MonoBehaviour
             var postImage = element.Q<Image>("post-image");
             postImage.style.display = post.ShowImage ? DisplayStyle.Flex : DisplayStyle.None;
             if (post.ShowImage)
+            {
                 postImage.sprite = post.DisplayImage;
+
+                // Override template styles: prevent flex expansion, set width to fill
+                postImage.style.flexGrow = 0;
+                postImage.style.width = Length.Percent(100);
+
+                // Calculate height based on sprite aspect ratio
+                var sprite = post.DisplayImage;
+                if (sprite != null && sprite.rect.width > 0)
+                {
+                    float aspectRatio = sprite.rect.height / sprite.rect.width;
+
+                    // Use ListView width as reference (more reliable than waiting for layout)
+                    float listWidth = m_PostList.resolvedStyle.width;
+                    if (listWidth > 0)
+                    {
+                        postImage.style.height = listWidth * aspectRatio;
+                    }
+                    else
+                    {
+                        // Fallback: wait for geometry if ListView width not available yet
+                        var postBody = element.Q("post-body");
+                        void OnGeometryChanged(GeometryChangedEvent evt)
+                        {
+                            float width = postBody.resolvedStyle.width;
+                            if (width > 0)
+                                postImage.style.height = width * aspectRatio;
+                            postBody.UnregisterCallback<GeometryChangedEvent>(OnGeometryChanged);
+                        }
+                        postBody.RegisterCallback<GeometryChangedEvent>(OnGeometryChanged);
+                    }
+                }
+            }
+            else
+            {
+                // Reset styles for non-photo posts
+                postImage.style.flexGrow = StyleKeyword.Null;
+                postImage.style.width = StyleKeyword.Auto;
+                postImage.style.height = StyleKeyword.Auto;
+            }
         };
 
         m_PostList.unbindItem = (element, index) => {
