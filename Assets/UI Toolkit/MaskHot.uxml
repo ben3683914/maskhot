@@ -3,9 +3,12 @@
     <ui:VisualElement name="background" style="flex-grow: 1; flex-direction: row; background-color: rgb(255, 255, 255);">
         <ui:VisualElement name="profile-pane" class="pane">
             <ui:Label text="Profiles" name="profiles-text" style="font-size: 40px; -unity-font-style: bold; -unity-text-align: upper-center;"/>
-            <ui:ListView name="profile-list" item-template="project://database/Assets/UI%20Toolkit/Templates/ProfileItem.uxml?fileID=9197481963319205126&amp;guid=baee8959f612fcd468d16b62e2e66998&amp;type=3#ProfileItem" binding-source-selection-mode="AutoAssign" show-bound-collection-size="false" selection-type="None" style="width: auto; flex-basis: 80px; flex-grow: 1; height: 300px;"/>
+            <ui:ListView name="profile-list" item-template="project://database/Assets/UI%20Toolkit/Templates/ProfileItem.uxml?fileID=9197481963319205126&amp;guid=baee8959f612fcd468d16b62e2e66998&amp;type=3#ProfileItem" binding-source-selection-mode="AutoAssign" show-bound-collection-size="false" selection-type="Single" header-title="Team" virtualization-method="FixedHeight" show-border="false" fixed-item-height="250" horizontal-scrolling="true" style="width: auto; flex-basis: 80px; flex-grow: 1; height: 300px;"/>
         </ui:VisualElement>
-        <ui:VisualElement name="feed-pane" class="pane"/>
+        <ui:VisualElement name="posts-pane" class="pane">
+            <ui:Label text="Posts" name="posts-text" style="font-size: 40px; -unity-font-style: bold; -unity-text-align: upper-center;"/>
+            <ui:ListView name="posts-list" item-template="project://database/Assets/UI%20Toolkit/Templates/PostItem.uxml?fileID=9197481963319205126&amp;guid=22b03cb49cbe7d34199cf569986feae0&amp;type=3#PostItem" binding-source-selection-mode="AutoAssign" show-bound-collection-size="false" selection-type="Single" header-title="Team" virtualization-method="DynamicHeight" show-border="false" fixed-item-height="250" style="width: auto; flex-basis: 80px; flex-grow: 1; height: 300px;"/>
+        </ui:VisualElement>
         <ui:VisualElement name="criteria-pane" class="pane"/>
     </ui:VisualElement>
 </ui:UXML>
