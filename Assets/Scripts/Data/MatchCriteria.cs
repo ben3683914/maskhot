@@ -27,6 +27,10 @@ namespace Maskhot.Data
         [Tooltip("Specific trait requirements (abstract hints + concrete traits)")]
         public TraitRequirement[] traitRequirements;
 
+        [Tooltip("Minimum number of Required traits that must be met (0 = all must be met)")]
+        [Range(0, 10)]
+        public int minRequiredMet = 0;
+
         [Header("Dealbreakers")]
         [Tooltip("Personality traits that are automatic rejections")]
         public PersonalityTraitSO[] dealbreakerPersonalityTraits;

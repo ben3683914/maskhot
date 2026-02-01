@@ -247,6 +247,7 @@ Client profiles - the people asking for matches. Each client has their own perso
   - `narrativeHints`: Asset name of NarrativeHintCollection to display
   - `acceptableInterests`, `acceptablePersonalityTraits`, `acceptableLifestyleTraits`: Traits that satisfy this requirement
   - `level`: "Required", "Preferred", or "Avoid"
+- `minRequiredMet`: How many Required traits must be met (0 = all must be met, 1+ = at least that many)
 - `dealbreakerPersonalityTraits`, `dealbreakerInterests`, `dealbreakerLifestyleTraits`: Auto-reject traits
 - `maxRedFlags`, `minGreenFlags`: Flag tolerance
 - `personalityWeight`, `interestsWeight`, `lifestyleWeight`: Scoring weights (0-1)
@@ -282,6 +283,7 @@ Client profiles - the people asking for matches. Each client has their own perso
         "level": "Preferred"
       }
     ],
+    "minRequiredMet": 1,
     "dealbreakerPersonalityTraits": ["Controversial"],
     "maxRedFlags": 1,
     "minGreenFlags": 2
@@ -407,7 +409,8 @@ Generated assets are saved to `Assets/Resources/GameData/` for runtime loading:
 2. **Test with ProfileTester:** Attach ProfileTester to a GameObject, drag in profile assets, use Context Menu "Test All Profiles"
 3. **Test with RandomPostTester:** Use Context Menu "Test All Candidates (via ProfileManager)" to verify random post generation
 4. **Test with ClientTester:** Use Context Menu "Test All Clients (from Resources)" to verify client profiles and match criteria
-5. **Enable verbose logging:** Toggle `verboseLogging` on ProfileManager and PostPoolManager for detailed console output
-6. **Verify references:** Check that all trait references are properly linked in the inspector
-7. **Review generated assets:** Browse `Assets/Resources/GameData/` folders to ensure everything imported correctly
-8. **Iterate:** Edit JSON files and reimport as needed to refine your data
+5. **Test with MatchingTester:** Use Context Menu "Test All (from Resources)" to verify matching algorithm across all candidates and clients
+6. **Enable verbose logging:** Toggle `verboseLogging` on ProfileManager and PostPoolManager for detailed console output
+7. **Verify references:** Check that all trait references are properly linked in the inspector
+8. **Review generated assets:** Browse `Assets/Resources/GameData/` folders to ensure everything imported correctly
+9. **Iterate:** Edit JSON files and reimport as needed to refine your data

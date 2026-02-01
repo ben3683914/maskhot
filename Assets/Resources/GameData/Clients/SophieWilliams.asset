@@ -71,13 +71,14 @@ MonoBehaviour:
       acceptableLifestyleTraits:
       - {fileID: 11400000, guid: 0bb881e009979794cacd509cef7c5ddc, type: 2}
       level: 1
+    minRequiredMet: 1
     dealbreakerPersonalityTraits:
     - {fileID: 11400000, guid: 86b4e0b28e987944190fc2f795410b4e, type: 2}
     - {fileID: 11400000, guid: 01a00d9749bb45a47b61c2182027ea65, type: 2}
     dealbreakerInterests: []
     dealbreakerLifestyleTraits: []
     maxRedFlags: 1
-    minGreenFlags: 3
+    minGreenFlags: 2
     personalityWeight: 0.45
     interestsWeight: 0.25
     lifestyleWeight: 0.3

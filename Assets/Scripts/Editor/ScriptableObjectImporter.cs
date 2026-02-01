@@ -695,6 +695,9 @@ namespace Maskhot.Editor
 					asset.matchCriteria.minAge = mc.minAge;
 					asset.matchCriteria.maxAge = mc.maxAge;
 
+					// Minimum required traits to meet (0 = all must be met)
+					asset.matchCriteria.minRequiredMet = mc.minRequiredMet;
+
 					// Red flag tolerance
 					asset.matchCriteria.maxRedFlags = mc.maxRedFlags;
 					asset.matchCriteria.minGreenFlags = mc.minGreenFlags;
@@ -1045,6 +1048,7 @@ namespace Maskhot.Editor
 		public int minAge;
 		public int maxAge;
 		public TraitRequirementData[] traitRequirements;
+		public int minRequiredMet;
 		public string[] dealbreakerPersonalityTraits;
 		public string[] dealbreakerInterests;
 		public string[] dealbreakerLifestyleTraits;

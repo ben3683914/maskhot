@@ -35,6 +35,7 @@
             "level": "Required"
           }
         ],
+        "minRequiredMet": 1,
         "dealbreakerPersonalityTraits": ["Controversial"],
         "dealbreakerInterests": [],
         "dealbreakerLifestyleTraits": [],
@@ -88,6 +89,7 @@
             "level": "Preferred"
           }
         ],
+        "minRequiredMet": 1,
         "dealbreakerPersonalityTraits": ["Introverted"],
         "dealbreakerInterests": [],
         "dealbreakerLifestyleTraits": ["Homebody"],
@@ -141,11 +143,12 @@
             "level": "Preferred"
           }
         ],
+        "minRequiredMet": 1,
         "dealbreakerPersonalityTraits": ["Laid_Back", "Controversial"],
         "dealbreakerInterests": [],
         "dealbreakerLifestyleTraits": [],
         "maxRedFlags": 1,
-        "minGreenFlags": 3,
+        "minGreenFlags": 2,
         "personalityWeight": 0.45,
         "interestsWeight": 0.25,
         "lifestyleWeight": 0.3
@@ -194,6 +197,7 @@
             "level": "Preferred"
           }
         ],
+        "minRequiredMet": 1,
         "dealbreakerPersonalityTraits": [],
         "dealbreakerInterests": [],
         "dealbreakerLifestyleTraits": ["SocialButterfly"],
@@ -254,11 +258,12 @@
             "level": "Preferred"
           }
         ],
+        "minRequiredMet": 2,
         "dealbreakerPersonalityTraits": ["Controversial", "Competitive"],
         "dealbreakerInterests": [],
         "dealbreakerLifestyleTraits": ["NightOwl"],
-        "maxRedFlags": 0,
-        "minGreenFlags": 3,
+        "maxRedFlags": 1,
+        "minGreenFlags": 2,
         "personalityWeight": 0.35,
         "interestsWeight": 0.3,
         "lifestyleWeight": 0.35

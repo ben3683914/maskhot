@@ -62,6 +62,7 @@ MonoBehaviour:
       - {fileID: 11400000, guid: bebb43b5ed920104181a9c95bd5f5d45, type: 2}
       acceptableLifestyleTraits: []
       level: 0
+    minRequiredMet: 1
     dealbreakerPersonalityTraits:
     - {fileID: 11400000, guid: 01a00d9749bb45a47b61c2182027ea65, type: 2}
     dealbreakerInterests: []

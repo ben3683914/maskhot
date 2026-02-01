@@ -22,6 +22,7 @@ Scripts/
 ├── Managers/          - Game-wide systems (GameManager, ProfileManager, QuestManager, MatchQueueManager)
 ├── Controllers/       - Feature controllers (MatchListController, SocialFeedController, DecisionController)
 ├── Data/             - Data classes, structs, enums (ProfileData, SocialMediaPost, MatchCriteria)
+├── Matching/         - Match evaluation utilities (MatchEvaluator, MatchResult)
 ├── UI/               - UI-specific scripts for each screen/panel
 └── Utilities/        - Helper classes and extensions
 ```
@@ -203,6 +204,38 @@ Game-wide state management:
 - **QuestManager** - Manages current quest/criteria, validates matches
 - **MatchQueueManager** - Manages the queue of potential matches (left panel data source)
 
+### Matching System (Priority 3.5)
+Standalone utility classes for evaluating candidates against match criteria:
+
+- **MatchResult** (IMPLEMENTED) - Data class holding evaluation results
+  - IsMatch: Overall pass/fail status
+  - Score: 0-100 match quality score
+  - HasDealbreaker, DealbreakerTrait: Dealbreaker detection
+  - GenderMismatch, AgeMismatch: Basic requirement checks
+  - TooManyRedFlags, NotEnoughGreenFlags: Flag tolerance checks
+  - RedFlagCount, GreenFlagCount: Flag counts from posts
+  - FailedRequirements, MetRequirements: Required trait tracking
+  - MetPreferences, MatchedAvoids: Preferred/Avoid trait tracking
+  - ScoreBreakdown: Detailed scoring breakdown (personality, interests, lifestyle scores with weights)
+  - FailureReason: Human-readable rejection reason
+
+- **MatchEvaluator** (IMPLEMENTED) - Static utility class with evaluation logic
+  - `Evaluate(CandidateProfileSO, MatchCriteria)`: Main evaluation method
+  - `Evaluate(CandidateProfileSO, ClientProfileSO)`: Convenience overload
+  - `Mode`: Static property for algorithm mode (RequirementMode enum)
+  - **Three Algorithm Modes** (switchable via RequirementMode):
+    - **ExplicitThreshold**: Uses `minRequiredMet` from MatchCriteria (0 = all must be met)
+    - **ImplicitSoftening**: 1 Required = Preferred, 2+ Required = need at least 1
+    - **ScoringOnly**: Required traits only affect score, never reject (only dealbreakers reject)
+  - Evaluation order:
+    1. Gender check (must match acceptable genders)
+    2. Age check (must be within min/max range)
+    3. Dealbreaker check (auto-reject if found)
+    4. Trait requirement evaluation (check threshold based on mode)
+    5. Flag counting (from guaranteed posts)
+    6. Flag tolerance check (red flags ≤ max, green flags ≥ min)
+    7. Score calculation (weighted personality/interests/lifestyle + bonuses - penalties)
+
 ### Controller Classes (Priority 4)
 Feature-specific logic:
 
@@ -252,6 +285,13 @@ See **SAMPLE_DATA.md** for original reference data (now available as JSON files)
   - Displays dealbreakers and scoring weights
   - Context Menu options: "Test Specific Client", "Test All Assigned Clients", "Test All Clients (from Resources)"
   - Usage: Attach to GameObject, drag in client assets or use Resources loader
+- **MatchingTester.cs** - Test script for verifying matching/scoring algorithm
+  - Tests candidates against clients using MatchEvaluator
+  - Shows pass/fail status, scores, and detailed breakdowns
+  - Displays met/failed requirements, flags, and bonuses/penalties
+  - Context Menu options: "Test Specific Match", "Test All Assigned (Candidates x Clients)", "Test All (from Resources)", "Quick Summary (from Resources)", "Cycle Algorithm Mode"
+  - Configurable: `requirementMode` (3 modes), `showScoreBreakdown`, `verboseRequirements` toggles
+  - Usage: Attach to GameObject, assign candidates and clients, use Context Menu to run tests
 
 ## Development Workflow
 
@@ -343,6 +383,7 @@ See `JSONData/README.md` for complete JSON documentation.
   - ProfileTester.cs (multi-profile batch testing with consolidated output)
   - RandomPostTester.cs (random post system verification with trait matching and engagement stats)
   - ClientTester.cs (client profiles and match criteria verification)
+  - MatchingTester.cs (matching algorithm verification with batch testing and summaries)
 - Hybrid design supporting both curated (ScriptableObject) and procedural (runtime) content
 - **Manager Layer**:
   - ProfileManager.cs (singleton, auto-loads from Resources, verbose logging toggle)
@@ -367,6 +408,12 @@ See `JSONData/README.md` for complete JSON documentation.
   - Clients.json (5 story clients with match criteria)
   - ClientProfileSO updated with `introduction` and `matchCriteria` fields
   - ScriptableObjectImporter updated to import narrative hints and clients
+- **Matching System**:
+  - MatchResult.cs (evaluation result data class with score breakdown)
+  - MatchEvaluator.cs (static utility class with Evaluate() method)
+  - Full evaluation pipeline: gender/age → dealbreakers → requirements → flags → scoring
+  - Weighted scoring with Preferred bonuses and Avoid penalties
+  - MatchingTester.cs (test script with batch testing and summary modes)
 
 ### ⏳ In Progress
 - None - ready for next development phase
@@ -374,6 +421,5 @@ See `JSONData/README.md` for complete JSON documentation.
 ### 📋 To Do
 - Remaining manager classes (GameManager, QuestManager, MatchQueueManager)
 - Controller classes (MatchListController, SocialFeedController, DecisionController)
-- Matching/scoring algorithm
 - Procedural generation systems (QuestGenerator - creates Quest instances from ClientProfileSO or procedural data)
 - UI implementation
