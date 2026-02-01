@@ -185,6 +185,7 @@ public class UIManager : MonoBehaviour
         };
 
         m_PostList.RefreshItems();
+        m_PostList.ScrollToItem(0);
     }
 
     private void OnProfileClicked(ClickEvent evt)
