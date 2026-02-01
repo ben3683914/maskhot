@@ -58,15 +58,18 @@ Sprites/
 ### Data Organization (Resources Folder)
 ScriptableObjects are stored in the Resources folder for automatic runtime loading by ProfileManager:
 ```
-Resources/GameData/
-├── Traits/
-│   ├── Interests/             - Interest ScriptableObjects (Hiking, Gaming, etc.)
-│   ├── Personality/           - Personality trait SOs (Outgoing, Creative, etc.)
-│   └── Lifestyle/             - Lifestyle trait SOs (Night Owl, Homebody, etc.)
-├── NarrativeHints/            - Narrative hint collections (Food_Hints, Travel_Hints, etc.)
-├── Profiles/                  - Candidate profile ScriptableObjects
-├── PostPool/                  - RandomPostPool.asset (global random post pool)
-└── Clients/                   - Client profile ScriptableObjects (5 story clients)
+Resources/
+├── GameData/
+│   ├── Traits/
+│   │   ├── Interests/             - Interest ScriptableObjects (Hiking, Gaming, etc.)
+│   │   ├── Personality/           - Personality trait SOs (Outgoing, Creative, etc.)
+│   │   └── Lifestyle/             - Lifestyle trait SOs (Night Owl, Homebody, etc.)
+│   ├── NarrativeHints/            - Narrative hint collections (Food_Hints, Travel_Hints, etc.)
+│   ├── Profiles/                  - Candidate profile ScriptableObjects
+│   ├── PostPool/                  - RandomPostPool.asset (global random post pool)
+│   └── Clients/                   - Client profile ScriptableObjects (5 story clients)
+└── Sprites/
+    └── Profiles/                  - Default profile pictures (male.jpg, female.jpg)
 ```
 
 ### Other Asset Folders
@@ -179,6 +182,12 @@ Create SO classes to hold game data:
   - Random post settings: `randomPostMin/Max` (range for post count per session, up to 100)
   - Social metrics: `friendsCountMin/Max` (affects engagement generation)
   - `GetPostsForPlaythrough()` method coordinates with PostPoolManager to combine guaranteed + random posts, sorted by date
+    - **Posts are cached** for the session - switching between candidates preserves their posts
+    - Call `ResetPlaythroughPosts()` to clear cache when starting a new quest
+  - `GetProfilePicture()` returns the candidate's profile picture with gender-based fallback
+    - Returns assigned `profilePicture` if set
+    - Otherwise loads default from `Resources/Sprites/Profiles/` based on gender
+    - Male → male sprite, Female → female sprite, NonBinary → 50/50 random
 - **ClientProfileSO** (IMPLEMENTED) - Curated client profiles (hand-crafted story characters)
   - Wraps ClientProfile data
   - Story client flag and suggested level metadata
@@ -192,6 +201,7 @@ Game-wide state management:
   - Auto-loads on Awake via `Resources.LoadAll<T>()`
   - Provides lookup by name: `GetCandidateByName()`, `GetInterestByName()`, etc.
   - Category filters: `GetInterestsByCategory()`, `GetLifestyleTraitsByCategory()`
+  - Session management: `ResetAllCandidatePosts()` clears cached posts for all candidates (call when starting new quest)
   - Verbose logging toggle for debugging
 - **PostPoolManager** (IMPLEMENTED) - Singleton that handles random post selection
   - Loads RandomPostPool from Resources folder
@@ -362,6 +372,9 @@ See `JSONData/README.md` for complete JSON documentation.
   - NarrativeHintCollectionSO.cs (hint collections for quest requirements)
 - Profile ScriptableObjects:
   - CandidateProfileSO.cs (with guaranteed posts and randomization rules)
+    - `GetPostsForPlaythrough()` with session caching
+    - `ResetPlaythroughPosts()` for new quest/session
+    - `GetProfilePicture()` with gender-based fallback sprites
   - ClientProfileSO.cs (curated client profiles for story progression)
 - Quest system:
   - Quest.cs (runtime quest data: client + introduction + match criteria)
@@ -391,6 +404,7 @@ See `JSONData/README.md` for complete JSON documentation.
     - Dictionary lookups by name for fast access
     - Category filtering for interests and lifestyle traits
     - Narrative hint lookup by trait reference
+    - Session management via `ResetAllCandidatePosts()`
   - PostPoolManager.cs (singleton, random post selection with trait matching)
     - Loads RandomPostPool from Resources
     - Weighted trait-based selection with 10% wild card chance

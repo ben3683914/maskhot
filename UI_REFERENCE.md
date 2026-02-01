@@ -318,9 +318,11 @@ These are "if we have time" during the 48-hour jam:
    - `clientName`, `age`, `gender`, `profilePicture`
    - `relationship`, `backstory`
 
-3. **CandidateProfile** - Candidate data
-   - `characterName`, `age`, `gender`, `bio`, `profilePhoto`
-   - `personalityTraits[]`, `interests[]`, `lifestyleTraits[]`
+3. **CandidateProfileSO** - Candidate data (ScriptableObject wrapper)
+   - `profile.characterName`, `profile.age`, `profile.gender`, `profile.bio`
+   - `profile.personalityTraits[]`, `profile.interests[]`, `profile.lifestyleTraits[]`
+   - `GetProfilePicture()` → Returns profile Sprite (with gender-based fallback)
+   - `GetPostsForPlaythrough()` → Returns posts (cached per session)
 
 4. **SocialMediaPost** - Individual post
    - `postType`, `content`, `imageContent`, `timestamp`
@@ -340,8 +342,11 @@ You'll interact with these managers/controllers (will be implemented):
 
 - **QuestManager**: `GetCurrentQuest()` → Quest data
 - **MatchQueueManager**: `GetCandidateQueue()` → List of candidates
-- **ProfileManager**: `GetProfile(id)` → Candidate details
-- **SocialFeedController**: `GetPostsForCandidate(id)` → Social media posts
+- **ProfileManager**: `GetCandidateByName(name)` → Candidate details
+  - `ResetAllCandidatePosts()` → Call when starting new quest to clear cached posts
+- **CandidateProfileSO** (directly):
+  - `GetProfilePicture()` → Profile Sprite (uses gender-based default if none assigned)
+  - `GetPostsForPlaythrough()` → Social media posts (cached per session)
 - **DecisionController**: `SubmitDecision(candidate, accepted)` → Handle accept/reject
 
 ### Testing Without Backend
