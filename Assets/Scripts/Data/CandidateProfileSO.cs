@@ -49,6 +49,48 @@ namespace Maskhot.Data
             }
         }
 
+        // Cached default sprites (loaded once)
+        private static Sprite cachedMaleSprite;
+        private static Sprite cachedFemaleSprite;
+
+        /// <summary>
+        /// Gets the profile picture for this candidate.
+        /// If no picture is assigned, returns a gender-based default.
+        /// NonBinary candidates get a 50/50 random selection between male/female.
+        /// </summary>
+        public Sprite GetProfilePicture()
+        {
+            // Return assigned picture if available
+            if (profile.profilePicture != null)
+            {
+                return profile.profilePicture;
+            }
+
+            // Load and cache default sprites if needed
+            if (cachedMaleSprite == null)
+            {
+                cachedMaleSprite = Resources.Load<Sprite>("Sprites/Profiles/male");
+            }
+            if (cachedFemaleSprite == null)
+            {
+                cachedFemaleSprite = Resources.Load<Sprite>("Sprites/Profiles/female");
+            }
+
+            // Return gender-based default
+            switch (profile.gender)
+            {
+                case Gender.Male:
+                    return cachedMaleSprite;
+                case Gender.Female:
+                    return cachedFemaleSprite;
+                case Gender.NonBinary:
+                    // 50/50 random selection for NonBinary
+                    return Random.value < 0.5f ? cachedMaleSprite : cachedFemaleSprite;
+                default:
+                    return cachedMaleSprite;
+            }
+        }
+
         /// <summary>
         /// Gets all posts for this profile (guaranteed + random selection)
         /// Combines guaranteed posts with trait-matched random posts from the pool
