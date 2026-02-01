@@ -45,7 +45,11 @@ graph TB
     subgraph "Manager Layer (Singletons)"
         PM[ProfileManager]
         PPM[PostPoolManager]
-        SFC[SocialFeedController]
+        MQM[MatchQueueManager]
+    end
+
+    subgraph "Controller Layer (Singletons)"
+        MLC[MatchListController]
     end
 
     subgraph "Data Access"
@@ -76,8 +80,9 @@ graph TB
     PM -->|Provides| Traits
     PPM -->|Generates| Posts
 
-    Candidates -->|Selected via| SFC
-    SFC -->|Events to| UI
+    Candidates -->|Queued in| MQM
+    MQM -->|Selection via| MLC
+    MLC -->|Events to| UI
 
     Clients -->|Creates| Quest
     Quest -->|Contains| MC
@@ -135,12 +140,15 @@ graph LR
 
 1. **Trait SOs are the hub** - Referenced by profiles, posts, criteria, and hints
 2. **JSON is the source of truth** - Edit JSON, import to create SOs
-3. **Singletons manage data access** - ProfileManager, PostPoolManager, SocialFeedController
-4. **Separation of concerns**:
+3. **Managers handle data/logic** - ProfileManager, PostPoolManager, MatchQueueManager
+4. **Controllers handle UI state** - MatchListController manages selection and fires events
+5. **Separation of concerns**:
    - Quest = "Who wants what"
    - MatchCriteria = "What they want"
    - CandidateProfile = "Who the candidate is"
    - SocialMediaPost = "What they show"
+   - MatchQueueManager = "Which candidates are available"
+   - MatchListController = "Which candidate is selected"
 
 ## Related Docs
 

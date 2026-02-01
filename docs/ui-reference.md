@@ -21,42 +21,111 @@ Actionable reference for building the game UI with Unity UI Toolkit.
 
 ---
 
-## SocialFeedController
+## MatchQueueManager
 
-**The main controller for the center panel.** Singleton that manages the currently selected candidate.
+**Manages the queue of candidates for the current session.** Handles queue population, decision tracking, and candidate filtering.
 
 ### Properties
 
 ```csharp
 // Singleton access
-SocialFeedController.Instance
+MatchQueueManager.Instance
 
-// Current candidate (null if none selected)
-CandidateProfileSO CurrentCandidate { get; }
+// The queue (read-only)
+IReadOnlyList<CandidateProfileSO> Queue { get; }
 
-// Quick check if a candidate is selected
-bool HasCandidate { get; }
+// Counts
+int Count { get; }           // Total candidates in queue
+int PendingCount { get; }    // Undecided candidates
+int AcceptedCount { get; }   // Accepted candidates
+int RejectedCount { get; }   // Rejected candidates
 
-// Get all posts for current candidate (guaranteed + random, sorted by date)
+// State
+bool HasCandidates { get; }  // Queue is not empty
+bool AllDecided { get; }     // All candidates have been decided
+```
+
+### Methods
+
+```csharp
+// Queue population
+void PopulateRandom(int count = 0)              // Fill with random candidates
+void PopulateForQuest(Quest quest, int count = 0)  // Fill with balanced mix for quest
+void ClearQueue()                               // Clear queue and decisions
+
+// Decision tracking
+CandidateDecision GetDecision(CandidateProfileSO candidate)
+void Accept(CandidateProfileSO candidate)
+void Reject(CandidateProfileSO candidate)
+void ResetDecision(CandidateProfileSO candidate)
+
+// Query
+CandidateProfileSO GetCandidateAt(int index)
+int GetIndexOf(CandidateProfileSO candidate)
+bool IsInQueue(CandidateProfileSO candidate)
+List<CandidateProfileSO> GetPendingCandidates()
+List<CandidateProfileSO> GetAcceptedCandidates()
+List<CandidateProfileSO> GetRejectedCandidates()
+```
+
+### Events
+
+```csharp
+// Fired when queue is modified (populated, cleared)
+event Action OnQueueChanged;
+
+// Fired when a decision is made
+event Action<CandidateProfileSO, CandidateDecision> OnDecisionMade;
+```
+
+---
+
+## MatchListController
+
+**The main controller for candidate selection and navigation.** Singleton that manages the currently selected candidate and provides UI-facing state.
+
+### Properties
+
+```csharp
+// Singleton access
+MatchListController.Instance
+
+// Current selection
+CandidateProfileSO CurrentCandidate { get; }  // Current candidate (null if none)
+int CurrentIndex { get; }                      // Index in queue (-1 if none)
+bool HasSelection { get; }                     // Quick check if selected
+
+// Navigation state
+bool HasNext { get; }      // Can navigate forward
+bool HasPrevious { get; }  // Can navigate backward
+
+// Post data for current candidate
 List<SocialMediaPost> CurrentPosts { get; }
 ```
 
 ### Methods
 
 ```csharp
-// Set the current candidate (fires OnCandidateChanged event)
-void SetCandidate(CandidateProfileSO candidate)
+// Selection
+bool SelectByIndex(int index)                  // Select by queue index
+bool SelectCandidate(CandidateProfileSO candidate)  // Select specific candidate
+void ClearSelection()                          // Clear current selection
 
-// Clear the feed (equivalent to SetCandidate(null))
-void ClearFeed()
+// Navigation
+bool SelectNext()          // Move to next candidate
+bool SelectPrevious()      // Move to previous candidate
+bool SelectFirst()         // Select first in queue
+bool SelectNextPending()   // Select next undecided candidate
 ```
 
 ### Events
 
 ```csharp
-// Fired when the current candidate changes
-// Passes the new candidate (null if cleared)
-event Action<CandidateProfileSO> OnCandidateChanged;
+// Fired when selection changes
+event Action<CandidateProfileSO> OnSelectionChanged;
+
+// Fired when queue is updated
+event Action OnQueueUpdated;
 ```
 
 ### Usage Examples
@@ -68,15 +137,15 @@ public class SocialFeedPanel : MonoBehaviour
 {
     private void OnEnable()
     {
-        SocialFeedController.Instance.OnCandidateChanged += HandleCandidateChanged;
+        MatchListController.Instance.OnSelectionChanged += HandleSelectionChanged;
     }
 
     private void OnDisable()
     {
-        SocialFeedController.Instance.OnCandidateChanged -= HandleCandidateChanged;
+        MatchListController.Instance.OnSelectionChanged -= HandleSelectionChanged;
     }
 
-    private void HandleCandidateChanged(CandidateProfileSO candidate)
+    private void HandleSelectionChanged(CandidateProfileSO candidate)
     {
         if (candidate == null)
         {
@@ -93,7 +162,7 @@ public class SocialFeedPanel : MonoBehaviour
 
         // Populate posts
         ClearFeedUI();
-        foreach (var post in SocialFeedController.Instance.CurrentPosts)
+        foreach (var post in MatchListController.Instance.CurrentPosts)
         {
             CreatePostElement(post);
         }
@@ -105,22 +174,40 @@ public class SocialFeedPanel : MonoBehaviour
 
 ```csharp
 // Check if there's a candidate
-if (SocialFeedController.Instance.HasCandidate)
+if (MatchListController.Instance.HasSelection)
 {
-    var candidate = SocialFeedController.Instance.CurrentCandidate;
-    var posts = SocialFeedController.Instance.CurrentPosts;
+    var candidate = MatchListController.Instance.CurrentCandidate;
+    var posts = MatchListController.Instance.CurrentPosts;
     // ...
 }
 ```
 
-**Setting the candidate (from left panel)**
+**Selecting a candidate (from left panel)**
 
 ```csharp
 // When player clicks a candidate in the queue
 public void OnCandidateClicked(CandidateProfileSO candidate)
 {
-    SocialFeedController.Instance.SetCandidate(candidate);
+    MatchListController.Instance.SelectCandidate(candidate);
 }
+
+// Or by index
+public void OnCandidateClickedByIndex(int index)
+{
+    MatchListController.Instance.SelectByIndex(index);
+}
+```
+
+**Navigation**
+
+```csharp
+// Navigate through candidates
+nextButton.clicked += () => MatchListController.Instance.SelectNext();
+prevButton.clicked += () => MatchListController.Instance.SelectPrevious();
+
+// Auto-advance to next pending after decision
+MatchQueueManager.Instance.Accept(currentCandidate);
+MatchListController.Instance.SelectNextPending();
 ```
 
 ---
@@ -253,12 +340,14 @@ When player accepts/rejects a candidate:
 ```csharp
 // Get match result for feedback
 MatchResult result = MatchEvaluator.Evaluate(
-    SocialFeedController.Instance.CurrentCandidate,
+    MatchListController.Instance.CurrentCandidate,
     currentQuest.matchCriteria
 );
 
 if (playerAccepted)
 {
+    MatchQueueManager.Instance.Accept(MatchListController.Instance.CurrentCandidate);
+
     if (result.IsMatch)
     {
         // Correct! Show score: result.Score
@@ -270,6 +359,8 @@ if (playerAccepted)
 }
 else // playerRejected
 {
+    MatchQueueManager.Instance.Reject(MatchListController.Instance.CurrentCandidate);
+
     if (!result.IsMatch)
     {
         // Correct rejection!
@@ -279,6 +370,9 @@ else // playerRejected
         // Wrong! This was a good match with score: result.Score
     }
 }
+
+// Auto-advance to next pending candidate
+MatchListController.Instance.SelectNextPending();
 ```
 
 ---
@@ -293,7 +387,13 @@ PostPoolManager.Instance.ResetPool();
 ProfileManager.Instance.ResetAllCandidatePosts();
 
 // Clear current selection
-SocialFeedController.Instance.ClearFeed();
+MatchListController.Instance.ClearSelection();
+
+// Populate queue for the quest
+MatchQueueManager.Instance.PopulateForQuest(currentQuest, 5);
+
+// Auto-select first candidate
+MatchListController.Instance.SelectFirst();
 ```
 
 ---
@@ -301,17 +401,19 @@ SocialFeedController.Instance.ClearFeed();
 ## Panel Responsibilities
 
 ### Left Panel (Candidate Queue)
-- Display list of candidates from `ProfileManager.Instance.GetAllCandidates()`
-- Show: profile picture, name, age, truncated bio
-- On click: `SocialFeedController.Instance.SetCandidate(candidate)`
-- Track reviewed/pending state locally
+- Subscribe to `MatchQueueManager.OnQueueChanged` for queue updates
+- Subscribe to `MatchQueueManager.OnDecisionMade` for decision state
+- Display candidates from `MatchQueueManager.Instance.Queue`
+- Show: profile picture, name, age, decision state (pending/accepted/rejected)
+- On click: `MatchListController.Instance.SelectCandidate(candidate)`
+- Highlight current selection based on `MatchListController.CurrentCandidate`
 
 ### Center Panel (Social Feed)
-- Subscribe to `SocialFeedController.OnCandidateChanged`
+- Subscribe to `MatchListController.OnSelectionChanged`
 - Display profile header from `CurrentCandidate.profile`
 - Display posts from `CurrentPosts`
 - Show Accept/Reject buttons
-- On decision: evaluate and provide feedback
+- On decision: call `MatchQueueManager.Accept/Reject`, evaluate, show feedback
 
 ### Right Panel (Quest Criteria)
 - Display client info from `Quest.client`
@@ -342,12 +444,16 @@ Right:  20% (quest criteria)
 | Avoid traits | Gray/Strikethrough |
 | Accept button | Green |
 | Reject button | Red |
+| Pending candidate | Default |
+| Accepted candidate | Green tint |
+| Rejected candidate | Gray/dimmed |
 
 ---
 
 ## File Locations
 
-- **SocialFeedController**: `Assets/Scripts/Controllers/SocialFeedController.cs`
+- **MatchQueueManager**: `Assets/Scripts/Managers/MatchQueueManager.cs`
+- **MatchListController**: `Assets/Scripts/Controllers/MatchListController.cs`
 - **ProfileManager**: `Assets/Scripts/Managers/ProfileManager.cs`
 - **MatchEvaluator**: `Assets/Scripts/Matching/MatchEvaluator.cs`
 - **Data classes**: `Assets/Scripts/Data/`

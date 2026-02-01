@@ -22,7 +22,10 @@ Track what's complete, in progress, and to do.
 **Manager Layer**
 - [x] ProfileManager - Loads/serves all profiles and traits from Resources
 - [x] PostPoolManager - Random post selection with trait matching
-- [x] SocialFeedController - Manages current candidate selection, fires events
+- [x] MatchQueueManager - Queue population, decision tracking, candidate filtering
+
+**Controller Layer**
+- [x] MatchListController - Selection state, navigation, fires events for UI
 
 **Matching System**
 - [x] MatchEvaluator - Static evaluation logic (currently using **ImplicitSoftening** mode)
@@ -44,7 +47,8 @@ Track what's complete, in progress, and to do.
 - [x] RandomPostTester - Verify random post generation
 - [x] ClientTester - Verify client profiles and criteria
 - [x] MatchingTester - Verify matching algorithm
-- [x] SocialFeedTester - Verify SocialFeedController
+- [x] MatchQueueTester - Verify queue population and decisions
+- [x] MatchListTester - Verify selection, navigation, events
 
 ### In Progress
 
@@ -55,10 +59,8 @@ Track what's complete, in progress, and to do.
 **Manager Layer**
 - [ ] GameManager - Overall game state, level progression
 - [ ] QuestManager - Current quest management, validation
-- [ ] MatchQueueManager - Candidate queue for left panel
 
 **Controllers**
-- [ ] MatchListController - Profile selection from queue
 - [ ] DecisionController - Accept/reject decisions and scoring
 
 **Procedural Generation**
@@ -75,8 +77,8 @@ Track what's complete, in progress, and to do.
 
 ## Current Priorities
 
-1. **Remaining Managers** - GameManager, QuestManager, MatchQueueManager
-2. **Controllers** - Wire up game flow between managers and UI
+1. **Remaining Managers** - GameManager, QuestManager
+2. **Remaining Controllers** - DecisionController
 3. **Integration** - Connect backend systems to UI (once UI is ready)
 
 ---
@@ -85,13 +87,14 @@ Track what's complete, in progress, and to do.
 
 1. ~~Data Structures~~ COMPLETE
 2. ~~ScriptableObjects~~ COMPLETE
-3. ~~Manager Layer (ProfileManager, PostPoolManager)~~ COMPLETE
+3. ~~Manager Layer (ProfileManager, PostPoolManager, MatchQueueManager)~~ COMPLETE
 4. ~~Matching System~~ COMPLETE
-5. UI Implementation *(separate developer)*
-6. **Remaining Managers (GameManager, QuestManager, MatchQueueManager)** <- CURRENT FOCUS
-7. Controllers (MatchListController, DecisionController)
-8. QuestGenerator for procedural quests
-9. Integration and polish
+5. ~~Controller Layer (MatchListController)~~ COMPLETE
+6. UI Implementation *(separate developer)*
+7. **Remaining Managers (GameManager, QuestManager)** <- CURRENT FOCUS
+8. Remaining Controllers (DecisionController)
+9. QuestGenerator for procedural quests
+10. Integration and polish
 
 ---
 

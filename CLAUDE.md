@@ -56,9 +56,15 @@ Read these docs when you need deeper context:
 
 ## Key Systems
 
+### Managers (Data/Logic)
 - **ProfileManager** (singleton): Loads all profiles/traits from Resources, provides lookup methods
 - **PostPoolManager** (singleton): Handles random post selection with trait matching
-- **SocialFeedController** (singleton): Manages current candidate selection, fires `OnCandidateChanged` event
+- **MatchQueueManager** (singleton): Manages candidate queue, decision tracking, queue population
+
+### Controllers (UI State/Events)
+- **MatchListController** (singleton): Manages current selection, navigation, fires `OnSelectionChanged` event
+
+### Other
 - **MatchEvaluator** (static): Evaluates candidates against match criteria, returns MatchResult with score
 - **ScriptableObjectImporter**: Editor tool (`Tools > Maskhot > Import Data from JSON`)
 
@@ -79,15 +85,15 @@ For multi-step tasks or significant changes, propose a plan and wait for confirm
 
 1. **For data changes**: Edit JSON files in `JSONData/`, then reimport via Unity menu
 2. **Testing**: Use tester scripts (ProfileTester, MatchingTester, etc.) via Context Menu
-3. **Test maintenance**: When creating new managers or controllers, create a corresponding tester script. When modifying existing systems, update relevant tests. See [docs/testing.md](docs/testing.md) for conventions.
+3. **Test maintenance**: When creating new managers or controllers, create a corresponding tester script. When modifying existing systems, update relevant tests. **Always provide testing instructions** (how to run, what to look for) when creating or updating tests. See [docs/testing.md](docs/testing.md) for conventions.
 4. **ScriptableObjects**: Never create manually - always use JSON import for consistency
 5. **Controllers/Managers**: Follow singleton pattern, use events for UI communication
 6. **No git commands**: Do not perform any git operations (commit, push, etc.) - the user handles version control
 
 ## Implementation Status
 
-- **Complete**: Data structures, trait SOs, profile SOs, JSON import, matching system, managers (ProfileManager, PostPoolManager), SocialFeedController
+- **Complete**: Data structures, trait SOs, profile SOs, JSON import, matching system, managers (ProfileManager, PostPoolManager, MatchQueueManager), MatchListController
 - **In Progress**: None currently
-- **To Do**: GameManager, QuestManager, MatchQueueManager, remaining Controllers, UI implementation
+- **To Do**: GameManager, QuestManager, DecisionController, UI implementation
 
 See [docs/project-status.md](docs/project-status.md) for detailed status breakdown.

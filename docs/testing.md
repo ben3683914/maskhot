@@ -14,6 +14,12 @@ How to verify each system works correctly using tester scripts and verbose loggi
 - Adding new features to an existing manager/controller
 - Fixing bugs (add test coverage for the bug scenario)
 
+### Always Provide Testing Instructions
+When creating or updating a test script, include clear instructions for the user:
+1. **Setup steps** - What components need to be in the scene, what to drag into Inspector fields
+2. **How to run** - Which Inspector button to click (create a custom editor with buttons)
+3. **What to verify** - What output to look for in the console, what indicates success/failure
+
 ---
 
 ## Test Script Conventions
@@ -162,20 +168,20 @@ public bool showBreakdown = false;         // Toggle score/detail breakdown
 
 ## Existing Tester Scripts
 
-All tester scripts use Unity's Context Menu (right-click the component in Inspector) to run tests.
+All testers have Inspector buttons for running tests. Enter Play Mode, then click the buttons in the Inspector.
 
 ### ProfileTester
 
 Verifies profile data and trait references.
 
-**Location**: `Assets/Scripts/Data/ProfileTester.cs`
+**Location**: `Assets/Scripts/Data/ProfileTester.cs` *(legacy location)*
 
 **Setup**:
 1. Attach to a GameObject
-2. Drag candidate profiles into the `testCandidates` array
+2. Drag candidate profiles into the `testProfiles` array
 
-**Context Menu**:
-- **Test All Profiles** - Tests all assigned candidates
+**Available Tests**:
+- **Test All Profiles** - Tests all assigned candidates (works in Edit or Play mode)
 
 **What it checks**:
 - Profile data (name, age, gender, bio)
@@ -194,8 +200,9 @@ Verifies random post generation and trait matching.
 **Setup**:
 1. Attach to a GameObject alongside ProfileManager and PostPoolManager
 2. Optionally drag specific candidates to test
+3. Enter Play Mode
 
-**Context Menu**:
+**Available Tests**:
 - **Test Specific Candidate** - Tests first assigned candidate
 - **Test All Assigned Candidates** - Tests all assigned candidates
 - **Test All Candidates (via ProfileManager)** - Tests all loaded candidates
@@ -219,8 +226,9 @@ Verifies client profiles and match criteria.
 **Setup**:
 1. Attach to a GameObject
 2. Optionally drag client profiles to test
+3. Enter Play Mode
 
-**Context Menu**:
+**Available Tests**:
 - **Test Specific Client** - Tests first assigned client
 - **Test All Assigned Clients** - Tests all assigned clients
 - **Test All Clients (from Resources)** - Tests all loaded clients
@@ -244,13 +252,14 @@ Verifies the matching algorithm.
 **Setup**:
 1. Attach to a GameObject
 2. Optionally assign candidates and clients to test
+3. Enter Play Mode
 
 **Inspector Settings**:
 - `requirementMode` - Algorithm mode to test
 - `showScoreBreakdown` - Include detailed score breakdown
 - `verboseRequirements` - Show all requirement details
 
-**Context Menu**:
+**Available Tests**:
 - **Test Specific Match** - Tests first candidate against first client
 - **Test All Assigned (Candidates x Clients)** - Tests all combinations
 - **Test All (from Resources)** - Tests all loaded candidates x clients
@@ -267,19 +276,48 @@ Verifies the matching algorithm.
 
 ---
 
-### SocialFeedTester
+### MatchQueueTester
 
-Verifies SocialFeedController events and data access.
+Verifies MatchQueueManager functionality.
 
-**Location**: `Assets/Scripts/Testing/SocialFeedTester.cs`
+**Location**: `Assets/Scripts/Testing/MatchQueueTester.cs`
 
 **Setup**:
-1. Attach to a GameObject alongside ProfileManager, PostPoolManager, SocialFeedController
-2. Optionally assign test candidates
+1. Attach to a GameObject alongside ProfileManager and MatchQueueManager
+2. Optionally assign a client for quest-based population tests
+3. Enter Play Mode
 
-**Context Menu**:
-- **Test Set Candidate** - Sets a candidate and logs the event
-- **Test Clear Feed** - Clears the feed
+**How to Run**: Click the buttons in the Inspector (buttons are enabled during Play Mode)
+
+**Available Tests**:
+- **Test Random Population** - Populates queue with random candidates
+- **Test Quest Population** - Populates queue balanced for a quest
+- **Test Decision Tracking** - Tests accept/reject/reset decisions
+- **Test Query Methods** - Tests GetCandidateAt, GetIndexOf, IsInQueue
+- **Clear Queue** - Clears the queue
+- **Log Current State** - Logs current queue state
+
+---
+
+### MatchListTester
+
+Verifies MatchListController functionality.
+
+**Location**: `Assets/Scripts/Testing/MatchListTester.cs`
+
+**Setup**:
+1. Attach to a GameObject alongside ProfileManager, MatchQueueManager, and MatchListController
+2. Optionally assign test candidates
+3. Enter Play Mode
+
+**How to Run**: Click the buttons in the Inspector (buttons are enabled during Play Mode)
+
+**Available Tests**:
+- **Test Selection By Index** - Tests SelectByIndex and event firing
+- **Test Navigation** - Tests SelectNext, SelectPrevious, SelectFirst
+- **Test Select Next Pending** - Tests auto-advancing to next undecided
+- **Test Current Posts** - Tests CurrentPosts property
+- **Test Clear Selection** - Tests ClearSelection
 - **Log Current State** - Logs current controller state
 
 ---
@@ -315,7 +353,7 @@ public bool verboseLogging = false;
 - Engagement generation details
 - Pool exhaustion warnings
 
-### SocialFeedController
+### MatchQueueManager
 
 ```csharp
 // In Inspector, enable verboseLogging
@@ -323,8 +361,21 @@ public bool verboseLogging = false;
 ```
 
 **Outputs**:
-- Candidate changes (previous → new)
+- Queue population details
+- Decision changes (accept/reject/reset)
+- Queue cleared notifications
+
+### MatchListController
+
+```csharp
+// In Inspector, enable verboseLogging
+public bool verboseLogging = false;
+```
+
+**Outputs**:
+- Selection changes (previous → new)
 - Post count for current candidate
+- Navigation attempts and results
 - Skip messages when same candidate selected
 
 ---
@@ -353,12 +404,14 @@ public bool verboseLogging = false;
 4. Right-click → "Test All (from Resources)"
 5. Cycle through algorithm modes to compare
 
-### Testing SocialFeedController
+### Testing Queue and Selection
 
-1. Add ProfileManager, PostPoolManager, SocialFeedController, SocialFeedTester
-2. Enter Play mode
-3. Right-click SocialFeedTester → "Test Set Candidate"
-4. Verify event fires and data is accessible
+1. Add ProfileManager, PostPoolManager, MatchQueueManager, MatchListController to a GameObject
+2. Add MatchQueueTester and MatchListTester
+3. Enter Play mode
+4. Click "Test Random Population" button on MatchQueueTester
+5. Click "Test Navigation" button on MatchListTester
+6. Verify events fire and selection updates correctly
 
 ---
 
@@ -393,4 +446,5 @@ All new tester scripts should go in `Assets/Scripts/Testing/`.
 - **RandomPostTester**: `Assets/Scripts/Testing/RandomPostTester.cs`
 - **ClientTester**: `Assets/Scripts/Testing/ClientTester.cs`
 - **MatchingTester**: `Assets/Scripts/Testing/MatchingTester.cs`
-- **SocialFeedTester**: `Assets/Scripts/Testing/SocialFeedTester.cs`
+- **MatchQueueTester**: `Assets/Scripts/Testing/MatchQueueTester.cs`
+- **MatchListTester**: `Assets/Scripts/Testing/MatchListTester.cs`
