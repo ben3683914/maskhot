@@ -263,7 +263,7 @@ public class UIManager : MonoBehaviour
             var candidate = MatchListController.Instance.CurrentCandidate;
             element.Q("post-header").Q<Label>().text = candidate.profile.characterName; 
             element.Q("post-header").Q<Image>().sprite = candidate.GetProfilePicture();
-            element.Q("post-header").Q<Label>().text = RedactionController.Instance.GetDisplayText(candidate, post);
+            element.Q("post-body").Q<Label>().text = RedactionController.Instance.GetDisplayText(candidate, post);
             element.Q<Label>("post-timestamp").text = $"{post.daysSincePosted} days ago";
 
             // Show/hide post image based on post type
