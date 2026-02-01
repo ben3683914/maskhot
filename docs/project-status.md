@@ -16,7 +16,8 @@
 - [ ] QuestGenerator - Creates Quest instances from ClientProfileSO or procedural data
 
 **UI Implementation** *(handled by me)*
-- [ ] Start Menu - Should be a new scene. Start game, Credits, Quit
+- [x] Start Menu - New scene with Start game, Credits popup, Quit (UI Toolkit)
+- [x] Loading Screen - Additive scene loading with progress bar, waits for candidates
 
 **UI Implementation** *(handled by separate developer, not using Claude)*
 - [ ] Three-panel layout (left: queue, center: feed, right: criteria)

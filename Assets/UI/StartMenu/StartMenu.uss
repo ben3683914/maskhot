@@ -1,0 +1,168 @@
+/* Start Menu Styles */
+
+.root {
+    flex-grow: 1;
+    background-color: rgb(20, 20, 30);
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-container {
+    align-items: center;
+    padding: 40px;
+}
+
+.game-title {
+    font-size: 72px;
+    color: rgb(255, 255, 255);
+    -unity-font-style: bold;
+    margin-bottom: 60px;
+    letter-spacing: 4px;
+}
+
+.menu-button {
+    width: 300px;
+    height: 60px;
+    margin: 10px;
+    font-size: 24px;
+    background-color: rgb(60, 60, 80);
+    border-color: rgb(100, 100, 140);
+    border-width: 2px;
+    border-radius: 8px;
+    color: rgb(255, 255, 255);
+    transition-duration: 0.15s;
+}
+
+.menu-button:hover {
+    background-color: rgb(80, 80, 110);
+    border-color: rgb(140, 140, 180);
+    scale: 1.05;
+}
+
+.menu-button:active {
+    background-color: rgb(50, 50, 70);
+    scale: 0.98;
+}
+
+/* Credits Panel Overlay */
+.credits-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    align-items: center;
+    justify-content: center;
+}
+
+.credits-panel {
+    background-color: rgb(30, 30, 45);
+    border-color: rgb(100, 100, 140);
+    border-width: 3px;
+    border-radius: 12px;
+    padding: 40px;
+    min-width: 500px;
+    max-width: 600px;
+    align-items: center;
+}
+
+.credits-title {
+    font-size: 36px;
+    color: rgb(255, 255, 255);
+    -unity-font-style: bold;
+    margin-bottom: 30px;
+}
+
+.credits-sections {
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.credits-section {
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.credits-section-header {
+    color: rgb(140, 180, 255);
+    font-size: 20px;
+    -unity-font-style: bold;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.credits-names {
+    color: rgb(200, 200, 220);
+    font-size: 16px;
+    -unity-text-align: middle-center;
+    white-space: normal;
+}
+
+.credits-back-button {
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    background-color: rgb(60, 60, 80);
+    border-color: rgb(100, 100, 140);
+    border-width: 2px;
+    border-radius: 8px;
+    color: rgb(255, 255, 255);
+}
+
+.credits-back-button:hover {
+    background-color: rgb(80, 80, 110);
+    border-color: rgb(140, 140, 180);
+}
+
+.hidden {
+    display: none;
+}
+
+/* Loading Overlay */
+.loading-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(20, 20, 30);
+    align-items: center;
+    justify-content: center;
+}
+
+.loading-panel {
+    align-items: center;
+    padding: 40px;
+}
+
+.loading-title {
+    font-size: 36px;
+    color: rgb(255, 255, 255);
+    -unity-font-style: bold;
+    margin-bottom: 30px;
+}
+
+.progress-bar-container {
+    width: 400px;
+    height: 24px;
+    background-color: rgb(40, 40, 55);
+    border-color: rgb(80, 80, 110);
+    border-width: 2px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    width: 0%;
+    background-color: rgb(100, 180, 100);
+    border-radius: 10px;
+    transition-duration: 0.1s;
+}
+
+.loading-status {
+    font-size: 16px;
+    color: rgb(150, 150, 170);
+}

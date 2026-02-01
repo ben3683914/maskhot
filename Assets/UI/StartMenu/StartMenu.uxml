@@ -1,0 +1,50 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="StartMenu.uss" />
+
+    <ui:VisualElement class="root">
+        <!-- Main Menu -->
+        <ui:VisualElement class="menu-container">
+            <ui:Label text="MASKHOT" class="game-title" />
+            <ui:Button name="start-button" text="Start Game" class="menu-button" />
+            <ui:Button name="credits-button" text="Credits" class="menu-button" />
+            <ui:Button name="quit-button" text="Quit" class="menu-button" />
+        </ui:VisualElement>
+
+        <!-- Credits Overlay (hidden by default) -->
+        <ui:VisualElement name="credits-overlay" class="credits-overlay hidden">
+            <ui:VisualElement class="credits-panel">
+                <ui:Label text="Credits" class="credits-title" />
+
+                <ui:VisualElement class="credits-sections">
+                    <ui:VisualElement class="credits-section">
+                        <ui:Label text="Idea &amp; Design" class="credits-section-header" />
+                        <ui:Label text="Kelsey Amyotte&#10;Darius Funches&#10;Ben Mueller" class="credits-names" />
+                    </ui:VisualElement>
+
+                    <ui:VisualElement class="credits-section">
+                        <ui:Label text="Developers" class="credits-section-header" />
+                        <ui:Label text="Ben Mueller&#10;Darius Funches&#10;Claude" class="credits-names" />
+                    </ui:VisualElement>
+
+                    <ui:VisualElement class="credits-section">
+                        <ui:Label text="Art" class="credits-section-header" />
+                        <ui:Label text="Kelsey Amyotte&#10;ChatGPT" class="credits-names" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+
+                <ui:Button name="credits-back-button" text="Back" class="credits-back-button" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <!-- Loading Overlay (hidden by default) -->
+        <ui:VisualElement name="loading-overlay" class="loading-overlay hidden">
+            <ui:VisualElement class="loading-panel">
+                <ui:Label text="Loading..." class="loading-title" />
+                <ui:VisualElement class="progress-bar-container">
+                    <ui:VisualElement name="progress-bar-fill" class="progress-bar-fill" />
+                </ui:VisualElement>
+                <ui:Label name="loading-status" class="loading-status" text="Preparing game..." />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -160,6 +160,10 @@ namespace Maskhot.Managers
 
         #region Unity Lifecycle
 
+        [Header("Startup")]
+        [Tooltip("If true, automatically starts a session on Awake. Disable for menu-driven start.")]
+        public bool autoStartSession = false;
+
         private void Awake()
         {
             if (Instance != null && Instance != this)
@@ -176,7 +180,10 @@ namespace Maskhot.Managers
                 Debug.Log("GameManager: Initialized");
             }
 
-            StartSession();
+            if (autoStartSession)
+            {
+                StartSession();
+            }
         }
 
         private void OnEnable()
