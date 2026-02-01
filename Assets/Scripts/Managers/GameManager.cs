@@ -175,6 +175,8 @@ namespace Maskhot.Managers
             {
                 Debug.Log("GameManager: Initialized");
             }
+
+            StartSession();
         }
 
         private void OnEnable()
