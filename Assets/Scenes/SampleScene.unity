@@ -228,7 +228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81466c3e1a4961f48a75a4a3fa8b01be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Controllers.DecisionController
-  autoAdvance: 1
+  autoAdvance: 0
   verboseLogging: 0
 --- !u!114 &99476925
 MonoBehaviour:
@@ -245,7 +245,7 @@ MonoBehaviour:
   passingAccuracyThreshold: 70
   candidatesPerQuest: 5
   questTransitionDelay: 1
-  verboseLogging: 1
+  verboseLogging: 0
 --- !u!114 &99476926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -341,6 +341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee417ac246b0e8d4ba903d41230d1ac9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIManager
+  verboseOutput: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -480,7 +481,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37aadd175842c6549bbd3ef990c2b0a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Controllers.MatchListController
-  verboseLogging: 1
+  verboseLogging: 0
 --- !u!114 &817613641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -493,7 +494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66a4cbd5638494a42aca9de6d7d97c8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Maskhot.Controllers.QuestController
-  verboseLogging: 0
+  verboseLogging: 1
 --- !u!114 &817613642
 MonoBehaviour:
   m_ObjectHideFlags: 0

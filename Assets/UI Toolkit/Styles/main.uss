@@ -16,3 +16,20 @@
     flex-basis: 33%;
     flex-shrink: 0;
 }
+
+.pane-header {
+    font-size: 40px;
+    -unity-font-style: bold;
+    -unity-text-align: upper-center;
+    border-bottom-width: 4px;
+    border-left-color: rgb(102, 102, 102);
+    border-right-color: rgb(102, 102, 102);
+    border-top-color: rgb(102, 102, 102);
+    border-bottom-color: rgb(102, 102, 102);
+}
+
+.approval-button {
+    font-size: 60px;
+    flex-grow: 1;
+    flex-basis: 50%;
+}

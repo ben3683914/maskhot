@@ -55,29 +55,25 @@ namespace Maskhot.Testing
             }
         }
 
-        private void HandleSelectionChanged(CandidateProfileSO candidate)
-        {
-            eventReceived = true;
-            lastEventCandidate = candidate;
-
-            if (verboseOutput)
+            private void HandleSelectionChanged(CandidateProfileSO candidate)
             {
-                string name = candidate != null ? candidate.profile.characterName : "null";
-                Debug.Log($"MatchListTester: OnSelectionChanged fired - {name}");
+                eventReceived = true;
+                lastEventCandidate = candidate;
+
+                if (verboseOutput)
+                {
+                    string name = candidate != null ? candidate.profile.characterName : "null";
+                    Debug.Log($"MatchListTester: OnSelectionChanged fired - {name}");
+                }
             }
 
-            UIManager.Instance.updatePostList(MatchListController.Instance.CurrentPosts);
-        }
-
-        private void HandleQueueUpdated()
-        {
-            if (verboseOutput)
+            private void HandleQueueUpdated()
             {
-                Debug.Log("MatchListTester: OnQueueUpdated fired");
+                if (verboseOutput)
+                {
+                    Debug.Log("MatchListTester: OnQueueUpdated fired");
+                }
             }
-
-            UIManager.Instance.updateProfileList(MatchListController.Instance.Queue);
-        }
 
         /// <summary>
         /// Tests selection by index

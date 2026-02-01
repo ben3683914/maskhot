@@ -1,0 +1,15 @@
+:root {
+}
+
+.required {
+    -unity-font-style: bold;
+    background-color: rgb(4, 179, 79);
+}
+
+.preferred {
+    background-color: rgb(255, 153, 0);
+}
+
+.avoid {
+    background-color: rgb(166, 25, 46);
+}
