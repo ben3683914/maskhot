@@ -24,6 +24,7 @@ namespace Maskhot.Data
         private static Sprite s_BeachImage;
         private static Sprite s_DogImage;
         private static Sprite s_SantoriniImage;
+        private static Sprite s_SpaghettiImage;
 
         /// <summary>
         /// Returns the post image for Photo posts only. Returns null for other post types.
@@ -56,6 +57,14 @@ namespace Maskhot.Data
                     if (s_SantoriniImage == null)
                         s_SantoriniImage = Resources.Load<Sprite>("Sprites/Posts/Santorini sunset");
                     return s_SantoriniImage;
+                }
+
+                // Check for food-related content
+                if (ContainsFoodKeywords(lowerContent) || HasFoodRelatedTraits())
+                {
+                    if (s_SpaghettiImage == null)
+                        s_SpaghettiImage = Resources.Load<Sprite>("Sprites/Posts/Spaghetti");
+                    return s_SpaghettiImage;
                 }
 
                 // Default to random image (deterministic based on content)
@@ -131,6 +140,47 @@ namespace Maskhot.Data
             return false;
         }
 
+        private bool ContainsFoodKeywords(string lowerContent)
+        {
+            return lowerContent.Contains("food") ||
+                   lowerContent.Contains("dinner") ||
+                   lowerContent.Contains("lunch") ||
+                   lowerContent.Contains("breakfast") ||
+                   lowerContent.Contains("meal") ||
+                   lowerContent.Contains("cook") ||
+                   lowerContent.Contains("recipe") ||
+                   lowerContent.Contains("restaurant") ||
+                   lowerContent.Contains("spaghetti") ||
+                   lowerContent.Contains("pasta") ||
+                   lowerContent.Contains("pizza") ||
+                   lowerContent.Contains("delicious") ||
+                   lowerContent.Contains("yummy") ||
+                   lowerContent.Contains("tasty") ||
+                   lowerContent.Contains("cuisine");
+        }
+
+        private bool HasFoodRelatedTraits()
+        {
+            if (relatedInterests != null)
+            {
+                foreach (var interest in relatedInterests)
+                {
+                    if (interest != null)
+                    {
+                        // Check category
+                        if (interest.category == InterestCategory.Food)
+                            return true;
+
+                        // Check display name
+                        string name = interest.displayName?.ToLowerInvariant() ?? "";
+                        if (name.Contains("food") || name.Contains("cooking") || name.Contains("culinary") || name.Contains("dining"))
+                            return true;
+                    }
+                }
+            }
+            return false;
+        }
+
         private Sprite GetRandomDefaultImage()
         {
             // Load all images if needed
@@ -140,16 +190,19 @@ namespace Maskhot.Data
                 s_DogImage = Resources.Load<Sprite>("Sprites/Posts/Dog");
             if (s_SantoriniImage == null)
                 s_SantoriniImage = Resources.Load<Sprite>("Sprites/Posts/Santorini sunset");
+            if (s_SpaghettiImage == null)
+                s_SpaghettiImage = Resources.Load<Sprite>("Sprites/Posts/Spaghetti");
 
             // Use content hash for deterministic "random" selection
             int hash = content?.GetHashCode() ?? 0;
-            int index = Mathf.Abs(hash) % 3;
+            int index = Mathf.Abs(hash) % 4;
 
             return index switch
             {
                 0 => s_BeachImage,
                 1 => s_DogImage,
-                _ => s_SantoriniImage
+                2 => s_SantoriniImage,
+                _ => s_SpaghettiImage
             };
         }
 
