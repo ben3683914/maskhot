@@ -5,11 +5,7 @@
             <ui:Label text="Name" style="flex-shrink: 1; align-items: stretch; margin-left: 15px;"/>
         </ui:VisualElement>
         <ui:VisualElement name="post-body" style="flex-grow: initial;">
-            <ui:Label text="Label">
-                <Bindings>
-                    <ui:DataBinding property="text" data-source-path="content" binding-mode="ToTarget"/>
-                </Bindings>
-            </ui:Label>
+            <ui:Label text="Label"/>
             <ui:Image name="post-image" style="flex-grow: 1;">
                 <Bindings>
                     <ui:DataBinding property="source" data-source-path="DisplayImage" binding-mode="ToTarget"/>
