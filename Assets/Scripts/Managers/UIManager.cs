@@ -2,16 +2,11 @@ using Maskhot.Controllers;
 using Maskhot.Data;
 using Maskhot.Managers;
 using Maskhot.Utilities;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using Unity.Properties;
-using Unity.VisualScripting;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UIElements;
-using static UnityEngine.Audio.ProcessorInstance.AvailableData;
-using static UnityEngine.InputSystem.HID.HID;
 
 public class UIManager : MonoBehaviour
 {
